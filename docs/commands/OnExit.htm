@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>OnExit</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="../static/theme.css" rel="stylesheet" type="text/css" />
+<script src="../static/jquery.js" type="text/javascript"></script>
+<script src="../static/tree.jquery.js" type="text/javascript"></script>
+<script src="../static/content.js" type="text/javascript"></script>
+</head>
+<body>
+
+<h1>OnExit</h1>
+
+<p>指定在脚本退出时自动运行的<a href="Gosub.htm">子程序</a>。</p>
+
+<pre class="Syntax">OnExit [, Label]</pre>
+<h3>参数</h3>
+<dl>
+
+  <dt>标签</dt>
+  <dd><p>如果省略, 则脚本会返回到正常的退出行为. 否则, 请指定 <a href="../misc/Labels.htm">标签</a> 的名称, 当脚本由于任意原因退出时将执行标签中的内容 (作为新 <a href="../misc/Threads.htm">线程</a>).</p></dd>
+
+</dl>
+
+<p><strong>重要提示:</strong> 由于调用这个指定的子程序而没有终止脚本, 所以想要终止脚本时必须在这个子程序中使用 <a href="ExitApp.htm">ExitApp</a> 命令. 可选的 (如同下面的示例部分那样), OnExit 子程序可以显示一个 <a href="MsgBox.htm">MsgBox</a> 来提示用户确认, 只有当用户按下 YES 时才会执行 ExitApp 退出脚本.</p>
+<h3>备注</h3>
+<p>当脚本由于任意原因退出时会调用 OnExit 子程序 (除非脚本是被像结束任务这样杀掉). 每当 <a href="_SingleInstance.htm">#SingleInstance</a> 和 <a href="Reload.htm">Reload</a> 命令要求终止前一个实例时, 也会调用这个子程序.</p>
+<p>脚本可以通过 <code><a href="OnMessage.htm#shutdown">OnMessage(0x11, "WM_QUERYENDSESSION")</a></code> 检测并且可以终止系统关闭或注销操作。</p>
+<p>OnExit <a href="../misc/Threads.htm">线程</a> 不遵循 <a href="_MaxThreads.htm">#MaxThreads</a> (需要时它总是会运行). 此外, 当它运行的时候, 它不会被任何 <a href="../misc/Threads.htm">线程</a> 中断, 包括 <a href="../Hotkeys.htm">热键</a>, <a href="Menu.htm">自定义菜单项</a> 以及 <a href="SetTimer.htm">定时子程序</a>. 然而, 如果用户在托盘菜单或主菜单中选择 Exit, 或者通过 <a href="Reload.htm">Reload</a> 或 <a href="_SingleInstance.htm">#SingleInstance</a> 命令要求终止脚本时, 它将会终止执行 (同时脚本将退出). 因此, OnExit 子程序应该设计成快速结束, 除非用户明白自己正在做什么.</p>
+<p>如果 OnExit <a href="../misc/Threads.htm">线程</a> 遇到诸如运行时错误的失败状况, 则脚本会终止. 这样避免了有问题的 OnExit 子程序使得脚本无法终止的情况出现.</p>
+<p>如果 OnExit 子程序是由指定退出码的 <a href="Exit.htm">Exit</a> 或 <a href="ExitApp.htm">ExitApp</a> 命令运行的, 则会忽略退出码. OnExit 子程序中可以使用 <a href="ExitApp.htm">ExitApp</a> 指定新的退出码.</p>
+<p>每当脚本退出尝试调用 OnExit 子程序时, 这时会使用设置 (例如 <a href="SendMode.htm">SendMode</a>) 的默认值开始. 这些默认值可以在 <a href="../Scripts.htm#auto">自动执行段</a> 改变.</p>
+<p>内置变量 <strong>A_ExitReason</strong> 为空，除非 OnExit 子程序正在运行或者在之前的退出中至少调用过一次。如果不是空的, 则它为下列单词的其中一个:</p>
+<table class="info">
+  <tr>
+    <td>logoff</td>
+    <td><a name="logoff"></a>用户正在注销.</td>
+  </tr>
+  <tr>
+    <td>Shutdown</td>
+    <td>正在关闭或重启系统, 例如使用 <a href="Shutdown.htm">Shutdown</a> 命令.</td>
+  </tr>
+  <tr>
+    <td>Close</td>
+    <td>脚本接收到 WM_CLOSE 或 WM_QUIT 消息, 出现致命错误或者正被以其他方式关闭. 尽管这些情况都是很少见的, 然而 WM_CLOSE 可能是由脚本主窗口使用 <a href="WinClose.htm">WinClose</a> 命令发出的. 要避免这种情况，请使用 <code>Send, !{F4}</code> 关闭主窗口。</td>
+  </tr>
+  <tr>
+    <td>错误</td>
+    <td>在没有热键且不是 <a href="_Persistent.htm">持续运行的</a> 脚本中发生了运行时错误. 运行时错误的一个例子是 <a href="Run.htm">Run/RunWait</a> 命令无法启动指定的程序或打开指定的文档.</td>
+  </tr>
+  <tr>
+    <td>Menu</td>
+    <td>用户在主窗口的菜单或标准托盘菜单中选择了退出.</td>
+  </tr>
+  <tr>
+    <td>Exit</td>
+    <td>使用了 <a href="Exit.htm">Exit</a> 或 <a href="ExitApp.htm">ExitApp</a> 命令 (包括 <a href="Menu.htm">自定义菜单项</a>).</td>
+  </tr>
+  <tr>
+    <td>Reload</td>
+    <td>正通过 <a href="Reload.htm">Reload</a> 命令或菜单项重载脚本.</td>
+  </tr>
+  <tr>
+    <td>Single</td>
+    <td>由于 <a href="_SingleInstance.htm">#SingleInstance</a> 的结果, 脚本正被它自身的新实例代替.</td>
+  </tr>
+</table>
+
+<h3>相关</h3>
+<p><a href="OnMessage.htm">OnMessage()</a>, <a href="RegisterCallback.htm">RegisterCallback()</a>, <a href="../misc/Clipboard.htm#OnClipboardChange">OnClipboardChange</a>, <a href="ExitApp.htm">ExitApp</a>, <a href="Shutdown.htm">Shutdown</a>, <a href="_Persistent.htm">#Persistent</a>, <a href="../misc/Threads.htm">线程</a>, <a href="Gosub.htm">Gosub</a>, <a href="Return.htm">Return</a>, <a href="Menu.htm">Menu</a></p>
+<h3>示例</h3>
+<pre class="NoIndent">#Persistent  <em>; 为了进行演示, 当用户选择 "No" 时让脚本持续运行.</em>
+OnExit, ExitSub
+return
+
+ExitSub:
+if A_ExitReason not in Logoff,Shutdown  <em>; 在这行语句中, 注意不要在逗号周围含有空格.</em>
+{
+    MsgBox, 4, , Are you sure you want to exit?
+    IfMsgBox, No
+        return
+}
+ExitApp  <em>; 含 OnExit 脚本终止自身的唯一方法是在 OnExit 子程序中使用 ExitApp.</em></pre>
+
+</body>
+</html>

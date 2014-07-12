@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <hdSearchTxt>请输入词语……</hdSearchTxt>
+    <hdSearchBtn>搜索</hdSearchBtn>
+    <sbContent>目录</sbContent>
+    <sbIndex>索引</sbIndex>
+    <ftLicense>许可：</ftLicense>
+    <ftExtra> | 维护人：amnesiac</ftExtra>
+</config>

@@ -1,0 +1,565 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>对象</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="static/theme.css" rel="stylesheet" type="text/css" />
+<script src="static/jquery.js" type="text/javascript"></script>
+<script src="static/tree.jquery.js" type="text/javascript"></script>
+<script src="static/content.js" type="text/javascript"></script>
+</head>
+<body>
+
+<h1>对象</h1>
+
+<p>AutoHotkey 中的 <i>对象</i> 是一种抽象数据结构, 它提供三个基本功能:</p>
+<ul>
+  <li>取值.</li>
+  <li>设置值.</li>
+  <li>调用方法 (即可以对目标对象进行某些操作的函数).</li>
+</ul>
+<p>对象 <i>引用</i> 是指向特殊对象的指针或 "句柄". 和字符串和数字一样, 对象引用可以存储到变量中, 传递给函数或从函数返回以及保存到对象中. 在从一个变量复制引用到另一个后, 例如 <code>x := y</code> , 两个变量都引用相同的对象.</p>
+
+<p><b>IsObject</b> 可以用来确定一个值是否为对象:</p>
+<pre>Result := IsObject(<i>expression</i>)</pre>
+
+<p>对象类型包括:</p>
+<ul>
+  <li><a href="objects/Object.htm"><b>对象</b></a> - 脚本化关联数组.</li>
+  <li><a href="objects/File.htm">文件</a> - 为文件输入/输出提供接口.</li>
+  <li><a href="objects/Func.htm">Func</a> - 函数.</li>
+  <li><a href="commands/ComObjCreate.htm">ComObject</a> - 打包 IDispatch 接口 (COM 或 "自动化" 对象).</li>
+</ul>
+
+<h2>目录</h2>
+<ul>
+  <li><a href="#Usage">基本用法</a> - <a href="#Usage_Simple_Arrays">简单数组</a>, <a href="#Usage_Associative_Arrays">关联数组</a>, <a href="#Usage_Objects">对象</a>, <a href="#Usage_Freeing_Objects">释放对象</a>, <a href="#Usage_Remarks">备注</a></li>
+  <li><a href="#Extended_Usage">扩展用法</a> - <a href="#Function_References">函数引用</a>, <a href="#Usage_Arrays_of_Arrays">数组嵌套</a>, <a href="#Usage_Arrays_of_Functions">函数数组</a></li>
+  <li><a href="#Custom_Objects">自定义对象</a> - <a href="#Custom_Prototypes">原型</a>, <a href="#Custom_Classes">类</a>, <a href="#Custom_NewDelete">创建和销毁</a>, <a href="#Meta_Functions">元函数</a></li>
+  <li><a href="#Default_Base_Object">默认基对象</a> - <a href="#Automatic_Var_Init">自动初始化变量</a>, <a href="#Pseudo_Properties">伪属性</a>, <a href="#Default__Warn">调试</a></li>
+  <li><a href="#Implementation">实现</a> - <a href="#Reference_Counting">引用计数</a>, <a href="#Implementation_Pointers">指向对象的指针</a></li>
+</ul>
+
+<a name="Syntax"></a><h2 id="Usage">基本用法</h2>
+
+<h3 id="Usage_Simple_Arrays">简单数组</h3>
+<p>创建数组:</p>
+<pre>Array := [Item1, Item2, ..., ItemN]
+Array := Array(Item1, Item2, ..., ItemN)</pre>
+<p>获取项:</p>
+<pre>Value := Array[Index]</pre>
+<p>对项进行赋值:</p>
+<pre>Array[Index] := Value</pre>
+<p>附加项:</p>
+<pre>Array.<a href="objects/Object.htm#Insert">Insert</a>(Value)</pre>
+<p>在指定的索引插入一项或多项:</p>
+<pre>Array.<a href="objects/Object.htm#Insert">Insert</a>(Index, Value, Value2, ...)</pre>
+<p>移除项:</p>
+<pre>RemovedValue := Array.<a href="objects/Object.htm#Remove">Remove</a>(Index)</pre>
+<p>如果数组不是空的, 那么 <a href="objects/Object.htm#MinMaxIndex">MinIndex</a> 和 <a href="objects/Object.htm#MinMaxIndex">MaxIndex</a> 分别返回数组中当前使用的最小和最大的索引. 由于最小的索引几乎总是 1, 所以 MaxIndex 经常返回项目数. 对数组内容进行依次循环可以通过索引或 For 循环实现. 例如：</p>
+<pre>array := ["one", "two", "three"]
+
+<em>; 从 1 到项目数进行重复:</em>
+<a href="commands/Loop.htm">Loop</a> % array.MaxIndex()
+    MsgBox % array[A_Index]
+
+<em>; 枚举数组内容:</em>
+<a href="commands/For.htm">For</a> index, value in array
+    MsgBox % "Item " index " is '" value "'"
+</pre>
+
+<a name="Arrays"></a><h3 id="Usage_Associative_Arrays">关联数组</h3>
+<p>关联数组是包含唯一键集合和值集合的对象, 其中每个键和一个值关联. 键可以为字符串, 整数或对象, 而值可以为任何类型. 关联数组可以用如下方法创建:</p>
+<pre>Array := {KeyA: ValueA, KeyB: ValueB, ..., KeyZ: ValueZ}
+Array := Object("KeyA", ValueA, "KeyB", ValueB, ..., "KeyZ", ValueZ)</pre>
+<p>使用 <code>{key:value}</code> 表示法时, 对于仅由单词字符组成的键, 其两边的引号标记是可选的. 可以使用任何表达式作为键, 但使用变量作为键时, 它必须包围在小括号中. 例如, <code>{(KeyVar): Value}</code> 和 <code>{GetKey(): Value}</code> 都是合法的.</p>
+<p>获取项:</p>
+<pre>Value := Array[Key]</pre>
+<p>对项进行赋值:</p>
+<pre>Array[Key] := Value</pre>
+<p>移除项:</p>
+<pre>RemovedValue := Array.<a href="objects/Object.htm#Remove">Remove</a>(Key)</pre>
+<p>枚举项:</p>
+<pre>array := {ten: 10, twenty: 20, thirty: 30}
+<a href="commands/For.htm">For</a> key, value in array
+    MsgBox %key% = %value%</pre>
+<p>关联数组可以是稀疏分布的 - 即 <code>{1:"a",1000:"b"}</code> 仅包含两个键值对, 而不是 1000.</p>
+<p id="same_thing">到现在, 您也许已经注意到关联数组使用与简单数组非常相似的语法. 事实上, 在 v1.x 中它们是相同的东西. 然而, 把 <code>[]</code> 视为简单线性数组有助于保持其作用清晰, 并且改善您脚本与 AutoHotkey 未来版本的兼容性, 未来版本中可能改变实现方式.</p>
+
+<h3 id="Usage_Objects">对象</h3>
+<p>获取属性:</p>
+<pre>Value := Object.Property</pre>
+<p>设置属性:</p>
+<pre>Object.Property := Value</pre>
+<p>调用方法:</p>
+<pre>ReturnValue := Object.Method(Parameters)</pre>
+<p>使用可推算的方法名调用方法:</p>
+<pre>ReturnValue := Object[MethodName](Parameters)</pre>
+<p>COM 对象和用户定义对象的一些属性可以接受参数:</p>
+<pre>Value := Object.Property[Parameters]
+Object.Property[Parameters] := Value</pre>
+<p><strong>相关:</strong> <a href="objects/Object.htm">对象</a>, <a href="objects/File.htm">文件对象</a>, <a href="objects/Func.htm">Func 对象</a>, <a href="commands/ComObjCreate.htm">COM 对象</a></p>
+<p><b>已知限制:</b></p>
+<ul><li>当前 <code><span class="dull">x</span>.y[z]<span class="dull">()</span></code> 会被视为 <code><span class="dull">x</span>["y", z]<span class="dull">()</span></code>, 这是不受支持的. 作为一种变通方法, <code><span class="red">(</span><span class="dull">x.y</span><span class="red">)</span>[z]()</code> 首先计算 <code>x.y</code>, 然后把结果作为方法调用的目标. 请注意 <code>x.y[z].()</code> 没有这个限制, 因为对它求值的方式和 <code>(x.y[z]).()</code> 一样.</li></ul>
+
+<h3 id="Usage_Freeing_Objects">释放对象</h3>
+<p>脚本不会显式的释放对象。当到对象的最后一个引用被释放时，会自动释放这个对象。当某个保存引用的变量被赋为其他值时，会自动释放它原来保存的引用。例如：</p>
+<pre>obj := {}  <em>; 创建对象。</em>
+obj := ""  <em>; 释放最后一个引用，因此释放对象。</em></pre>
+<p>同样地，当另一个对象的某个字段被赋为其他值或从对象中移除时，保存在这个字段中的引用会被释放。这同样适用于数组，因为它是真正的对象。</p>
+<pre>arr := [{}]  <em>; 创建包含对象的数组。</em>
+arr[1] := {}  <em>; 再创建一个对象，隐式释放第一个对象。</em>
+arr.Remove(1)  <em>; 移除并释放第二个对象。</em></pre>
+<p id="Circular_References">由于在释放一个对象时，到这个对象的所有引用都必须被释放，所以包含循环引用的对象无法被自动释放。例如，如果 <code>x.child</code> 引用 <code>y</code> 且 <code>y.parent</code> 引用了 <code>x</code>，则清除 <code>x</code> 和 <code>y</code> 是不够的，因为父对象仍然包含到这个子对象的引用，反之亦然。要避免此问题，请首先移除循环引用。</p>
+<pre>
+x := {}, y := {}             <em>; 创建两个对象。</em>
+x.child := y, y.parent := x  <em>; 创建循环引用。</em>
+
+y.parent := ""               <em>; 在释放对象前必须移除循环引用。</em>
+x := "", y := ""             <em>; 如果没有上一行，则此行无法释放对象。</em>
+</pre>
+<p>想了解更多高级用法和细节，请参阅<a href="#Reference_Counting">引用计数</a>。</p>
+
+<h3 id="Usage_Remarks">备注</h3>
+
+<h4>语法</h4>
+<p>对于所有类型的对象都支持数组语法 (方括号) 和对象语法 (句点).</p>
+<p>同时, 对象引用自身也可以用在表达式中:</p>
+<ul>
+  <li>当对象引用使用 <code>= == != &lt;&gt;</code> 中的一种比较运算符和其他值比较时, 仅在两个值都为指向相同对象的引用时它们才被视为相等的.</li>
+  <li>进行逻辑运算时对象总是被视为 <i>true</i>, 例如在 <code>if obj</code>, <code>!obj</code> 或 <code>obj ? x : y</code> 中.</li>
+  <li>使用 <code>&amp;</code> 取址运算符可以获取对象的地址. 它从此对象创建时到此对象的最后一个引用被 <a href="#Refs">释放</a> 期间唯一标识此对象.</li>
+</ul>
+<p>如果在不期望对象的地方使用对象, 那么它被视为空字符串. 例如, <code>MsgBox %object%</code> 显示空的 MsgBox 且 <code>object + 1</code> 产生空字符串. 由于这种特性可能会变化, 所以不要依赖它.</p>
+<p>当方法调用紧接着赋值运算符, 那么它等同于用参数来设置属性. 例如, 下面的方式是等同的:</p>
+<pre>obj.item(x) := y
+obj.item[x] := y</pre>
+<p id="cassign">还支持复合赋值例如 <code>x.y += 1</code> 和 <code>--arr[1]</code>.</p>
+
+<h4>键</h4>
+<p>对于哪种值可以在通过 <code>[]</code>, <code>{}</code> 或 <code>new</code> 运算符创建的对象中作为键使用的一些限制:</p>
+<ul>
+  <li>整数键使用本机有符号整数类型存储. AutoHotkey 32 位支持使用从 -2147483648 到 2147483647 范围内的整数作为键. AutoHotkey 支持 64 位整数, 但仅 AutoHotkey 64 位版本才支持完整范围的整数在对象中作为键使用.</li>
+  <li>由上面这点可知, 整数值的字符串格式不会被保留. 例如, <code>x[0x10]</code>, <code>x[16]</code> 和 <code>x[00016]</code> 都是等同的. 这点同样适用于不含小数点的数值型字符串.</li>
+  <li>用引号括起来的原义字符串在 v1.x 中被视为纯非数值型, 所以 <code>x[1]</code> 和 <code>x["1"]</code> 是 <i>不</i> 等同的. 同时, 如果原义字符串和另一个值串联在一起 (如同在 <code>"0x" x</code>), 结果被视为纯非数值型. 不过, 这不适用于变量, 所以 <code>x[1]</code> 和 <code>x[y:="1"]</code> 是等同的. 此问题将在 v2 中解决, 所以脚本应避免使用用引号括起来的原义字符串作为键.</li>
+  <li>不支持使用浮点数作为键 - 而是把它们转换成字符串. 在 v1.x 中, 浮点数文字保留它们原始的格式, 而纯浮点数 (例如 <code>0+1.0</code> 或 <code>Sqrt(y)</code> 的结果) 被强制转换成当前的 <a href="commands/SetFormat.htm">浮点格式</a>. 考虑到一致和清晰, 脚本中应避免使用浮点文字作为键.</li>
+  <li>字符串键 <a href="#Custom_Objects">"base"</a> 没有和 <a href="objects/Object.htm#Insert">Insert</a> 一起使用时具有特殊含义.</li>
+</ul>
+
+<h2 id="Extended_Usage">扩展用法</h2>
+<h3 id="Function_References">函数引用 <span class="ver">[v1.1.00+]</span></h3>
+<p>如果变量 <i>func</i> 包含一个函数名, 此函数可以通过两种方式进行调用: <code>%func%()</code> 或 <code>func.()</code>. 然而，由于前者每次都需要解析函数名，所以多次调用时效率低下。为了改善性能, 脚本可以获取到函数的引用并保存以供后面使用:</p>
+<pre>Func := Func("MyFunc")</pre>
+<p>通过引用调用函数时, 必须使用下面的语法:</p>
+<pre>RetVal := Func.(<i>Params</i>)</pre>
+<p>有关函数引用的附加属性的详细信息，请参阅 <a href="objects/Func.htm">Func 对象</a>。</p>
+<p><a name="ExitLimitation"></a><b>已知限制:</b></p>
+<ul><li>在 v1.1.07.00 已修复: 如果它所调用的函数或子程序中使用了 <a href="commands/Exit.htm">Exit</a>, 它表现的如同函数调用创建了新线程. 即它立即返回到函数的调用者而不会终止当前线程. 但是, 如果脚本不是 <a href="commands/_Persistent.htm">持续运行的</a>, 那么它仍会使脚本终止.</li></ul>
+
+<h3 id="Usage_Arrays_of_Arrays"><a name="JaggedArrays"></a>数组嵌套</h3>
+<p>在 AutoHotkey 中可以通过透明地把数组存储到其他数组中来支持“多维”数组。例如, 表格可以表示为行数组, 这里每个行自身是一个列数组. 此时,  <code>x</code> 行 <code>y</code> 列的内容可以用以下两种方法的其中一个进行设置:</p>
+<pre>table[x][y] := content  <em>; A</em>
+table[x, y] := content  <em>; B</em></pre>
+<p>如果 <code>table[x]</code> 不存在, <span class="Code"><em>A</em></span> 和 <span class="Code"><em>B</em></span> 在两个方面有区别:</p>
+<ul>
+  <li><span class="Code"><em>A</em></span> 失败而 <span class="Code"><em>B</em></span> 会自动创建一个对象并把它存储到 <code>table[x]</code> 中.</li>
+  <li>如果 <code>table</code> 的 <a href="#Custom_Objects">base</a> 定义了 <a href="#Meta_Functions">元函数</a>, 可以用如下方式调用它们:
+  <pre>table.base.__Get(table, x)<span class="dull">[y] := content</span>   <em>; A</em>
+table.base.__Set(table, x, y, content)     <em>; B</em></pre>
+  因此, <span class="Code"><em>B</em></span> 可以让对象为全面赋值定义定制的行为.</li>
+</ul>
+<p>类似 <code>table[a, b, c, d] := value</code> 这样的多维赋值按以下方式处理：</p>
+<ul>
+  <li>如果仅剩一个键，则执行赋值操作并返回。在其他情况时：</li>
+  <li>在对象中查找列表中的首个键。</li>
+  <li>如果找到非对象值，则失败。</li>
+  <li>如果没有找到对象，则创建一个并保存。</li>
+  <li>重复调用子对象，从顶部开始把剩下的键和值传递过去。</li>
+</ul>
+<p>这种行为仅适用于由脚本创建的对象, 而不适合特殊的对象类型例如 COM 对象或 COM 数组.</p>
+
+<h3 id="Usage_Arrays_of_Functions"><a name="FuncArrays"></a>函数数组</h3>
+<p>函数数组是包含函数名或引用的简单数组. 例如：</p>
+<pre>array := [Func("FirstFunc"), Func("SecondFunc")]
+
+<em>; 调用每个函数, 传递 "foo" 参数:</em>
+Loop 2
+    array[A_Index].("foo")
+
+<em>; 调用每个函数, 隐式地把数组自己作为参数传递:</em>
+Loop 2
+    array[A_Index]()
+
+FirstFunc(param) {
+    MsgBox % A_ThisFunc ": " (IsObject(param) ? "object" : param)
+}
+SecondFunc(param) {
+    MsgBox % A_ThisFunc ": " (IsObject(param) ? "object" : param)
+}</pre>
+<p>为了向后兼容，如果<code>array[A_Index]</code>含有函数名而非函数引用时，在第二种形式中<i>array</i>将不会作为参数被传递。但是, 如果 <code>array[A_Index]</code> <a href="#Custom_Objects">继承</a> 自 <code>array.base[A_Index]</code>, 那么 <i>array</i> 将作为参数被传递.</p>
+
+<h2 id="Custom_Objects">自定义对象</h2>
+<p>AutoHotkey 中的对象是基于原型而不是基于类. 即对象可以从其原型或 <code>base</code> 对象中继承属性和方法, 但不需要有预定义结构. 在任何时候, 属性和方法还可以添加到 (或从中移除) 一个对象或它所派生自的任何对象. 不过, AutoHotkey 通过把 <a href="#Custom_Classes">类定义</a> 转化为普通对象来模仿类. 有关更多复杂或特殊解决方法, 通过定义 <a href="#Meta_Functions"><i>元函数</i></a> 基对象可以覆盖标准行为.</p>
+<p>要从其他对象继承创建对象, 脚本可以赋值 <code>base</code> 或使用 <code>new</code> 关键字:</p>
+<pre>baseObject := {foo: "bar"}
+obj1 := Object(), obj1.base := baseObject
+obj2 := {base: baseObject}
+obj3 := new baseObject
+MsgBox % obj1.foo " " obj2.foo " " obj3.foo</pre>
+
+<h3 id="Custom_Prototypes">原型</h3>
+<p>原型或 <code>base</code> 对象和其他任何对象一样创建和操作. 例如, 带有单属性和单方法的普通对象可以这样创建:</p>
+<pre><em>; 创建对象.</em>
+thing := {}
+<em>; 存储值.</em>
+thing.foo := "bar"
+<em>; 通过存储函数引用创建方法.</em>
+thing.test := Func("thing_test")
+<em>; 调用方法.</em>
+thing.test()
+
+thing_test(this) {
+   MsgBox % this.foo
+}</pre>
+<p>调用 <code>thing.test()</code> 时, <i>thing</i> 会自动被插入到参数列表的开始处. 然而, 为了能够向后兼容, 通过名称 (而不是通过引用) 把函数直接保存到对象中 (而不是继承自基对象) 时这种情况不会发生. 按照约定, 通过结合对象 "类型" 和方法名来命名函数.</p>
+<p>如果另一个对象继承自某个对象，那么这个对象被称为<i>原型</i>或<i>基</i>：</p>
+<pre>other := {}
+other.base := thing
+other.test()</pre>
+<p>此时, <i>other</i> 从 <i>thing</i> 继承了 <i>foo</i> 和 <i>test</i>. 这种继承是动态的, 所以如果 <code>thing.foo</code> 被改变了, 这改变也会由 <code>other.foo</code> 表现出来. 如果脚本赋值给 <code>other.foo</code>, 值存储到 <i>other</i> 中并且之后对 <code>thing.foo</code> 任何改变都不会影响 <code>other.foo</code>. 调用 <code>other.test()</code> 时, 它 <i>这里的</i> 参数包含到 <i>other</i> 而不是 <i>thing</i> 的引用.
+</p>
+
+<h3 id="Custom_Classes">类 <span class="ver">[v1.1.00+]</span></h3>
+<p>为了简便，可以使用“class”关键字创建基对象。基类定义看起来类似这样：</p>
+<pre>class ClassName extends BaseClassName
+{
+    InstanceVar := Expression
+    static ClassVar := Expression
+
+    class NestedClass
+    {
+        ...
+    }
+
+    Method()
+    {
+        ...
+    }
+}
+</pre>
+<p>在加载脚本时, 这里会创建对象并将其存储到全局 (而在 v1.1.05+, <a href="Functions.htm#SuperGlobal">超级全局</a>) 变量 <i>ClassName</i>. 在 v1.1.05 之前, 要在函数中引用这个类, 如果函数不处于 <a href="Functions.htm#AssumeGlobal">假设全局模式</a>, 那么需要进行声明, 例如 <code>global ClassName</code>. 如果存在 <code>extends BaseClassName</code>，那么 <i>BaseClassName</i> 必须为另一个类的完整名称（从 v1.1.11 开始，对于早期的版本它们所定义的无关紧要）。每个类的完整名称存储在 <code><i>object</i>.__Class</code>.</p>
+<p>类定义可以包含变量声明, 方法定义和内嵌的类定义.</p>
+<pre id="Custom_Classes_var">
+    InstanceVar := Expression
+</pre>
+<p><b>实例变量</b> 声明 <span class="ver">[v1.1.01+]</span> 在每次使用 <a href="#Custom_NewDelete">new</a> 关键字创建类的新实例时都进行求值. 在调用 <a href="#Custom_NewDelete">__New()</a> 方法之前对所有这样的声明进行求值，包括在基类中定义的那些。<i>表达式</i> 可以通过 <code>this</code> 访问其他实例变量和方法, 但其他所有的变量引用都假定为全局的. 要访问实例变量, 总是要指定目标对象; 例如, <code><b>this</b>.InstanceVar</code>.</p>
+<pre id="Custom_Classes_staticvar">
+    static ClassVar := Expression
+</pre>
+<p><b>类变量</b> 声明 <span class="ver">[v1.1.00.01+]</span> 仅在 <a href="Scripts.htm#auto">自动执行段</a> 之前根据它们在脚本中出现的顺序被求值一次. 每个声明保存值到类对象中. 如同类对象包含的任何值或方法, 这个值可以被派生对象继承. <i>表达式</i> 中的任何变量引用都假定为全局的. 要访问类变量, 总是要指定类或或派生对象; 例如, <code><b>ClassName</b>.ClassVar</code>.</p>
+<pre id="Custom_Classes_class">
+    class NestedClass
+    {
+        ...
+    }
+</pre>
+<p><b>嵌套类</b> 定义允许类对象存储到另一个类对象中而不作为单独的全局变量. 在上面的例子中, <code>class NestedClass</code> 创建了一个对象并把它保存到 <code>ClassName.NestedClass</code>. 因此, <i>NestedClass</i> 可以被派生自 <i>ClassName</i> 的任何类或对象继承.</p>
+<pre id="Custom_Classes_method">
+    Method()
+    {
+        ...
+    }
+</pre>
+<p><b>方法</b> 定义看起来和函数定义相同. 每个方法都有一个名称为 <code>this</code> 的隐藏参数, 它实际上包含了指向继承自此类的对象的引用. 不过, 它也可以包含指向此类自身或派生类的引用, 取决于如何调用这个方法. 方法被 <a href="#Function_References">通过引用</a> 存储到类对象中.</p>
+<p id="Custom_Classes_base">除了隐藏参数 <code>this</code>, 方法定义中还可以使用伪关键字 <code>base</code> 以调用包含了此方法定义的类的基类. 例如, 在上面的方法中 <code>base.Method()</code> 相当于 <code>BaseClassName.Method.(this)</code>. 注意它与<code>this.base.base.Method()</code>在其他两方面有区别：</p>
+<ul>
+  <li>它总是调用当前类的基, 即使 <code>this</code> 继承自当前类的 <i>子类</i>.</li>
+  <li>它自动传递 <code>this</code>, 而不是 <code>this.base.base</code>.</li>
+</ul>
+<p><code>base</code> 仅在后面跟着点 <code>.</code> 或方括号 <code>[]</code> 时才有特殊含义, 所以像 <code>obj := base, obj.Method()</code> 这样的代码将不起作用. 通过把<i>base</i>赋为非空值可以禁用它的特殊行为，但是不建议这样做。因为变量 <i>base</i> 必须为空, 所以如果脚本中不含有 <a href="commands/_NoEnv.htm">#NoEnv</a> 指令那么性能可能会降低.</p>
+
+<h3 id="Custom_NewDelete">创建和销毁</h3>
+<p>每当使用 <code>new</code> 关键字 <span class="ver">[需要 v1.1.00+]</span> 创建派生对象时, 那么调用由其基对象定义的 <code>__New</code> 方法. 此方法可以接受参数, 初始化对象并通过返回值覆盖 <code>new</code> 运算符的结果. 销毁对象时, 则调用 <code>__Delete</code>. 例如：</p>
+<pre>m1 := new GMem(0, 20)
+m2 := {base: GMem}.__New(0, 30)
+
+class GMem
+{
+    __New(aFlags, aSize)
+    {
+        this.ptr := DllCall("GlobalAlloc", "uint", aFlags, "ptr", aSize, "ptr")
+        if !this.ptr
+            return ""
+        MsgBox % "New GMem of " aSize " bytes at address " this.ptr "."
+        return this  <em>; 使用“new”运算符时可以省略此行。</em>
+    }
+
+    __Delete()
+    {
+        MsgBox % "Delete GMem at address " this.ptr "."
+        DllCall("GlobalFree", "ptr", this.ptr)
+    }
+}</pre>
+
+<h3 id="Meta_Functions">元函数</h3>
+<pre class="Syntax">
+<strong>方法语法：</strong>
+class <i>ClassName</i> {
+    __Get([Key, Key2, ...])
+    __Set([Key, Key2, ...], Value)
+    __Call(Name [, Params...])
+}
+
+<strong>函数语法：</strong>
+<i>MyGet</i>(this [, Key, Key2, ...])
+<i>MySet</i>(this [, Key, Key2, ...], Value)
+<i>MyCall</i>(this, Name [, Params...])
+
+<i>ClassName</i> := { __Get: Func("<i>MyGet</i>"), __Set: Func("<i>MySet</i>"), __Call: Func("<i>MyCall</i>") }
+</pre>
+<p>元函数是由对象的基定义的方法, 这里可以明确定义在接受未知键的请求时对象应如何处理. 例如, 如果 <code>obj.key</code> 尚未赋值, 那么它会调用 <i>__Get</i> 元函数. 同样地, <code>obj.key := value</code> 调用 <i>__Set</i> 而 <code>obj.key()</code> 调用 <i>__Call</i>.</p>
+<p>在这些情况中, 按如下方式调用基对象:</p>
+<ul>
+  <li>如果此基对象定义了相应的元函数, 那么调用它. 如果元函数明确 <code>return</code>, 那么把返回值作为运算的结果且不进行进一步的处理.
+    <p><i>Set</i>：如果运算成功，<i>__Set</i>应该返回这个字段的新值，这可能与原始的r值不同。这样允许赋值链, 例如 <code>a.x := b.y := z</code>. 如果赋值失败那么应该返回空字符串, 这样脚本可以检测到发生了错误.</p></li>
+  <li>如果是 <i>get</i> 或 <i>call</i> 运算, 那么在基对象自身的字段中搜索匹配的键.
+    <p><i>Get</i>: 如果找到, 那么返回这个字段的值.<br>
+    <i>Call</i>: 如果找到, 那么 (通过名称或 <a href="#Function_References">引用</a>) 调用保存在这个字段中的函数, 并把原始目标对象作为 <i>this</i> 参数传递过去.</p></li>
+  <li>递归调用其自己的基对象. 这样就可以从其基对象, 基对象的基等 "继承" 对象的属性.</li>
+</ul>
+<p>当 (且仅当) 没有基对象处理运算时, 处理照常进行:</p>
+<ul>
+  <li><i>Get</i>: 如果此键为 "base", 那么获取对象的基.</li>
+  <li><i>Set</i>: 如果此键为 "base", 那么设置对象的基; 非对象的值会移除现有的基.
+  <p style="margin-left:2.6em;margin-top:0.25em;">否则创建一个新键值对并存储到对象中.</p></li>
+  <li><i>Call</i>: 调用 <a href="objects/Object.htm">内置方法</a>.</li>
+</ul>
+<p><b>已知限制:</b></p>
+<ul><li>使用不带值的 <code>return</code> 等同于 <code>return ""</code>. 这种情况可能在未来的版本中改变, 所以可以使用 <code>return</code> 来从元函数 "退出" 而不覆盖默认行为.</li>
+<li>请参阅 <a href="#ExitLimitation">Exit 限制</a>。</li></ul>
+
+<h4 id="Dynamic_Properties">动态属性</h4>
+<p><i>__Get</i> 和 <i>__Set</i> 可以用来实现在某些情况下可以计算或限制的值的属性. 例如, 可以用来实现含 R, G, B 和 RGB 属性的 "Color" 对象, 这里只有 RGB 值是实际存储的:</p>
+<pre>red  := new Color(0xff0000), red.R -= 5
+cyan := new Color(0x00ffff)
+
+MsgBox % "red: " red.R "," red.G "," red.B " = " red.RGB
+MsgBox % "cyan: " cyan.R "," cyan.G "," cyan.B " = " cyan.RGB
+
+class Color
+{
+    __New(aRGB)
+    {
+        this.RGB := aRGB
+    }
+
+    __Get(aName)
+    {
+        if (aName = "R")
+            return (this.RGB &gt;&gt; 16) &amp; 255
+        if (aName = "G")
+            return (this.RGB &gt;&gt; 8) &amp; 255
+        if (aName = "B")
+            return this.RGB &amp; 255
+    }
+
+    __Set(aName, aValue)
+    {
+        if aName in R,G,B
+        {
+            aValue &amp;= 255
+
+            if      (aName = "R")
+                this.RGB := (aValue &lt;&lt; 16) | (this.RGB &amp; ~0xff0000)
+            else if (aName = "G")
+                this.RGB := (aValue &lt;&lt; 8)  | (this.RGB &amp; ~0x00ff00)
+            else  <em>; (aName = "B")</em>
+                this.RGB :=  aValue        | (this.RGB &amp; ~0x0000ff)
+
+            <em>; 必须使用 'Return' 表示不应该创建一个新键值对.
+            ; 这里也定义了在 'x := clr[name] := val' 中将要存储到 'x' 中的内容:</em>
+            return aValue
+        }
+    }
+}</pre>
+
+<h4 id="Objects_as_Functions">对象函数化</h4>
+<p>生成一个调用（例如<code>obj.func(param)</code>）时，<i>obj.func</i>可以包含函数名或对象。如果<i>obj.func</i>包含对象，则可以用<i>obj</i>代替方法名调用此对象，像在<code>(obj.func)[obj]()</code>那样。在大多数情况下<code>obj.func[obj]</code>不存在，作为替代而调用<i>obj.func</i>的__Call <a href="#Meta_Functions">元函数</a>。这可以用来以一种抽象的方式改变函数调用的行为, 如以下示例所示:</p>
+<pre><em>; 为函数数组创建原型.</em>
+FuncArrayType := {__Call: "FuncType_Call"}
+<em>; 创建函数数组.</em>
+funcArray := {1: "One", 2: "Two", base: FuncArrayType}
+<em>; 把此数组作为方法创建对象.</em>
+obj := {func: funcArray}
+<em>; 调用方法.</em>
+obj.func("foo", "bar")
+
+FuncType_Call(func, obj, params*)
+{
+    <em>; 调用函数列表.</em>
+    Loop % ObjMaxIndex(func)
+        func[A_Index](params*)
+}
+
+One(param1, param2) {
+    ListVars
+    Pause
+}
+Two(param1, param2) {
+    ListVars
+    Pause
+}</pre>
+<p>把这种技术和类定义组合在一起为定义类似于前面部分的动态属性提供了便利的方法:</p>
+<pre>blue := new Color(0x0000ff)
+MsgBox % blue.R "," blue.G "," blue.B
+
+class Properties
+{
+    __Call(aTarget, aName, aParams*)
+    {
+        <em>; 如果 this 属性对象包含此半属性的定义, 那么调用它.
+        ; 小心别使用 this.HasKey(aName), 因为这样会递归进 __Call.</em>
+        if IsObject(aTarget) &amp;&amp; ObjHasKey(this, aName)
+            return this[aName].(aTarget, aParams*)
+    }
+}
+
+class Color
+{
+    __New(aRGB)
+    {
+        this.RGB := aRGB
+    }
+
+    class __Get extends Properties
+    {
+        R() {
+            return (this.RGB &gt;&gt; 16) &amp; 255
+        }
+        G() {
+            return (this.RGB &gt;&gt; 8) &amp; 255
+        }
+        B() {
+            return this.RGB &amp; 255
+        }
+    }
+
+    <em>;...</em>
+}</pre>
+
+<h4 id="Subclassing_aoa">子类化数组嵌套</h4>
+<p>在 <a href="#Usage_Arrays_of_Arrays">多参数赋值</a> 例如 <code>table[x, y] := content</code> 会隐式地创建一个新对象, 这个新对象一般不含基, 因此没有自定义方法或特殊行为. <code>__Set</code> 可以用来初始化这样的对象, 如下所示.</p>
+<pre>x := {base: {addr: Func("x_Addr"), __Set: Func("x_Setter")}}
+
+<em>; 赋值, 隐式调用 x_Setter 来创建子对象.</em>
+x[1,2,3] := "..."
+
+<em>; 获取值并调用示例方法.</em>
+MsgBox % x[1,2,3] "`n" x.addr() "`n" x[1].addr() "`n" x[1,2].addr()
+
+x_Setter(x, p1, p2, p3) {
+    x[p1] := new x.base
+}
+
+x_Addr(x) {
+    return &amp;x
+}</pre>
+<p>由于 <code>x_Setter</code> 含有四个必需参数, 所以只有在有两个或更多键参数时才会调用它. 当上面的赋值出现时, 会发生下面的情况:</p>
+<ul>
+  <li><code>x[1]</code> 不存在, 所以调用 <code>x_Setter(x,1,2,3)</code> (由于参数过少所以 <code>"..."</code> 不会被传递).
+  <ul>
+    <li><code>x[1]</code> 被赋值为与 <code>x</code> 含有相同基的新对象.</li>
+    <li>不返回任何值 – 赋值继续.</li>
+  </ul></li>
+  <li><code>x[1][2]</code> 不存在, 所以调用 <code>x_Setter(x[1],2,3,"...")</code>.
+  <ul>
+    <li><code>x[1][2]</code> 被赋值为与 <code>x[1]</code> 含有相同基的新对象.</li>
+    <li>不返回任何值 – 赋值继续.</li>
+  </ul></li>
+  <li><code>x[1][2][3]</code> 不存在, 但由于 <code>x_Setter</code> 需要四个参数而这里只有三个 (<code>x[1][2], 3, "..."</code>), 所以不会调用它且赋值正常完成.</li>
+</ul>
+
+<h2 id="Default_Base_Object">默认基对象</h2>
+<p>当非对象值用于对象语法时, 则调用 <i>默认基对象</i>. 这可以用于调试或为字符串, 数字和/或变量定义全局的类对象行为. 默认基可以使用带任何非对象值的 <code>.base</code> 进行访问; 例如, <code>"".base</code>. 尽管默认基无法像 <code>"".base := Object()</code> 这样进行 <i>set</i>, 不过它可以有自己的基如同在 <code>"".base.base := Object()</code> 中那样.</p>
+
+<h4 id="Automatic_Var_Init">自动初始化变量</h4>
+<p>当使用空变量作为 <i>set</i> 运算的目标时, 它直接被传递给 __Set 元函数, 这样它就有机会插入新对象到变量中. 为简洁起见, 此示例不支持多个参数; 如果需要, 可以使用 <a href="Functions.htm#Variadic">可变参数函数</a> 实现.</p>
+<pre>"".base.__Set := Func("Default_Set_AutomaticVarInit")
+
+empty_var.foo := "bar"
+MsgBox % empty_var.foo
+
+Default_Set_AutomaticVarInit(ByRef var, key, value)
+{
+    if (var = "")
+        var := Object(key, value)
+}</pre>
+
+<h4 id="Pseudo_Properties">伪属性</h4>
+<p>对象 "语法糖" 可以适用于字符串和数字.</p>
+<pre>"".base.__Get := Func("Default_Get_PseudoProperty")
+"".base.is    := Func("Default_is")
+
+MsgBox % A_AhkPath.length " == " StrLen(A_AhkPath)
+MsgBox % A_AhkPath.length.is("integer")
+
+Default_Get_PseudoProperty(nonobj, key)
+{
+    if (key = "length")
+        return StrLen(nonobj)
+}
+
+Default_is(nonobj, type)
+{
+    if nonobj is %type%
+        return true
+    return false
+}</pre>
+<p>注意也可以使用内置函数, 不过这时不能省略大括号:</p>
+<pre>"".base.length := Func("StrLen")
+MsgBox % A_AhkPath.length() " == " StrLen(A_AhkPath)</pre>
+
+<h4 id="Default__Warn">调试</h4>
+<p>如果不希望把一个值视为对象, 每当调用非对象值可以显示警告:</p>
+<pre>"".base.__Get := "".base.__Set := "".base.__Call := Func("Default__Warn")
+
+empty_var.foo := "bar"
+x := (1 + 1).is("integer")
+
+Default__Warn(nonobj, p1="", p2="", p3="", p4="")
+{
+    ListLines
+    MsgBox A non-object value was improperly invoked.`n`nSpecifically: %nonobj%
+}</pre>
+
+<h2 id="Implementation">实现</h2>
+<a name="Refs"></a><h3 id="Reference_Counting">引用计数</h3>
+<p>当脚本不再引用对象时, AutoHotkey 使用基本引用计数结构来自动释放对象使用的资源. 脚本作者不应该明确调用此结构, 除非在直接处理指向对象的未托管指针时. 想了解更多细节，请参阅 <a href="commands/ObjAddRef.htm">ObjAddRef</a>。</p>
+<pre><em>; 增加对象的引用数以 "使其保持活跃":</em>
+<a href="commands/ObjAddRef.htm">ObjAddRef</a>(address)
+...
+<em>; 减少对象的引用数, 这样可以释放它:</em>
+ObjRelease(address)
+</pre>
+<p>然而, 最初通过 <code><a href="#AddressCast">Object(obj)</a></code> 获取地址时不需要使用 ObjAddRef.</p>
+<p>通常每个新的对象地址副本都应被视为对象引用, 除非脚本会负责在适当时调用 ObjAddRef 和/或 ObjRelease. 例如, 每当通过类似 <code>x := address</code> 这样的方式复制地址时, 应调用 ObjAddRef 来增加引用数. 同样地, 每当含对象地址特殊副本的脚本结束时, 它应该调用 ObjRelease. 这样确保了当指向对象的最后一个引用失去时对象被释放 - 而不是在这之前.</p>
+<p>要在指向对象的最后一个引用被释放时运行代码, 实现 <a href="#Custom_NewDelete">__Delete</a> 元函数.</p>
+<p><b>已知限制:</b></p>
+<ul>
+  <li>在释放对象前必须断开循环引用. 想了解细节和查看示例，请参阅<a href="#Circular_References">释放对象</a>。</li>
+  <li>尽管在程序退出时静态和全局变量中的引用会自动释放, 但在非静态局部变量或表达式求值堆栈中的引用则不会. 只有让函数或表达式正常结束这些引用才会释放.</li>
+</ul>
+<p>尽管当程序退出时操作系统会回收对象所使用的内存, 但只有在指向对象的所有引用都释放时才会调用 <a href="#Custom_NewDelete">__Delete</a>. 这样释放了不会由操作系统自动回收的其他资源, 例如临时文件, 所以这很重要.</p>
+
+<a name="AddressCast"></a><h3 id="Implementation_Pointers">指向对象的指针</h3>
+<p>在一些罕见的情况中, 可能需要通过 DllCall 传递对象到外部代码或把它存储到二进制数据结构以供以后取回. 通过 <code>x := &amp;obj</code> 可以获取对象的地址; 然而, 如果变量 <i>obj</i> 被清除, 此对象可能被过早释放. 为确保不发生这样的情况, 按上面演示那样使用 ObjAddRef 或按下面演示那样使用 <code>Object()</code>:</p>
+<pre>address := Object(object)</pre>
+<p>此外, 还可以使用此函数把地址转换回引用:</p>
+<pre>object := Object(address)</pre>
+<p>在这两种情况中, 对象的 <a href="#Refs">引用数</a> 都会自动增加, 这样对象不会被过早释放.</p>
+<p>注意此函数同样适用于不是由 <a href="#Arrays">Object()</a> 创建的对象, 例如 <a href="commands/ComObjCreate.htm">COM 对象包装器</a> 或 <a href="objects/File.htm">文件对象</a>.</p>
+
+</body>
+</html>
