@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>ComObjType()</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="text/html; charset=GBK">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/jquery.js" type="text/javascript"></script>
@@ -14,83 +14,83 @@
 
 <h1>ComObjType() <span class="ver">[v1.0.91+]</span></h1>
 
-<p>ä»Ž COM å¯¹è±¡èŽ·å–ç±»åž‹ä¿¡æ¯ã€‚</p>
+<p>´Ó COM ¶ÔÏó»ñÈ¡ÀàÐÍÐÅÏ¢¡£</p>
 
 <pre class="Syntax">VarType := ComObjType(ComObject)
 Name    := ComObjType(ComObject, "Name")
 IID     := ComObjType(ComObject, "IID")</pre>
 
-<h3>å‚æ•°</h3>
+<h3>²ÎÊý</h3>
 <dl>
 
   <dt>ComObject</dt>
-  <dd><p>åŒ…å« COM å¯¹è±¡æˆ–ç±»åž‹åŒ–å€¼çš„åŒ…è£…å™¨å¯¹è±¡.</p></dd>
+  <dd><p>°üº¬ COM ¶ÔÏó»òÀàÐÍ»¯ÖµµÄ°ü×°Æ÷¶ÔÏó.</p></dd>
 
   <dt>VarType</dt>
-  <dd><p>è¡¨ç¤ºå€¼ç±»åž‹çš„æ•´æ•°. è¯·å‚é˜…ä¸‹é¢.</p></dd>
+  <dd><p>±íÊ¾ÖµÀàÐÍµÄÕûÊý. Çë²ÎÔÄÏÂÃæ.</p></dd>
 
   <dt>Name</dt>
-  <dd><p>æŽ¥å£ç±»åž‹å.</p></dd>
+  <dd><p>½Ó¿ÚÀàÐÍÃû.</p></dd>
 
   <dt>IID</dt>
-  <dd><p>è¡¨ç¤ºæŽ¥å£ç±»åž‹çš„å…¨å±€å”¯ä¸€æ ‡è¯†ç¬¦ (GUID).</p></dd>
+  <dd><p>±íÊ¾½Ó¿ÚÀàÐÍµÄÈ«¾ÖÎ¨Ò»±êÊ¶·û (GUID).</p></dd>
 
 </dl>
 
-<h3>è¿”å›žå€¼</h3>
-<p>å¦‚æžœçœç•¥ç¬¬äºŒä¸ªå‚æ•°, åˆ™è¿”å›žåŒ…è£…å™¨å¯¹è±¡åŒ…å«çš„å€¼çš„å˜é‡ç±»åž‹.</p>
-<p>å¦‚æžœç¬¬äºŒä¸ªå‚æ•°ä¸º "Name" æˆ– "IID" å¹¶ä¸”åŒ…è£…å™¨å¯¹è±¡åŒ…å« COM å¯¹è±¡ (å˜é‡ç±»åž‹ VT_DISPATCH), åˆ™è¿”å›ž COM å¯¹è±¡çš„ç±»åž‹åæˆ–å…¶ä¸»æŽ¥å£çš„æ ‡è¯†ç¬¦.</p>
-<p>å¦‚æžœå‚æ•°æ— æ•ˆæˆ–å‘ç”Ÿäº†é”™è¯¯, åˆ™è¿”å›žç©ºå­—ç¬¦ä¸².</p>
+<h3>·µ»ØÖµ</h3>
+<p>Èç¹ûÊ¡ÂÔµÚ¶þ¸ö²ÎÊý, Ôò·µ»Ø°ü×°Æ÷¶ÔÏó°üº¬µÄÖµµÄ±äÁ¿ÀàÐÍ.</p>
+<p>Èç¹ûµÚ¶þ¸ö²ÎÊýÎª "Name" »ò "IID" ²¢ÇÒ°ü×°Æ÷¶ÔÏó°üº¬ COM ¶ÔÏó (±äÁ¿ÀàÐÍ VT_DISPATCH), Ôò·µ»Ø COM ¶ÔÏóµÄÀàÐÍÃû»òÆäÖ÷½Ó¿ÚµÄ±êÊ¶·û.</p>
+<p>Èç¹û²ÎÊýÎÞÐ§»ò·¢ÉúÁË´íÎó, Ôò·µ»Ø¿Õ×Ö·û´®.</p>
 
-<h3 id="vt">å˜é‡ç±»åž‹çš„å¸¸é‡å€¼</h3>
+<h3 id="vt">±äÁ¿ÀàÐÍµÄ³£Á¿Öµ</h3>
 <pre>
-VT_EMPTY     =      0  <em>; æ²¡æœ‰å€¼</em>
-VT_NULL      =      1  <em>; SQL é£Žæ ¼çš„ç©ºå€¼</em>
-VT_I2        =      2  <em>; 16 ä½æœ‰ç¬¦å·æ•´æ•°</em>
-VT_I4        =      3  <em>; 32 ä½æœ‰ç¬¦å·æ•´æ•°</em>
-VT_R4        =      4  <em>; 32 ä½æµ®ç‚¹æ•°</em>
-VT_R8        =      5  <em>; 64 ä½æµ®ç‚¹æ•°</em>
-VT_CY        =      6  <em>; é€šç”¨</em>
-VT_DATE      =      7  <em>; æ—¥æœŸ</em>
-VT_BSTR      =      8  <em>; COM å­—ç¬¦ä¸²ï¼ˆå¸¦é•¿åº¦å‰ç¼€çš„ Unicode å­—ç¬¦ä¸²ï¼‰</em>
-VT_DISPATCH  =      9  <em>; COM å¯¹è±¡</em>
-VT_ERROR     =    0xA  <em>; Error ç ï¼ˆ32 ä½æ•´æ•°ï¼‰</em>
-VT_BOOL      =    0xB  <em>; å¸ƒå°”å€¼çœŸï¼ˆ-1ï¼‰æˆ–å‡ï¼ˆ0ï¼‰</em>
-VT_VARIANT   =    0xC  <em>; <a href="http://msdn.microsoft.com/en-us/library/ms221627.aspx">VARIANT</a>ï¼ˆå¿…é¡»ä¸Ž VT_ARRAY æˆ– VT_BYREF ç»„åˆä½¿ç”¨ï¼‰</em>
-VT_UNKNOWN   =    0xD  <em>; IUnknown æŽ¥å£æŒ‡é’ˆ</em>
-VT_DECIMAL   =    0xE  <em>; ï¼ˆä¸æ”¯æŒï¼‰</em>
-VT_I1        =   0x10  <em>; 8 ä½æœ‰ç¬¦å·æ•´æ•°</em>
-VT_UI1       =   0x11  <em>; 8 ä½æ— ç¬¦å·æ•´æ•°</em>
-VT_UI2       =   0x12  <em>; 16 ä½æ— ç¬¦å·æ•´æ•°</em>
-VT_UI4       =   0x13  <em>; 32 ä½æ— ç¬¦å·æ•´æ•°</em>
-VT_I8        =   0x14  <em>; 64 ä½æœ‰ç¬¦å·æ•´æ•°</em>
-VT_UI8       =   0x15  <em>; 64 ä½æ— ç¬¦å·æ•´æ•°</em>
-VT_INT       =   0x16  <em>; æœ‰ç¬¦å·æœºå™¨æ•´æ•°</em>
-VT_UINT      =   0x17  <em>; æ— ç¬¦å·æœºå™¨æ•´æ•°</em>
-VT_RECORD    =   0x24  <em>; ç”¨æˆ·å®šä¹‰ç±»åž‹</em>
+VT_EMPTY     =      0  <em>; Ã»ÓÐÖµ</em>
+VT_NULL      =      1  <em>; SQL ·ç¸ñµÄ¿ÕÖµ</em>
+VT_I2        =      2  <em>; 16 Î»ÓÐ·ûºÅÕûÊý</em>
+VT_I4        =      3  <em>; 32 Î»ÓÐ·ûºÅÕûÊý</em>
+VT_R4        =      4  <em>; 32 Î»¸¡µãÊý</em>
+VT_R8        =      5  <em>; 64 Î»¸¡µãÊý</em>
+VT_CY        =      6  <em>; Í¨ÓÃ</em>
+VT_DATE      =      7  <em>; ÈÕÆÚ</em>
+VT_BSTR      =      8  <em>; COM ×Ö·û´®£¨´ø³¤¶ÈÇ°×ºµÄ Unicode ×Ö·û´®£©</em>
+VT_DISPATCH  =      9  <em>; COM ¶ÔÏó</em>
+VT_ERROR     =    0xA  <em>; Error Âë£¨32 Î»ÕûÊý£©</em>
+VT_BOOL      =    0xB  <em>; ²¼¶ûÖµÕæ£¨-1£©»ò¼Ù£¨0£©</em>
+VT_VARIANT   =    0xC  <em>; <a href="http://msdn.microsoft.com/en-us/library/ms221627.aspx">VARIANT</a>£¨±ØÐëÓë VT_ARRAY »ò VT_BYREF ×éºÏÊ¹ÓÃ£©</em>
+VT_UNKNOWN   =    0xD  <em>; IUnknown ½Ó¿ÚÖ¸Õë</em>
+VT_DECIMAL   =    0xE  <em>; £¨²»Ö§³Ö£©</em>
+VT_I1        =   0x10  <em>; 8 Î»ÓÐ·ûºÅÕûÊý</em>
+VT_UI1       =   0x11  <em>; 8 Î»ÎÞ·ûºÅÕûÊý</em>
+VT_UI2       =   0x12  <em>; 16 Î»ÎÞ·ûºÅÕûÊý</em>
+VT_UI4       =   0x13  <em>; 32 Î»ÎÞ·ûºÅÕûÊý</em>
+VT_I8        =   0x14  <em>; 64 Î»ÓÐ·ûºÅÕûÊý</em>
+VT_UI8       =   0x15  <em>; 64 Î»ÎÞ·ûºÅÕûÊý</em>
+VT_INT       =   0x16  <em>; ÓÐ·ûºÅ»úÆ÷ÕûÊý</em>
+VT_UINT      =   0x17  <em>; ÎÞ·ûºÅ»úÆ÷ÕûÊý</em>
+VT_RECORD    =   0x24  <em>; ÓÃ»§¶¨ÒåÀàÐÍ</em>
 VT_ARRAY     = 0x2000  <em>; <a href="http://msdn.microsoft.com/en-us/library/ms221482.aspx">SAFEARRAY</a></em>
-VT_BYREF     = 0x4000  <em>; åˆ°å¦ä¸€ç§å€¼çš„æŒ‡é’ˆ</em>
+VT_BYREF     = 0x4000  <em>; µ½ÁíÒ»ÖÖÖµµÄÖ¸Õë</em>
 <em>/*
- VT_ARRAY å’Œ VT_BYREF ä¸Žå¦ä¸€ä¸ªå€¼ç»„åˆåœ¨ä¸€èµ· (ä½¿ç”¨æŒ‰ä½ "æˆ–")
- æ¥æŒ‡å®šå‡†ç¡®çš„ç±»åž‹. ä¾‹å¦‚, 0x2003 è¡¨ç¤º 32 ä½æœ‰ç¬¦å·æ•´æ•°çš„ <a href="http://msdn.microsoft.com/en-us/library/ms221482.aspx">SAFEARRAY</a>
- è€Œ 0x400C è¡¨ç¤ºåˆ° <a href="http://msdn.microsoft.com/en-us/library/ms221627.aspx">VARIANT</a> çš„æŒ‡é’ˆ.
+ VT_ARRAY ºÍ VT_BYREF ÓëÁíÒ»¸öÖµ×éºÏÔÚÒ»Æð (Ê¹ÓÃ°´Î» "»ò")
+ À´Ö¸¶¨×¼È·µÄÀàÐÍ. ÀýÈç, 0x2003 ±íÊ¾ 32 Î»ÓÐ·ûºÅÕûÊýµÄ <a href="http://msdn.microsoft.com/en-us/library/ms221482.aspx">SAFEARRAY</a>
+ ¶ø 0x400C ±íÊ¾µ½ <a href="http://msdn.microsoft.com/en-us/library/ms221627.aspx">VARIANT</a> µÄÖ¸Õë.
 */</em>
 </pre>
 
-<h3>ä¸€èˆ¬è¯´æ˜Ž</h3>
-<p>åœ¨é€šå¸¸æƒ…å†µä¸‹, COM å¯¹è±¡çš„æ–¹æ³•æˆ–å±žæ€§çš„è¿”å›žå€¼ä¼šè¢«è½¬æ¢æˆ AutoHotkey æ”¯æŒçš„é€‚åˆçš„æ•°æ®ç±»åž‹. æ²¡æœ‰æ˜Žç¡®å¤„ç†çš„ç±»åž‹é€šè¿‡ <a href="http://msdn.microsoft.com/en-us/library/ms221258.aspx">VariantChangeType</a> å¼ºåˆ¶è½¬æ¢æˆå­—ç¬¦ä¸²; å¦‚æžœè½¬æ¢å¤±è´¥æˆ–å˜é‡ç±»åž‹åŒ…å« VT_ARRAY æˆ– VT_BYREF æ ‡å¿—, åˆ™è¿”å›žåŒ…å«å€¼å’Œå…¶ç±»åž‹çš„å¯¹è±¡ä»£æ›¿.</p>
-<p>å¯¹äºŽä»»æ„å˜é‡ <i>x</i>, å¦‚æžœ <code>ComObjType(x)</code> è¿”å›žæ•´æ•°, åˆ™ <i>x</i> åŒ…å« COM å¯¹è±¡åŒ…è£…å™¨.</p>
+<h3>Ò»°ãËµÃ÷</h3>
+<p>ÔÚÍ¨³£Çé¿öÏÂ, COM ¶ÔÏóµÄ·½·¨»òÊôÐÔµÄ·µ»ØÖµ»á±»×ª»»³É AutoHotkey Ö§³ÖµÄÊÊºÏµÄÊý¾ÝÀàÐÍ. Ã»ÓÐÃ÷È·´¦ÀíµÄÀàÐÍÍ¨¹ý <a href="http://msdn.microsoft.com/en-us/library/ms221258.aspx">VariantChangeType</a> Ç¿ÖÆ×ª»»³É×Ö·û´®; Èç¹û×ª»»Ê§°Ü»ò±äÁ¿ÀàÐÍ°üº¬ VT_ARRAY »ò VT_BYREF ±êÖ¾, Ôò·µ»Ø°üº¬ÖµºÍÆäÀàÐÍµÄ¶ÔÏó´úÌæ.</p>
+<p>¶ÔÓÚÈÎÒâ±äÁ¿ <i>x</i>, Èç¹û <code>ComObjType(x)</code> ·µ»ØÕûÊý, Ôò <i>x</i> °üº¬ COM ¶ÔÏó°ü×°Æ÷.</p>
 
 
-<h3>ç›¸å…³</h3>
+<h3>Ïà¹Ø</h3>
 <p><a href="ComObjValue.htm">ComObjValue</a>, <a href="ComObjCreate.htm">ComObjCreate</a>, <a href="ComObjGet.htm">ComObjGet</a>, <a href="ComObjActive.htm">ComObjActive</a></p>
 
-<h3>ç¤ºä¾‹</h3>
+<h3>Ê¾Àý</h3>
 <pre class="NoIndent">
 d := <a href="ComObjCreate.htm">ComObjCreate</a>("Scripting.Dictionary")
-VarType := ComObjType(d)          <em>; å¯¹äºŽå¯è„šæœ¬åŒ–å¯¹è±¡æ€»ä¸º 9.</em>
-Name    := ComObjType(d, "Name")  <em>; ä»…å¯¹äºŽå¯è„šæœ¬åŒ–å¯¹è±¡æœ‰æ•ˆ.</em>
-IID     := ComObjType(d, "IID")   <em>; åŒä¸Š.</em>
+VarType := ComObjType(d)          <em>; ¶ÔÓÚ¿É½Å±¾»¯¶ÔÏó×ÜÎª 9.</em>
+Name    := ComObjType(d, "Name")  <em>; ½ö¶ÔÓÚ¿É½Å±¾»¯¶ÔÏóÓÐÐ§.</em>
+IID     := ComObjType(d, "IID")   <em>; Í¬ÉÏ.</em>
 MsgBox Variant type:`t%VarType%`nType name:`t%Name%`nInterface ID:`t%IID%
 </pre>
 

@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>TrayTip</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="text/html; charset=GBK">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/jquery.js" type="text/javascript"></script>
@@ -14,49 +14,49 @@
 
 <h1>TrayTip</h1>
 
-<p>在托盘图标附近创建气球提示窗口。</p>
+<p>������ͼ�긽������������ʾ���ڡ�</p>
 
 <pre class="Syntax">TrayTip [, Title, Text, Seconds, Options]</pre>
-<h3>参数</h3>
+<h3>����</h3>
 <dl>
 
-  <dt>标题</dt>
-  <dd><p>如果省略所有参数, 则移除任何当前显示的托盘提示窗口.</p>
-    <p>否则, 此参数为窗口标题, 可以长达 73 个字符 (超出此长度的字符不会显示出来).</p>
-    <p>如果 <em>Title</em> 为空, 则会移除气球窗口中的标题行, 这会让它垂直高度变短.</p></dd>
+  <dt>����</dt>
+  <dd><p>���ʡ�����в���, ���Ƴ��κε�ǰ��ʾ��������ʾ����.</p>
+    <p>����, �˲���Ϊ���ڱ���, ���Գ��� 73 ���ַ� (�����˳��ȵ��ַ�������ʾ����).</p>
+    <p>��� <em>Title</em> Ϊ��, ����Ƴ����򴰿��еı�����, ���������ֱ�߶ȱ��.</p></dd>
 
-  <dt>文本</dt>
-  <dd><p>如果此参数省略或为空, 则移除当前显示的任何托盘提示窗口.</p>
-      <p>否则, 请指定要显示的消息, 它会显示在 <em>Title</em> 的下面. 仅显示 <em>Text</em> 中前 265 个字符. 可以使用回车 (`r) 或换行 (`n) 来创建多行文本. 例如：<code>Line1`nLine2</code>。</p>
-      <p>如果 <em>Text</em> 较长, 可以通过 <a href="../Scripts.htm#continuation">延续片段</a> 的方法将其分解成较短的几行, 这样可以增加可读性和可维护性.</p>
+  <dt>�ı�</dt>
+  <dd><p>����˲���ʡ�Ի�Ϊ��, ���Ƴ���ǰ��ʾ���κ�������ʾ����.</p>
+      <p>����, ��ָ��Ҫ��ʾ����Ϣ, ������ʾ�� <em>Title</em> ������. ����ʾ <em>Text</em> ��ǰ 265 ���ַ�. ����ʹ�ûس� (`r) ���� (`n) �����������ı�. ���磺<code>Line1`nLine2</code>��</p>
+      <p>��� <em>Text</em> �ϳ�, ����ͨ�� <a href="../Scripts.htm#continuation">����Ƭ��</a> �ķ�������ֽ�ɽ϶̵ļ���, �����������ӿɶ��ԺͿ�ά����.</p>
     </dd>
 
-  <dt>秒</dt>
-  <dd><p>要窗口显示的近似秒数, 达到这时间后它会被操作系统自动移除. 指定小于 10 或大于 30 的数字时通常会使用最小 (10) 或最大 (30) 的显示时间代替。如果为空或省略, 则一般使用最小的时间. 此参数可以为 <a href="../Variables.htm#Expressions">表达式</a>.</p>
-    <p>真实的时间可能不同于指定的时间. 微软解释说，“如果用户没有在使用计算机，那么系统不会被这个时间计算为超时前经过的时间。”（技术细节请参阅<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/shellcc/platform/shell/reference/structures/notifyicondata.asp">此处</a>。）因此，要更精确地控制托盘提示显示的时间，请使用 <a href="Sleep.htm">Sleep</a> 命令后面跟着不带参数的 TrayTip，或像下面的示例中演示的那样使用 <a href="SetTimer.htm">SetTimer</a>。</p>
+  <dt>��</dt>
+  <dd><p>Ҫ������ʾ�Ľ�������, �ﵽ��ʱ������ᱻ����ϵͳ�Զ��Ƴ�. ָ��С�� 10 ����� 30 ������ʱͨ����ʹ����С (10) ����� (30) ����ʾʱ����档���Ϊ�ջ�ʡ��, ��һ��ʹ����С��ʱ��. �˲�������Ϊ <a href="../Variables.htm#Expressions">����ʽ</a>.</p>
+    <p>��ʵ��ʱ����ܲ�ͬ��ָ����ʱ��. ΢������˵��������û�û����ʹ�ü��������ôϵͳ���ᱻ���ʱ�����Ϊ��ʱǰ������ʱ�䡣��������ϸ�������<a href="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/shellcc/platform/shell/reference/structures/notifyicondata.asp">�˴�</a>������ˣ�Ҫ����ȷ�ؿ���������ʾ��ʾ��ʱ�䣬��ʹ�� <a href="Sleep.htm">Sleep</a> ���������Ų��������� TrayTip�����������ʾ������ʾ������ʹ�� <a href="SetTimer.htm">SetTimer</a>��</p>
     </dd>
 
-  <dt>选项</dt>
-  <dd><p>指定下列数字的其中一个来让小图标显示在 <em>Title</em> 的左边:</p>
-      <p>1: 信息图标<br>
-        2: 警告图标<br>
-        3: 错误图标</p>      
-      <p>如果省略, 则它默认为 0, 此时没有图标. 此参数可以为 <a href="../Variables.htm#Expressions">表达式</a>.<br>
+  <dt>ѡ��</dt>
+  <dd><p>ָ���������ֵ�����һ������Сͼ����ʾ�� <em>Title</em> �����:</p>
+      <p>1: ��Ϣͼ��<br>
+        2: ����ͼ��<br>
+        3: ����ͼ��</p>      
+      <p>���ʡ��, ����Ĭ��Ϊ 0, ��ʱû��ͼ��. �˲�������Ϊ <a href="../Variables.htm#Expressions">����ʽ</a>.<br>
       </p></dd>
 
 </dl>
-<h3>备注</h3>
-<p>如果脚本没有托盘图标（使用 <a href="_NoTrayIcon.htm">#NoTrayIcon</a> 或 <code><a href="Menu.htm">Menu</a>, tray, NoIcon</code>），则不会显示托盘提示的气球窗口。同样地, 如果下列的 REG_DWORD 值已经存在且被设置为 0, TrayTip 不起作用:</p>
+<h3>��ע</h3>
+<p>����ű�û������ͼ�꣨ʹ�� <a href="_NoTrayIcon.htm">#NoTrayIcon</a> �� <code><a href="Menu.htm">Menu</a>, tray, NoIcon</code>�����򲻻���ʾ������ʾ�����򴰿ڡ�ͬ����, ������е� REG_DWORD ֵ�Ѿ������ұ�����Ϊ 0, TrayTip ��������:</p>
 <pre>HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced &gt;&gt; EnableBalloonTips</pre>
-<p>在显示气球提示时操作系统通常会播放声音. 此声音可以通过 <em>Options </em> 参数中加上 16 来禁止（即 16 为无声音无图标，17 为无声音信息图标等等）。</p>
-<p>相关提示, 每当用户把鼠标悬停在脚本托盘图标上时会显示工具提示. 此工具提示的内容可以使用这样的方法改变：<code><a href="Menu.htm">Menu</a>, Tray, Tip, My New Text</code>。</p>
-<h3>相关</h3>
+<p>����ʾ������ʾʱ����ϵͳͨ���Ქ������. ����������ͨ�� <em>Options </em> �����м��� 16 ����ֹ���� 16 Ϊ��������ͼ�꣬17 Ϊ��������Ϣͼ��ȵȣ���</p>
+<p>�����ʾ, ÿ���û��������ͣ�ڽű�����ͼ����ʱ����ʾ������ʾ. �˹�����ʾ�����ݿ���ʹ�������ķ����ı䣺<code><a href="Menu.htm">Menu</a>, Tray, Tip, My New Text</code>��</p>
+<h3>���</h3>
 <p><a href="ToolTip.htm">ToolTip</a>, <a href="SetTimer.htm">SetTimer</a>, <a href="Menu.htm">Menu</a>, <a href="SplashTextOn.htm">SplashTextOn</a>, <a href="MsgBox.htm">MsgBox</a>, <a href="InputBox.htm">InputBox</a>, <a href="FileSelectFile.htm">FileSelectFile</a>, <a href="FileSelectFolder.htm">FileSelectFolder</a></p>
-<h3>示例</h3>
+<h3>ʾ��</h3>
 <pre class="NoIndent">TrayTip, My Title, Multiline`nText, 20, 17
 
-<em>; 要更精确的控制显示的时间
-; 而不使用 Sleep 的方法 (它停止了当前线程):</em>
+<em>; Ҫ����ȷ�Ŀ�����ʾ��ʱ��
+; ����ʹ�� Sleep �ķ��� (��ֹͣ�˵�ǰ�߳�):</em>
 #Persistent
 TrayTip, Timed TrayTip, This will be displayed for 5 seconds.
 SetTimer, RemoveTrayTip, 5000
@@ -67,9 +67,9 @@ SetTimer, RemoveTrayTip, Off
 TrayTip
 return
 
-<em>; 要让托盘提示永久显示, 请使用计时器进行周期性的刷新:</em>
+<em>; Ҫ��������ʾ������ʾ, ��ʹ�ü�ʱ�����������Ե�ˢ��:</em>
 SetTimer, RefreshTrayTip, 1000
-Gosub, RefreshTrayTip  <em>; 调用一次来让它立即开始.</em>
+Gosub, RefreshTrayTip  <em>; ����һ��������������ʼ.</em>
 return
 
 RefreshTrayTip:

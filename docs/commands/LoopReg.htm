@@ -2,8 +2,8 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>Loopï¼ˆæ³¨å†Œè¡¨ï¼‰</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Loop£¨×¢²á±í£©</title>
+<meta http-equiv="content-type" content="text/html; charset=GBK">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/jquery.js" type="text/javascript"></script>
@@ -12,91 +12,91 @@
 </head>
 <body>
 
-<h1>Loopï¼ˆæ³¨å†Œè¡¨ï¼‰</h1>
+<h1>Loop£¨×¢²á±í£©</h1>
 
-<p>èŽ·å–æŒ‡å®šçš„æ³¨å†Œè¡¨å­é”®çš„å†…å®¹ï¼Œæ¯æ¬¡ä¸€ä¸ªé¡¹ç›®ã€‚</p>
+<p>»ñÈ¡Ö¸¶¨µÄ×¢²á±í×Ó¼üµÄÄÚÈÝ£¬Ã¿´ÎÒ»¸öÏîÄ¿¡£</p>
 
 <pre class="Syntax">Loop, RootKey [, Key, IncludeSubkeys?, Recurse?]</pre>
-<h3>å‚æ•°</h3>
+<h3>²ÎÊý</h3>
 <dl>
 
   <dt>RootKey</dt>
-  <dd><p>å¿…é¡»ä¸º HKEY_LOCAL_MACHINEï¼ˆæˆ– HKLMï¼‰ã€HKEY_USERSï¼ˆæˆ– HKUï¼‰ã€HKEY_CURRENT_USERï¼ˆæˆ– HKCUï¼‰ã€HKEY_CLASSES_ROOTï¼ˆæˆ– HKCRï¼‰æˆ– HKEY_CURRENT_CONFIGï¼ˆæˆ– HKCCï¼‰çš„å…¶ä¸­ä¸€ä¸ªã€‚</p>
-      <p>è¦è®¿é—®è¿œç¨‹æ³¨å†Œè¡¨, è¯·åœ¨å‰é¢åŠ ä¸Šè®¡ç®—æœºåå’Œå†’å·, ä¾‹å¦‚: \\workstation01:HKEY_LOCAL_MACHINE</p></dd>
+  <dd><p>±ØÐëÎª HKEY_LOCAL_MACHINE£¨»ò HKLM£©¡¢HKEY_USERS£¨»ò HKU£©¡¢HKEY_CURRENT_USER£¨»ò HKCU£©¡¢HKEY_CLASSES_ROOT£¨»ò HKCR£©»ò HKEY_CURRENT_CONFIG£¨»ò HKCC£©µÄÆäÖÐÒ»¸ö¡£</p>
+      <p>Òª·ÃÎÊÔ¶³Ì×¢²á±í, ÇëÔÚÇ°Ãæ¼ÓÉÏ¼ÆËã»úÃûºÍÃ°ºÅ, ÀýÈç: \\workstation01:HKEY_LOCAL_MACHINE</p></dd>
 
-  <dt>é”®</dt>
-  <dd><p>é”®åï¼ˆä¾‹å¦‚ Software\SomeApplicationï¼‰ã€‚å¦‚æžœä¸ºç©ºæˆ–çœç•¥, å°†èŽ·å– <em>æ ¹é”®</em> çš„å†…å®¹.</p></dd>
+  <dt>¼ü</dt>
+  <dd><p>¼üÃû£¨ÀýÈç Software\SomeApplication£©¡£Èç¹ûÎª¿Õ»òÊ¡ÂÔ, ½«»ñÈ¡ <em>¸ù¼ü</em> µÄÄÚÈÝ.</p></dd>
 
   <dt>IncludeSubkeys?</dt>
-  <dd><p>0 (é»˜è®¤å€¼) ä¸èŽ·å– <em>Key</em> ä¸­åŒ…å«çš„å­é”® (ä»…èŽ·å–å€¼).<br>
-  1èŽ·å–æ‰€æœ‰çš„å€¼å’Œå­é”®.<br>
-  2ä»…èŽ·å–å­é”® (ä¸èŽ·å–å€¼).</p></dd>
+  <dd><p>0 (Ä¬ÈÏÖµ) ²»»ñÈ¡ <em>Key</em> ÖÐ°üº¬µÄ×Ó¼ü (½ö»ñÈ¡Öµ).<br>
+  1»ñÈ¡ËùÓÐµÄÖµºÍ×Ó¼ü.<br>
+  2½ö»ñÈ¡×Ó¼ü (²»»ñÈ¡Öµ).</p></dd>
 
-  <dt>é€’å½’ï¼Ÿ</dt>
-  <dd>0 (é»˜è®¤å€¼) ä¸å¯¹å­é”®è¿›è¡Œé€’å½’.<br>
-1å¯¹å­é”®è¿›è¡Œé€’å½’, ä»¥ä¾¿èŽ·å–åŒ…å«åœ¨å…¶ä¸­çš„æ‰€æœ‰å€¼å’Œå­é”®.</dd>
+  <dt>µÝ¹é£¿</dt>
+  <dd>0 (Ä¬ÈÏÖµ) ²»¶Ô×Ó¼ü½øÐÐµÝ¹é.<br>
+1¶Ô×Ó¼ü½øÐÐµÝ¹é, ÒÔ±ã»ñÈ¡°üº¬ÔÚÆäÖÐµÄËùÓÐÖµºÍ×Ó¼ü.</dd>
 
 </dl>
 
-<h3>å¤‡æ³¨</h3>
-<p>å½“æ‚¨æƒ³å¯¹æ³¨å†Œè¡¨å€¼æˆ–å­é”®é›†åˆä¸­çš„é¡¹é€ä¸ªè¿›è¡Œæ“ä½œæ—¶, æ³¨å†Œè¡¨å¾ªçŽ¯å¾ˆæœ‰ç”¨. å€¼å’Œå­é”®ä»¥é€†åºèŽ·å– (è‡ªä¸‹è€Œä¸Š), è¿™æ ·åœ¨å¾ªçŽ¯ä¸­ä½¿ç”¨ <a href="RegDelete.htm">RegDelete</a> ä¸ä¼šæ‰°ä¹±å¾ªçŽ¯è‡ªèº«.</p>
-<p>ä¸‹åˆ—å˜é‡å­˜åœ¨äºŽä»»ä½•æ³¨å†Œè¡¨å¾ªçŽ¯ä¸­ã€‚å¦‚æžœä¸€ä¸ªå†…å±‚æ³¨å†Œè¡¨å¾ªçŽ¯åŒ…å«åœ¨ä¸€ä¸ªå¤–å±‚æ³¨å†Œè¡¨å¾ªçŽ¯ä¸­ï¼Œé‚£ä¹ˆæœ€å†…å±‚å¾ªçŽ¯çš„æ³¨å†Œè¡¨é¡¹å°†å…·æœ‰ä¼˜å…ˆæƒï¼š</p>
+<h3>±¸×¢</h3>
+<p>µ±ÄúÏë¶Ô×¢²á±íÖµ»ò×Ó¼ü¼¯ºÏÖÐµÄÏîÖð¸ö½øÐÐ²Ù×÷Ê±, ×¢²á±íÑ­»·ºÜÓÐÓÃ. ÖµºÍ×Ó¼üÒÔÄæÐò»ñÈ¡ (×ÔÏÂ¶øÉÏ), ÕâÑùÔÚÑ­»·ÖÐÊ¹ÓÃ <a href="RegDelete.htm">RegDelete</a> ²»»áÈÅÂÒÑ­»·×ÔÉí.</p>
+<p>ÏÂÁÐ±äÁ¿´æÔÚÓÚÈÎºÎ×¢²á±íÑ­»·ÖÐ¡£Èç¹ûÒ»¸öÄÚ²ã×¢²á±íÑ­»·°üº¬ÔÚÒ»¸öÍâ²ã×¢²á±íÑ­»·ÖÐ£¬ÄÇÃ´×îÄÚ²ãÑ­»·µÄ×¢²á±íÏî½«¾ßÓÐÓÅÏÈÈ¨£º</p>
 <table class="info">
   <tr>
     <td>A_LoopRegName</td>
-    <td>å½“å‰èŽ·å–é¡¹çš„åç§°, å¯ä»¥æ˜¯å€¼åæˆ–å­é”®å. åœ¨ Windows æ³¨å†Œè¡¨ç¼–è¾‘å™¨ä¸­, å€¼åä¸º "(é»˜è®¤)" çš„é¡¹å¦‚æžœåˆ†é…äº†å€¼,  é‚£ä¹ˆä¹Ÿä¼šèŽ·å–å®ƒçš„å€¼, ä¸è¿‡æ­¤æ—¶ç›¸åº”çš„ A_LoopRegName å°†æ˜¯ç©ºçš„.</td>
+    <td>µ±Ç°»ñÈ¡ÏîµÄÃû³Æ, ¿ÉÒÔÊÇÖµÃû»ò×Ó¼üÃû. ÔÚ Windows ×¢²á±í±à¼­Æ÷ÖÐ, ÖµÃûÎª "(Ä¬ÈÏ)" µÄÏîÈç¹û·ÖÅäÁËÖµ,  ÄÇÃ´Ò²»á»ñÈ¡ËüµÄÖµ, ²»¹ý´ËÊ±ÏàÓ¦µÄ A_LoopRegName ½«ÊÇ¿ÕµÄ.</td>
   </tr>
   <tr>
     <td>A_LoopRegType</td>
-    <td>å½“å‰èŽ·å–é¡¹çš„ç±»åž‹, å¯ä»¥æ˜¯ä¸‹åˆ—å•è¯çš„å…¶ä¸­ä¸€ä¸ª: KEY (å³å½“å‰èŽ·å–é¡¹ä¸ºå­é”®è€Œä¸æ˜¯å€¼), REG_SZ, REG_EXPAND_SZ, REG_MULTI_SZ, REG_DWORD, REG_QWORD, REG_BINARY, REG_LINK, REG_RESOURCE_LIST, REG_FULL_RESOURCE_DESCRIPTOR, REG_RESOURCE_REQUIREMENTS_LIST, REG_DWORD_BIG_ENDIAN (åœ¨å¤§å¤šæ•° Windows ç¡¬ä»¶ä¸Šç›¸å½“ç½•è§). å¦‚æžœå½“å‰èŽ·å–é¡¹ä¸ºæœªçŸ¥ç±»åž‹, é‚£ä¹ˆæ­¤å˜é‡å°†ä¸ºç©º.</td>
+    <td>µ±Ç°»ñÈ¡ÏîµÄÀàÐÍ, ¿ÉÒÔÊÇÏÂÁÐµ¥´ÊµÄÆäÖÐÒ»¸ö: KEY (¼´µ±Ç°»ñÈ¡ÏîÎª×Ó¼ü¶ø²»ÊÇÖµ), REG_SZ, REG_EXPAND_SZ, REG_MULTI_SZ, REG_DWORD, REG_QWORD, REG_BINARY, REG_LINK, REG_RESOURCE_LIST, REG_FULL_RESOURCE_DESCRIPTOR, REG_RESOURCE_REQUIREMENTS_LIST, REG_DWORD_BIG_ENDIAN (ÔÚ´ó¶àÊý Windows Ó²¼þÉÏÏàµ±º±¼û). Èç¹ûµ±Ç°»ñÈ¡ÏîÎªÎ´ÖªÀàÐÍ, ÄÇÃ´´Ë±äÁ¿½«Îª¿Õ.</td>
   </tr>
   <tr>
     <td>A_LoopRegKey</td>
-    <td>æ­£åœ¨è®¿é—®çš„æ ¹é”®å (HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CURRENT_USER, HKEY_CLASSES_ROOT æˆ– HKEY_CURRENT_CONFIG). è®¿é—®è¿œç¨‹æ³¨å†Œè¡¨æ—¶ï¼Œæ­¤å˜é‡çš„å€¼å°†<strong>ä¸</strong>åŒ…å«è®¡ç®—æœºåã€‚</td>
+    <td>ÕýÔÚ·ÃÎÊµÄ¸ù¼üÃû (HKEY_LOCAL_MACHINE, HKEY_USERS, HKEY_CURRENT_USER, HKEY_CLASSES_ROOT »ò HKEY_CURRENT_CONFIG). ·ÃÎÊÔ¶³Ì×¢²á±íÊ±£¬´Ë±äÁ¿µÄÖµ½«<strong>²»</strong>°üº¬¼ÆËã»úÃû¡£</td>
   </tr>
   <tr>
     <td>A_LoopRegSubKey</td>
-    <td>å½“å‰å­é”®å. å¦‚æžœæ²¡æœ‰ä½¿ç”¨ <em>Recurse</em> å‚æ•°ä»¥é€’å½’æŸ¥è¯¢å…¶ä»–å­é”®æ—¶, æ­¤å˜é‡çš„å€¼ä¸Ž <em>Key</em> å‚æ•°ç›¸åŒ. åœ¨é€’å½’æŸ¥è¯¢æ—¶, æ­¤å˜é‡çš„å€¼å°†ä¸ºå½“å‰èŽ·å–é¡¹çš„å®Œæ•´è·¯å¾„, å…¶ä¸­ä¸åŒ…å«æ ¹é”®. ä¾‹å¦‚: Software\SomeApplication\My SubKey</td>
+    <td>µ±Ç°×Ó¼üÃû. Èç¹ûÃ»ÓÐÊ¹ÓÃ <em>Recurse</em> ²ÎÊýÒÔµÝ¹é²éÑ¯ÆäËû×Ó¼üÊ±, ´Ë±äÁ¿µÄÖµÓë <em>Key</em> ²ÎÊýÏàÍ¬. ÔÚµÝ¹é²éÑ¯Ê±, ´Ë±äÁ¿µÄÖµ½«Îªµ±Ç°»ñÈ¡ÏîµÄÍêÕûÂ·¾¶, ÆäÖÐ²»°üº¬¸ù¼ü. ÀýÈç: Software\SomeApplication\My SubKey</td>
   </tr>
   <tr>
     <td>A_LoopRegTimeModified</td>
-    <td>å½“å‰å­é”®æˆ–å…¶ä¸­ä»»ä½•ä¸€ä¸ªå€¼çš„ä¸Šæ¬¡ä¿®æ”¹æ—¶é—´. æ ¼å¼ä¸º <a href="FileSetTime.htm">YYYYMMDDHH24MISS</a>. å½“å‰èŽ·å–é¡¹ä¸æ˜¯å­é”®ï¼ˆå³ <em>A_LoopRegType</em> ä¸æ˜¯å•è¯ KEYï¼‰æ—¶ï¼Œæ­¤å˜é‡å°†ä¸ºç©ºã€‚</td>
+    <td>µ±Ç°×Ó¼ü»òÆäÖÐÈÎºÎÒ»¸öÖµµÄÉÏ´ÎÐÞ¸ÄÊ±¼ä. ¸ñÊ½Îª <a href="FileSetTime.htm">YYYYMMDDHH24MISS</a>. µ±Ç°»ñÈ¡Ïî²»ÊÇ×Ó¼ü£¨¼´ <em>A_LoopRegType</em> ²»ÊÇµ¥´Ê KEY£©Ê±£¬´Ë±äÁ¿½«Îª¿Õ¡£</td>
   </tr>
 </table>
-<p>åœ¨æ³¨å†Œè¡¨å¾ªçŽ¯ä¸­ä½¿ç”¨ä¸‹åˆ—å‘½ä»¤æ—¶, å¯ä»¥ä»¥ä¸€ç§ç®€åŒ–çš„æ–¹å¼æ¥æ“ä½œå½“å‰èŽ·å–é¡¹:</p>
+<p>ÔÚ×¢²á±íÑ­»·ÖÐÊ¹ÓÃÏÂÁÐÃüÁîÊ±, ¿ÉÒÔÒÔÒ»ÖÖ¼ò»¯µÄ·½Ê½À´²Ù×÷µ±Ç°»ñÈ¡Ïî:</p>
 <table class="info">
   <tr>
     <td width="21%"><a href="RegRead.htm">RegRead</a>, OutputVar</td>
-    <td width="79%">è¯»å–å½“å‰é¡¹. å¦‚æžœå½“å‰é¡¹ä¸ºé”®, ErrorLevel å°†è¢«ç½®ä¸º 1 ä¸” <em>OutputVar</em> å°†è¢«ç½®ç©º.</td>
+    <td width="79%">¶ÁÈ¡µ±Ç°Ïî. Èç¹ûµ±Ç°ÏîÎª¼ü, ErrorLevel ½«±»ÖÃÎª 1 ÇÒ <em>OutputVar</em> ½«±»ÖÃ¿Õ.</td>
   </tr>
   <tr>
     <td><a href="RegWrite.htm">RegWrite</a> [, Value]</td>
-    <td>å†™å…¥åˆ°å½“å‰é¡¹. å¦‚æžœçœç•¥ <em>Value</em>, æ ¹æ®ä¸åŒçš„ç±»åž‹å½“å‰é¡¹å¯èƒ½è¢«ç½®ä¸º 0 æˆ–ç©º. å¦‚æžœå½“å‰é¡¹ä¸ºé”®, ErrorLevel å°†è¢«ç½®ä¸º 1 ä¸”æ²¡æœ‰å…¶ä»–æ•ˆæžœ.</td>
+    <td>Ð´Èëµ½µ±Ç°Ïî. Èç¹ûÊ¡ÂÔ <em>Value</em>, ¸ù¾Ý²»Í¬µÄÀàÐÍµ±Ç°Ïî¿ÉÄÜ±»ÖÃÎª 0 »ò¿Õ. Èç¹ûµ±Ç°ÏîÎª¼ü, ErrorLevel ½«±»ÖÃÎª 1 ÇÒÃ»ÓÐÆäËûÐ§¹û.</td>
   </tr>
   <tr>
     <td><a href="RegDelete.htm">RegDelete</a></td>
-    <td>åˆ é™¤å½“å‰é¡¹. å¦‚æžœå½“å‰é¡¹ä¸ºé”®, å®ƒä»¥åŠå®ƒæ‰€åŒ…å«çš„æ‰€æœ‰å­é”®å’Œå€¼éƒ½å°†è¢«åˆ é™¤.</td>
+    <td>É¾³ýµ±Ç°Ïî. Èç¹ûµ±Ç°ÏîÎª¼ü, ËüÒÔ¼°ËüËù°üº¬µÄËùÓÐ×Ó¼üºÍÖµ¶¼½«±»É¾³ý.</td>
   </tr>
 </table>
-<p>è®¿é—®è¿œç¨‹æ³¨å†Œè¡¨æ—¶ (é€šè¿‡ä¸Šé¢æè¿°çš„ <em>RootKey</em> å‚æ•°), éœ€è¦æ³¨æ„ä»¥ä¸‹äº‹é¡¹:</p>
+<p>·ÃÎÊÔ¶³Ì×¢²á±íÊ± (Í¨¹ýÉÏÃæÃèÊöµÄ <em>RootKey</em> ²ÎÊý), ÐèÒª×¢ÒâÒÔÏÂÊÂÏî:</p>
 <ul>
-  <li>ç›®æ ‡æœºå™¨ä¸Šå¿…é¡»æ­£åœ¨è¿è¡Œè¿œç¨‹æ³¨å†Œè¡¨æœåŠ¡ã€‚</li>
-  <li>å¦‚æžœæ‚¨å’Œç›®æ ‡è®¡ç®—æœºä¸åœ¨ç›¸åŒçš„åŸŸæˆ–è€…æœ¬åœ°æˆ–è¿œç¨‹ç”¨æˆ·åç¼ºä¹è¶³å¤Ÿçš„æƒé™ï¼ˆç„¶è€Œï¼Œè¯·å‚é˜…ä¸‹æ–‡äº†è§£å¯èƒ½çš„è§£å†³æ–¹æ³•ï¼‰æ—¶ï¼Œè®¿é—®è¿œç¨‹æ³¨å†Œè¡¨å¯èƒ½å¤±è´¥ã€‚</li>
-  <li>åœ¨å°è¯•è®¿é—®è¿œç¨‹æ³¨å†Œè¡¨ä¹‹å‰, æ ¹æ®æ‚¨çš„ç”¨æˆ·åæ‰€åœ¨çš„åŸŸ, å·¥ä½œç»„å’Œ/æˆ–æƒé™, æ‚¨å¯èƒ½å¿…é¡»è¿žæŽ¥åˆ°å…±äº«è®¾å¤‡, ä¾‹å¦‚é€šè¿‡æ˜ å°„é©±åŠ¨å™¨. å»ºç«‹è¿™æ ·çš„è¿žæŽ¥ -- ä½¿ç”¨æ‹¥æœ‰è®¿é—®æˆ–ç¼–è¾‘æ³¨å†Œè¡¨æƒé™çš„è¿œç¨‹ç”¨æˆ·åå’Œå¯†ç  -- ä¹Ÿè®¸å¯ä»¥é¡ºå¸¦å¯ç”¨è¿œç¨‹æ³¨å†Œè¡¨è®¿é—®.</li>
-  <li>å¦‚æžœæ‚¨å·²ç»ä½œä¸ºå¦ä¸€ä¸ªç”¨æˆ·è¿žæŽ¥åˆ°ç›®æ ‡è®¡ç®—æœº (ä¾‹å¦‚, é€šè¿‡ Guest ç”¨æˆ·æ˜ å°„é©±åŠ¨å™¨), æ‚¨å¯èƒ½å¿…é¡»ç»ˆæ­¢è¿™ä¸ªè¿žæŽ¥, ä»¥å…è®¸è¿œç¨‹æ³¨å†Œè¡¨åŠŸèƒ½ä½¿ç”¨æ‚¨å½“å‰ç™»å½•çš„ç”¨æˆ·åé‡æ–°è¿žæŽ¥å’Œè®¤è¯.</li>
-  <li>å¯¹äºŽ Windows Server 2003 å’Œ Windows XP ä¸“ä¸šç‰ˆ, MSDN ä¸­å£°æ˜Ž: "å¦‚æžœ [æ³¨å†Œè¡¨æœåŠ¡å™¨] æ‰€åœ¨çš„è®¡ç®—æœºåŠ å…¥äº†å·¥ä½œç»„ä¸”å¯ç”¨äº† <em>å¼ºåˆ¶ä»¥æœ¬åœ°è´¦æˆ·çš„æ¥å®¾èº«ä»½è¿›è¡Œç½‘ç»œç™»å½•éªŒè¯</em> ç­–ç•¥, æ­¤åŠŸèƒ½æ— æ•ˆ. è¯·æ³¨æ„å¦‚æžœè®¡ç®—æœºåŠ å…¥äº†å·¥ä½œç»„, é‚£ä¹ˆè¿™é¡¹ç­–ç•¥é»˜è®¤æ˜¯å¯ç”¨çš„."</li>
-  <li>å¯¹äºŽ Windows XP å®¶åº­ç‰ˆ, MSDN ä¸­å£°æ˜Ž "æ­¤åŠŸèƒ½æ€»æ˜¯æ— æ•ˆ". å®¶åº­ç‰ˆæ²¡æœ‰æ³¨å†Œè¡¨æœåŠ¡å™¨å’Œå®¢æˆ·ç«¯, å°½ç®¡å®¢æˆ·ç«¯å¯ä»¥ä»Žæ“ä½œç³»ç»Ÿçš„æŸä¸ª cab åŽ‹ç¼©åŒ…æå–.</li>
+  <li>Ä¿±ê»úÆ÷ÉÏ±ØÐëÕýÔÚÔËÐÐÔ¶³Ì×¢²á±í·þÎñ¡£</li>
+  <li>Èç¹ûÄúºÍÄ¿±ê¼ÆËã»ú²»ÔÚÏàÍ¬µÄÓò»òÕß±¾µØ»òÔ¶³ÌÓÃ»§ÃûÈ±·¦×ã¹»µÄÈ¨ÏÞ£¨È»¶ø£¬Çë²ÎÔÄÏÂÎÄÁË½â¿ÉÄÜµÄ½â¾ö·½·¨£©Ê±£¬·ÃÎÊÔ¶³Ì×¢²á±í¿ÉÄÜÊ§°Ü¡£</li>
+  <li>ÔÚ³¢ÊÔ·ÃÎÊÔ¶³Ì×¢²á±íÖ®Ç°, ¸ù¾ÝÄúµÄÓÃ»§ÃûËùÔÚµÄÓò, ¹¤×÷×éºÍ/»òÈ¨ÏÞ, Äú¿ÉÄÜ±ØÐëÁ¬½Óµ½¹²ÏíÉè±¸, ÀýÈçÍ¨¹ýÓ³ÉäÇý¶¯Æ÷. ½¨Á¢ÕâÑùµÄÁ¬½Ó -- Ê¹ÓÃÓµÓÐ·ÃÎÊ»ò±à¼­×¢²á±íÈ¨ÏÞµÄÔ¶³ÌÓÃ»§ÃûºÍÃÜÂë -- Ò²Ðí¿ÉÒÔË³´øÆôÓÃÔ¶³Ì×¢²á±í·ÃÎÊ.</li>
+  <li>Èç¹ûÄúÒÑ¾­×÷ÎªÁíÒ»¸öÓÃ»§Á¬½Óµ½Ä¿±ê¼ÆËã»ú (ÀýÈç, Í¨¹ý Guest ÓÃ»§Ó³ÉäÇý¶¯Æ÷), Äú¿ÉÄÜ±ØÐëÖÕÖ¹Õâ¸öÁ¬½Ó, ÒÔÔÊÐíÔ¶³Ì×¢²á±í¹¦ÄÜÊ¹ÓÃÄúµ±Ç°µÇÂ¼µÄÓÃ»§ÃûÖØÐÂÁ¬½ÓºÍÈÏÖ¤.</li>
+  <li>¶ÔÓÚ Windows Server 2003 ºÍ Windows XP ×¨Òµ°æ, MSDN ÖÐÉùÃ÷: "Èç¹û [×¢²á±í·þÎñÆ÷] ËùÔÚµÄ¼ÆËã»ú¼ÓÈëÁË¹¤×÷×éÇÒÆôÓÃÁË <em>Ç¿ÖÆÒÔ±¾µØÕË»§µÄÀ´±öÉí·Ý½øÐÐÍøÂçµÇÂ¼ÑéÖ¤</em> ²ßÂÔ, ´Ë¹¦ÄÜÎÞÐ§. Çë×¢ÒâÈç¹û¼ÆËã»ú¼ÓÈëÁË¹¤×÷×é, ÄÇÃ´ÕâÏî²ßÂÔÄ¬ÈÏÊÇÆôÓÃµÄ."</li>
+  <li>¶ÔÓÚ Windows XP ¼ÒÍ¥°æ, MSDN ÖÐÉùÃ÷ "´Ë¹¦ÄÜ×ÜÊÇÎÞÐ§". ¼ÒÍ¥°æÃ»ÓÐ×¢²á±í·þÎñÆ÷ºÍ¿Í»§¶Ë, ¾¡¹Ü¿Í»§¶Ë¿ÉÒÔ´Ó²Ù×÷ÏµÍ³µÄÄ³¸ö cab Ñ¹Ëõ°üÌáÈ¡.</li>
 </ul>
-<p>è¯·å‚é˜… <a href="Loop.htm">Loop</a> äº†è§£å…³äºŽ<a href="Block.htm">åŒºå—</a>ã€<a href="Break.htm">Break</a>ã€<a href="Continue.htm">Continue</a> å’Œ A_Index å˜é‡ï¼ˆå…¶å­˜åœ¨äºŽå„ç§ç±»åž‹çš„å¾ªçŽ¯ä¸­ï¼‰çš„ç›¸å…³ä¿¡æ¯ã€‚</p>
-<h3>ç›¸å…³</h3>
-<p><a href="Loop.htm">Loop</a>ã€<a href="Break.htm">Break</a>ã€<a href="Continue.htm">Continue</a>ã€<a href="Block.htm">åŒºå—</a>ã€<a href="RegRead.htm">RegRead</a>ã€<a href="RegWrite.htm">RegWrite</a>ã€<a href="RegDelete.htm">RegDelete</a>ã€<a href="SetRegView.htm">SetRegView</a></p>
+<p>Çë²ÎÔÄ <a href="Loop.htm">Loop</a> ÁË½â¹ØÓÚ<a href="Block.htm">Çø¿é</a>¡¢<a href="Break.htm">Break</a>¡¢<a href="Continue.htm">Continue</a> ºÍ A_Index ±äÁ¿£¨Æä´æÔÚÓÚ¸÷ÖÖÀàÐÍµÄÑ­»·ÖÐ£©µÄÏà¹ØÐÅÏ¢¡£</p>
+<h3>Ïà¹Ø</h3>
+<p><a href="Loop.htm">Loop</a>¡¢<a href="Break.htm">Break</a>¡¢<a href="Continue.htm">Continue</a>¡¢<a href="Block.htm">Çø¿é</a>¡¢<a href="RegRead.htm">RegRead</a>¡¢<a href="RegWrite.htm">RegWrite</a>¡¢<a href="RegDelete.htm">RegDelete</a>¡¢<a href="SetRegView.htm">SetRegView</a></p>
 
-<h3>ç¤ºä¾‹</h3>
-<pre class="NoIndent"><em>; ç¤ºä¾‹: åˆ é™¤ç”¨æˆ·è¾“å…¥çš„ Internet Explorer URL åŽ†å²:</em>
+<h3>Ê¾Àý</h3>
+<pre class="NoIndent"><em>; Ê¾Àý: É¾³ýÓÃ»§ÊäÈëµÄ Internet Explorer URL ÀúÊ·:</em>
 Loop, HKEY_CURRENT_USER, Software\Microsoft\Internet Explorer\TypedURLs
     RegDelete</pre>
 <p>&nbsp;</p>
-<pre class="NoIndent"><em>; ç¤ºä¾‹: æœ‰æ•ˆçš„æµ‹è¯•è„šæœ¬:</em>
+<pre class="NoIndent"><em>; Ê¾Àý: ÓÐÐ§µÄ²âÊÔ½Å±¾:</em>
 Loop, HKEY_CURRENT_USER, Software\Microsoft\Windows, 1, 1
 {
     if a_LoopRegType = key
@@ -111,10 +111,10 @@ Loop, HKEY_CURRENT_USER, Software\Microsoft\Windows, 1, 1
     IfMsgBox, NO, break
 }</pre>
 <p>&nbsp;</p>
-<pre class="NoIndent"><em>; ç¤ºä¾‹: ç”¨äºŽåœ¨æ•´ä¸ªæ³¨å†Œè¡¨ä¸­
-; é€’å½’æœç´¢ç‰¹æ®Šå€¼çš„å¯è¿è¡Œç¤ºä¾‹.</em>
-SetBatchLines -1  <em>; è®©æœç´¢ä»¥æœ€å¿«é€Ÿåº¦è¿›è¡Œ.</em>
-RegSearchTarget = Notepad  <em>; å‘ŠçŸ¥å­ç¨‹åºæœç´¢çš„ç›®æ ‡.</em>
+<pre class="NoIndent"><em>; Ê¾Àý: ÓÃÓÚÔÚÕû¸ö×¢²á±íÖÐ
+; µÝ¹éËÑË÷ÌØÊâÖµµÄ¿ÉÔËÐÐÊ¾Àý.</em>
+SetBatchLines -1  <em>; ÈÃËÑË÷ÒÔ×î¿ìËÙ¶È½øÐÐ.</em>
+RegSearchTarget = Notepad  <em>; ¸æÖª×Ó³ÌÐòËÑË÷µÄÄ¿±ê.</em>
 Gosub, RegSearch
 return
 
@@ -123,28 +123,28 @@ ContinueRegSearch = y
 Loop, HKEY_LOCAL_MACHINE, , 1, 1
 {
     Gosub, CheckThisRegItem
-    if ContinueRegSearch = n <em>; è¿™é‡Œå‘ŠçŸ¥æˆ‘ä»¬è¦åœæ­¢æœç´¢.</em>
+    if ContinueRegSearch = n <em>; ÕâÀï¸æÖªÎÒÃÇÒªÍ£Ö¹ËÑË÷.</em>
         return
 }
 Loop, HKEY_USERS, , 1, 1
 {
     Gosub, CheckThisRegItem
-    if ContinueRegSearch = n <em>; è¿™é‡Œå‘ŠçŸ¥æˆ‘ä»¬è¦åœæ­¢æœç´¢.</em>
+    if ContinueRegSearch = n <em>; ÕâÀï¸æÖªÎÒÃÇÒªÍ£Ö¹ËÑË÷.</em>
         return
 }
 Loop, HKEY_CURRENT_CONFIG, , 1, 1
 {
     Gosub, CheckThisRegItem
-    if ContinueRegSearch = n <em>; è¿™é‡Œå‘ŠçŸ¥æˆ‘ä»¬è¦åœæ­¢æœç´¢.</em>
+    if ContinueRegSearch = n <em>; ÕâÀï¸æÖªÎÒÃÇÒªÍ£Ö¹ËÑË÷.</em>
         return
 }
-<em>; è¯·æ³¨æ„: æˆ‘è®¤ä¸ºå¦‚æžœå·²ç»æœç´¢äº† HKEY_USERS, é‚£ä¹ˆå¯ä»¥ä¸å¿…æœç´¢
-; HKEY_CURRENT_USER.  åŒæ ·åœ°, å¦‚æžœæœç´¢äº† HKEY_LOCAL_MACHINE,
-; é‚£ä¹ˆå¯ä»¥ä¸å¿…æœç´¢ HKEY_CLASSES_ROOT.</em>
+<em>; Çë×¢Òâ: ÎÒÈÏÎªÈç¹ûÒÑ¾­ËÑË÷ÁË HKEY_USERS, ÄÇÃ´¿ÉÒÔ²»±ØËÑË÷
+; HKEY_CURRENT_USER.  Í¬ÑùµØ, Èç¹ûËÑË÷ÁË HKEY_LOCAL_MACHINE,
+; ÄÇÃ´¿ÉÒÔ²»±ØËÑË÷ HKEY_CLASSES_ROOT.</em>
 return
 
 CheckThisRegItem:
-if A_LoopRegType = KEY  <em>; å¦‚æžœæ‚¨ä¹Ÿæƒ³æ£€æŸ¥é”®å, é‚£ä¹ˆç§»é™¤è¿™ä¸¤è¡Œ.</em>
+if A_LoopRegType = KEY  <em>; Èç¹ûÄúÒ²Ïë¼ì²é¼üÃû, ÄÇÃ´ÒÆ³ýÕâÁ½ÐÐ.</em>
     return
 RegRead, RegValue
 if ErrorLevel
@@ -153,7 +153,7 @@ IfInString, RegValue, %RegSearchTarget%
 {
     MsgBox, 4, , The following match was found:`n%A_LoopRegKey%\%A_LoopRegSubKey%\%A_LoopRegName%`nValue = %RegValue%`n`nContinue?
     IfMsgBox, No
-        ContinueRegSearch = n  <em>; å‘ŠçŸ¥æˆ‘ä»¬çš„è°ƒç”¨è€…åœæ­¢æœç´¢.</em>
+        ContinueRegSearch = n  <em>; ¸æÖªÎÒÃÇµÄµ÷ÓÃÕßÍ£Ö¹ËÑË÷.</em>
 }
 return</pre>
 

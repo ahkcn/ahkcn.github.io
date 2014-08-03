@@ -2,8 +2,8 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>å‡½æ•°</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>º¯Êý</title>
+<meta http-equiv="content-type" content="text/html; charset=GBK">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="static/theme.css" rel="stylesheet" type="text/css" />
 <script src="static/jquery.js" type="text/javascript"></script>
@@ -12,79 +12,79 @@
 </head>
 
 <body>
-<h1>å‡½æ•°</h1>
+<h1>º¯Êý</h1>
 
-<h2>ç›®å½•</h2>
+<h2>Ä¿Â¼</h2>
 <ul>
-  <li><a href="#intro">å…¥é—¨å’Œç®€å•ç¤ºä¾‹</a></li>
-  <li><a href="#param">å‚æ•°</a></li>
-  <li><a href="#optional">å¯é€‰å‚æ•°</a></li>
-  <li><a href="#return">è¿”å›žå€¼ç»™è°ƒç”¨è€…</a></li>
-  <li><a href="#Variadic">å¯å˜å‚æ•°å‡½æ•°</a></li>
-  <li><a href="#Locals">å±€éƒ¨å˜é‡</a></li>
-  <li><a href="#DynCall">åŠ¨æ€è°ƒç”¨å‡½æ•°</a></li>
-  <li><a href="#ShortCircuit">ä¼˜åŒ–å¸ƒå°”æ±‚å€¼</a></li>
-  <li><a href="#gosub">åœ¨å‡½æ•°ä¸­ä½¿ç”¨å­ç¨‹åº</a></li>
-  <li><a href="#remarks">Return, Exit åŠä¸€èˆ¬è¯´æ˜Ž</a></li>
-  <li><a href="#include">ä½¿ç”¨ #Include åœ¨å¤šä¸ªè„šæœ¬é—´å…±äº«å‡½æ•°</a></li>
-  <li><a href="#lib">å‡½æ•°åº“: æ ‡å‡†åº“å’Œç”¨æˆ·åº“</a></li>
-  <li><a href="#BuiltIn">å†…ç½®å‡½æ•°</a></li>
+  <li><a href="#intro">ÈëÃÅºÍ¼òµ¥Ê¾Àý</a></li>
+  <li><a href="#param">²ÎÊý</a></li>
+  <li><a href="#optional">¿ÉÑ¡²ÎÊý</a></li>
+  <li><a href="#return">·µ»ØÖµ¸øµ÷ÓÃÕß</a></li>
+  <li><a href="#Variadic">¿É±ä²ÎÊýº¯Êý</a></li>
+  <li><a href="#Locals">¾Ö²¿±äÁ¿</a></li>
+  <li><a href="#DynCall">¶¯Ì¬µ÷ÓÃº¯Êý</a></li>
+  <li><a href="#ShortCircuit">ÓÅ»¯²¼¶ûÇóÖµ</a></li>
+  <li><a href="#gosub">ÔÚº¯ÊýÖÐÊ¹ÓÃ×Ó³ÌÐò</a></li>
+  <li><a href="#remarks">Return, Exit ¼°Ò»°ãËµÃ÷</a></li>
+  <li><a href="#include">Ê¹ÓÃ #Include ÔÚ¶à¸ö½Å±¾¼ä¹²Ïíº¯Êý</a></li>
+  <li><a href="#lib">º¯Êý¿â: ±ê×¼¿âºÍÓÃ»§¿â</a></li>
+  <li><a href="#BuiltIn">ÄÚÖÃº¯Êý</a></li>
 </ul>
-<h2><a name="intro" id="intro"></a>å…¥é—¨å’Œç®€å•ç¤ºä¾‹</h2>
-<p><a name="define"></a>å‡½æ•°ç±»ä¼¼äºŽå­ç¨‹åº (<a href="commands/Gosub.htm">Gosub</a>), ä¸è¿‡å®ƒå¯ä»¥ä»Žè°ƒç”¨è€…é‚£é‡ŒæŽ¥å—å‚æ•° (è¾“å…¥). åŒæ—¶, å‡½æ•°è¿˜å¯ä»¥è¿”å›žå€¼ç»™å…¶è°ƒç”¨è€…. æ€è€ƒåŽé¢è¿™ä¸ªæŽ¥å—ä¸¤ä¸ªæ•°å­—å¹¶è¿”å›žå®ƒä»¬çš„å’Œçš„ç®€å•å‡½æ•°:</p>
+<h2><a name="intro" id="intro"></a>ÈëÃÅºÍ¼òµ¥Ê¾Àý</h2>
+<p><a name="define"></a>º¯ÊýÀàËÆÓÚ×Ó³ÌÐò (<a href="commands/Gosub.htm">Gosub</a>), ²»¹ýËü¿ÉÒÔ´Óµ÷ÓÃÕßÄÇÀï½ÓÊÜ²ÎÊý (ÊäÈë). Í¬Ê±, º¯Êý»¹¿ÉÒÔ·µ»ØÖµ¸øÆäµ÷ÓÃÕß. Ë¼¿¼ºóÃæÕâ¸ö½ÓÊÜÁ½¸öÊý×Ö²¢·µ»ØËüÃÇµÄºÍµÄ¼òµ¥º¯Êý:</p>
 <pre>Add(x, y)
 {
-    return x + y   <em>; "<a href="commands/Return.htm">Return</a>" æœŸæœ› <a href="Variables.htm#Expressions">è¡¨è¾¾å¼</a>.</em>
+    return x + y   <em>; "<a href="commands/Return.htm">Return</a>" ÆÚÍû <a href="Variables.htm#Expressions">±í´ïÊ½</a>.</em>
 }</pre>
-<p>ä¸Šé¢çš„è¢«ç§°ä¸ºå‡½æ•° <em>å®šä¹‰</em>, å› ä¸ºå®ƒåˆ›å»ºäº†ä¸€ä¸ªåç§°ä¸º "Add" (ä¸åŒºåˆ†å¤§å°å†™) çš„å‡½æ•°å¹¶ä¸”ç¡®ç«‹äº†è°ƒç”¨å®ƒæ—¶å¿…é¡»å‡†ç¡®çš„æä¾›ä¸¤ä¸ªå‚æ•° (x å’Œ y). è¦è°ƒç”¨æ­¤å‡½æ•°, è¯·æŠŠå®ƒçš„ç»“æžœé€šè¿‡ <strong><a href="commands/SetExpression.htm">:=</a></strong><a href="commands/SetExpression.htm"> è¿ç®—ç¬¦</a> èµ‹å€¼ç»™å˜é‡. ä¾‹å¦‚ï¼š</p>
-<pre>Var := Add(2, 3)  <em>; æ•°å­— 5 å°†è¢«ä¿å­˜åˆ° Var.</em></pre>
-<p>å¹¶ä¸”, è°ƒç”¨å‡½æ•°æ—¶å¯ä»¥ä¸ä¿å­˜å…¶è¿”å›žå€¼:</p>
+<p>ÉÏÃæµÄ±»³ÆÎªº¯Êý <em>¶¨Òå</em>, ÒòÎªËü´´½¨ÁËÒ»¸öÃû³ÆÎª "Add" (²»Çø·Ö´óÐ¡Ð´) µÄº¯Êý²¢ÇÒÈ·Á¢ÁËµ÷ÓÃËüÊ±±ØÐë×¼È·µÄÌá¹©Á½¸ö²ÎÊý (x ºÍ y). Òªµ÷ÓÃ´Ëº¯Êý, Çë°ÑËüµÄ½á¹ûÍ¨¹ý <strong><a href="commands/SetExpression.htm">:=</a></strong><a href="commands/SetExpression.htm"> ÔËËã·û</a> ¸³Öµ¸ø±äÁ¿. ÀýÈç£º</p>
+<pre>Var := Add(2, 3)  <em>; Êý×Ö 5 ½«±»±£´æµ½ Var.</em></pre>
+<p>²¢ÇÒ, µ÷ÓÃº¯ÊýÊ±¿ÉÒÔ²»±£´æÆä·µ»ØÖµ:</p>
 <pre>Add(2, 3)</pre>
-<p>ä½†åœ¨è¿™ç§æƒ…å†µä¸‹, å‡½æ•°è¿”å›žçš„ä»»ä½•å€¼ä¼šè¢«ä¸¢å¼ƒ; æ‰€ä»¥é™¤éžå‡½æ•°äº§ç”Ÿäº†è¿”å›žå€¼å¤–çš„å…¶ä»–æ•ˆæžœ, å¦åˆ™è¿™ä¸ªè°ƒç”¨æ²¡æœ‰æ„ä¹‰.</p>
-<p>ç”±äºŽå‡½æ•°è°ƒç”¨æ˜¯ <a href="Variables.htm#Expressions">è¡¨è¾¾å¼</a>, åœ¨å…¶å‚æ•°åˆ—è¡¨ä¸­çš„ä»»ä½•å˜é‡åç§°éƒ½ä¸åº”è¯¥æ‹¬åœ¨ç™¾åˆ†å·ä¸­. ä¸Žä¹‹ç›¸æ¯”, åŽŸä¹‰çš„å­—ç¬¦ä¸²åº”è¯¥æ‹¬åœ¨åŒå¼•å·ä¸­. ä¾‹å¦‚ï¼š</p>
+<p>µ«ÔÚÕâÖÖÇé¿öÏÂ, º¯Êý·µ»ØµÄÈÎºÎÖµ»á±»¶ªÆú; ËùÒÔ³ý·Çº¯Êý²úÉúÁË·µ»ØÖµÍâµÄÆäËûÐ§¹û, ·ñÔòÕâ¸öµ÷ÓÃÃ»ÓÐÒâÒå.</p>
+<p>ÓÉÓÚº¯Êýµ÷ÓÃÊÇ <a href="Variables.htm#Expressions">±í´ïÊ½</a>, ÔÚÆä²ÎÊýÁÐ±íÖÐµÄÈÎºÎ±äÁ¿Ãû³Æ¶¼²»Ó¦¸ÃÀ¨ÔÚ°Ù·ÖºÅÖÐ. ÓëÖ®Ïà±È, Ô­ÒåµÄ×Ö·û´®Ó¦¸ÃÀ¨ÔÚË«ÒýºÅÖÐ. ÀýÈç£º</p>
 <pre>if <a href="#InStr">InStr</a>(MyVar, "fox")
     MsgBox The variable MyVar contains the word fox.</pre>
-<p>æœ€åŽ, å¯ä»¥åœ¨ä»»ä½•å‘½ä»¤çš„å‚æ•°ä¸­è°ƒç”¨å‡½æ•° (é™¤äº†åƒ <a href="commands/StringLen.htm">StringLen</a> çš„ä¸­çš„é‚£äº› OutputVar å’Œ InputVar å‚æ•°). ç„¶è€Œ, ä¸æ”¯æŒ <a href="Variables.htm#Expressions">è¡¨è¾¾å¼</a> çš„å‚æ•°å¿…é¡»åŠ ä¸Š "% " å‰ç¼€, ä¾‹å¦‚:</p>
+<p>×îºó, ¿ÉÒÔÔÚÈÎºÎÃüÁîµÄ²ÎÊýÖÐµ÷ÓÃº¯Êý (³ýÁËÏñ <a href="commands/StringLen.htm">StringLen</a> µÄÖÐµÄÄÇÐ© OutputVar ºÍ InputVar ²ÎÊý). È»¶ø, ²»Ö§³Ö <a href="Variables.htm#Expressions">±í´ïÊ½</a> µÄ²ÎÊý±ØÐë¼ÓÉÏ "% " Ç°×º, ÀýÈç:</p>
 <pre>MsgBox <strong>%</strong> "The answer is: " <strong>.</strong> Add(3, 2)</pre>
-<p>åœ¨åŽŸç”Ÿæ”¯æŒè¡¨è¾¾å¼çš„å‚æ•°ä¸­ä¹Ÿå…è®¸åŠ ä¸Š "% " å‰ç¼€, ä¸è¿‡å®ƒä¼šè¢«ç®€å•çš„å¿½ç•¥äº†.</p>
-<h2><a name="param" id="param"></a>å‚æ•°</h2>
-<p>å®šä¹‰å‡½æ•°æ—¶, å…¶å‚æ•°éƒ½åœ¨å…¶åç§°åŽé¢çš„æ‹¬å·ä¸­åˆ—å‡º (åœ¨å…¶åç§°å’Œå¼€æ‹¬å·ä¹‹é—´ä¸èƒ½å«æœ‰ç©ºæ ¼). å¦‚æžœå‡½æ•°ä¸æŽ¥å—ä»»ä½•å‚æ•°ï¼Œè¯·æŠŠæ‹¬å·ç•™ç©ºï¼Œä¾‹å¦‚ï¼š<code>GetCurrentTimestamp()</code>ã€‚</p>
-<p><a name="ByRef"></a><strong>ByRef å‚æ•°</strong>: ä»Žå‡½æ•°çš„è§’åº¦çœ‹, å‚æ•°æœ¬è´¨ä¸Šæ˜¯ <a href="#Locals">å±€éƒ¨å˜é‡</a>, é™¤éžå®ƒä»¬è¢«å®šä¹‰ä¸º <em>ByRef</em>, ä¾‹å¦‚:</p>
+<p>ÔÚÔ­ÉúÖ§³Ö±í´ïÊ½µÄ²ÎÊýÖÐÒ²ÔÊÐí¼ÓÉÏ "% " Ç°×º, ²»¹ýËü»á±»¼òµ¥µÄºöÂÔÁË.</p>
+<h2><a name="param" id="param"></a>²ÎÊý</h2>
+<p>¶¨Òåº¯ÊýÊ±, Æä²ÎÊý¶¼ÔÚÆäÃû³ÆºóÃæµÄÀ¨ºÅÖÐÁÐ³ö (ÔÚÆäÃû³ÆºÍ¿ªÀ¨ºÅÖ®¼ä²»ÄÜº¬ÓÐ¿Õ¸ñ). Èç¹ûº¯Êý²»½ÓÊÜÈÎºÎ²ÎÊý£¬Çë°ÑÀ¨ºÅÁô¿Õ£¬ÀýÈç£º<code>GetCurrentTimestamp()</code>¡£</p>
+<p><a name="ByRef"></a><strong>ByRef ²ÎÊý</strong>: ´Óº¯ÊýµÄ½Ç¶È¿´, ²ÎÊý±¾ÖÊÉÏÊÇ <a href="#Locals">¾Ö²¿±äÁ¿</a>, ³ý·ÇËüÃÇ±»¶¨ÒåÎª <em>ByRef</em>, ÀýÈç:</p>
 <pre>Swap(ByRef Left, ByRef Right)
 {
     temp := Left
     Left := Right
     Right := temp
 }</pre>
-<p>åœ¨ä¸Šè¿°ä¾‹å­ä¸­, <em>ByRef</em> çš„ä½¿ç”¨è®©æ¯ä¸ªå‚æ•°å˜æˆä»Žè°ƒç”¨è€…ä¼ é€’è¿›æ¥çš„å˜é‡çš„ä¸€ä¸ªåˆ«å. æ¢å¥è¯è¯´, å‚æ•°å’Œè°ƒç”¨è€…çš„å˜é‡éƒ½å¼•ç”¨å†…å­˜ä¸­ç›¸åŒçš„å†…å®¹. è¿™æ ·ä½¿å¾— Swap å‡½æ•°å¯ä»¥é€šè¿‡ç§»åŠ¨ <em>Left</em> çš„å†…å®¹åˆ° <em>Right</em> ä¸­æ¥ä¿®æ”¹è°ƒç”¨è€…çš„å˜é‡, åä¹‹äº¦ç„¶.</p>
-<p>ä¸Žä¹‹ç›¸æ¯”, åœ¨ä¸Šè¿°ä¾‹å­ä¸­å¦‚æžœæ²¡æœ‰ä½¿ç”¨ <em>ByRef</em>, <em>Left</em> å’Œ <em>Right</em> å°†æ˜¯è°ƒç”¨è€…å˜é‡çš„å‰¯æœ¬, å› æ­¤ Swap å‡½æ•°ä¸ä¼šå¯¹å¤–éƒ¨äº§ç”Ÿå½±å“.</p>
-<p>ç”±äºŽ <a href="commands/Return.htm">return</a> åªèƒ½é€å›žä¸€ä¸ªå€¼ç»™å‡½æ•°çš„è°ƒç”¨è€…, æ‰€ä»¥å¯ä»¥ä½¿ç”¨ <em>ByRef</em> é€å›žæ›´å¤šçš„ç»“æžœ. è¿™æ˜¯ç”±å‡½æ•°å‘è°ƒç”¨è€…ä¼ é€’è¿›æ¥çš„å˜é‡ (é€šå¸¸ä¸ºç©º) å‚¨å­˜ä¸€ä¸ªå€¼æ¥å®žçŽ°çš„.</p>
-<p>ä¼ é€’å¤§å­—ç¬¦ä¸²ç»™å‡½æ•°æ—¶, ä½¿ç”¨ <em>ByRef</em> æé«˜äº†æ€§èƒ½å¹¶ä¸”é€šè¿‡é¿å…ç”Ÿæˆå­—ç¬¦ä¸²çš„å‰¯æœ¬èŠ‚çº¦äº†å†…å­˜. åŒæ ·åœ°, ä½¿ç”¨ <em>ByRef</em> é€å›žé•¿å­—ç¬¦ä¸²ç»™è°ƒç”¨è€…é€šå¸¸æ¯”ç±»ä¼¼ <code>Return HugeString</code> çš„æ–¹å¼æ‰§è¡Œçš„æ›´å¥½.</p>
-<p><span class="ver">[AHK_L 60+]:</span> å¦‚æžœä¼ é€’ç»™ ByRef å‚æ•°çš„ä¸æ˜¯å¯ä¿®æ”¹çš„å˜é‡, é‚£ä¹ˆå‡½æ•°ä¼šè¡¨çŽ°çš„å°±åƒå…³é”®å­— "ByRef" æ²¡æœ‰é‚£æ ·. ä¾‹å¦‚, <code>Swap(A_Index, i)</code> ä¿å­˜ <i>A_Index</i> çš„å€¼åˆ° <i>i</i> ä¸­, ä½†æ˜¯å½“ <i>Swap</i> å‡½æ•°è¿”å›žæ—¶èµ‹ç»™ <i>Left</i> çš„å€¼ä¼šè¢«ä¸¢å¼ƒ.</p>
-<p><span class="ver">[v1.1.01+]ï¼š</span><a href="#IsByRef">IsByRef()</a> å‡½æ•°å¯ä»¥ç”¨æ¥åˆ¤æ–­è°ƒç”¨è€…æ˜¯å¦ä¸ºæŒ‡å®šçš„ ByRef å‚æ•°æä¾›äº†å˜é‡ã€‚</p>
-<p>å·²çŸ¥é™åˆ¶:</p>
+<p>ÔÚÉÏÊöÀý×ÓÖÐ, <em>ByRef</em> µÄÊ¹ÓÃÈÃÃ¿¸ö²ÎÊý±ä³É´Óµ÷ÓÃÕß´«µÝ½øÀ´µÄ±äÁ¿µÄÒ»¸ö±ðÃû. »»¾ä»°Ëµ, ²ÎÊýºÍµ÷ÓÃÕßµÄ±äÁ¿¶¼ÒýÓÃÄÚ´æÖÐÏàÍ¬µÄÄÚÈÝ. ÕâÑùÊ¹µÃ Swap º¯Êý¿ÉÒÔÍ¨¹ýÒÆ¶¯ <em>Left</em> µÄÄÚÈÝµ½ <em>Right</em> ÖÐÀ´ÐÞ¸Äµ÷ÓÃÕßµÄ±äÁ¿, ·´Ö®ÒàÈ».</p>
+<p>ÓëÖ®Ïà±È, ÔÚÉÏÊöÀý×ÓÖÐÈç¹ûÃ»ÓÐÊ¹ÓÃ <em>ByRef</em>, <em>Left</em> ºÍ <em>Right</em> ½«ÊÇµ÷ÓÃÕß±äÁ¿µÄ¸±±¾, Òò´Ë Swap º¯Êý²»»á¶ÔÍâ²¿²úÉúÓ°Ïì.</p>
+<p>ÓÉÓÚ <a href="commands/Return.htm">return</a> Ö»ÄÜËÍ»ØÒ»¸öÖµ¸øº¯ÊýµÄµ÷ÓÃÕß, ËùÒÔ¿ÉÒÔÊ¹ÓÃ <em>ByRef</em> ËÍ»Ø¸ü¶àµÄ½á¹û. ÕâÊÇÓÉº¯ÊýÏòµ÷ÓÃÕß´«µÝ½øÀ´µÄ±äÁ¿ (Í¨³£Îª¿Õ) ´¢´æÒ»¸öÖµÀ´ÊµÏÖµÄ.</p>
+<p>´«µÝ´ó×Ö·û´®¸øº¯ÊýÊ±, Ê¹ÓÃ <em>ByRef</em> Ìá¸ßÁËÐÔÄÜ²¢ÇÒÍ¨¹ý±ÜÃâÉú³É×Ö·û´®µÄ¸±±¾½ÚÔ¼ÁËÄÚ´æ. Í¬ÑùµØ, Ê¹ÓÃ <em>ByRef</em> ËÍ»Ø³¤×Ö·û´®¸øµ÷ÓÃÕßÍ¨³£±ÈÀàËÆ <code>Return HugeString</code> µÄ·½Ê½Ö´ÐÐµÄ¸üºÃ.</p>
+<p><span class="ver">[AHK_L 60+]:</span> Èç¹û´«µÝ¸ø ByRef ²ÎÊýµÄ²»ÊÇ¿ÉÐÞ¸ÄµÄ±äÁ¿, ÄÇÃ´º¯Êý»á±íÏÖµÄ¾ÍÏñ¹Ø¼ü×Ö "ByRef" Ã»ÓÐÄÇÑù. ÀýÈç, <code>Swap(A_Index, i)</code> ±£´æ <i>A_Index</i> µÄÖµµ½ <i>i</i> ÖÐ, µ«ÊÇµ± <i>Swap</i> º¯Êý·µ»ØÊ±¸³¸ø <i>Left</i> µÄÖµ»á±»¶ªÆú.</p>
+<p><span class="ver">[v1.1.01+]£º</span><a href="#IsByRef">IsByRef()</a> º¯Êý¿ÉÒÔÓÃÀ´ÅÐ¶Ïµ÷ÓÃÕßÊÇ·ñÎªÖ¸¶¨µÄ ByRef ²ÎÊýÌá¹©ÁË±äÁ¿¡£</p>
+<p>ÒÑÖªÏÞÖÆ:</p>
 <ul>
-  <li>å¯¹è±¡å­—æ®µåœ¨ <em>ByRef</em> çš„ç›®çš„ä¸­ä¸ä¼šè¢«è§†ä¸ºå˜é‡. ä¾‹å¦‚, å¦‚æžœ <code>foo.bar</code> ä¼ é€’ç»™ ByRef å‚æ•°, é‚£ä¹ˆå®ƒå°†è¡¨çŽ°çš„å°±åƒ <em>ByRef</em> æ²¡æœ‰é‚£æ ·.</li>
-  <li>ä¸èƒ½ä¼ é€’ <a href="misc/Clipboard.htm">Clipboard</a>, <a href="Variables.htm#BuiltIn">å†…ç½®å˜é‡</a> æˆ– <a href="Variables.htm#env">çŽ¯å¢ƒå˜é‡</a> ç»™å‡½æ•°çš„ <em>ByRef</em> å‚æ•°, å³ä½¿è„šæœ¬ä¸­æ²¡æœ‰ <a href="commands/_NoEnv.htm">#NoEnv</a> æ—¶.</li>
-  <li><a name="recurse"></a>å°½ç®¡å‡½æ•°å¯ä»¥é€’å½’è°ƒç”¨å®ƒè‡ªå·±ï¼Œä½†æ˜¯å¦‚æžœå®ƒä¼ é€’å®ƒè‡ªå·±çš„ä¸€ä¸ª<a href="#Locals">å±€éƒ¨å˜é‡</a>æˆ–éž ByRef å‚æ•°ç»™è‡ªå·±çš„ <em>ByRef</em>ï¼Œé‚£ä¹ˆæ–°ä¸€å±‚çš„ <em>ByRef</em> å‚æ•°å°†å¼•ç”¨å®ƒè‡ªå·±é‚£ä¸ªåç§°çš„å±€éƒ¨å˜é‡è€Œä¸æ˜¯ä¹‹å‰å±‚çš„ã€‚ç„¶è€Œ, å½“å‡½æ•°ä¼ é€’ç»™å®ƒè‡ªå·± <a href="#Global">å…¨å±€å˜é‡</a>, <a href="#static">é™æ€å˜é‡</a> æˆ– <em>ByRef</em> å‚æ•°æ—¶ä¸ä¼šäº§ç”Ÿè¿™æ ·çš„é—®é¢˜.</li>
-  <li>å¦‚æžœä¸€ä¸ªå‚æ•°åœ¨å‡½æ•°è°ƒç”¨ä¸­è¢«è§£æžä¸ºä¸€ä¸ªå˜é‡ (ä¾‹å¦‚ <code>Var</code> æˆ– <code>++Var</code> æˆ– <code>Var*=2</code>), å®ƒå·¦è¾¹æˆ–å³è¾¹çš„å…¶ä»–å‚æ•°å¯èƒ½åœ¨å®ƒè¢«ä¼ é€’ç»™å‡½æ•°å‰ä¿®æ”¹è¿™ä¸ªå˜é‡. ä¾‹å¦‚, å½“ <em>Var</em> åˆå§‹ä¸º 0 æ—¶ <code>func(Var, Var++)</code> ä¼šæ„å¤–åœ°ä¼ é€’ 1 å’Œ 0, å³ä½¿å‡½æ•°çš„é¦–ä¸ªå‚æ•°ä¸æ˜¯ <em>ByRef</em> ç±»åž‹æ—¶. å› ä¸ºè¿™ç§è¡Œä¸ºæ˜¯è¿åå¸¸è§„çš„, æ‰€ä»¥å¯èƒ½åœ¨å°†æ¥çš„ç‰ˆæœ¬ä¸­æ”¹å˜.</li>
+  <li>¶ÔÏó×Ö¶ÎÔÚ <em>ByRef</em> µÄÄ¿µÄÖÐ²»»á±»ÊÓÎª±äÁ¿. ÀýÈç, Èç¹û <code>foo.bar</code> ´«µÝ¸ø ByRef ²ÎÊý, ÄÇÃ´Ëü½«±íÏÖµÄ¾ÍÏñ <em>ByRef</em> Ã»ÓÐÄÇÑù.</li>
+  <li>²»ÄÜ´«µÝ <a href="misc/Clipboard.htm">Clipboard</a>, <a href="Variables.htm#BuiltIn">ÄÚÖÃ±äÁ¿</a> »ò <a href="Variables.htm#env">»·¾³±äÁ¿</a> ¸øº¯ÊýµÄ <em>ByRef</em> ²ÎÊý, ¼´Ê¹½Å±¾ÖÐÃ»ÓÐ <a href="commands/_NoEnv.htm">#NoEnv</a> Ê±.</li>
+  <li><a name="recurse"></a>¾¡¹Üº¯Êý¿ÉÒÔµÝ¹éµ÷ÓÃËü×Ô¼º£¬µ«ÊÇÈç¹ûËü´«µÝËü×Ô¼ºµÄÒ»¸ö<a href="#Locals">¾Ö²¿±äÁ¿</a>»ò·Ç ByRef ²ÎÊý¸ø×Ô¼ºµÄ <em>ByRef</em>£¬ÄÇÃ´ÐÂÒ»²ãµÄ <em>ByRef</em> ²ÎÊý½«ÒýÓÃËü×Ô¼ºÄÇ¸öÃû³ÆµÄ¾Ö²¿±äÁ¿¶ø²»ÊÇÖ®Ç°²ãµÄ¡£È»¶ø, µ±º¯Êý´«µÝ¸øËü×Ô¼º <a href="#Global">È«¾Ö±äÁ¿</a>, <a href="#static">¾²Ì¬±äÁ¿</a> »ò <em>ByRef</em> ²ÎÊýÊ±²»»á²úÉúÕâÑùµÄÎÊÌâ.</li>
+  <li>Èç¹ûÒ»¸ö²ÎÊýÔÚº¯Êýµ÷ÓÃÖÐ±»½âÎöÎªÒ»¸ö±äÁ¿ (ÀýÈç <code>Var</code> »ò <code>++Var</code> »ò <code>Var*=2</code>), Ëü×ó±ß»òÓÒ±ßµÄÆäËû²ÎÊý¿ÉÄÜÔÚËü±»´«µÝ¸øº¯ÊýÇ°ÐÞ¸ÄÕâ¸ö±äÁ¿. ÀýÈç, µ± <em>Var</em> ³õÊ¼Îª 0 Ê± <code>func(Var, Var++)</code> »áÒâÍâµØ´«µÝ 1 ºÍ 0, ¼´Ê¹º¯ÊýµÄÊ×¸ö²ÎÊý²»ÊÇ <em>ByRef</em> ÀàÐÍÊ±. ÒòÎªÕâÖÖÐÐÎªÊÇÎ¥·´³£¹æµÄ, ËùÒÔ¿ÉÄÜÔÚ½«À´µÄ°æ±¾ÖÐ¸Ä±ä.</li>
 </ul>
-<h2 id="optional">å¯é€‰å‚æ•°</h2>
-<p>å®šä¹‰å‡½æ•°æ—¶, å¯ä»¥æŠŠå®ƒçš„ä¸€ä¸ªæˆ–å¤šä¸ªå‚æ•°æ ‡è®°ä¸ºå¯é€‰çš„. è¿™å¯ä»¥é€šè¿‡åœ¨å‚æ•°åŽæ·»åŠ ä¸€ä¸ªç­‰å·ï¼ˆåœ¨ v1.1.09+ ä¸­è¿˜å¯ä»¥ä¸º <code>:=</code>ï¼‰è·Ÿç€é»˜è®¤å€¼å®Œæˆ. åŽé¢çš„å‡½æ•°ä¸­å…¶ Z å‚æ•°è¢«æ ‡è®°ä¸ºå¯é€‰çš„:</p>
+<h2 id="optional">¿ÉÑ¡²ÎÊý</h2>
+<p>¶¨Òåº¯ÊýÊ±, ¿ÉÒÔ°ÑËüµÄÒ»¸ö»ò¶à¸ö²ÎÊý±ê¼ÇÎª¿ÉÑ¡µÄ. Õâ¿ÉÒÔÍ¨¹ýÔÚ²ÎÊýºóÌí¼ÓÒ»¸öµÈºÅ£¨ÔÚ v1.1.09+ ÖÐ»¹¿ÉÒÔÎª <code>:=</code>£©¸ú×ÅÄ¬ÈÏÖµÍê³É. ºóÃæµÄº¯ÊýÖÐÆä Z ²ÎÊý±»±ê¼ÇÎª¿ÉÑ¡µÄ:</p>
 <pre>Add(X, Y, Z:=0) {
     return X + Y + Z
 }</pre>
-<p>ä»Ž v1.1.09 èµ·ï¼Œ<code>=</code> å’Œ <code>:=</code> éƒ½æ”¯æŒã€‚ä¸ºäº†ä¸Žè¡¨è¾¾å¼èµ‹å€¼ä¿æŒä¸€è‡´ä¸”ä¸Žå°†æ¥çš„ AutoHotkey ç‰ˆæœ¬å…¼å®¹ï¼Œå»ºè®®ä½¿ç”¨åŽè€…ã€‚</p>
-<p>å½“è°ƒç”¨è€…ä¼ é€’ <strong>ä¸‰ä¸ª</strong> å‚æ•°ç»™ä¸Šé¢çš„å‡½æ•°æ—¶, Z çš„é»˜è®¤å€¼è¢«å¿½ç•¥. ä½†å½“è°ƒç”¨è€…ä»…ä¼ é€’ <strong>ä¸¤ä¸ª</strong> å‚æ•°æ—¶, Z è‡ªåŠ¨æŽ¥å—é»˜è®¤å€¼ 0.</p>
-<p id="missing">å¯é€‰å‚æ•°ä¸èƒ½å­¤ç«‹åœ°æ”¾åœ¨å‚æ•°åˆ—è¡¨çš„ä¸­é—´. æ¢å¥è¯è¯´, åœ¨é¦–ä¸ªå¯é€‰å‚æ•°å³è¾¹çš„æ‰€æœ‰å‚æ•°éƒ½å¿…é¡»æ ‡è®°ä¸ºå¯é€‰çš„. <span class="ver">[AHK_L 31+]ï¼š</span>è°ƒç”¨å‡½æ•°æ—¶å¯ä»¥çœç•¥å‚æ•°åˆ—è¡¨ä¸­é—´çš„å¯é€‰å‚æ•°ï¼Œå¦‚ä¸‹æ‰€ç¤ºï¼šå¯¹äºŽåŠ¨æ€çš„å‡½æ•°è°ƒç”¨å’Œæ–¹æ³•è°ƒç”¨ï¼Œç‰ˆæœ¬ä¸º v1.1.12+ æ‰æ”¯æŒè¿™ç§ç‰¹æ€§ã€‚</p>
+<p>´Ó v1.1.09 Æð£¬<code>=</code> ºÍ <code>:=</code> ¶¼Ö§³Ö¡£ÎªÁËÓë±í´ïÊ½¸³Öµ±£³ÖÒ»ÖÂÇÒÓë½«À´µÄ AutoHotkey °æ±¾¼æÈÝ£¬½¨ÒéÊ¹ÓÃºóÕß¡£</p>
+<p>µ±µ÷ÓÃÕß´«µÝ <strong>Èý¸ö</strong> ²ÎÊý¸øÉÏÃæµÄº¯ÊýÊ±, Z µÄÄ¬ÈÏÖµ±»ºöÂÔ. µ«µ±µ÷ÓÃÕß½ö´«µÝ <strong>Á½¸ö</strong> ²ÎÊýÊ±, Z ×Ô¶¯½ÓÊÜÄ¬ÈÏÖµ 0.</p>
+<p id="missing">¿ÉÑ¡²ÎÊý²»ÄÜ¹ÂÁ¢µØ·ÅÔÚ²ÎÊýÁÐ±íµÄÖÐ¼ä. »»¾ä»°Ëµ, ÔÚÊ×¸ö¿ÉÑ¡²ÎÊýÓÒ±ßµÄËùÓÐ²ÎÊý¶¼±ØÐë±ê¼ÇÎª¿ÉÑ¡µÄ. <span class="ver">[AHK_L 31+]£º</span>µ÷ÓÃº¯ÊýÊ±¿ÉÒÔÊ¡ÂÔ²ÎÊýÁÐ±íÖÐ¼äµÄ¿ÉÑ¡²ÎÊý£¬ÈçÏÂËùÊ¾£º¶ÔÓÚ¶¯Ì¬µÄº¯Êýµ÷ÓÃºÍ·½·¨µ÷ÓÃ£¬°æ±¾Îª v1.1.12+ ²ÅÖ§³ÖÕâÖÖÌØÐÔ¡£</p>
 <pre>Func(1,, 3)
-Func(X, Y:=2, Z:=0) {  <em>; è¯·æ³¨æ„æ­¤æ—¶ Z å¿…é¡»æ˜¯å¯é€‰çš„ã€‚</em>
+Func(X, Y:=2, Z:=0) {  <em>; Çë×¢Òâ´ËÊ± Z ±ØÐëÊÇ¿ÉÑ¡µÄ¡£</em>
     MsgBox %X%, %Y%, %Z%
 }</pre>
-<p><a name="OptionalByRef"></a>åœ¨ v1.0.46.13+, <a href="#ByRef">ByRef å‚æ•°</a> ä¹Ÿæ”¯æŒé»˜è®¤å€¼; ä¾‹å¦‚: <code>Func(ByRef p1 = "")</code>. æ¯å½“è°ƒç”¨è€…çœç•¥è¿™æ ·çš„å‚æ•°æ—¶, å‡½æ•°ä¼šåˆ›å»ºä¸€ä¸ªåŒ…å«é»˜è®¤å€¼çš„å±€éƒ¨å˜é‡; æ¢å¥è¯è¯´, å‡½æ•°è¡¨çŽ°çš„å°±åƒå…³é”®å­— "ByRef" æ²¡æœ‰é‚£æ ·.</p>
-<p>å‚æ•°çš„é»˜è®¤å€¼å¿…é¡»æ˜¯ä¸‹åˆ—å½¢å¼çš„å…¶ä¸­ä¸€ç§ï¼š<code>true</code>ã€<code>false</code>ã€åŽŸä¹‰çš„æ•´æ•°ã€åŽŸä¹‰çš„æµ®ç‚¹æ•°æˆ–å¼•å·åŒ…å›´çš„/åŽŸä¹‰çš„å­—ç¬¦ä¸²ä¾‹å¦‚ "fox" æˆ– ""ï¼ˆä½†åœ¨ 1.0.46.13+ ä¹‹å‰çš„ç‰ˆæœ¬ä¸­å­—ç¬¦ä¸²åªæ”¯æŒ ""ï¼‰ã€‚</p>
-<h2 id="return">è¿”å›žå€¼ç»™è°ƒç”¨è€…</h2>
-<p>å¦‚<a href="#intro">ä»‹ç»</a>ä¸­æ‰€è¯´ï¼Œå‡½æ•°å¯ä»¥<a href="commands/Return.htm">è¿”å›ž</a>å€¼ç»™è°ƒç”¨è€…ã€‚</p>
+<p><a name="OptionalByRef"></a>ÔÚ v1.0.46.13+, <a href="#ByRef">ByRef ²ÎÊý</a> Ò²Ö§³ÖÄ¬ÈÏÖµ; ÀýÈç: <code>Func(ByRef p1 = "")</code>. Ã¿µ±µ÷ÓÃÕßÊ¡ÂÔÕâÑùµÄ²ÎÊýÊ±, º¯Êý»á´´½¨Ò»¸ö°üº¬Ä¬ÈÏÖµµÄ¾Ö²¿±äÁ¿; »»¾ä»°Ëµ, º¯Êý±íÏÖµÄ¾ÍÏñ¹Ø¼ü×Ö "ByRef" Ã»ÓÐÄÇÑù.</p>
+<p>²ÎÊýµÄÄ¬ÈÏÖµ±ØÐëÊÇÏÂÁÐÐÎÊ½µÄÆäÖÐÒ»ÖÖ£º<code>true</code>¡¢<code>false</code>¡¢Ô­ÒåµÄÕûÊý¡¢Ô­ÒåµÄ¸¡µãÊý»òÒýºÅ°üÎ§µÄ/Ô­ÒåµÄ×Ö·û´®ÀýÈç "fox" »ò ""£¨µ«ÔÚ 1.0.46.13+ Ö®Ç°µÄ°æ±¾ÖÐ×Ö·û´®Ö»Ö§³Ö ""£©¡£</p>
+<h2 id="return">·µ»ØÖµ¸øµ÷ÓÃÕß</h2>
+<p>Èç<a href="#intro">½éÉÜ</a>ÖÐËùËµ£¬º¯Êý¿ÉÒÔ<a href="commands/Return.htm">·µ»Ø</a>Öµ¸øµ÷ÓÃÕß¡£</p>
 <pre>
 Test := returnTest()
 MsgBox % Test
@@ -93,7 +93,7 @@ returnTest() {
   return 123
 }
 </pre>
-<p>å¦‚æžœè¦ä»Žå‡½æ•°ä¸­è¿”å›žé¢å¤–çš„ç»“æžœï¼Œå¯ä»¥ä½¿ç”¨ <a href="#ByRef">ByRef</a>ï¼š</p>
+<p>Èç¹ûÒª´Óº¯ÊýÖÐ·µ»Ø¶îÍâµÄ½á¹û£¬¿ÉÒÔÊ¹ÓÃ <a href="#ByRef">ByRef</a>£º</p>
 <pre>
 returnByRef(A,B,C)
 MsgBox % A "," B "," C
@@ -106,7 +106,7 @@ returnByRef(ByRef val1, ByRef val2, ByRef val3)
   return
 }
 </pre>
-<p><span class="ver">[v1.0.97+]ï¼š</span> å¯ä»¥ä½¿ç”¨<a href="Objects.htm#Usage_Objects">å¯¹è±¡</a>å’Œ<a href="Objects.htm#Usage_Simple_Arrays">æ•°ç»„</a>è¿”å›žå¤šå€¼ç”šè‡³æ˜¯å‘½åå€¼ï¼š</p>
+<p><span class="ver">[v1.0.97+]£º</span> ¿ÉÒÔÊ¹ÓÃ<a href="Objects.htm#Usage_Objects">¶ÔÏó</a>ºÍ<a href="Objects.htm#Usage_Simple_Arrays">Êý×é</a>·µ»Ø¶àÖµÉõÖÁÊÇÃüÃûÖµ£º</p>
 <pre>
 Test1 := returnArray1()
 MsgBox % Test1[1] "," Test1[2]
@@ -133,74 +133,74 @@ returnObject() {
   return Test
 }
 </pre>
-<h2 id="Variadic">å¯å˜å‚æ•°å‡½æ•° <span class="ver">[AHK_L 60+]</span></h2>
-<p>å®šä¹‰å‡½æ•°æ—¶, åœ¨æœ€åŽä¸€ä¸ªå‚æ•°åŽé¢å†™ä¸€ä¸ªæ˜Ÿå·æ¥æ ‡è®°æ­¤å‡½æ•°ä¸ºå¯å˜å‚æ•°çš„, è¿™æ ·è®©å®ƒå¯ä»¥æŽ¥æ”¶å¯å˜æ•°ç›®çš„å‚æ•°:</p>
+<h2 id="Variadic">¿É±ä²ÎÊýº¯Êý <span class="ver">[AHK_L 60+]</span></h2>
+<p>¶¨Òåº¯ÊýÊ±, ÔÚ×îºóÒ»¸ö²ÎÊýºóÃæÐ´Ò»¸öÐÇºÅÀ´±ê¼Ç´Ëº¯ÊýÎª¿É±ä²ÎÊýµÄ, ÕâÑùÈÃËü¿ÉÒÔ½ÓÊÕ¿É±äÊýÄ¿µÄ²ÎÊý:</p>
 <pre>Join(sep, <b class="blue">params*</b>) {
     for index,param in params
         str .= param . sep
     return SubStr(str, 1, -StrLen(sep))
 }
 MsgBox % Join("`n", "one", "two", "three")</pre>
-<p>è°ƒç”¨å¯å˜å‚æ•°å‡½æ•°æ—¶, é€šè¿‡ä¿å­˜åœ¨å‡½æ•°çš„æœ€åŽå‚æ•°ä¸­çš„å¯¹è±¡å¯ä»¥è®¿é—®å‰©ä½™çš„å‚æ•°. å‡½æ•°çš„é¦–ä¸ªå‰©ä½™å‚æ•°åœ¨ <code><i>params</i>[1]</code>, ç¬¬äºŒä¸ªåœ¨ <code><i>params</i>[2]</code> ç­‰ç­‰. å’Œæ‰€æœ‰çš„æ ‡å‡†å¯¹è±¡ä¸€æ ·, ä½¿ç”¨ <code><i>params</i>.MaxIndex()</code> å¯ä»¥ç¡®å®šæœ€å¤§çš„ç´¢å¼•å€¼ (è¿™é‡Œä¸ºå‚æ•°çš„æ•°ç›®). ä½†æ˜¯å¦‚æžœæ²¡æœ‰å‚æ•°, MaxIndex ä¼šè¿”å›žç©ºå­—ç¬¦ä¸².</p>
-<p>æ³¨æ„:</p>
+<p>µ÷ÓÃ¿É±ä²ÎÊýº¯ÊýÊ±, Í¨¹ý±£´æÔÚº¯ÊýµÄ×îºó²ÎÊýÖÐµÄ¶ÔÏó¿ÉÒÔ·ÃÎÊÊ£ÓàµÄ²ÎÊý. º¯ÊýµÄÊ×¸öÊ£Óà²ÎÊýÔÚ <code><i>params</i>[1]</code>, µÚ¶þ¸öÔÚ <code><i>params</i>[2]</code> µÈµÈ. ºÍËùÓÐµÄ±ê×¼¶ÔÏóÒ»Ñù, Ê¹ÓÃ <code><i>params</i>.MaxIndex()</code> ¿ÉÒÔÈ·¶¨×î´óµÄË÷ÒýÖµ (ÕâÀïÎª²ÎÊýµÄÊýÄ¿). µ«ÊÇÈç¹ûÃ»ÓÐ²ÎÊý, MaxIndex »á·µ»Ø¿Õ×Ö·û´®.</p>
+<p>×¢Òâ:</p>
 <ul>
-  <li>"å¯å˜" å‚æ•°åªå¯ä»¥å‡ºçŽ°åœ¨å½¢å¼å‚æ•°åˆ—è¡¨çš„æœ«å°¾.</li>
-  <li><a href="misc/RegExCallout.htm">RegEx è°ƒå‡º</a>å‡½æ•°ä¸æ˜¯å¯å˜å‚æ•°çš„ï¼Œè™½ç„¶å…è®¸ä½¿ç”¨â€œå¯å˜çš„â€å‚æ•°ä½†ä¼šè¢«ç•™ç©ºã€‚</li>
-  <li><a href="commands/RegisterCallback.htm">å›žè°ƒå‡½æ•°</a><a href="commands/RegisterCallback.htm#Indirect">é€šè¿‡åœ°å€</a>è€Œä¸æ˜¯æ•°ç»„ä¼ é€’å‰©ä½™å‚æ•°ã€‚</li>
+  <li>"¿É±ä" ²ÎÊýÖ»¿ÉÒÔ³öÏÖÔÚÐÎÊ½²ÎÊýÁÐ±íµÄÄ©Î².</li>
+  <li><a href="misc/RegExCallout.htm">RegEx µ÷³ö</a>º¯Êý²»ÊÇ¿É±ä²ÎÊýµÄ£¬ËäÈ»ÔÊÐíÊ¹ÓÃ¡°¿É±äµÄ¡±²ÎÊýµ«»á±»Áô¿Õ¡£</li>
+  <li><a href="commands/RegisterCallback.htm">»Øµ÷º¯Êý</a><a href="commands/RegisterCallback.htm#Indirect">Í¨¹ýµØÖ·</a>¶ø²»ÊÇÊý×é´«µÝÊ£Óà²ÎÊý¡£</li>
 </ul>
-<h3 id="VariadicCall">å¯å˜å‚æ•°å‡½æ•°è°ƒç”¨</h3>
-<p>è™½ç„¶å¯å˜å‚æ•°å‡½æ•°å¯ä»¥<i>æŽ¥å—</i>å¯å˜æ•°ç›®çš„å‚æ•°ï¼Œä¸è¿‡åœ¨å‡½æ•°è°ƒç”¨ä¸­ä½¿ç”¨ç›¸åŒçš„è¯­æ³•å¯ä»¥æŠŠæ•°ç»„ä½œä¸ºå‚æ•°ä¼ é€’ç»™<i>ä»»ä½•</i>å‡½æ•°ï¼š</p>
+<h3 id="VariadicCall">¿É±ä²ÎÊýº¯Êýµ÷ÓÃ</h3>
+<p>ËäÈ»¿É±ä²ÎÊýº¯Êý¿ÉÒÔ<i>½ÓÊÜ</i>¿É±äÊýÄ¿µÄ²ÎÊý£¬²»¹ýÔÚº¯Êýµ÷ÓÃÖÐÊ¹ÓÃÏàÍ¬µÄÓï·¨¿ÉÒÔ°ÑÊý×é×÷Îª²ÎÊý´«µÝ¸ø<i>ÈÎºÎ</i>º¯Êý£º</p>
 <pre>substrings := ["one", "two", "three"]
 MsgBox % Join("`n", <b class="blue">substrings*</b>)</pre>
-<p>æ³¨æ„:</p>
+<p>×¢Òâ:</p>
 <ul>
-  <li>åœ¨æºæ•°ç»„ä¸­å‚æ•°çš„ç¼–å·ä»Ž 1 å¼€å§‹.</li>
-  <li>æ•°ç»„ä¸­çš„å¯é€‰å‚æ•°å¯ä»¥å®Œå…¨çœç•¥.</li>
-  <li>è°ƒç”¨è‡ªå®šä¹‰å‡½æ•°æ—¶æ•°ç»„å‚æ•°å¯ä»¥åŒ…å«å‘½åé¡¹ï¼Œåœ¨å…¶ä»–æƒ…å†µä¸‹åˆ™ä¸æ”¯æŒå‘½åé¡¹ã€‚</li>
-  <li>ç›®æ ‡å‡½æ•°ä¹Ÿå¯ä»¥æ˜¯å¯å˜çš„, æ­¤æ—¶å‘½åé¡¹è¢«å¤åˆ¶, å³ä½¿å®ƒä»¬æ²¡æœ‰ä¸€è‡´çš„å½¢å¼å‚æ•°.</li>
-  <li>è¿™æ ·çš„è¯­æ³•è¿˜å¯ä»¥ç”¨äºŽè°ƒç”¨å¯¹è±¡çš„æ–¹æ³•æˆ–èŽ·å–å¯¹è±¡çš„å±žæ€§; ä¾‹å¦‚, <code>Object.Property[Params*]</code>. åœ¨ v1.1.12+ï¼Œå®ƒè¿˜å¯ä»¥ç”¨äºŽè®¾ç½®å±žæ€§ã€‚</li>
+  <li>ÔÚÔ´Êý×éÖÐ²ÎÊýµÄ±àºÅ´Ó 1 ¿ªÊ¼.</li>
+  <li>Êý×éÖÐµÄ¿ÉÑ¡²ÎÊý¿ÉÒÔÍêÈ«Ê¡ÂÔ.</li>
+  <li>µ÷ÓÃ×Ô¶¨Òåº¯ÊýÊ±Êý×é²ÎÊý¿ÉÒÔ°üº¬ÃüÃûÏî£¬ÔÚÆäËûÇé¿öÏÂÔò²»Ö§³ÖÃüÃûÏî¡£</li>
+  <li>Ä¿±êº¯ÊýÒ²¿ÉÒÔÊÇ¿É±äµÄ, ´ËÊ±ÃüÃûÏî±»¸´ÖÆ, ¼´Ê¹ËüÃÇÃ»ÓÐÒ»ÖÂµÄÐÎÊ½²ÎÊý.</li>
+  <li>ÕâÑùµÄÓï·¨»¹¿ÉÒÔÓÃÓÚµ÷ÓÃ¶ÔÏóµÄ·½·¨»ò»ñÈ¡¶ÔÏóµÄÊôÐÔ; ÀýÈç, <code>Object.Property[Params*]</code>. ÔÚ v1.1.12+£¬Ëü»¹¿ÉÒÔÓÃÓÚÉèÖÃÊôÐÔ¡£</li>
 </ul>
-<p>å·²çŸ¥é™åˆ¶:</p>
+<p>ÒÑÖªÏÞÖÆ:</p>
 <ul>
-  <li>åªæœ‰æœ€å³è¾¹çš„é‚£ä¸ªå‚æ•°æ‰å¯ä»¥è¿™æ ·å±•å¼€ã€‚ä¾‹å¦‚, æ”¯æŒ <code>Func(x, y*)</code> ä½†ä¸æ”¯æŒ <code>Func(x*, y)</code>.</li>
-  <li>åœ¨æ˜Ÿå· (<code>*</code>) å’Œå‚æ•°åˆ—è¡¨ä¸­æœ€åŽçš„å½¢å¼å‚æ•°é—´ä¸èƒ½å­˜åœ¨ä»»ä½•çš„éžç©ºç™½å­—ç¬¦.</li>
+  <li>Ö»ÓÐ×îÓÒ±ßµÄÄÇ¸ö²ÎÊý²Å¿ÉÒÔÕâÑùÕ¹¿ª¡£ÀýÈç, Ö§³Ö <code>Func(x, y*)</code> µ«²»Ö§³Ö <code>Func(x*, y)</code>.</li>
+  <li>ÔÚÐÇºÅ (<code>*</code>) ºÍ²ÎÊýÁÐ±íÖÐ×îºóµÄÐÎÊ½²ÎÊý¼ä²»ÄÜ´æÔÚÈÎºÎµÄ·Ç¿Õ°××Ö·û.</li>
 </ul>
-<h2 id="Locals">å±€éƒ¨å˜é‡å’Œå…¨å±€å˜é‡</h2>
-<h3>å±€éƒ¨å˜é‡</h3>
-<p>é»˜è®¤æƒ…å†µä¸‹, åœ¨å‡½æ•°ä¸­åˆ›å»ºæˆ–è®¿é—®çš„æ‰€æœ‰å˜é‡éƒ½æ˜¯ <em>å±€éƒ¨çš„</em> (é™¤äº† <a href="#SuperGlobal">è¶…çº§å…¨å±€</a> å˜é‡å’Œå†…ç½®å˜é‡, ä¾‹å¦‚ <a href="misc/Clipboard.htm">Clipboard</a>, <a href="misc/ErrorLevel.htm">ErrorLevel</a> å’Œ <a href="Variables.htm#TimeIdle">A_TimeIdle</a>). æ¯ä¸ªå±€éƒ¨å˜é‡çš„å†…å®¹åªåœ¨å®ƒæ‰€åœ¨çš„å‡½æ•°ä¸­å¯è§. å› æ­¤, ä¸€ä¸ªå±€éƒ¨å˜é‡å¯ä»¥å’Œä¸€ä¸ªå…¨å±€å˜é‡æœ‰ç›¸åŒçš„åç§°å´æœ‰ç€ä¸åŒçš„å†…å®¹. æœ€åŽ, æ‰€æœ‰çš„å±€éƒ¨å˜é‡åœ¨æ¯æ¬¡è°ƒç”¨å‡½æ•°æ—¶éƒ½ä»¥ç©ºå€¼å¼€å§‹.</p>
-<h3 id="Global">å…¨å±€å˜é‡</h3>
-<p>è¦åœ¨å‡½æ•°ä¸­å¼•ç”¨çŽ°æœ‰çš„å…¨å±€å˜é‡ (æˆ–åˆ›å»ºæ–°çš„), éœ€è¦åœ¨ä½¿ç”¨å‰å£°æ˜Žæ­¤å˜é‡ä¸ºå…¨å±€çš„. ä¾‹å¦‚ï¼š</p>
+<h2 id="Locals">¾Ö²¿±äÁ¿ºÍÈ«¾Ö±äÁ¿</h2>
+<h3>¾Ö²¿±äÁ¿</h3>
+<p>Ä¬ÈÏÇé¿öÏÂ, ÔÚº¯ÊýÖÐ´´½¨»ò·ÃÎÊµÄËùÓÐ±äÁ¿¶¼ÊÇ <em>¾Ö²¿µÄ</em> (³ýÁË <a href="#SuperGlobal">³¬¼¶È«¾Ö</a> ±äÁ¿ºÍÄÚÖÃ±äÁ¿, ÀýÈç <a href="misc/Clipboard.htm">Clipboard</a>, <a href="misc/ErrorLevel.htm">ErrorLevel</a> ºÍ <a href="Variables.htm#TimeIdle">A_TimeIdle</a>). Ã¿¸ö¾Ö²¿±äÁ¿µÄÄÚÈÝÖ»ÔÚËüËùÔÚµÄº¯ÊýÖÐ¿É¼û. Òò´Ë, Ò»¸ö¾Ö²¿±äÁ¿¿ÉÒÔºÍÒ»¸öÈ«¾Ö±äÁ¿ÓÐÏàÍ¬µÄÃû³ÆÈ´ÓÐ×Å²»Í¬µÄÄÚÈÝ. ×îºó, ËùÓÐµÄ¾Ö²¿±äÁ¿ÔÚÃ¿´Îµ÷ÓÃº¯ÊýÊ±¶¼ÒÔ¿ÕÖµ¿ªÊ¼.</p>
+<h3 id="Global">È«¾Ö±äÁ¿</h3>
+<p>ÒªÔÚº¯ÊýÖÐÒýÓÃÏÖÓÐµÄÈ«¾Ö±äÁ¿ (»ò´´½¨ÐÂµÄ), ÐèÒªÔÚÊ¹ÓÃÇ°ÉùÃ÷´Ë±äÁ¿ÎªÈ«¾ÖµÄ. ÀýÈç£º</p>
 <pre>LogToFile(TextToLog)
 {
-    global LogFileName  <em>; æ­¤å…¨å±€å˜é‡ä¹‹å‰å·²ç»åœ¨å‡½æ•°å¤–çš„æŸä¸ªåœ°æ–¹èµ‹å€¼äº†.</em>
+    global LogFileName  <em>; ´ËÈ«¾Ö±äÁ¿Ö®Ç°ÒÑ¾­ÔÚº¯ÊýÍâµÄÄ³¸öµØ·½¸³ÖµÁË.</em>
     FileAppend, %TextToLog%`n, %LogFileName%
 }</pre>
-<p><a name="AssumeGlobal"></a><strong>å‡è®¾å…¨å±€æ¨¡å¼</strong>: å¦‚æžœå‡½æ•°éœ€è¦è®¿é—®æˆ–åˆ›å»ºå¤§é‡çš„å…¨å±€å˜é‡, é€šè¿‡åœ¨å‡½æ•°çš„é¦–è¡Œä½¿ç”¨å•è¯ "global" æˆ–å£°æ˜Žå±€éƒ¨å˜é‡å¯ä»¥æŠŠå‡½æ•°å®šä¹‰ä¸ºå‡è®¾å…¶æ‰€æœ‰çš„å˜é‡éƒ½æ˜¯å…¨å±€çš„ (é™¤äº†å®ƒçš„å‚æ•°). ä¾‹å¦‚ï¼š</p>
+<p><a name="AssumeGlobal"></a><strong>¼ÙÉèÈ«¾ÖÄ£Ê½</strong>: Èç¹ûº¯ÊýÐèÒª·ÃÎÊ»ò´´½¨´óÁ¿µÄÈ«¾Ö±äÁ¿, Í¨¹ýÔÚº¯ÊýµÄÊ×ÐÐÊ¹ÓÃµ¥´Ê "global" »òÉùÃ÷¾Ö²¿±äÁ¿¿ÉÒÔ°Ñº¯Êý¶¨ÒåÎª¼ÙÉèÆäËùÓÐµÄ±äÁ¿¶¼ÊÇÈ«¾ÖµÄ (³ýÁËËüµÄ²ÎÊý). ÀýÈç£º</p>
 <pre>SetDefaults()
 {
-    global  <em>; å¦‚æžœæ­¤å‡½æ•°çš„é¦–è¡Œæ˜¯ç±»ä¼¼äºŽ "local MyVar" è¿™æ ·çš„, é‚£ä¹ˆè¿™ä¸ªå•è¯å¯ä»¥çœç•¥.</em>
-    MyGlobal := 33  <em>; æŠŠ 33 èµ‹å€¼ç»™å…¨å±€å˜é‡, å¿…è¦æ—¶é¦–å…ˆåˆ›å»ºè¿™ä¸ªå˜é‡.</em>
-    local x, y:=0, z  <em>; åœ¨è¿™ç§æ¨¡å¼ä¸­å±€éƒ¨å˜é‡å¿…é¡»è¿›è¡Œå£°æ˜Ž, å¦åˆ™ä¼šå‡è®¾å®ƒä»¬ä¸ºå…¨å±€çš„.</em>
+    global  <em>; Èç¹û´Ëº¯ÊýµÄÊ×ÐÐÊÇÀàËÆÓÚ "local MyVar" ÕâÑùµÄ, ÄÇÃ´Õâ¸öµ¥´Ê¿ÉÒÔÊ¡ÂÔ.</em>
+    MyGlobal := 33  <em>; °Ñ 33 ¸³Öµ¸øÈ«¾Ö±äÁ¿, ±ØÒªÊ±Ê×ÏÈ´´½¨Õâ¸ö±äÁ¿.</em>
+    local x, y:=0, z  <em>; ÔÚÕâÖÖÄ£Ê½ÖÐ¾Ö²¿±äÁ¿±ØÐë½øÐÐÉùÃ÷, ·ñÔò»á¼ÙÉèËüÃÇÎªÈ«¾ÖµÄ.</em>
 }</pre>
-<p>å‡½æ•°è¿˜å¯ä»¥ä½¿ç”¨è¿™ç§å‡è®¾å…¨å±€æ¨¡å¼æ¥åˆ›å»ºå…¨å±€ <a href="misc/Arrays.htm">æ•°ç»„</a>, ä¾‹å¦‚èµ‹å€¼ç»™ <code>Array%A_Index%</code> çš„å¾ªçŽ¯.</p>
-<p id="SuperGlobal"><strong>è¶…çº§å…¨å±€å˜é‡</strong> <span class="ver">[v1.1.05+]</span>: å¦‚æžœå…¨å±€å£°æ˜Žå‡ºçŽ°åœ¨ä»»ä½•å‡½æ•°çš„å¤–é¢, é»˜è®¤æƒ…å†µä¸‹å®ƒå¯ä»¥å¯¹æ‰€æœ‰å‡½æ•°æœ‰æ•ˆ. è¿™æ ·å¯ä»¥é¿å…åœ¨æ¯ä¸ªå‡½æ•°ä¸­é‡å¤å£°æ˜Žå˜é‡çš„éœ€è¦. ä¸è¿‡, å¦‚æžœå£°æ˜Žäº†å«æœ‰ç›¸åŒåç§°çš„å‡½æ•°å‚æ•°æˆ–å±€éƒ¨å˜é‡, é‚£ä¹ˆå®ƒä¼šä¼˜å…ˆäºŽå…¨å±€å˜é‡. ç”± <a href="Objects.htm#Custom_Classes">class</a> å…³é”®å­—åˆ›å»ºçš„å˜é‡ä¹Ÿæ˜¯è¶…çº§å…¨å±€çš„.</p>
-<h3 id="static">é™æ€å˜é‡</h3>
-<p>é™æ€å˜é‡æ€»æ˜¯éšå¼çš„å±€éƒ¨å˜é‡, ä½†å’Œå±€éƒ¨å˜é‡çš„åŒºåˆ«æ˜¯å®ƒä»¬çš„å€¼åœ¨å¤šæ¬¡è°ƒç”¨æœŸé—´æ˜¯è®°ä½çš„. ä¾‹å¦‚ï¼š</p>
+<p>º¯Êý»¹¿ÉÒÔÊ¹ÓÃÕâÖÖ¼ÙÉèÈ«¾ÖÄ£Ê½À´´´½¨È«¾Ö <a href="misc/Arrays.htm">Êý×é</a>, ÀýÈç¸³Öµ¸ø <code>Array%A_Index%</code> µÄÑ­»·.</p>
+<p id="SuperGlobal"><strong>³¬¼¶È«¾Ö±äÁ¿</strong> <span class="ver">[v1.1.05+]</span>: Èç¹ûÈ«¾ÖÉùÃ÷³öÏÖÔÚÈÎºÎº¯ÊýµÄÍâÃæ, Ä¬ÈÏÇé¿öÏÂËü¿ÉÒÔ¶ÔËùÓÐº¯ÊýÓÐÐ§. ÕâÑù¿ÉÒÔ±ÜÃâÔÚÃ¿¸öº¯ÊýÖÐÖØ¸´ÉùÃ÷±äÁ¿µÄÐèÒª. ²»¹ý, Èç¹ûÉùÃ÷ÁËº¬ÓÐÏàÍ¬Ãû³ÆµÄº¯Êý²ÎÊý»ò¾Ö²¿±äÁ¿, ÄÇÃ´Ëü»áÓÅÏÈÓÚÈ«¾Ö±äÁ¿. ÓÉ <a href="Objects.htm#Custom_Classes">class</a> ¹Ø¼ü×Ö´´½¨µÄ±äÁ¿Ò²ÊÇ³¬¼¶È«¾ÖµÄ.</p>
+<h3 id="static">¾²Ì¬±äÁ¿</h3>
+<p>¾²Ì¬±äÁ¿×ÜÊÇÒþÊ½µÄ¾Ö²¿±äÁ¿, µ«ºÍ¾Ö²¿±äÁ¿µÄÇø±ðÊÇËüÃÇµÄÖµÔÚ¶à´Îµ÷ÓÃÆÚ¼äÊÇ¼Ç×¡µÄ. ÀýÈç£º</p>
 <pre>LogToFile(TextToLog)
 {
     <strong>static</strong> LoggedLines = 0
-    LoggedLines += 1  <em>; ä¿æŒå±€éƒ¨çš„è®¡æ•° (å®ƒçš„å€¼åœ¨å¤šæ¬¡è°ƒç”¨æœŸé—´æ˜¯è®°ä½çš„).</em>
+    LoggedLines += 1  <em>; ±£³Ö¾Ö²¿µÄ¼ÆÊý (ËüµÄÖµÔÚ¶à´Îµ÷ÓÃÆÚ¼äÊÇ¼Ç×¡µÄ).</em>
     global LogFileName
     FileAppend, %LoggedLines%: %TextToLog%`n, %LogFileName%
 }</pre>
-<p><a name="InitStatic"></a><strong>é™æ€åˆå§‹åŒ–</strong>: åœ¨ 1.0.46 ä»¥å‰çš„ç‰ˆæœ¬ä¸­, æ‰€æœ‰çš„é™æ€å˜é‡éƒ½æ˜¯ä»¥ç©ºå€¼å¼€å§‹; æ‰€ä»¥è¦æ£€æŸ¥é™æ€å˜é‡é¦–æ¬¡è¢«ä½¿ç”¨çš„å”¯ä¸€æ–¹æ³•æ˜¯æ£€æŸ¥å®ƒæ˜¯å¦ä¸ºç©ºå€¼. åœ¨ v1.0.46+ï¼Œé™æ€å˜é‡å¯ä»¥åˆå§‹åŒ–ä¸º <code>""</code> å¤–çš„å…¶ä»–å€¼ï¼Œé€šè¿‡åœ¨åŽé¢è·Ÿç€ <code>:=</code> æˆ– <code>=</code> åŠåŽé¢è¿™äº›å½¢å¼çš„å…¶ä¸­ä¸€ç§ï¼š<code>true</code>ã€<code>false</code>ã€åŽŸä¹‰çš„æ•´æ•°ã€åŽŸä¹‰çš„æµ®ç‚¹æ•°æˆ–å¼•å·åŒ…å›´çš„/åŽŸä¹‰çš„å­—ç¬¦ä¸²ï¼Œå¦‚ <code>"fox"</code>ã€‚ä¾‹å¦‚ï¼š<code>static X:=0, Y:="fox"</code>ã€‚æ¯ä¸ªé™æ€å˜é‡åªåˆå§‹åŒ–ä¸€æ¬¡ (åœ¨è„šæœ¬å¼€å§‹æ‰§è¡Œå‰).</p>
-<p><span class="ver">[AHK_L 58+]:</span> æ”¯æŒ <code>Static var := expression</code>. æ ¹æ®è¿™äº›è¡¨è¾¾å¼åœ¨è„šæœ¬ä¸­å‡ºçŽ°çš„é¡ºåºå¯¹å®ƒä»¬è¿›è¡Œè®¡ç®—ï¼Œç´§æŽ¥ç€æ‰è¿›å…¥è„šæœ¬çš„è‡ªåŠ¨æ‰§è¡Œæ®µã€‚</p>
-<p><a name="AssumeStatic"></a><strong>å‡è®¾é™æ€æ¨¡å¼</strong> <span class="ver">[v1.0.48+]:</span> é€šè¿‡åœ¨å‡½æ•°çš„é¦–è¡Œä½¿ç”¨å•è¯ "static" å¯ä»¥æŠŠå‡½æ•°å®šä¹‰ä¸ºå‡è®¾å…¶æ‰€æœ‰çš„å˜é‡éƒ½æ˜¯é™æ€çš„ (é™¤äº†å®ƒçš„å‚æ•°). ä¾‹å¦‚ï¼š</p>
+<p><a name="InitStatic"></a><strong>¾²Ì¬³õÊ¼»¯</strong>: ÔÚ 1.0.46 ÒÔÇ°µÄ°æ±¾ÖÐ, ËùÓÐµÄ¾²Ì¬±äÁ¿¶¼ÊÇÒÔ¿ÕÖµ¿ªÊ¼; ËùÒÔÒª¼ì²é¾²Ì¬±äÁ¿Ê×´Î±»Ê¹ÓÃµÄÎ¨Ò»·½·¨ÊÇ¼ì²éËüÊÇ·ñÎª¿ÕÖµ. ÔÚ v1.0.46+£¬¾²Ì¬±äÁ¿¿ÉÒÔ³õÊ¼»¯Îª <code>""</code> ÍâµÄÆäËûÖµ£¬Í¨¹ýÔÚºóÃæ¸ú×Å <code>:=</code> »ò <code>=</code> ¼°ºóÃæÕâÐ©ÐÎÊ½µÄÆäÖÐÒ»ÖÖ£º<code>true</code>¡¢<code>false</code>¡¢Ô­ÒåµÄÕûÊý¡¢Ô­ÒåµÄ¸¡µãÊý»òÒýºÅ°üÎ§µÄ/Ô­ÒåµÄ×Ö·û´®£¬Èç <code>"fox"</code>¡£ÀýÈç£º<code>static X:=0, Y:="fox"</code>¡£Ã¿¸ö¾²Ì¬±äÁ¿Ö»³õÊ¼»¯Ò»´Î (ÔÚ½Å±¾¿ªÊ¼Ö´ÐÐÇ°).</p>
+<p><span class="ver">[AHK_L 58+]:</span> Ö§³Ö <code>Static var := expression</code>. ¸ù¾ÝÕâÐ©±í´ïÊ½ÔÚ½Å±¾ÖÐ³öÏÖµÄË³Ðò¶ÔËüÃÇ½øÐÐ¼ÆËã£¬½ô½Ó×Å²Å½øÈë½Å±¾µÄ×Ô¶¯Ö´ÐÐ¶Î¡£</p>
+<p><a name="AssumeStatic"></a><strong>¼ÙÉè¾²Ì¬Ä£Ê½</strong> <span class="ver">[v1.0.48+]:</span> Í¨¹ýÔÚº¯ÊýµÄÊ×ÐÐÊ¹ÓÃµ¥´Ê "static" ¿ÉÒÔ°Ñº¯Êý¶¨ÒåÎª¼ÙÉèÆäËùÓÐµÄ±äÁ¿¶¼ÊÇ¾²Ì¬µÄ (³ýÁËËüµÄ²ÎÊý). ÀýÈç£º</p>
 <pre>GetFromStaticArray(WhichItemNumber)
 {
     <strong>static</strong>
-    static FirstCallToUs := true  <em>; é™æ€å£°æ˜Žåˆå§‹åŒ–ä»ç„¶åªè¿è¡Œä¸€æ¬¡ (åœ¨è„šæœ¬æ‰§è¡Œå‰).</em>
-    if FirstCallToUs  <em>; åœ¨é¦–æ¬¡è°ƒç”¨è€Œä¸åœ¨åŽç»­çš„è°ƒç”¨æ—¶åˆ›å»ºé™æ€æ•°ç»„.</em>
+    static FirstCallToUs := true  <em>; ¾²Ì¬ÉùÃ÷³õÊ¼»¯ÈÔÈ»Ö»ÔËÐÐÒ»´Î (ÔÚ½Å±¾Ö´ÐÐÇ°).</em>
+    if FirstCallToUs  <em>; ÔÚÊ×´Îµ÷ÓÃ¶ø²»ÔÚºóÐøµÄµ÷ÓÃÊ±´´½¨¾²Ì¬Êý×é.</em>
     {
         FirstCallToUs := false
         Loop 10
@@ -208,129 +208,129 @@ MsgBox % Join("`n", <b class="blue">substrings*</b>)</pre>
     }
     return StaticArray%WhichItemNumber%
 }</pre>
-<p>åœ¨å‡è®¾é™æ€æ¨¡å¼ä¸­, ä»»ä½•éžé™æ€å˜é‡éƒ½å¿…é¡»å£°æ˜Žä¸ºå±€éƒ¨å˜é‡æˆ–å…¨å±€å˜é‡.</p>
-<h3>å…³äºŽå±€éƒ¨å’Œå…¨å±€çš„æ›´å¤šä¿¡æ¯</h3>
-<p>é€šè¿‡é€—å·åˆ†éš”å¤šä¸ªå˜é‡è¿™æ ·å¯ä»¥åœ¨åŒä¸€è¡Œå£°æ˜Žå®ƒä»¬, ä¾‹å¦‚:</p>
+<p>ÔÚ¼ÙÉè¾²Ì¬Ä£Ê½ÖÐ, ÈÎºÎ·Ç¾²Ì¬±äÁ¿¶¼±ØÐëÉùÃ÷Îª¾Ö²¿±äÁ¿»òÈ«¾Ö±äÁ¿.</p>
+<h3>¹ØÓÚ¾Ö²¿ºÍÈ«¾ÖµÄ¸ü¶àÐÅÏ¢</h3>
+<p>Í¨¹ý¶ººÅ·Ö¸ô¶à¸ö±äÁ¿ÕâÑù¿ÉÒÔÔÚÍ¬Ò»ÐÐÉùÃ÷ËüÃÇ, ÀýÈç:</p>
 <pre>global LogFileName, MaxRetries := 5
 static TotalAttempts = 0, PrevResult</pre>
-<p><a name="DeclareInit"></a>åœ¨ v1.0.46+, é€šè¿‡åŽé¢è·Ÿç€ <code>:=</code> or <code>=</code> åŠä»»æ„ <a href="Variables.htm#Expressions">è¡¨è¾¾å¼</a> å±€éƒ¨æˆ–å…¨å±€å˜é‡å¯ä»¥åœ¨åŒä¸€è¡Œåˆå§‹åŒ–, å¦‚åŒå£°æ˜Žé‚£æ · (åœ¨å£°æ˜Žæ—¶ <code>=</code> è¿ç®—ç¬¦å’Œ <code>:=</code> ä½œç”¨ç›¸åŒ). ä¸Ž <a href="#InitStatic">é™æ€åˆå§‹åŒ–</a> ä¸åŒ, åœ¨æ¯æ¬¡è°ƒç”¨å‡½æ•°æ—¶éƒ½ä¼šå¯¹å±€éƒ¨å˜é‡å’Œå…¨å±€å˜é‡è¿›è¡Œåˆå§‹åŒ–, ä½†åªåœ¨æŽ§åˆ¶æµå®žé™…è¾¾åˆ°å®ƒä»¬æ‰€åœ¨çš„è¯­å¥æ—¶. æ¢å¥è¯è¯´, åƒ <code>local x = 0</code> è¿™æ ·çš„ä¸€è¡Œå’Œå†™æˆå•ç‹¬çš„ä¸¤è¡Œæœ‰åŒæ ·çš„æ•ˆæžœ: <code>local x</code> åŽé¢è·Ÿç€ <code>x = 0</code>.</p>
-<p>å› ä¸ºå•è¯ <em>local</em>, <em>global</em> å’Œ <em>static</em> éƒ½æ˜¯åœ¨è„šæœ¬è¿è¡Œæ—¶ç«‹å³å¤„ç†çš„, æ‰€ä»¥ä¸èƒ½ä½¿ç”¨ <a href="commands/IfExpression.htm">IF è¯­å¥</a> æœ‰æ¡ä»¶çš„å£°æ˜Žå˜é‡. æ¢å¥è¯è¯´, IF æˆ– ELSE çš„ <a href="commands/Block.htm">åŒºå—</a> å†…çš„å£°æ˜Žæ— æ¡ä»¶å¯¹å£°æ˜Žå’Œå‡½æ•°çš„é—­æ‹¬å·ä¹‹é—´çš„æ‰€æœ‰è¡Œç”Ÿæ•ˆ. åŒæ—¶è¿˜éœ€æ³¨æ„å½“å‰è¿˜ä¸æ”¯æŒå£°æ˜ŽåŠ¨æ€å˜é‡, ä¾‹å¦‚ <code>global Array%i%</code>.</p>
-<p>å¯¹äºŽåˆ›å»º <a href="misc/Arrays.htm">æ•°ç»„</a> çš„å‘½ä»¤ (ä¾‹å¦‚ <a href="commands/StringSplit.htm">StringSplit</a>), å¦‚æžœ <a href="#AssumeGlobal">å‡è®¾å…¨å±€æ¨¡å¼</a> æ²¡æœ‰ç”Ÿæ•ˆæˆ–æ•°ç»„çš„é¦–ä¸ªå…ƒç´ å·²ç»å£°æ˜Žä¸ºå±€éƒ¨å˜é‡æ—¶åˆ›å»ºçš„æ•°ç»„æ˜¯å±€éƒ¨çš„ (å¦‚æžœå‡½æ•°çš„æŸä¸ªå‚æ•°è¢«ä¼ é€’æ—¶ä¹Ÿæ˜¯å¦‚æ­¤, å³ä½¿æ­¤å‚æ•°ä¸º <a href="#ByRef">ByRef</a> ç±»åž‹, å› ä¸ºå‚æ•°ç±»ä¼¼äºŽå±€éƒ¨å˜é‡). ç›¸ååœ°, å¦‚æžœé¦–ä¸ªå…ƒç´ å·²ç» <a href="#Global">å£°æ˜Žä¸ºå…¨å±€çš„</a>, é‚£ä¹ˆåˆ›å»ºå…¨å±€çš„æ•°ç»„. ä¸è¿‡, åŽé¢ <i>æ··ä¹±çš„å¸¸è§æ ¹æº</i> ä¹Ÿé€‚ç”¨äºŽè¿™äº›æƒ…å†µ. <a href="commands/StringSplit.htm">StringSplit</a> åˆ›å»ºçš„æ•°ç»„é¦–ä¸ªå…ƒç´ ä¸º ArrayName0. å¯¹äºŽå…¶ä»–åˆ›å»ºæ•°ç»„çš„å‘½ä»¤, ä¾‹å¦‚ <a href="commands/WinGet.htm">WinGet List</a>, é¦–ä¸ªå…ƒç´ ä¸º ArrayName (å³æ²¡æœ‰æ•°å­—).</p>
-<p><a name="DynVar"></a><a name="Dynamic" id="Dynamic"></a>åœ¨å‡½æ•°ä¸­, ä»»ä½•åŠ¨æ€å˜é‡å¼•ç”¨, ä¾‹å¦‚ <code>Array%i%</code>, æ€»æ˜¯è§£æžä¸ºå±€éƒ¨å˜é‡, ä»…å½“è¿™æ ·åç§°çš„å±€éƒ¨å˜é‡ä¸å­˜åœ¨è€Œå…¨å±€å˜é‡å­˜åœ¨æ—¶æ‰è§£æžä¸ºå…¨å±€å˜é‡. å¦‚æžœä¸¤è€…éƒ½ä¸å­˜åœ¨å¹¶ä¸”éœ€è¦åˆ›å»ºæ­¤å˜é‡æ—¶, å½“ <a href="#AssumeGlobal">å‡è®¾å…¨å±€æ¨¡å¼</a> æ²¡æœ‰ç”Ÿæ•ˆæ—¶å®ƒè¢«åˆ›å»ºä¸ºå±€éƒ¨å˜é‡. å› æ­¤, ä»…å½“å‡½æ•°è¢«å®šä¹‰ä¸º <a href="#AssumeGlobal">å‡è®¾å…¨å±€</a> å‡½æ•°æ—¶, å‡½æ•°ä¸­æ‰å¯ä»¥æ‰‹åŠ¨åˆ›å»ºå…¨å±€ <a href="misc/Arrays.htm">æ•°ç»„</a> (é€šè¿‡ä½¿ç”¨ç±»ä¼¼ <code>Array%i% := A_Index</code> çš„æ–¹æ³•).</p>
-<p><strong>æ··ä¹±çš„å¸¸è§æ ¹æº</strong>: ä»»ä½•å¯¹ <em>éž</em> åŠ¨æ€å¼•ç”¨éƒ½ä¼šåœ¨è„šæœ¬è¿è¡Œæ—¶åˆ›å»ºé‚£ä¸ªå˜é‡. ä¾‹å¦‚, åœ¨å‡½æ•°å¤–ä½¿ç”¨æ—¶, <code>MsgBox %Array1%</code> ä¼šåœ¨è„šæœ¬è¿è¡Œçš„æ—¶å€™åˆ›å»º Array1 ä¸ºå…¨å±€å˜é‡. ç›¸ååœ°, åœ¨å‡½æ•°ä¸­ä½¿ç”¨ <code>MsgBox %Array1%</code> ä¼šåœ¨è„šæœ¬è¿è¡Œçš„æ—¶å€™åˆ›å»º Array1 ä¸ºå‡½æ•°çš„ä¸€ä¸ªå±€éƒ¨å˜é‡ (é™¤éž <a href="#AssumeGlobal">å‡è®¾å…¨å±€æ¨¡å¼</a> ç”Ÿæ•ˆ), å³ä½¿ Array å’Œ Array0 éƒ½å£°æ˜Žä¸ºå…¨å±€çš„.</p>
-<h2 id="DynCall">åŠ¨æ€è°ƒç”¨å‡½æ•°</h2>
-<p>åœ¨ v1.0.47.06+, é€šè¿‡ç™¾åˆ†å·å¯ä»¥åŠ¨æ€è°ƒç”¨å‡½æ•° (åŒ…æ‹¬ <a href="#BuiltIn">å†…ç½®å‡½æ•°</a>). ä¾‹å¦‚ï¼Œ<code>%Var%(x, "fox")</code> å°†è°ƒç”¨åç§°ä¿å­˜åœ¨ <em>Var</em> ä¸­çš„å‡½æ•°ã€‚åŒæ ·åœ°, <code>Func%A_Index%()</code> å°†è°ƒç”¨ Func1() æˆ– Func2() ç­‰, è¿™å–å†³äºŽ A_Index çš„å½“å‰å€¼.</p>
-<p>åœ¨ v1.1.07.00+,  åœ¨ <code>%Var%()</code> ä¸­çš„ <em>Var</em> å¯åŒ…å«å‡½æ•°å, <a href="objects/Func.htm">å‡½æ•°å¼•ç”¨</a> æˆ– <a href="Objects.htm#Objects_as_Functions">æ¨¡ä»¿å‡½æ•°çš„å¯¹è±¡</a>. å¦‚æžœæ­¤å‡½æ•°ä¸å­˜åœ¨, åˆ™è°ƒç”¨ <a href="Objects.htm#Default_Base_Object">é»˜è®¤åŸºå¯¹è±¡</a>çš„ __Call å…ƒå‡½æ•°.</p>
-<p>å¦‚æžœç”±äºŽä¸‹é¢çš„æŸä¸ªåŽŸå› æ— æ³•è°ƒç”¨å‡½æ•°, è®¡ç®—åŒ…å«è°ƒç”¨çš„è¡¨è¾¾å¼æ—¶å¯èƒ½ä¼šè¿‡æ—©é™é»˜åœæ­¢, è¿™æ ·å¯èƒ½ä¼šäº§ç”Ÿé—®é¢˜.</p>
+<p><a name="DeclareInit"></a>ÔÚ v1.0.46+, Í¨¹ýºóÃæ¸ú×Å <code>:=</code> or <code>=</code> ¼°ÈÎÒâ <a href="Variables.htm#Expressions">±í´ïÊ½</a> ¾Ö²¿»òÈ«¾Ö±äÁ¿¿ÉÒÔÔÚÍ¬Ò»ÐÐ³õÊ¼»¯, ÈçÍ¬ÉùÃ÷ÄÇÑù (ÔÚÉùÃ÷Ê± <code>=</code> ÔËËã·ûºÍ <code>:=</code> ×÷ÓÃÏàÍ¬). Óë <a href="#InitStatic">¾²Ì¬³õÊ¼»¯</a> ²»Í¬, ÔÚÃ¿´Îµ÷ÓÃº¯ÊýÊ±¶¼»á¶Ô¾Ö²¿±äÁ¿ºÍÈ«¾Ö±äÁ¿½øÐÐ³õÊ¼»¯, µ«Ö»ÔÚ¿ØÖÆÁ÷Êµ¼Ê´ïµ½ËüÃÇËùÔÚµÄÓï¾äÊ±. »»¾ä»°Ëµ, Ïñ <code>local x = 0</code> ÕâÑùµÄÒ»ÐÐºÍÐ´³Éµ¥¶ÀµÄÁ½ÐÐÓÐÍ¬ÑùµÄÐ§¹û: <code>local x</code> ºóÃæ¸ú×Å <code>x = 0</code>.</p>
+<p>ÒòÎªµ¥´Ê <em>local</em>, <em>global</em> ºÍ <em>static</em> ¶¼ÊÇÔÚ½Å±¾ÔËÐÐÊ±Á¢¼´´¦ÀíµÄ, ËùÒÔ²»ÄÜÊ¹ÓÃ <a href="commands/IfExpression.htm">IF Óï¾ä</a> ÓÐÌõ¼þµÄÉùÃ÷±äÁ¿. »»¾ä»°Ëµ, IF »ò ELSE µÄ <a href="commands/Block.htm">Çø¿é</a> ÄÚµÄÉùÃ÷ÎÞÌõ¼þ¶ÔÉùÃ÷ºÍº¯ÊýµÄ±ÕÀ¨ºÅÖ®¼äµÄËùÓÐÐÐÉúÐ§. Í¬Ê±»¹Ðè×¢Òâµ±Ç°»¹²»Ö§³ÖÉùÃ÷¶¯Ì¬±äÁ¿, ÀýÈç <code>global Array%i%</code>.</p>
+<p>¶ÔÓÚ´´½¨ <a href="misc/Arrays.htm">Êý×é</a> µÄÃüÁî (ÀýÈç <a href="commands/StringSplit.htm">StringSplit</a>), Èç¹û <a href="#AssumeGlobal">¼ÙÉèÈ«¾ÖÄ£Ê½</a> Ã»ÓÐÉúÐ§»òÊý×éµÄÊ×¸öÔªËØÒÑ¾­ÉùÃ÷Îª¾Ö²¿±äÁ¿Ê±´´½¨µÄÊý×éÊÇ¾Ö²¿µÄ (Èç¹ûº¯ÊýµÄÄ³¸ö²ÎÊý±»´«µÝÊ±Ò²ÊÇÈç´Ë, ¼´Ê¹´Ë²ÎÊýÎª <a href="#ByRef">ByRef</a> ÀàÐÍ, ÒòÎª²ÎÊýÀàËÆÓÚ¾Ö²¿±äÁ¿). Ïà·´µØ, Èç¹ûÊ×¸öÔªËØÒÑ¾­ <a href="#Global">ÉùÃ÷ÎªÈ«¾ÖµÄ</a>, ÄÇÃ´´´½¨È«¾ÖµÄÊý×é. ²»¹ý, ºóÃæ <i>»ìÂÒµÄ³£¼û¸ùÔ´</i> Ò²ÊÊÓÃÓÚÕâÐ©Çé¿ö. <a href="commands/StringSplit.htm">StringSplit</a> ´´½¨µÄÊý×éÊ×¸öÔªËØÎª ArrayName0. ¶ÔÓÚÆäËû´´½¨Êý×éµÄÃüÁî, ÀýÈç <a href="commands/WinGet.htm">WinGet List</a>, Ê×¸öÔªËØÎª ArrayName (¼´Ã»ÓÐÊý×Ö).</p>
+<p><a name="DynVar"></a><a name="Dynamic" id="Dynamic"></a>ÔÚº¯ÊýÖÐ, ÈÎºÎ¶¯Ì¬±äÁ¿ÒýÓÃ, ÀýÈç <code>Array%i%</code>, ×ÜÊÇ½âÎöÎª¾Ö²¿±äÁ¿, ½öµ±ÕâÑùÃû³ÆµÄ¾Ö²¿±äÁ¿²»´æÔÚ¶øÈ«¾Ö±äÁ¿´æÔÚÊ±²Å½âÎöÎªÈ«¾Ö±äÁ¿. Èç¹ûÁ½Õß¶¼²»´æÔÚ²¢ÇÒÐèÒª´´½¨´Ë±äÁ¿Ê±, µ± <a href="#AssumeGlobal">¼ÙÉèÈ«¾ÖÄ£Ê½</a> Ã»ÓÐÉúÐ§Ê±Ëü±»´´½¨Îª¾Ö²¿±äÁ¿. Òò´Ë, ½öµ±º¯Êý±»¶¨ÒåÎª <a href="#AssumeGlobal">¼ÙÉèÈ«¾Ö</a> º¯ÊýÊ±, º¯ÊýÖÐ²Å¿ÉÒÔÊÖ¶¯´´½¨È«¾Ö <a href="misc/Arrays.htm">Êý×é</a> (Í¨¹ýÊ¹ÓÃÀàËÆ <code>Array%i% := A_Index</code> µÄ·½·¨).</p>
+<p><strong>»ìÂÒµÄ³£¼û¸ùÔ´</strong>: ÈÎºÎ¶Ô <em>·Ç</em> ¶¯Ì¬ÒýÓÃ¶¼»áÔÚ½Å±¾ÔËÐÐÊ±´´½¨ÄÇ¸ö±äÁ¿. ÀýÈç, ÔÚº¯ÊýÍâÊ¹ÓÃÊ±, <code>MsgBox %Array1%</code> »áÔÚ½Å±¾ÔËÐÐµÄÊ±ºò´´½¨ Array1 ÎªÈ«¾Ö±äÁ¿. Ïà·´µØ, ÔÚº¯ÊýÖÐÊ¹ÓÃ <code>MsgBox %Array1%</code> »áÔÚ½Å±¾ÔËÐÐµÄÊ±ºò´´½¨ Array1 Îªº¯ÊýµÄÒ»¸ö¾Ö²¿±äÁ¿ (³ý·Ç <a href="#AssumeGlobal">¼ÙÉèÈ«¾ÖÄ£Ê½</a> ÉúÐ§), ¼´Ê¹ Array ºÍ Array0 ¶¼ÉùÃ÷ÎªÈ«¾ÖµÄ.</p>
+<h2 id="DynCall">¶¯Ì¬µ÷ÓÃº¯Êý</h2>
+<p>ÔÚ v1.0.47.06+, Í¨¹ý°Ù·ÖºÅ¿ÉÒÔ¶¯Ì¬µ÷ÓÃº¯Êý (°üÀ¨ <a href="#BuiltIn">ÄÚÖÃº¯Êý</a>). ÀýÈç£¬<code>%Var%(x, "fox")</code> ½«µ÷ÓÃÃû³Æ±£´æÔÚ <em>Var</em> ÖÐµÄº¯Êý¡£Í¬ÑùµØ, <code>Func%A_Index%()</code> ½«µ÷ÓÃ Func1() »ò Func2() µÈ, ÕâÈ¡¾öÓÚ A_Index µÄµ±Ç°Öµ.</p>
+<p>ÔÚ v1.1.07.00+,  ÔÚ <code>%Var%()</code> ÖÐµÄ <em>Var</em> ¿É°üº¬º¯ÊýÃû, <a href="objects/Func.htm">º¯ÊýÒýÓÃ</a> »ò <a href="Objects.htm#Objects_as_Functions">Ä£·Âº¯ÊýµÄ¶ÔÏó</a>. Èç¹û´Ëº¯Êý²»´æÔÚ, Ôòµ÷ÓÃ <a href="Objects.htm#Default_Base_Object">Ä¬ÈÏ»ù¶ÔÏó</a>µÄ __Call Ôªº¯Êý.</p>
+<p>Èç¹ûÓÉÓÚÏÂÃæµÄÄ³¸öÔ­ÒòÎÞ·¨µ÷ÓÃº¯Êý, ¼ÆËã°üº¬µ÷ÓÃµÄ±í´ïÊ½Ê±¿ÉÄÜ»á¹ýÔç¾²Ä¬Í£Ö¹, ÕâÑù¿ÉÄÜ»á²úÉúÎÊÌâ.</p>
 <ul>
-  <li>è°ƒç”¨ä¸å­˜åœ¨çš„å‡½æ•°, è¿™å¯ä»¥é€šè¿‡ä½¿ç”¨ <code>If <a href="#IsFunc">IsFunc</a>(VarContainingFuncName)</code> æ¥é¿å…. é™¤äº† <a href="#BuiltIn">å†…ç½®å‡½æ•°</a>, è¢«è°ƒç”¨å‡½æ•°çš„ <a href="#define">å®šä¹‰</a> å¿…é¡»æ˜Žç¡®å­˜åœ¨äºŽè„šæœ¬ä¸­, é€šè¿‡ç±»ä¼¼ <a href="commands/_Include.htm">#Include</a> æˆ–å¯¹ <a href="#lib">åº“å‡½æ•°</a> çš„éžåŠ¨æ€è°ƒç”¨çš„æ–¹æ³•.</li>
-  <li>ä¼ é€’è¿‡å°‘çš„å‚æ•°, è¿™å¯ä»¥é€šè¿‡æ£€æŸ¥ <a href="#IsFunc">IsFunc()</a> çš„è¿”å›žå€¼æ¥é¿å… (è¿™æ˜¯å¼ºåˆ¶å‚æ•°çš„æ•°ç›®åŠ ä¸Šä¸€çš„æ•°å­—). æ³¨æ„: åœ¨ v1.0.48+, å…è®¸ä¼ é€’è¿‡å¤šçš„å‚æ•°; æ¯ä¸ªé¢å¤–çš„å‚æ•°åœ¨è¢«å®Œå…¨è®¡ç®— (åŒ…æ‹¬ä»»ä½•å‡½æ•°è°ƒç”¨) åŽä¸¢å¼ƒ.</li>
+  <li>µ÷ÓÃ²»´æÔÚµÄº¯Êý, Õâ¿ÉÒÔÍ¨¹ýÊ¹ÓÃ <code>If <a href="#IsFunc">IsFunc</a>(VarContainingFuncName)</code> À´±ÜÃâ. ³ýÁË <a href="#BuiltIn">ÄÚÖÃº¯Êý</a>, ±»µ÷ÓÃº¯ÊýµÄ <a href="#define">¶¨Òå</a> ±ØÐëÃ÷È·´æÔÚÓÚ½Å±¾ÖÐ, Í¨¹ýÀàËÆ <a href="commands/_Include.htm">#Include</a> »ò¶Ô <a href="#lib">¿âº¯Êý</a> µÄ·Ç¶¯Ì¬µ÷ÓÃµÄ·½·¨.</li>
+  <li>´«µÝ¹ýÉÙµÄ²ÎÊý, Õâ¿ÉÒÔÍ¨¹ý¼ì²é <a href="#IsFunc">IsFunc()</a> µÄ·µ»ØÖµÀ´±ÜÃâ (ÕâÊÇÇ¿ÖÆ²ÎÊýµÄÊýÄ¿¼ÓÉÏÒ»µÄÊý×Ö). ×¢Òâ: ÔÚ v1.0.48+, ÔÊÐí´«µÝ¹ý¶àµÄ²ÎÊý; Ã¿¸ö¶îÍâµÄ²ÎÊýÔÚ±»ÍêÈ«¼ÆËã (°üÀ¨ÈÎºÎº¯Êýµ÷ÓÃ) ºó¶ªÆú.</li>
 </ul>
-<p>æœ€åŽ, å¯¹å‡½æ•°çš„åŠ¨æ€è°ƒç”¨æ¯”æ­£å¸¸è°ƒç”¨ç¨æ…¢, å› ä¸ºæ­£å¸¸çš„è°ƒç”¨åœ¨è„šæœ¬å¼€å§‹è¿è¡Œå‰è§£æž (æŸ¥è¯¢).</p>
-<h2 id="ShortCircuit">ä¼˜åŒ–å¸ƒå°”æ±‚å€¼</h2>
-<p>å½“åœ¨ <a href="Variables.htm#Expressions">è¡¨è¾¾å¼</a> ä¸­ä½¿ç”¨ <em>AND, OR</em> å’Œ <a href="Variables.htm#ternary">ä¸‰å…ƒè¿ç®—ç¬¦</a> æ—¶, ä¼šå¯¹å®ƒä»¬è¿›è¡Œä¼˜åŒ–æ¥æé«˜æ€§èƒ½ (ä¸ç®¡å½“å‰æ˜¯å¦å­˜åœ¨å‡½æ•°è°ƒç”¨). é€šè¿‡ä¸è®¡ç®—è¡¨è¾¾å¼ä¸­é‚£äº›ä¸å½±å“æœ€ç»ˆç»“æžœçš„éƒ¨åˆ†æ¥è¿›è¡Œä¼˜åŒ–è¿ç®—. ä¸ºäº†è¯´æ˜Žè¿™ä¸ªæ¦‚å¿µ, è¯·çœ‹è¿™ä¸ªä¾‹å­:</p>
+<p>×îºó, ¶Ôº¯ÊýµÄ¶¯Ì¬µ÷ÓÃ±ÈÕý³£µ÷ÓÃÉÔÂý, ÒòÎªÕý³£µÄµ÷ÓÃÔÚ½Å±¾¿ªÊ¼ÔËÐÐÇ°½âÎö (²éÑ¯).</p>
+<h2 id="ShortCircuit">ÓÅ»¯²¼¶ûÇóÖµ</h2>
+<p>µ±ÔÚ <a href="Variables.htm#Expressions">±í´ïÊ½</a> ÖÐÊ¹ÓÃ <em>AND, OR</em> ºÍ <a href="Variables.htm#ternary">ÈýÔªÔËËã·û</a> Ê±, »á¶ÔËüÃÇ½øÐÐÓÅ»¯À´Ìá¸ßÐÔÄÜ (²»¹Üµ±Ç°ÊÇ·ñ´æÔÚº¯Êýµ÷ÓÃ). Í¨¹ý²»¼ÆËã±í´ïÊ½ÖÐÄÇÐ©²»Ó°Ïì×îÖÕ½á¹ûµÄ²¿·ÖÀ´½øÐÐÓÅ»¯ÔËËã. ÎªÁËËµÃ÷Õâ¸ö¸ÅÄî, Çë¿´Õâ¸öÀý×Ó:</p>
 <pre>if (ColorName &lt;&gt; "" AND not FindColor(ColorName))
     MsgBox %ColorName% could not be found.</pre>
-<p>åœ¨ä¸Šé¢çš„ä¾‹å­ä¸­, å¦‚æžœ <em>ColorName</em> å˜é‡ä¸ºç©ºåˆ™æ°¸è¿œä¸ä¼šè°ƒç”¨ FindColor() å‡½æ•°. è¿™æ˜¯ç”±äºŽ <em>AND</em> çš„å·¦ä¾§ç»“æžœå°†ä¸º <em>false</em>, å› æ­¤å…¶å³è¾¹ä¸å¯èƒ½è®©æœ€ç»ˆçš„ç»“æžœä¸º <em>true</em>.</p>
-<p>ç”±äºŽæ­¤ç‰¹æ€§, æ‰€ä»¥éœ€è¦æ³¨æ„åˆ°, å¦‚æžœåœ¨ <em>AND</em> æˆ– <em>OR</em> çš„å³ä¾§è°ƒç”¨å‡½æ•°, é‚£ä¹ˆå‡½æ•°å¯èƒ½æ°¸è¿œä¸ä¼šäº§ç”Ÿå‰¯ä½œç”¨ (ä¾‹å¦‚æ”¹å˜å…¨å±€å˜é‡çš„å†…å®¹).</p>
-<p>è¿˜éœ€è¦æ³¨æ„åœ¨åµŒå¥—çš„ <em>AND</em> å’Œ <em>OR</em> ä¸²è”è¡¨è¾¾å¼çš„æ±‚å€¼ä¼˜åŒ–. ä¾‹å¦‚, åœ¨åŽé¢çš„è¡¨è¾¾å¼ä¸­æ¯å½“ <em>ColorName</em> ä¸ºç©ºæ—¶åªä¼šè¿›è¡Œæœ€å·¦è¾¹çš„æ¯”è¾ƒ. è¿™æ˜¯å› ä¸ºæ­¤æ—¶æœ€å·¦è¾¹çš„æ¯”è¾ƒå·²ç»è¶³ä»¥ç¡®å®šæœ€ç»ˆçš„ç»“æžœ:</p>
+<p>ÔÚÉÏÃæµÄÀý×ÓÖÐ, Èç¹û <em>ColorName</em> ±äÁ¿Îª¿ÕÔòÓÀÔ¶²»»áµ÷ÓÃ FindColor() º¯Êý. ÕâÊÇÓÉÓÚ <em>AND</em> µÄ×ó²à½á¹û½«Îª <em>false</em>, Òò´ËÆäÓÒ±ß²»¿ÉÄÜÈÃ×îÖÕµÄ½á¹ûÎª <em>true</em>.</p>
+<p>ÓÉÓÚ´ËÌØÐÔ, ËùÒÔÐèÒª×¢Òâµ½, Èç¹ûÔÚ <em>AND</em> »ò <em>OR</em> µÄÓÒ²àµ÷ÓÃº¯Êý, ÄÇÃ´º¯Êý¿ÉÄÜÓÀÔ¶²»»á²úÉú¸±×÷ÓÃ (ÀýÈç¸Ä±äÈ«¾Ö±äÁ¿µÄÄÚÈÝ).</p>
+<p>»¹ÐèÒª×¢ÒâÔÚÇ¶Ì×µÄ <em>AND</em> ºÍ <em>OR</em> ´®Áª±í´ïÊ½µÄÇóÖµÓÅ»¯. ÀýÈç, ÔÚºóÃæµÄ±í´ïÊ½ÖÐÃ¿µ± <em>ColorName</em> Îª¿ÕÊ±Ö»»á½øÐÐ×î×ó±ßµÄ±È½Ï. ÕâÊÇÒòÎª´ËÊ±×î×ó±ßµÄ±È½ÏÒÑ¾­×ãÒÔÈ·¶¨×îÖÕµÄ½á¹û:</p>
 <pre>if (ColorName = "" <u>OR</u> FindColor(ColorName, Region1) <u>OR</u> FindColor(ColorName, Region2))
-    break   <em>; æœç´¢å†…å®¹ä¸ºç©ºæˆ–æ‰¾åˆ°äº†åŒ¹é….</em></pre>
-<p>ä»Žä¸Šé¢çš„ä¾‹å­å¯ä»¥çœ‹å‡º, ä»»ä½•è€—æ—¶çš„å‡½æ•°ä¸€èˆ¬åº”è¯¥åœ¨ <em>AND</em> æˆ– <em>OR</em> çš„å³ä¾§è°ƒç”¨ä»Žè€Œæé«˜æ€§èƒ½. è¿™ç§æ–¹æ³•è¿˜èƒ½é¿å…è°ƒç”¨æŽ¥å—äº†ä¸€ä¸ªä¸åˆé€‚çš„å€¼ä¾‹å¦‚ç©ºå­—ç¬¦ä¸²çš„å‡½æ•°.</p>
-<p>åœ¨ v1.0.46+, <a href="Variables.htm#ternary">ä¸‰å…ƒæ¡ä»¶è¿ç®—ç¬¦ (?:)</a> ä¹Ÿé€šè¿‡ä¸è®¡ç®—ä¸¢å¼ƒçš„åˆ†æ”¯è¿›è¡Œæ±‚å€¼ä¼˜åŒ–.</p>
-<h2 id="gosub">åœ¨å‡½æ•°ä¸­ä½¿ç”¨å­ç¨‹åº</h2>
-<p>å°½ç®¡åœ¨ä¸€ä¸ªå‡½æ•°ä¸­ä¸èƒ½ <a href="#define">å®šä¹‰</a> å…¶ä»–å‡½æ•°, ä½†å®ƒå¯ä»¥å«æœ‰å­ç¨‹åº. ä¸Žå…¶ä»–å­ç¨‹åºä¸€æ ·ä½¿ç”¨ <a href="commands/Gosub.htm">Gosub</a> è¿è¡Œå®ƒä»¬ä¸”ä½¿ç”¨ <a href="commands/Return.htm">Return</a> è¿”å›ž (æ­¤æ—¶ Return å±žäºŽ Gosub è€Œä¸æ˜¯å‡½æ•°).</p>
-<p>å·²çŸ¥é™åˆ¶: å½“å‰æ¯ä¸ªå­ç¨‹åº (æ ‡ç­¾) çš„åç§°åœ¨æ•´ä¸ªè„šæœ¬ä¸­å¿…é¡»æ˜¯å”¯ä¸€çš„. å¦‚æžœå­˜åœ¨é‡å¤çš„æ ‡ç­¾, åœ¨è¿è¡Œå‰ç¨‹åºä¼šé€šçŸ¥æ‚¨.</p>
-<p><a name="GosubPublic"></a>å¦‚æžœå‡½æ•°ä½¿ç”¨ <a href="commands/Gosub.htm">Gosub</a> è·³è½¬åˆ°å…¬å…±å­ç¨‹åº (åœ¨å‡½æ•°å¤–éƒ¨çš„å­ç¨‹åº), é‚£ä¹ˆæ‰€æœ‰å¤–é¢çš„å˜é‡éƒ½æ˜¯å…¨å±€çš„è€Œä¸”åœ¨å­ç¨‹åºè¿”å›žå‰æ— æ³•å¼•ç”¨å‡½æ•°è‡ªèº«çš„ <a href="#Locals">å±€éƒ¨å˜é‡</a>. ä¸è¿‡, A_ThisFunc ä»å°†åŒ…å«æ­£åœ¨æ‰§è¡Œçš„å‡½æ•°åç§°.</p>
-<p>å°½ç®¡ä¸èƒ½ä½¿ç”¨ <a href="commands/Goto.htm">Goto</a> ä»Žå‡½æ•°ä¸­è·³è½¬åˆ°å¤–é¢, ä½†å¯ä»¥åœ¨å‡½æ•°ä¸­ä½¿ç”¨ <a href="commands/Gosub.htm">Gosub</a> åˆ°å¤–éƒ¨/å…¬å…±çš„å­ç¨‹åº, ç„¶åŽåœ¨é‚£é‡Œä½¿ç”¨ Goto.</p>
-<p>å°½ç®¡ä¸€èˆ¬ä¸é¼“åŠ±ä½¿ç”¨ <a href="commands/Goto.htm">Goto</a>, ä½†å®ƒèƒ½ç”¨æ¥åœ¨åŒä¸ªå‡½æ•°ä¸­çš„ä¸€ä¸ªä½ç½®è·³è½¬åˆ°å…¶ä»–ä½ç½®. è¿™æ ·æœ‰åŠ©äºŽç®€åŒ–åŒ…å«è®¸å¤šä¸ªè¿”å›žç‚¹è€Œæ‰€æœ‰è¿™äº›ç‚¹åœ¨è¿”å›žå‰éœ€è¦è¿›è¡Œä¸€äº›æ¸…ç†çš„å¤æ‚å‡½æ•°.</p>
-<p>å‡½æ•°å¯ä»¥åŒ…å«èƒ½è¢«å¤–éƒ¨è°ƒç”¨çš„å­ç¨‹åºï¼Œä¾‹å¦‚<a href="commands/SetTimer.htm">è®¡æ—¶å™¨</a>ã€<a href="commands/Gui.htm#label">GUI g æ ‡ç­¾</a>å’Œ<a href="commands/Menu.htm">èœå•é¡¹</a>ã€‚é€šå¸¸æŠŠå®ƒä»¬å°è£…åˆ°ä¸€ä¸ªå•ç‹¬çš„æ–‡ä»¶ä¸­ä¾› <a href="commands/_Include.htm">#Include</a> ä½¿ç”¨, è¿™æ ·é¿å…äº†å®ƒä»¬å’Œè„šæœ¬çš„ <a href="Scripts.htm#auto">è‡ªåŠ¨æ‰§è¡Œæ®µ</a> çš„å†²çª. ä¸è¿‡, è¿˜å­˜åœ¨ä¸‹é¢è¿™äº›é™åˆ¶:</p>
+    break   <em>; ËÑË÷ÄÚÈÝÎª¿Õ»òÕÒµ½ÁËÆ¥Åä.</em></pre>
+<p>´ÓÉÏÃæµÄÀý×Ó¿ÉÒÔ¿´³ö, ÈÎºÎºÄÊ±µÄº¯ÊýÒ»°ãÓ¦¸ÃÔÚ <em>AND</em> »ò <em>OR</em> µÄÓÒ²àµ÷ÓÃ´Ó¶øÌá¸ßÐÔÄÜ. ÕâÖÖ·½·¨»¹ÄÜ±ÜÃâµ÷ÓÃ½ÓÊÜÁËÒ»¸ö²»ºÏÊÊµÄÖµÀýÈç¿Õ×Ö·û´®µÄº¯Êý.</p>
+<p>ÔÚ v1.0.46+, <a href="Variables.htm#ternary">ÈýÔªÌõ¼þÔËËã·û (?:)</a> Ò²Í¨¹ý²»¼ÆËã¶ªÆúµÄ·ÖÖ§½øÐÐÇóÖµÓÅ»¯.</p>
+<h2 id="gosub">ÔÚº¯ÊýÖÐÊ¹ÓÃ×Ó³ÌÐò</h2>
+<p>¾¡¹ÜÔÚÒ»¸öº¯ÊýÖÐ²»ÄÜ <a href="#define">¶¨Òå</a> ÆäËûº¯Êý, µ«Ëü¿ÉÒÔº¬ÓÐ×Ó³ÌÐò. ÓëÆäËû×Ó³ÌÐòÒ»ÑùÊ¹ÓÃ <a href="commands/Gosub.htm">Gosub</a> ÔËÐÐËüÃÇÇÒÊ¹ÓÃ <a href="commands/Return.htm">Return</a> ·µ»Ø (´ËÊ± Return ÊôÓÚ Gosub ¶ø²»ÊÇº¯Êý).</p>
+<p>ÒÑÖªÏÞÖÆ: µ±Ç°Ã¿¸ö×Ó³ÌÐò (±êÇ©) µÄÃû³ÆÔÚÕû¸ö½Å±¾ÖÐ±ØÐëÊÇÎ¨Ò»µÄ. Èç¹û´æÔÚÖØ¸´µÄ±êÇ©, ÔÚÔËÐÐÇ°³ÌÐò»áÍ¨ÖªÄú.</p>
+<p><a name="GosubPublic"></a>Èç¹ûº¯ÊýÊ¹ÓÃ <a href="commands/Gosub.htm">Gosub</a> Ìø×ªµ½¹«¹²×Ó³ÌÐò (ÔÚº¯ÊýÍâ²¿µÄ×Ó³ÌÐò), ÄÇÃ´ËùÓÐÍâÃæµÄ±äÁ¿¶¼ÊÇÈ«¾ÖµÄ¶øÇÒÔÚ×Ó³ÌÐò·µ»ØÇ°ÎÞ·¨ÒýÓÃº¯Êý×ÔÉíµÄ <a href="#Locals">¾Ö²¿±äÁ¿</a>. ²»¹ý, A_ThisFunc ÈÔ½«°üº¬ÕýÔÚÖ´ÐÐµÄº¯ÊýÃû³Æ.</p>
+<p>¾¡¹Ü²»ÄÜÊ¹ÓÃ <a href="commands/Goto.htm">Goto</a> ´Óº¯ÊýÖÐÌø×ªµ½ÍâÃæ, µ«¿ÉÒÔÔÚº¯ÊýÖÐÊ¹ÓÃ <a href="commands/Gosub.htm">Gosub</a> µ½Íâ²¿/¹«¹²µÄ×Ó³ÌÐò, È»ºóÔÚÄÇÀïÊ¹ÓÃ Goto.</p>
+<p>¾¡¹ÜÒ»°ã²»¹ÄÀøÊ¹ÓÃ <a href="commands/Goto.htm">Goto</a>, µ«ËüÄÜÓÃÀ´ÔÚÍ¬¸öº¯ÊýÖÐµÄÒ»¸öÎ»ÖÃÌø×ªµ½ÆäËûÎ»ÖÃ. ÕâÑùÓÐÖúÓÚ¼ò»¯°üº¬Ðí¶à¸ö·µ»Øµã¶øËùÓÐÕâÐ©µãÔÚ·µ»ØÇ°ÐèÒª½øÐÐÒ»Ð©ÇåÀíµÄ¸´ÔÓº¯Êý.</p>
+<p>º¯Êý¿ÉÒÔ°üº¬ÄÜ±»Íâ²¿µ÷ÓÃµÄ×Ó³ÌÐò£¬ÀýÈç<a href="commands/SetTimer.htm">¼ÆÊ±Æ÷</a>¡¢<a href="commands/Gui.htm#label">GUI g ±êÇ©</a>ºÍ<a href="commands/Menu.htm">²Ëµ¥Ïî</a>¡£Í¨³£°ÑËüÃÇ·â×°µ½Ò»¸öµ¥¶ÀµÄÎÄ¼þÖÐ¹© <a href="commands/_Include.htm">#Include</a> Ê¹ÓÃ, ÕâÑù±ÜÃâÁËËüÃÇºÍ½Å±¾µÄ <a href="Scripts.htm#auto">×Ô¶¯Ö´ÐÐ¶Î</a> µÄ³åÍ». ²»¹ý, »¹´æÔÚÏÂÃæÕâÐ©ÏÞÖÆ:</p>
 <ul>
-  <li>å¦‚æžœå®ƒä»¬æ‰€åœ¨çš„å‡½æ•°æ›¾ç»è¢«æ­£å¸¸è°ƒç”¨, é‚£ä¹ˆè¿™æ ·çš„å­ç¨‹åºåº”è¯¥åªä½¿ç”¨ <a href="#static">é™æ€</a> å’Œ <a href="#Global">å…¨å±€</a> å˜é‡ (ä¸ä½¿ç”¨ <a href="#Locals">å±€éƒ¨</a> å˜é‡). è¿™æ˜¯ç”±äºŽä¸­æ–­å‡½æ•°è°ƒç”¨çº¿ç¨‹çš„å­ç¨‹åº <a href="misc/Threads.htm">çº¿ç¨‹</a> (åä¹‹äº¦ç„¶) å¯ä»¥æ”¹å˜è¢«ä¸­æ–­çº¿ç¨‹çœ‹åˆ°çš„å±€éƒ¨å˜é‡çš„å€¼. æ­¤å¤–, åœ¨ä»»ä½•æ—¶å€™å‡½æ•°è¿”å›žåˆ°å…¶è°ƒç”¨è€…æ—¶, å®ƒåŒ…å«çš„æ‰€æœ‰å±€éƒ¨å˜é‡éƒ½è¢«ç½®ç©ºæ¥é‡Šæ”¾å ç”¨çš„å†…å­˜.</li>
-  <li>è¿™æ ·çš„å­ç¨‹åºåº”è¯¥åªä½¿ç”¨ <a href="#Global">å…¨å±€å˜é‡</a> (ä¸ä½¿ç”¨ <a href="#static">é™æ€å˜é‡</a>) ä½œä¸º <a href="commands/Gui.htm#var">GUI æŽ§ä»¶çš„å˜é‡</a>.</li>
-  <li>å½“ä¸€ä¸ªå­ç¨‹åº <a href="misc/Threads.htm">çº¿ç¨‹</a> è¿›å…¥å‡½æ•°åŽ, åœ¨æ­¤çº¿ç¨‹ä¸­ä»»ä½•å¯¹ <a href="misc/Arrays.htm">åŠ¨æ€å˜é‡</a> çš„å¼•ç”¨éƒ½è¢«è§†ä¸ºæ˜¯ <a href="#Global">å…¨å±€</a> çš„ (åŒ…æ‹¬åˆ›å»ºæ•°ç»„çš„é‚£äº›å‘½ä»¤).</li>
+  <li>Èç¹ûËüÃÇËùÔÚµÄº¯ÊýÔø¾­±»Õý³£µ÷ÓÃ, ÄÇÃ´ÕâÑùµÄ×Ó³ÌÐòÓ¦¸ÃÖ»Ê¹ÓÃ <a href="#static">¾²Ì¬</a> ºÍ <a href="#Global">È«¾Ö</a> ±äÁ¿ (²»Ê¹ÓÃ <a href="#Locals">¾Ö²¿</a> ±äÁ¿). ÕâÊÇÓÉÓÚÖÐ¶Ïº¯Êýµ÷ÓÃÏß³ÌµÄ×Ó³ÌÐò <a href="misc/Threads.htm">Ïß³Ì</a> (·´Ö®ÒàÈ») ¿ÉÒÔ¸Ä±ä±»ÖÐ¶ÏÏß³Ì¿´µ½µÄ¾Ö²¿±äÁ¿µÄÖµ. ´ËÍâ, ÔÚÈÎºÎÊ±ºòº¯Êý·µ»Øµ½Æäµ÷ÓÃÕßÊ±, Ëü°üº¬µÄËùÓÐ¾Ö²¿±äÁ¿¶¼±»ÖÃ¿ÕÀ´ÊÍ·ÅÕ¼ÓÃµÄÄÚ´æ.</li>
+  <li>ÕâÑùµÄ×Ó³ÌÐòÓ¦¸ÃÖ»Ê¹ÓÃ <a href="#Global">È«¾Ö±äÁ¿</a> (²»Ê¹ÓÃ <a href="#static">¾²Ì¬±äÁ¿</a>) ×÷Îª <a href="commands/Gui.htm#var">GUI ¿Ø¼þµÄ±äÁ¿</a>.</li>
+  <li>µ±Ò»¸ö×Ó³ÌÐò <a href="misc/Threads.htm">Ïß³Ì</a> ½øÈëº¯Êýºó, ÔÚ´ËÏß³ÌÖÐÈÎºÎ¶Ô <a href="misc/Arrays.htm">¶¯Ì¬±äÁ¿</a> µÄÒýÓÃ¶¼±»ÊÓÎªÊÇ <a href="#Global">È«¾Ö</a> µÄ (°üÀ¨´´½¨Êý×éµÄÄÇÐ©ÃüÁî).</li>
 </ul>
-<h2 id="remarks">Return, Exit åŠä¸€èˆ¬è¯´æ˜Ž</h2>
-<p>å¦‚æžœå‡½æ•°å†…çš„æ‰§è¡Œæµåœ¨é‡åˆ° <a href="commands/Return.htm">Return</a> å‰åˆ°è¾¾äº†å‡½æ•°çš„é—­æ‹¬å·, é‚£ä¹ˆå‡½æ•°ç»“æŸå¹¶è¿”å›žç©ºå€¼ (ç©ºå­—ç¬¦ä¸²) ç»™å…¶è°ƒç”¨è€…. å½“å‡½æ•°æ˜Žç¡®çœç•¥ <a href="commands/Return.htm">Return</a> çš„å‚æ•°æ—¶ä¹Ÿè¿”å›žç©ºå€¼.</p>
-<p>å½“å‡½æ•°ä½¿ç”¨ <a href="commands/Exit.htm">Exit</a> å‘½ä»¤ç»ˆæ­¢ <a href="misc/Threads.htm">å½“å‰çº¿ç¨‹</a> æ—¶, å…¶è°ƒç”¨è€…ä¸ä¼šæŽ¥æ”¶åˆ°è¿”å›žå€¼. ä¾‹å¦‚ï¼Œè¿™ä¸ªè¯­å¥ <code>Var := Add(2, 3)</code> ä¸­ï¼Œå¦‚æžœ <code>Add()</code> é€€å‡ºäº†é‚£ä¹ˆ <code>Var</code> ä¼šä¿æŒä¸å˜ã€‚å¦‚æžœå‡½æ•°å‡ºçŽ°äº†è¿è¡Œæ—¶é”™è¯¯, ä¾‹å¦‚ <a href="commands/Run.htm">è¿è¡Œ</a> äº†ä¸€ä¸ªä¸å­˜åœ¨çš„æ–‡ä»¶ (å½“ <a href="commands/Run.htm#UseErrorLevel">UseErrorLevel</a> é€‰é¡¹ä¸å­˜åœ¨æ—¶), ä¹Ÿä¼šå‡ºçŽ°åŒæ ·çš„æƒ…å†µ.</p>
-<p>å¦‚æžœè¦è¿”å›žä¸€ä¸ªé¢å¤–çš„å®¹æ˜“è®°ä½çš„å€¼, é‚£ä¹ˆå‡½æ•°å¯ä»¥ä¿®æ”¹ <a href="misc/ErrorLevel.htm">ErrorLevel</a> çš„å€¼æ¥å®žçŽ°.</p>
-<p>è¦ä½¿ç”¨ä¸€ä¸ªæˆ–å¤šä¸ªç©ºå€¼ï¼ˆç©ºå­—ç¬¦ä¸²ï¼‰è°ƒç”¨å‡½æ•°ï¼Œå¯ä»¥ä½¿ç”¨ç©ºçš„å¼•å·å¯¹ï¼Œä¾‹å¦‚ï¼š<code>FindColor(ColorName, "")</code>ã€‚</p>
-<p>å› ä¸ºè°ƒç”¨å‡½æ•°ä¸ä¼šå¼€å¯æ–° <a href="misc/Threads.htm">çº¿ç¨‹</a>, æ‰€ä»¥å‡½æ•°å¯¹è®¾ç½®ä¾‹å¦‚ <a href="commands/SendMode.htm">SendMode</a> å’Œ <a href="commands/SetTitleMatchMode.htm">SetTitleMatchMode</a> åšå‡ºçš„ä»»ä½•æ”¹å˜å¯¹å…¶è°ƒç”¨è€…åŒæ ·æœ‰æ•ˆ.</p>
-<p>å‡½æ•°çš„è°ƒç”¨è€…å¯ä»¥ä¼ é€’ä¸å­˜åœ¨çš„å˜é‡æˆ– <a href="misc/Arrays.htm">æ•°ç»„</a> å…ƒç´ ç»™å®ƒ, å½“å‡½æ•°æœŸæœ›å’Œ <a href="#ByRef">ByRef</a> ä¸€è‡´çš„å‚æ•°æ—¶è¿™å¾ˆæœ‰ç”¨. ä¾‹å¦‚, è°ƒç”¨ <code>GetNextLine(BlankArray%i%)</code> ä¼šè‡ªåŠ¨åœ°åˆ›å»º <a href="#Locals">å±€éƒ¨</a> æˆ–å…¨å±€çš„å˜é‡ <code>BlankArray%i%</code> (æ˜¯å±€éƒ¨è¿˜æ˜¯å…¨å±€å–å†³äºŽè°ƒç”¨è€…æ˜¯å¦åœ¨å‡½æ•°å†…å¹¶ä¸”å®ƒçš„ <a href="#AssumeGlobal">å‡è®¾å…¨å±€æ¨¡å¼</a> æ˜¯å¦æœ‰æ•ˆ).</p>
-<p>åœ¨å‡½æ•°ä¸­ä½¿ç”¨ <a href="commands/ListVars.htm">ListVars</a> æ—¶, å®ƒä¼šæ˜¾ç¤ºå‡½æ•°çš„ <a href="#Locals">å±€éƒ¨å˜é‡</a> åŠå…¶å†…å®¹. è¿™æ ·å¯ä»¥å¸®åŠ©è°ƒè¯•è„šæœ¬.</p>
-<h2>é£Žæ ¼å’Œå‘½åçº¦å®š</h2>
-<p>æ‚¨ä¹Ÿè®¸ä¼šå‘çŽ°, å¦‚æžœç»™å¤æ‚å‡½æ•°ä¸­çš„ç‰¹å®šå˜é‡åŠ ä¸Šç‹¬ç‰¹çš„å‰ç¼€ä¼šè®©å‡½æ•°æ›´å®¹æ˜“é˜…è¯»å’Œç»´æŠ¤. ä¾‹å¦‚, ä½¿ç”¨ "p" æˆ– "p_" å¼€å¤´æ¥å‘½åå‡½æ•°ä¸­çš„æ¯ä¸ªå‚æ•°å¯ä»¥è®©å®ƒä»¬çš„æ€§è´¨ä¸€ç›®äº†ç„¶, å°¤å…¶æ˜¯å½“å‡½æ•°ä¸­æœ‰è®¸å¤š <a href="#Locals">å±€éƒ¨å˜é‡</a> å¸å¼•æ‚¨çš„æ³¨æ„åŠ›çš„æ—¶å€™. åŒæ ·åœ°, å‰ç¼€ "r" æˆ– "r_" å¯ä»¥ç”¨äºŽ <a href="#ByRef">ByRef å‚æ•°</a>, è€Œ "s" æˆ– "s_" å¯ä»¥ç”¨äºŽ <a href="#static">é™æ€å˜é‡</a>.</p>
-<p>åœ¨å®šä¹‰å‡½æ•°æ—¶å¯ä»¥ä½¿ç”¨ <a href="commands/Block.htm#otb">One True Brace (OTB) é£Žæ ¼</a>. ä¾‹å¦‚ï¼š</p>
+<h2 id="remarks">Return, Exit ¼°Ò»°ãËµÃ÷</h2>
+<p>Èç¹ûº¯ÊýÄÚµÄÖ´ÐÐÁ÷ÔÚÓöµ½ <a href="commands/Return.htm">Return</a> Ç°µ½´ïÁËº¯ÊýµÄ±ÕÀ¨ºÅ, ÄÇÃ´º¯Êý½áÊø²¢·µ»Ø¿ÕÖµ (¿Õ×Ö·û´®) ¸øÆäµ÷ÓÃÕß. µ±º¯ÊýÃ÷È·Ê¡ÂÔ <a href="commands/Return.htm">Return</a> µÄ²ÎÊýÊ±Ò²·µ»Ø¿ÕÖµ.</p>
+<p>µ±º¯ÊýÊ¹ÓÃ <a href="commands/Exit.htm">Exit</a> ÃüÁîÖÕÖ¹ <a href="misc/Threads.htm">µ±Ç°Ïß³Ì</a> Ê±, Æäµ÷ÓÃÕß²»»á½ÓÊÕµ½·µ»ØÖµ. ÀýÈç£¬Õâ¸öÓï¾ä <code>Var := Add(2, 3)</code> ÖÐ£¬Èç¹û <code>Add()</code> ÍË³öÁËÄÇÃ´ <code>Var</code> »á±£³Ö²»±ä¡£Èç¹ûº¯Êý³öÏÖÁËÔËÐÐÊ±´íÎó, ÀýÈç <a href="commands/Run.htm">ÔËÐÐ</a> ÁËÒ»¸ö²»´æÔÚµÄÎÄ¼þ (µ± <a href="commands/Run.htm#UseErrorLevel">UseErrorLevel</a> Ñ¡Ïî²»´æÔÚÊ±), Ò²»á³öÏÖÍ¬ÑùµÄÇé¿ö.</p>
+<p>Èç¹ûÒª·µ»ØÒ»¸ö¶îÍâµÄÈÝÒ×¼Ç×¡µÄÖµ, ÄÇÃ´º¯Êý¿ÉÒÔÐÞ¸Ä <a href="misc/ErrorLevel.htm">ErrorLevel</a> µÄÖµÀ´ÊµÏÖ.</p>
+<p>ÒªÊ¹ÓÃÒ»¸ö»ò¶à¸ö¿ÕÖµ£¨¿Õ×Ö·û´®£©µ÷ÓÃº¯Êý£¬¿ÉÒÔÊ¹ÓÃ¿ÕµÄÒýºÅ¶Ô£¬ÀýÈç£º<code>FindColor(ColorName, "")</code>¡£</p>
+<p>ÒòÎªµ÷ÓÃº¯Êý²»»á¿ªÆôÐÂ <a href="misc/Threads.htm">Ïß³Ì</a>, ËùÒÔº¯Êý¶ÔÉèÖÃÀýÈç <a href="commands/SendMode.htm">SendMode</a> ºÍ <a href="commands/SetTitleMatchMode.htm">SetTitleMatchMode</a> ×ö³öµÄÈÎºÎ¸Ä±ä¶ÔÆäµ÷ÓÃÕßÍ¬ÑùÓÐÐ§.</p>
+<p>º¯ÊýµÄµ÷ÓÃÕß¿ÉÒÔ´«µÝ²»´æÔÚµÄ±äÁ¿»ò <a href="misc/Arrays.htm">Êý×é</a> ÔªËØ¸øËü, µ±º¯ÊýÆÚÍûºÍ <a href="#ByRef">ByRef</a> Ò»ÖÂµÄ²ÎÊýÊ±ÕâºÜÓÐÓÃ. ÀýÈç, µ÷ÓÃ <code>GetNextLine(BlankArray%i%)</code> »á×Ô¶¯µØ´´½¨ <a href="#Locals">¾Ö²¿</a> »òÈ«¾ÖµÄ±äÁ¿ <code>BlankArray%i%</code> (ÊÇ¾Ö²¿»¹ÊÇÈ«¾ÖÈ¡¾öÓÚµ÷ÓÃÕßÊÇ·ñÔÚº¯ÊýÄÚ²¢ÇÒËüµÄ <a href="#AssumeGlobal">¼ÙÉèÈ«¾ÖÄ£Ê½</a> ÊÇ·ñÓÐÐ§).</p>
+<p>ÔÚº¯ÊýÖÐÊ¹ÓÃ <a href="commands/ListVars.htm">ListVars</a> Ê±, Ëü»áÏÔÊ¾º¯ÊýµÄ <a href="#Locals">¾Ö²¿±äÁ¿</a> ¼°ÆäÄÚÈÝ. ÕâÑù¿ÉÒÔ°ïÖúµ÷ÊÔ½Å±¾.</p>
+<h2>·ç¸ñºÍÃüÃûÔ¼¶¨</h2>
+<p>ÄúÒ²Ðí»á·¢ÏÖ, Èç¹û¸ø¸´ÔÓº¯ÊýÖÐµÄÌØ¶¨±äÁ¿¼ÓÉÏ¶ÀÌØµÄÇ°×º»áÈÃº¯Êý¸üÈÝÒ×ÔÄ¶ÁºÍÎ¬»¤. ÀýÈç, Ê¹ÓÃ "p" »ò "p_" ¿ªÍ·À´ÃüÃûº¯ÊýÖÐµÄÃ¿¸ö²ÎÊý¿ÉÒÔÈÃËüÃÇµÄÐÔÖÊÒ»Ä¿ÁËÈ», ÓÈÆäÊÇµ±º¯ÊýÖÐÓÐÐí¶à <a href="#Locals">¾Ö²¿±äÁ¿</a> ÎüÒýÄúµÄ×¢ÒâÁ¦µÄÊ±ºò. Í¬ÑùµØ, Ç°×º "r" »ò "r_" ¿ÉÒÔÓÃÓÚ <a href="#ByRef">ByRef ²ÎÊý</a>, ¶ø "s" »ò "s_" ¿ÉÒÔÓÃÓÚ <a href="#static">¾²Ì¬±äÁ¿</a>.</p>
+<p>ÔÚ¶¨Òåº¯ÊýÊ±¿ÉÒÔÊ¹ÓÃ <a href="commands/Block.htm#otb">One True Brace (OTB) ·ç¸ñ</a>. ÀýÈç£º</p>
 <pre>Add(x, y) <strong>{</strong>
     return x + y
 <strong>}</strong></pre>
-<h2 id="include">ä½¿ç”¨ #Include åœ¨å¤šä¸ªè„šæœ¬é—´å…±äº«å‡½æ•°</h2>
-<p>å¯ä»¥ä½¿ç”¨ <a href="commands/_Include.htm">#Include</a> æŒ‡ä»¤ (<em>å³ä½¿åœ¨è„šæœ¬çš„é¡¶éƒ¨</em>) ä»Žå¤–éƒ¨æ–‡ä»¶ä¸­åŠ è½½å‡½æ•°.</p>
-<p>è¯´æ˜Ž: å½“è„šæœ¬çš„æ‰§è¡Œæµé‡åˆ°å‡½æ•°å®šä¹‰æ—¶, å®ƒä¼šè·³è¿‡å‡½æ•° (ä½¿ç”¨ä¸€ç§çž¬æ—¶çš„æ–¹æ³•) å¹¶åœ¨å‡½æ•°é—­æ‹¬å·åŽæ¢å¤æ‰§è¡Œ. å› æ­¤, å¼€å§‹æ‰§è¡Œæ—¶æ‰§è¡Œæµä¸ä¼šé™·å…¥å‡½æ•°ä¸­, ä¹Ÿä¸ä¼šå› ä¸ºåœ¨è„šæœ¬çš„æœ€é¡¶éƒ¨å­˜åœ¨ä¸€ä¸ªæˆ–å¤šä¸ªå‡½æ•°è€Œå½±å“åˆ° <a href="Scripts.htm#auto">è‡ªåŠ¨æ‰§è¡Œæ®µ</a>.</p>
-<h2><a name="lib" id="lib"></a>å‡½æ•°åº“: æ ‡å‡†åº“å’Œç”¨æˆ·åº“ <span class="ver">[v1.0.47+]</span></h2>
-<p>è„šæœ¬ä¸­å¯ä»¥ä¸éœ€è¦é€šè¿‡ <a href="commands/_Include.htm">#Include</a> è€Œè°ƒç”¨å¤–éƒ¨æ–‡ä»¶ä¸­çš„å‡½æ•°. è¦è¾¾åˆ°æ­¤ç›®çš„, ä¸€ä¸ªå’Œå‡½æ•°ç›¸åŒåç§°çš„æ–‡ä»¶å¿…é¡»å­˜åœ¨äºŽä¸‹é¢åº“ç›®å½•çš„å…¶ä¸­ä¸€ä¸ª:</p>
-<pre><a href="Variables.htm#ScriptDir">%A_ScriptDir%</a>\Lib\  <em>; å±€éƒ¨åº“ - éœ€è¦ AHK_L 42+.</em>
-<a href="Variables.htm#MyDocuments">%A_MyDocuments%</a>\AutoHotkey\Lib\  <em>; ç”¨æˆ·åº“.</em>
-path-to-the-currently-running-AutoHotkey.exe\Lib\  <em>; æ ‡å‡†åº“.</em></pre>
-<p>ä¾‹å¦‚ï¼Œå½“è„šæœ¬è°ƒç”¨ä¸å­˜åœ¨çš„å‡½æ•° <code>MyFunc()</code> æ—¶ï¼Œç¨‹åºä¼šåœ¨ç”¨æˆ·åº“ä¸­æœç´¢åä¸ºâ€œMyFunc.ahkâ€çš„æ–‡ä»¶ã€‚å¦‚æžœæ²¡æœ‰æ‰¾åˆ°, ä¼šç»§ç»­åœ¨æ ‡å‡†åº“ä¸­æœç´¢æ­¤æ–‡ä»¶. å¦‚æžœä»ç„¶æ²¡æœ‰æ‰¾åˆ°åŒ¹é…çš„æ–‡ä»¶ä¸”å‡½æ•°çš„åç§°å«æœ‰ä¸‹åˆ’çº¿ï¼ˆä¾‹å¦‚ <code>MyPrefix_MyFunc</code>ï¼‰ï¼Œé‚£ä¹ˆç¨‹åºä¼šåœ¨ä¸¤ä¸ªåº“ä¸­æœç´¢åä¸º <code>MyPrefix.ahk</code> çš„æ–‡ä»¶ï¼Œå¦‚æžœæ‰¾åˆ°åˆ™åŠ è½½å®ƒã€‚è¿™æ ·ä½¿å¾— <code>MyPrefix.ahk</code> å¯ä»¥åŒæ—¶åŒ…å« <code>MyPrefix_MyFunc</code> å‡½æ•°å’Œå…¶ä»–åç§°ä»¥ <code>MyPrefix_</code> å¼€å§‹çš„ç›¸å…³å‡½æ•°ã€‚</p>
-<p><span class="ver">[AHK_L 42+]:</span> æ”¯æŒå±€éƒ¨åº“ä¸”å±€éƒ¨åº“ä¼˜å…ˆäºŽç”¨æˆ·åº“å’Œæ ‡å‡†åº“.</p>
-<p>è™½ç„¶åº“æ–‡ä»¶é€šå¸¸åªåŒ…å«å’Œå®ƒçš„æ–‡ä»¶åç§°ç›¸åŒçš„å•ä¸ªå‡½æ•°, ä½†å®ƒè¿˜å¯ä»¥åŒ…å«ä»…è¢«æ­¤å‡½æ•°è°ƒç”¨çš„ç§æœ‰å‡½æ•°å’Œå­ç¨‹åº. ç„¶è€Œ, è¿™æ ·çš„å‡½æ•°åº”è¯¥ä½¿ç”¨ç›¸å½“ç‰¹æ®Šçš„åç§°, å› ä¸ºå®ƒä»¬ä»å±žäºŽå…¨å±€å‘½åç©ºé—´; ä¹Ÿå°±æ˜¯è¯´, å¯ä»¥åœ¨è„šæœ¬çš„ä»»æ„ä½ç½®è°ƒç”¨å®ƒä»¬.</p>
-<p>å¦‚æžœåœ¨åº“æ–‡ä»¶ä¸­ä½¿ç”¨ <a href="commands/_Include.htm">#Include</a>, é‚£ä¹ˆ #Include çš„å·¥ä½œç›®å½•ä¸ºåº“æ–‡ä»¶è‡ªèº«æ‰€åœ¨çš„ç›®å½•. åˆ©ç”¨è¿™ä¸ªç‰¹æ€§å¯ä»¥é‡å®šå‘åˆ°è¾ƒå¤§çš„åº“æ–‡ä»¶, å…¶ä¸­åŒ…å«æ­¤å‡½æ•°åŠç›¸å…³å†…å®¹.</p>
-<p><a href="Scripts.htm#ahk2exe">è„šæœ¬ç¼–è¯‘å™¨ (ahk2exe)</a> åŒæ ·æ”¯æŒåº“å‡½æ•°. ä¸è¿‡, å®ƒè¦æ±‚åœ¨ç¼–è¯‘å™¨ç›®å½•çš„ä¸Šä¸€çº§ç›®å½•ä¸­å­˜åœ¨ AutoHotkey.exe çš„å‰¯æœ¬ (é€šå¸¸æ˜¯è¿™æ ·). å¦‚æžœä¸å­˜åœ¨ AutoHotkey.exe, ç¼–è¯‘å™¨ä»å¯ä»¥è¿è¡Œä½†æ— æ³•è‡ªåŠ¨åŒ…å«åº“å‡½æ•°.</p>
-<p>åŒ…å«åœ¨åº“ä¸­çš„å‡½æ•°å’Œå…¶ä»–å‡½æ•°æ‰§è¡Œçš„ä¸€æ ·å¥½, å› ä¸ºåœ¨è„šæœ¬å¼€å§‹æ‰§è¡Œå‰å·²ç»é¢„åŠ è½½äº†å®ƒä»¬.</p>
-<h2 id="BuiltIn">å†…ç½®å‡½æ•°</h2>
-<p>åœ¨å†…ç½®å‡½æ•°å‚æ•°åˆ—è¡¨æœ«å°¾çš„ä»»ä½•å¯é€‰å‚æ•°å¯ä»¥å®Œå…¨çœç•¥. ä¾‹å¦‚, <code>WinExist("Untitled - Notepad")</code> æ˜¯æœ‰æ•ˆçš„, å› ä¸ºå®ƒçš„å…¶ä»–ä¸‰ä¸ªå‚æ•°è¢«è®¤ä¸ºæ˜¯ç©ºçš„.</p>
-<p>å¦‚æžœè„šæœ¬å®šä¹‰äº†ä¸Žå†…ç½®å‡½æ•°åŒåçš„å‡½æ•°, é‚£ä¹ˆå†…ç½®å‡½æ•°ä¼šè¢«è¦†ç›–. ä¾‹å¦‚, è„šæœ¬ä¼šè°ƒç”¨å®ƒè‡ªå·±å®šä¹‰çš„ WinExist() å‡½æ•°æ¥ä»£æ›¿æ ‡å‡†çš„é‚£ä¸ª. ç„¶è€Œ, è¿™æ ·è„šæœ¬å°†æ— æ³•è°ƒç”¨åŽŸæ¥çš„å‡½æ•°.</p>
-<p>åœ¨ DLL æ–‡ä»¶ä¸­çš„å¤–éƒ¨å‡½æ•°å¯ä»¥ä½¿ç”¨ <a href="commands/DllCall.htm">DllCall()</a> è°ƒç”¨.</p>
-<h3>å¸¸ç”¨å‡½æ•°</h3>
-<p><strong><a name="FileExist"></a>FileExist(FilePattern)</strong>: å¦‚æžœ <em>FilePattern</em> ä¸å­˜åœ¨ (å¦‚æžœæœªæŒ‡å®šç»å¯¹è·¯å¾„, åˆ™å‡å®š <em>FilePattern</em> åœ¨ <a href="Variables.htm#WorkingDir">A_WorkingDir</a> ä¸­) åˆ™è¿”å›žç©ºå€¼ (ç©ºå­—ç¬¦ä¸²). å¦åˆ™, å®ƒè¿”å›žé¦–ä¸ªåŒ¹é…çš„æ–‡ä»¶æˆ–æ–‡ä»¶å¤¹çš„ <a href="commands/FileGetAttrib.htm#attrib">å±žæ€§å­—ç¬¦ä¸²</a> ("RASHNDOCT" çš„å­é›†). å¦‚æžœæ–‡ä»¶æ²¡æœ‰å±žæ€§ (å¾ˆå°‘è§), åˆ™è¿”å›ž "X". <em>FilePattern</em> å¯ä»¥æ˜¯æ–‡ä»¶æˆ–æ–‡ä»¶å¤¹çš„å‡†ç¡®åç§°æˆ–åŒ…å«é€šé…ç¬¦ (* æˆ– ?). ç”±äºŽç©ºå­—ç¬¦ä¸²è¢«è§†ä¸º "false", æ‰€ä»¥æ€»å¯ä»¥æŠŠå‡½æ•°çš„è¿”å›žå€¼ä½œä¸ºå‡†å¸ƒå°”å€¼æ¥ä½¿ç”¨. ä¾‹å¦‚, <code>if FileExist("C:\My File.txt")</code> è¯­å¥å½“æ–‡ä»¶å­˜åœ¨æ—¶åˆ™ä¸ºçœŸ, å¦åˆ™ä¸ºå‡. åŒæ ·åœ°, <code>if InStr(FileExist("C:\My Folder"), "D")</code> è¯­å¥ä»…å½“æ–‡ä»¶å­˜åœ¨ <em>å¹¶ä¸”</em> ä¸ºç›®å½•æ—¶æ‰ä¸ºçœŸ. ç›¸å…³å‘½ä»¤: <a href="commands/IfExist.htm">IfExist</a> å’Œ <a href="commands/FileGetAttrib.htm">FileGetAttrib</a>.</p>
-<p><strong><a name="GetKeyState"></a>GetKeyState(<a href="KeyList.htm">KeyName</a> [, "P"</strong> æˆ– <strong>"T"])</strong>ï¼šä¸Ž <a href="commands/GetKeyState.htm">GetKeyState å‘½ä»¤</a>ï¼ˆå®ƒåœ¨æŒ‰ä¸‹æ—¶è¿”å›ž D è€Œå¼¹èµ·æ—¶è¿”å›ž Uï¼‰ä¸åŒï¼Œæ­¤å‡½æ•°åœ¨æŒ‰ä¸‹æ—¶è¿”å›ž trueï¼ˆ1ï¼‰è€Œå¼¹èµ·æ—¶è¿”å›ž falseï¼ˆ0ï¼‰ã€‚å¦‚æžœ <em><a href="KeyList.htm">KeyName</a></em> æ— æ•ˆ, åˆ™è¿”å›žç©ºå­—ç¬¦ä¸². è¯·å‚é˜… <a href="commands/GetKeyState.htm">GetKeyState</a> äº†è§£å…¶ä»–è¿”å›žå€¼å’Œç”¨æ³•.</p>
-<p><strong><a name="InStr"></a>InStr(Haystack, Needle [, CaseSensitive = false, StartingPos = 1, Occurrence = 1])</strong>: è¿”å›žå­—ç¬¦ä¸² <em>Needle</em> åœ¨å­—ç¬¦ä¸² <em>Haystack</em> ä¸­çš„å‡ºçŽ°ä½ç½®. ä¸Ž <a href="commands/StringGetPos.htm">StringGetPos</a> ä¸åŒ, é¦–ä¸ªå­—ç¬¦ä½ç½®ä¸º 1; è¿™æ˜¯ç”±äºŽ 0 ç›¸å½“äºŽ "false", ä½¿å…¶æˆä¸ºç›´è§‚çš„ "æœªæ‰¾åˆ°" çš„æç¤º. å¦‚æžœå‚æ•° <em>CaseSensitive</em> çœç•¥æˆ–ä¸º false, æœç´¢ä¸åŒºåˆ†å¤§å°å†™ (ä¸åŒºåˆ†çš„æ¨¡å¼å–å†³äºŽ <a href="commands/StringCaseSense.htm">StringCaseSense</a>); å¦åˆ™, å¿…é¡»å‡†ç¡®åŒ¹é…å¤§å°å†™. å¦‚æžœ <em>StartingPos</em> çœç•¥, é‚£ä¹ˆä½¿ç”¨é»˜è®¤å€¼ 1 (<em>Haystack</em> çš„èµ·å§‹å¤„). å¦åˆ™, ä»Ž <em>Haystack</em> çš„ç¬¬äºŒä¸ªå­—ç¬¦å¼€å§‹è¯·æŒ‡å®š 2, ä»Žç¬¬ä¸‰ä¸ªå¼€å§‹ä¸º 3, ç­‰ç­‰. å¦‚æžœ <em>StartingPos</em> è¶…è¿‡äº† <em>Haystack</em> çš„é•¿åº¦, åˆ™è¿”å›ž 0. å¦‚æžœ <em>StartingPos</em> ä¸º 0 æˆ–è´Ÿæ•°, æœç´¢å°†ä»Žæœ«å°¾çš„åç§»å¤„å¼€å§‹åå‘è¿›è¡Œ (ä»Žå³å¾€å·¦). ä¸è®º <em>StartingPos</em> çš„å€¼æ˜¯å¤šå°‘, è¿”å›žçš„ä½ç½®æ€»æ˜¯ç›¸å¯¹äºŽ <em>Haystack</em> çš„é¦–ä¸ªå­—ç¬¦. ä¾‹å¦‚, "abc" åœ¨ "123abc789" ä¸­çš„ä½ç½®æ€»ä¸º 4. åœ¨ <i>Occurrence</i> ä¸­æŒ‡å®š 2 æ¥è¿”å›žç¬¬äºŒä¸ªåŒ¹é…çš„ä½ç½®, 3 ä¸ºç¬¬ä¸‰ä¸ª, ç­‰ç­‰. ç›¸å…³é¡¹: <a href="commands/RegExMatch.htm">RegExMatch()</a>, <a href="commands/IfInString.htm">IfInString</a> å’Œ <a href="commands/StringGetPos.htm">StringGetPos</a>.</p>
-<p><strong>RegExMatch(Haystack, NeedleRegEx [, UnquotedOutputVar = "", StartingPos = 1])</strong>ï¼šåˆ¤æ–­å­—ç¬¦ä¸²æ˜¯å¦åŒ…å«æŸä¸ªåŒ¹é…æ¨¡å¼ï¼ˆæ­£åˆ™è¡¨è¾¾å¼ï¼‰ã€‚è¯·å‚é˜… <a href="commands/RegExMatch.htm">RegExMatch()</a> äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong>RegExReplace(Haystack, NeedleRegEx [, Replacement = "", OutputVarCount = "", Limit = -1, StartingPos = 1])</strong>ï¼šæ›¿æ¢å­—ç¬¦ä¸²ä¸­åŒ¹é…æ¨¡å¼ï¼ˆæ­£åˆ™è¡¨è¾¾å¼ï¼‰å‡ºçŽ°çš„åœ°æ–¹ã€‚è¯·å‚é˜… <a href="commands/RegExReplace.htm">RegExReplace()</a> äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong><a name="SubStr"></a>SubStr(String, StartingPos [, Length])</strong> <span class="ver">[v1.0.46+]:</span> åœ¨ <em>String</em> ä¸­ä»Ž <em>StartingPos</em> å¼€å§‹å‘å³å¤åˆ¶ä¸è¶…è¿‡ <em>Length</em> é•¿åº¦çš„å­å­—ç¬¦ä¸² (å¦‚æžœ <em>Length</em> çœç•¥, åˆ™é»˜è®¤ä¸º "æ‰€æœ‰å­—ç¬¦"). å¯¹äºŽ <em>StartingPos</em>, æŒ‡å®š 1 ä»Žé¦–ä¸ªå­—ç¬¦å¼€å§‹, 2 ä»Žç¬¬äºŒä¸ªå¼€å§‹ç­‰ (å¦‚æžœ <em>StartingPos</em> è¶…è¿‡äº† <em>String</em> é•¿åº¦, åˆ™è¿”å›žç©ºå­—ç¬¦ä¸²). å¦‚æžœ <em>StartingPos</em> å°äºŽ 1, é‚£ä¹ˆå®ƒè¢«çœ‹æˆæ˜¯ä»Žå­—ç¬¦ä¸²æœ«å°¾å¼€å§‹çš„åç§». ä¾‹å¦‚, 0 æå–æœ€åŽä¸€ä¸ªå­—ç¬¦è€Œ -1 æå–æœ€åŽä¸¤ä¸ªå­—ç¬¦ (ä½†å¦‚æžœ <em>StartingPos</em> è¶…è¿‡äº†å­—ç¬¦ä¸²çš„å·¦ç«¯, åˆ™æå–åˆä»Žé¦–ä¸ªå­—ç¬¦å¼€å§‹). <em>Length</em> æ˜¯éœ€æå–å­—ç¬¦çš„æœ€å¤§æ•°ç›® (å½“å­—ç¬¦ä¸²å‰©ä½™éƒ¨åˆ†å¤ªçŸ­æ—¶æå–çš„æ•°ç›®ä¼šæ¯”æœ€å¤§å€¼å°‘). æŒ‡å®šè´Ÿçš„ <em>Length</em> ä»Žè€Œåœ¨è¿”å›žå­—ç¬¦ä¸²çš„æœ«å°¾çœç•¥è¿™ä¸ªæ•°ç›®çš„å­—ç¬¦ï¼ˆå¦‚æžœçœç•¥äº†å…¨éƒ¨æˆ–è¿‡å¤šå­—ç¬¦åˆ™è¿”å›žç©ºå­—ç¬¦ä¸²ï¼‰ã€‚ç›¸å…³é¡¹: <a href="commands/RegExMatch.htm">RegExMatch()</a>, <a href="commands/StringMid.htm">StringMid</a>, <a href="commands/StringLeft.htm">StringLeft/Right</a>, <a href="commands/StringTrimLeft.htm">StringTrimLeft/Right</a>.</p>
-<p><strong><a name="StrLen"></a>StrLen(String)</strong>: è¿”å›ž <em>String</em> çš„é•¿åº¦. è¯·å‚é˜… <a href="commands/StringLen.htm">StrLen()</a> äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong><a name="StrSplit"></a>StrSplit(String [, Delimiters, OmitChars])</strong> <span class="ver">[v1.1.13+]ï¼š</span>ä½¿ç”¨æŒ‡å®šçš„åˆ†éš”ç¬¦æŠŠä¸€ä¸ªå­—ç¬¦ä¸²åˆ†è§£æˆå¤šä¸ªå­å­—ç¬¦ä¸²å¹¶ä¿å­˜åˆ°æ•°ç»„ä¸­ã€‚è¯·å‚é˜…<a href="commands/StringSplit.htm">StrSplit()</a>äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong><a name="WinActive"></a>WinActive([WinTitle, WinText, ExcludeTitle, ExcludeText])</strong>ï¼šå¦‚æžœæ´»åŠ¨çª—å£åŒ¹é…æŒ‡å®šçš„æ¡ä»¶ï¼Œåˆ™è¿”å›žå…¶ <a href="commands/WinGet.htm">å”¯ä¸€ ID ï¼ˆHWNDï¼‰</a>ã€‚è¯·å‚é˜… <a href="commands/WinActive.htm">WinActive()</a> äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong><a name="WinExist"></a>WinExist([WinTitle, WinText, ExcludeTitle, ExcludeText])</strong>ï¼šè¿”å›žé¦–ä¸ªåŒ¹é…çª—å£çš„<a href="commands/WinGet.htm">å”¯ä¸€ IDï¼ˆHWNDï¼‰</a>ã€‚è¯·å‚é˜… <a href="commands/WinExist.htm">WinExist()</a> äº†è§£è¯¦æƒ…ã€‚</p>
-<h3>æ‚é¡¹å‡½æ•°</h3>
-<p><strong><a name="Asc"></a>Asc(String)</strong>: è¿”å›ž <em>String</em> ä¸­é¦–ä¸ªå­—ç¬¦çš„å­—ç¬¦ç¼–ç  (ä»‹äºŽ 1 å’Œ 255 (åœ¨ ANSI ç‰ˆæœ¬ä¸­) æˆ– 65535 (åœ¨ Unicode ç‰ˆæœ¬ä¸­) çš„æ•°å­—). å¦‚æžœ <em>String</em> ä¸ºç©º, åˆ™è¿”å›ž 0.</p>
-<p><strong><a name="Chr"></a>Chr(Number)</strong>: è¿”å›žä¸Ž <em>Number</em> è¡¨ç¤ºçš„å­—ç¬¦ç¼–ç ç›¸å¯¹åº”çš„å•ä¸ªå­—ç¬¦. å¦‚æžœ <em>Number</em> ä¸åœ¨æœ‰æ•ˆçš„å­—ç¬¦ç¼–ç èŒƒå›´å†…, åˆ™è¿”å›žç©ºå­—ç¬¦ä¸². å¸¸ç”¨çš„å­—ç¬¦ç¼–ç åŒ…æ‹¬ 9 (tab), 10 (æ¢è¡Œ), 13 (å›žè½¦), 32 (ç©ºæ ¼), 48-57 (æ•°å­— 0-9), 65-90 (å¤§å†™å­—æ¯ A-Z) å’Œ 97-122 (å°å†™å­—æ¯ a-z).</p>
-<p><strong>DllCall()</strong>ï¼šè°ƒç”¨ DLL æ–‡ä»¶ä¸­çš„å‡½æ•°ï¼Œä¾‹å¦‚æ ‡å‡†çš„ Windows API å‡½æ•°ã€‚è¯·å‚é˜… <a href="commands/DllCall.htm">DllCall()</a> äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong>FileOpen()</strong>: æä¾›é¢å‘å¯¹è±¡çš„æ–‡ä»¶ I/O. è¯·å‚é˜… <a href="commands/FileOpen.htm">FileOpen()</a> äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong><a name="Func"></a>Func(FunctionName)</strong> <span class="ver">[v1.1.00+]:</span> å¦‚æžœ <em>FunctionName</em> æ²¡æœ‰æ˜¾å¼å‡ºçŽ°åœ¨è„šæœ¬ä¸­ (é€šè¿‡ä¾‹å¦‚ <a href="commands/_Include.htm">#Include</a> æˆ–å¯¹ <a href="#lib">åº“å‡½æ•°</a> çš„éžåŠ¨æ€è°ƒç”¨çš„æ–¹æ³•), åˆ™ Func() è¿”å›ž 0. å¦åˆ™, å®ƒè¿”å›ž <a href="Objects.htm#Function_References">åˆ°å‡½æ•°çš„å¼•ç”¨</a>. è¿™å¯ä»¥ç”¨æ¥è°ƒç”¨å‡½æ•°æˆ–èŽ·å–ç±»ä¼¼å‚æ•°çš„æœ€å°å’Œæœ€å¤§æ•°ç›®çš„ <a href="objects/Func.htm">ä¿¡æ¯</a>.</p>
-<p><strong><a name="GetKeyName"></a>GetKeyName(Key), GetKeyVK(Key), GetKeySC(Key)</strong> <span class="ver">[v1.1.01+]:</span> èŽ·å–æŒ‰é”®çš„åç§°/æ–‡æœ¬, è™šæ‹ŸæŒ‰é”®ç æˆ–æ‰«æç . <em>Key</em> å¯ä»¥ä¸º VK æˆ– SC ç , ä¾‹å¦‚ "vkA2" æˆ– "sc01D", ä»¥åŠä¸¤è€…çš„ç»„åˆæˆ–é”®å. ä¾‹å¦‚, <code>GetKeyName("vk1B")</code> å’Œ <code>GetKeyName("Esc")</code> éƒ½è¿”å›ž "Escape", è€Œ <code>GetKeyVK("Esc")</code> è¿”å›ž 27.</p>
-<p><strong><a name="IsByRef"></a>IsByRef(Var)</strong> <span class="ver">[v1.1.01+]:</span> å½“ <em>Var</em> ä¸º ByRef å‚æ•°ä¸”è°ƒç”¨è€…æä¾›äº†å˜é‡æ—¶è¿”å›ž 1; å¦åˆ™å½“ <em>Var</em> ä¸ºå…¶ä»–ç±»åž‹çš„å˜é‡æ—¶è¿”å›ž 0.</p>
-<p><strong><a name="IsFunc"></a>IsFunc(FunctionName)</strong> <span class="ver">[v1.0.48+]:</span> å¦‚æžœ <em>FunctionName</em> ä¸æ˜¯æ˜¾å¼å‡ºçŽ°åœ¨è„šæœ¬ä¸­ (é€šè¿‡ä¾‹å¦‚ <a href="commands/_Include.htm">#Include</a> æˆ–å¯¹ <a href="#lib">åº“å‡½æ•°</a> çš„éžåŠ¨æ€è°ƒç”¨çš„æ–¹æ³•), åˆ™ IsFunc() è¿”å›ž 0. å¦åˆ™å®ƒè¿”å›žå‡½æ•°çš„å¼ºåˆ¶å‚æ•°ä¸ªæ•°åŠ ä¸€çš„æ•°å­—ï¼ˆä¾‹å¦‚ 1 ä¸ºå‡½æ•°å¯ä»¥ä¸éœ€è¦å‚æ•°ï¼Œ2 ä¸ºå‡½æ•°éœ€è¦ 1 ä¸ªå‚æ•°ç­‰ç­‰ï¼‰ã€‚ä¾‹å¦‚, å‡½æ•°å­˜åœ¨æ—¶ <code>if IsFunc("MyFunc")</code> å’Œ <code>if IsFunc(VarContainingFunctionName)</code> è¯­å¥ä¸ºçœŸ, å¦åˆ™ä¸ºå‡. åœ¨ v1.1.00+, <i>FunctionName</i> ä¸ºå¯ä»¥ä»£æ›¿å‡½æ•°åçš„å‡½æ•°å¼•ç”¨. å¦è¯·å‚é˜…: <a href="#DynCall">åŠ¨æ€å‡½æ•°è°ƒç”¨</a>, <a href="Variables.htm#ThisFunc">A_ThisFunc</a></p>
-<p><strong><a name="IsLabel"></a>IsLabel(LabelName)</strong>ï¼šå¦‚æžœ <em>LabelName</em> ä¸ºè„šæœ¬ä¸­çš„<a href="commands/Gosub.htm">å­ç¨‹åº</a>ã€<a href="Hotkeys.htm">çƒ­é”®</a>æˆ–<a href="Hotstrings.htm">çƒ­å­—ä¸²</a>ï¼ˆä¸åŒ…æ‹¬ <em>LabelName</em> ä¸­æœ«å°¾çš„å†’å·ï¼‰ï¼Œåˆ™è¿”å›žéžé›¶æ•°å­—ã€‚ä¾‹å¦‚, æ ‡ç­¾å­˜åœ¨æ—¶ <code>if IsLabel(VarContainingLabelName)</code> å°†ä¸ºçœŸ, å¦åˆ™ä¸ºå‡. åœ¨ç±»ä¼¼ <a href="commands/Gosub.htm">Gosub</a>, <a href="commands/Hotkey.htm">Hotkey</a>, <a href="commands/Menu.htm">Menu</a> å’Œ <a href="commands/Gui.htm">Gui</a> å‘½ä»¤ä¸­æŒ‡å®šåŠ¨æ€æ ‡ç­¾æ—¶, ä½¿ç”¨æ­¤å‡½æ•°å¯ä»¥é¿å…è¿è¡Œæ—¶é”™è¯¯. å¦è¯·å‚é˜…: <a href="misc/Labels.htm">Labels</a>.</p>
-<p><strong><a name="IsObject"></a>IsObject()</strong> <span class="ver">[AHK_L 31+]:</span> åˆ¤æ–­æŸä¸ªå€¼æ˜¯å¦ä¸ºå¯¹è±¡. å¦è¯·å‚é˜…: <a href="Objects.htm">å¯¹è±¡</a>.</p>
-<p><strong>ListView å’Œ TreeView å‡½æ•°</strong>ï¼šè¯·å‚é˜… <a href="commands/ListView.htm">ListView</a> å’Œ <a href="commands/TreeView.htm">TreeView</a> é¡µé¢äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong><a name="NumGet"></a>NumGet(VarOrAddress [, Offset = 0][, Type = "UPtr"])</strong>ï¼šè¿”å›žåœ¨æŒ‡å®šåœ°å€+åç§»çš„ä½ç½®å­˜å‚¨çš„äºŒè¿›åˆ¶æ•°ã€‚è¯·å‚é˜… <a href="commands/NumGet.htm">NumGet</a> äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong><a name="NumPut"></a>NumPut(Number, VarOrAddress [, Offset = 0][, Type = "UPtr"])</strong>ï¼šä»¥äºŒè¿›åˆ¶æ ¼å¼æŠŠæ•°å­—å­˜å‚¨åˆ°æŒ‡å®šåœ°å€+åç§»çš„ä½ç½®ã€‚è¯·å‚é˜… <a href="commands/NumPut.htm">NumPut</a> äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong>OnMessage(MsgNumber [, "FunctionName"])</strong>: ç›‘è§†æ¶ˆæ¯/äº‹ä»¶. è¯·å‚é˜… <a href="commands/OnMessage.htm">OnMessage()</a> äº†è§£è¯¦æƒ….</p>
-<p><strong>StrGet(Address [, Length] [, Encoding = None ] )</strong> <span class="ver">[AHK_L 46+]:</span> ä»Žå†…å­˜åœ°å€å¤åˆ¶å­—ç¬¦ä¸², å¹¶å¯ä»¥å¯¹å…¶åœ¨ä¸åŒä»£ç é¡µé—´è¿›è¡Œè½¬æ¢. è¯·å‚é˜… <a href="commands/StrPutGet.htm">StrGet()</a> äº†è§£è¯¦æƒ….</p>
-<p><strong>StrPut(String, Address [, Length] [, Encoding = None ] )</strong> <span class="ver">[AHK_L 46+]:</span> å¤åˆ¶å­—ç¬¦ä¸²åˆ°å†…å­˜åœ°å€, å¹¶å¯ä»¥å¯¹å…¶åœ¨ä¸åŒä»£ç é¡µé—´è¿›è¡Œè½¬æ¢. è¯·å‚é˜… <a href="commands/StrPutGet.htm">StrPut()</a> äº†è§£è¯¦æƒ….</p>
-<p><strong>RegisterCallback()</strong>ï¼šåˆ›å»ºæœºå™¨ç åœ°å€ï¼Œå½“å®ƒè¢«è°ƒç”¨æ—¶ä¼šé‡å®šå‘åˆ°è„šæœ¬ä¸­çš„å‡½æ•°ã€‚è¯·å‚é˜… <a href="commands/RegisterCallback.htm">RegisterCallback()</a> äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong>Trim()</strong> <span class="ver">[AHK_L 31+]ï¼š</span>ç§»é™¤å­—ç¬¦ä¸²çš„å¼€å§‹å’Œ/æˆ–æœ«å°¾çš„æŸäº›å­—ç¬¦ã€‚è¯·å‚é˜… <a href="commands/Trim.htm">Trim()</a> äº†è§£è¯¦æƒ…ã€‚</p>
-<p><strong>VarSetCapacity(UnquotedVarName [, RequestedCapacity, FillByte])</strong>: å¢žåŠ æˆ–æ¸…ç©ºå˜é‡å ç”¨çš„å†…å­˜. è¯·å‚é˜… <a href="commands/VarSetCapacity.htm">VarSetCapacity()</a> äº†è§£è¯¦æƒ….</p>
-<h3 id="Math">é€šç”¨æ•°å­¦å‡½æ•°</h3>
-<p>æ³¨æ„: å¦‚æžœæŸä¸ªä¼ å…¥å‚æ•°ä¸ºéžæ•°å€¼æ—¶, é‚£ä¹ˆæ•°å­¦å‡½æ•°é€šå¸¸è¿”å›žç©ºå€¼ (ç©ºå­—ç¬¦ä¸²).</p>
-<p><strong><a name="Abs"></a>Abs(Number)</strong>: è¿”å›ž <em>Number</em> çš„ç»å¯¹å€¼. è¿”å›žå€¼çš„ç±»åž‹ä¸Ž <em>Number</em> ç›¸åŒ (æ•´æ•°æˆ–æµ®ç‚¹æ•°).</p>
-<p><strong><a name="Ceil"></a>Ceil(Number)</strong>ï¼šè¿”å›žç”± <em>Number</em> å‘ä¸Šå–æ•´åˆ°æœ€è¿‘çš„æ•´æ•°ï¼ˆä¸å¸¦ .00 åŽç¼€ï¼‰ã€‚ä¾‹å¦‚ï¼Œ<code>Ceil(1.2)</code> ç»“æžœä¸º 2 è€Œ <code>Ceil(-1.2)</code> ç»“æžœä¸º -1ã€‚</p>
-<p><strong><a name="Exp"></a>Exp(N)</strong>: è¿”å›ž <em>e</em> (å…¶è¿‘ä¼¼å€¼ä¸º 2.71828182845905) çš„ <em>N</em> æ¬¡å¹‚. <em>N</em> å¯ä»¥ä¸ºè´Ÿæ•°, ä¹Ÿå¯ä»¥ä¸ºå°æ•°. è¦è®¡ç®— <em>e</em> ä»¥å¤–çš„å…¶ä»–æ•°çš„æ¬¡å¹‚, è¯·ä½¿ç”¨ <a href="Variables.htm#pow">** è¿ç®—ç¬¦</a>.</p>
-<p><strong><a name="Floor"></a>Floor(Number)</strong>: è¿”å›žç”± <em>Number</em> å‘ä¸‹å–æ•´åˆ°æœ€è¿‘çš„æ•´æ•° (ä¸å¸¦ä»»ä½• .00 åŽç¼€). ä¾‹å¦‚, <code>Floor(1.2)</code> çš„ç»“æžœä¸º 1 è€Œ <code>Floor(-1.2)</code> ç»“æžœä¸º -2.</p>
-<p><strong><a name="Log"></a>Log(Number)</strong>: è¿”å›ž <em>Number</em> çš„å¯¹æ•° (åº•æ•°ä¸º 10). ç»“æžœæ ¼å¼åŒ–ä¸º <a href="commands/SetFormat.htm">æµ®ç‚¹æ•°</a>. å¦‚æžœ <em>Number</em> ä¸ºè´Ÿæ•°, åˆ™è¿”å›žç©ºå­—ç¬¦ä¸².</p>
-<p><strong><a name="Ln"></a>Ln(Number)</strong>: è¿”å›ž <em>Number</em> çš„è‡ªç„¶å¯¹æ•° (åº•æ•°ä¸º e). ç»“æžœæ ¼å¼åŒ–ä¸º <a href="commands/SetFormat.htm">æµ®ç‚¹æ•°</a>. å¦‚æžœ <em>Number</em> ä¸ºè´Ÿæ•°, åˆ™è¿”å›žç©ºå­—ç¬¦ä¸².</p>
-<p><strong><a name="Mod"></a>Mod(Dividend, Divisor)</strong>: æ±‚æ¨¡. è¿”å›žè¢«é™¤æ•° <em>Dividend</em> é™¤ä»¥é™¤æ•° <em>Divisor</em> åŽå¾—åˆ°çš„ä½™æ•°. ç»“æžœçš„æ­£è´Ÿæ€»æ˜¯ä¸Žè¢«é™¤æ•°ä¸€è‡´. ä¾‹å¦‚ï¼Œ<code>mod(5, 3)</code> å’Œ <code>mod(5, -3)</code> çš„ç»“æžœéƒ½ä¸º 2ï¼Œä½† <code>mod(-5, 3)</code> å’Œ <code>mod(-5, -3)</code> çš„ç»“æžœä¸º -2ã€‚å¦‚æžœå…¶ä¸­ä¸€ä¸ªå‚æ•°ä¸ºæµ®ç‚¹æ•°, é‚£ä¹ˆç»“æžœä¹Ÿæ˜¯æµ®ç‚¹æ•°. ä¾‹å¦‚, <code>mod(5.0, 3)</code> çš„ç»“æžœä¸º 2.0 è€Œ <code>mod(5, 3.5)</code> çš„ç»“æžœä¸º 1.5. å¦‚æžœé™¤æ•°ä¸ºé›¶, åˆ™å‡½æ•°è¿”å›žç©ºå€¼ (ç©ºå­—ç¬¦ä¸²).</p>
-<p><strong><a name="Round"></a>Round(Number [, N])</strong>: å¦‚æžœ <em>N</em> çœç•¥æˆ–ä¸º 0, åˆ™ <em>Number</em> è¢«å–æ•´åˆ°æœ€è¿‘çš„æ•´æ•°. å¦‚æžœ <em>N</em> ä¸ºæ­£æ•°, åˆ™ <em>Number</em> è¢«å–æ•´åˆ° <em>N</em> ä¸ªå°æ•°ä½. å¦‚æžœ <em>N</em> ä¸ºè´Ÿæ•°ï¼Œåˆ™ <em>Number</em> è¢«å–æ•´åˆ°åè¿›åˆ¶å°æ•°ç‚¹å·¦è¾¹ <em>N</em> ä½ã€‚ä¾‹å¦‚ï¼Œ<code>Round(345, -1)</code> çš„ç»“æžœä¸º 350 è€Œ <code>Round (345, -2)</code> çš„ç»“æžœä¸º 300ã€‚ä¸Ž <a href="commands/Transform.htm">Transform Round</a> ä¸åŒ, æ¯å½“ <em>N</em> çœç•¥æˆ–å°äºŽ 1 æ—¶ç»“æžœä¸å¸¦ .000 åŽç¼€. åœ¨ v1.0.44.01+ï¼Œ<em>N</em> å€¼å¤§äºŽé›¶æ—¶ä¼šå‡†ç¡®æ˜¾ç¤º <em>N</em> ä¸ªå°æ•°ä½è€Œä¸éµå¾ª <a href="commands/SetFormat.htm">SetFormat</a> çš„è®¾ç½®ã€‚è¦é¿å…è¿™ç§æƒ…å†µ, éœ€è¦å¯¹ Round() çš„è¿”å›žå€¼å†è¿›è¡Œä¸€æ¬¡æ•°å­¦è¿ç®—; ä¾‹å¦‚: <code>Round(3.333, 1)<strong>+0</strong></code>.</p>
-<p><strong><a name="Sqrt"></a>Sqrt(Number)</strong>: è¿”å›ž <em>Number</em> çš„å¹³æ–¹æ ¹. ç»“æžœæ ¼å¼åŒ–ä¸º <a href="commands/SetFormat.htm">æµ®ç‚¹æ•°</a>. å¦‚æžœ <em>Number</em> ä¸ºè´Ÿæ•°, åˆ™å‡½æ•°è¿”å›žç©ºå­—å€¼ (ç©ºå­—ç¬¦ä¸²).</p>
-<h3>ä¸‰è§’å‡½æ•°</h3>
-<p><strong><a name="Sin"></a><a name="Cos"></a><a name="Tan"></a>Sin(Number)</strong> | <strong>Cos(Number)</strong> | <strong>Tan(Number)</strong>ï¼šåˆ†åˆ«è¿”å›ž <em>Number</em> çš„æ­£å¼¦ã€ä½™å¼¦æˆ–ä¸‰è§’å‡½æ•°å€¼ã€‚<em>Number</em> å¿…é¡»ç”¨å¼§åº¦è¡¨ç¤º.</p>
-<p><strong><a name="ASin"></a>ASin(Number)</strong>: è¿”å›žå¼§åº¦è¡¨ç¤ºçš„åæ­£å¼¦å€¼ (å…¶æ­£å¼¦å€¼ä¸º <em>Number</em>). å¦‚æžœ <em>Number</em> å°äºŽ -1 æˆ–å¤§äºŽ 1, åˆ™å‡½æ•°è¿”å›žç©ºå€¼ (ç©ºå­—ç¬¦ä¸²).</p>
-<p><strong><a name="ACos"></a>ACos(Number)</strong>: è¿”å›žå¼§åº¦è¡¨ç¤ºçš„åä½™å¼¦å€¼ (å…¶ä½™å¼¦å€¼ä¸º <em>Number</em>). å¦‚æžœ <em>Number</em> å°äºŽ -1 æˆ–å¤§äºŽ 1, åˆ™å‡½æ•°è¿”å›žç©ºå€¼ (ç©ºå­—ç¬¦ä¸²).</p>
-<p><strong><a name="ATan"></a>ATan(Number)</strong>ï¼šè¿”å›žå¼§åº¦è¡¨ç¤ºçš„åæ­£åˆ‡å€¼ï¼ˆå…¶æ­£åˆ‡å€¼ä¸º <em>Number</em>ï¼‰ã€‚</p>
-<p><strong>æ³¨æ„:</strong> è¦å°†å¼§åº¦è½¬æ¢æˆè§’åº¦, è¯·å°†å…¶ä¹˜ä»¥ 180/pi (çº¦ä¸º 57.29578). è¦å°†è§’åº¦è½¬æ¢æˆå¼§åº¦, è¯·å°†å…¶ä¹˜ä»¥ pi/180 (çº¦ä¸º 0.01745329252). pi çš„å€¼ (çº¦ä¸º 3.141592653589793) ä¸º 1 çš„åæ­£åˆ‡å€¼çš„ 4 å€.</p>
-<h3>å…¶ä»–å‡½æ•°</h3>
-<p><a href="http://www.autohotkey.net/~polyethene/#functions">Polyethene çš„å‘½ä»¤å‡½æ•°</a>ï¼šä¸ºæ¯ä¸ªæœ‰ OutputVar çš„ AutoHotkey å‘½ä»¤æä¾›äº†å¯è°ƒç”¨çš„å‡½æ•°ã€‚å¯ä»¥é€šè¿‡ <a href="commands/_Include.htm">#Include</a> æŠŠè¿™ä¸ªåº“åŒ…å«åœ¨ä»»ä½•è„šæœ¬ä¸­.</p>
+<h2 id="include">Ê¹ÓÃ #Include ÔÚ¶à¸ö½Å±¾¼ä¹²Ïíº¯Êý</h2>
+<p>¿ÉÒÔÊ¹ÓÃ <a href="commands/_Include.htm">#Include</a> Ö¸Áî (<em>¼´Ê¹ÔÚ½Å±¾µÄ¶¥²¿</em>) ´ÓÍâ²¿ÎÄ¼þÖÐ¼ÓÔØº¯Êý.</p>
+<p>ËµÃ÷: µ±½Å±¾µÄÖ´ÐÐÁ÷Óöµ½º¯Êý¶¨ÒåÊ±, Ëü»áÌø¹ýº¯Êý (Ê¹ÓÃÒ»ÖÖË²Ê±µÄ·½·¨) ²¢ÔÚº¯Êý±ÕÀ¨ºÅºó»Ö¸´Ö´ÐÐ. Òò´Ë, ¿ªÊ¼Ö´ÐÐÊ±Ö´ÐÐÁ÷²»»áÏÝÈëº¯ÊýÖÐ, Ò²²»»áÒòÎªÔÚ½Å±¾µÄ×î¶¥²¿´æÔÚÒ»¸ö»ò¶à¸öº¯Êý¶øÓ°Ïìµ½ <a href="Scripts.htm#auto">×Ô¶¯Ö´ÐÐ¶Î</a>.</p>
+<h2><a name="lib" id="lib"></a>º¯Êý¿â: ±ê×¼¿âºÍÓÃ»§¿â <span class="ver">[v1.0.47+]</span></h2>
+<p>½Å±¾ÖÐ¿ÉÒÔ²»ÐèÒªÍ¨¹ý <a href="commands/_Include.htm">#Include</a> ¶øµ÷ÓÃÍâ²¿ÎÄ¼þÖÐµÄº¯Êý. Òª´ïµ½´ËÄ¿µÄ, Ò»¸öºÍº¯ÊýÏàÍ¬Ãû³ÆµÄÎÄ¼þ±ØÐë´æÔÚÓÚÏÂÃæ¿âÄ¿Â¼µÄÆäÖÐÒ»¸ö:</p>
+<pre><a href="Variables.htm#ScriptDir">%A_ScriptDir%</a>\Lib\  <em>; ¾Ö²¿¿â - ÐèÒª AHK_L 42+.</em>
+<a href="Variables.htm#MyDocuments">%A_MyDocuments%</a>\AutoHotkey\Lib\  <em>; ÓÃ»§¿â.</em>
+path-to-the-currently-running-AutoHotkey.exe\Lib\  <em>; ±ê×¼¿â.</em></pre>
+<p>ÀýÈç£¬µ±½Å±¾µ÷ÓÃ²»´æÔÚµÄº¯Êý <code>MyFunc()</code> Ê±£¬³ÌÐò»áÔÚÓÃ»§¿âÖÐËÑË÷ÃûÎª¡°MyFunc.ahk¡±µÄÎÄ¼þ¡£Èç¹ûÃ»ÓÐÕÒµ½, »á¼ÌÐøÔÚ±ê×¼¿âÖÐËÑË÷´ËÎÄ¼þ. Èç¹ûÈÔÈ»Ã»ÓÐÕÒµ½Æ¥ÅäµÄÎÄ¼þÇÒº¯ÊýµÄÃû³Æº¬ÓÐÏÂ»®Ïß£¨ÀýÈç <code>MyPrefix_MyFunc</code>£©£¬ÄÇÃ´³ÌÐò»áÔÚÁ½¸ö¿âÖÐËÑË÷ÃûÎª <code>MyPrefix.ahk</code> µÄÎÄ¼þ£¬Èç¹ûÕÒµ½Ôò¼ÓÔØËü¡£ÕâÑùÊ¹µÃ <code>MyPrefix.ahk</code> ¿ÉÒÔÍ¬Ê±°üº¬ <code>MyPrefix_MyFunc</code> º¯ÊýºÍÆäËûÃû³ÆÒÔ <code>MyPrefix_</code> ¿ªÊ¼µÄÏà¹Øº¯Êý¡£</p>
+<p><span class="ver">[AHK_L 42+]:</span> Ö§³Ö¾Ö²¿¿âÇÒ¾Ö²¿¿âÓÅÏÈÓÚÓÃ»§¿âºÍ±ê×¼¿â.</p>
+<p>ËäÈ»¿âÎÄ¼þÍ¨³£Ö»°üº¬ºÍËüµÄÎÄ¼þÃû³ÆÏàÍ¬µÄµ¥¸öº¯Êý, µ«Ëü»¹¿ÉÒÔ°üº¬½ö±»´Ëº¯Êýµ÷ÓÃµÄË½ÓÐº¯ÊýºÍ×Ó³ÌÐò. È»¶ø, ÕâÑùµÄº¯ÊýÓ¦¸ÃÊ¹ÓÃÏàµ±ÌØÊâµÄÃû³Æ, ÒòÎªËüÃÇÈÔÊôÓÚÈ«¾ÖÃüÃû¿Õ¼ä; Ò²¾ÍÊÇËµ, ¿ÉÒÔÔÚ½Å±¾µÄÈÎÒâÎ»ÖÃµ÷ÓÃËüÃÇ.</p>
+<p>Èç¹ûÔÚ¿âÎÄ¼þÖÐÊ¹ÓÃ <a href="commands/_Include.htm">#Include</a>, ÄÇÃ´ #Include µÄ¹¤×÷Ä¿Â¼Îª¿âÎÄ¼þ×ÔÉíËùÔÚµÄÄ¿Â¼. ÀûÓÃÕâ¸öÌØÐÔ¿ÉÒÔÖØ¶¨Ïòµ½½Ï´óµÄ¿âÎÄ¼þ, ÆäÖÐ°üº¬´Ëº¯Êý¼°Ïà¹ØÄÚÈÝ.</p>
+<p><a href="Scripts.htm#ahk2exe">½Å±¾±àÒëÆ÷ (ahk2exe)</a> Í¬ÑùÖ§³Ö¿âº¯Êý. ²»¹ý, ËüÒªÇóÔÚ±àÒëÆ÷Ä¿Â¼µÄÉÏÒ»¼¶Ä¿Â¼ÖÐ´æÔÚ AutoHotkey.exe µÄ¸±±¾ (Í¨³£ÊÇÕâÑù). Èç¹û²»´æÔÚ AutoHotkey.exe, ±àÒëÆ÷ÈÔ¿ÉÒÔÔËÐÐµ«ÎÞ·¨×Ô¶¯°üº¬¿âº¯Êý.</p>
+<p>°üº¬ÔÚ¿âÖÐµÄº¯ÊýºÍÆäËûº¯ÊýÖ´ÐÐµÄÒ»ÑùºÃ, ÒòÎªÔÚ½Å±¾¿ªÊ¼Ö´ÐÐÇ°ÒÑ¾­Ô¤¼ÓÔØÁËËüÃÇ.</p>
+<h2 id="BuiltIn">ÄÚÖÃº¯Êý</h2>
+<p>ÔÚÄÚÖÃº¯Êý²ÎÊýÁÐ±íÄ©Î²µÄÈÎºÎ¿ÉÑ¡²ÎÊý¿ÉÒÔÍêÈ«Ê¡ÂÔ. ÀýÈç, <code>WinExist("Untitled - Notepad")</code> ÊÇÓÐÐ§µÄ, ÒòÎªËüµÄÆäËûÈý¸ö²ÎÊý±»ÈÏÎªÊÇ¿ÕµÄ.</p>
+<p>Èç¹û½Å±¾¶¨ÒåÁËÓëÄÚÖÃº¯ÊýÍ¬ÃûµÄº¯Êý, ÄÇÃ´ÄÚÖÃº¯Êý»á±»¸²¸Ç. ÀýÈç, ½Å±¾»áµ÷ÓÃËü×Ô¼º¶¨ÒåµÄ WinExist() º¯ÊýÀ´´úÌæ±ê×¼µÄÄÇ¸ö. È»¶ø, ÕâÑù½Å±¾½«ÎÞ·¨µ÷ÓÃÔ­À´µÄº¯Êý.</p>
+<p>ÔÚ DLL ÎÄ¼þÖÐµÄÍâ²¿º¯Êý¿ÉÒÔÊ¹ÓÃ <a href="commands/DllCall.htm">DllCall()</a> µ÷ÓÃ.</p>
+<h3>³£ÓÃº¯Êý</h3>
+<p><strong><a name="FileExist"></a>FileExist(FilePattern)</strong>: Èç¹û <em>FilePattern</em> ²»´æÔÚ (Èç¹ûÎ´Ö¸¶¨¾ø¶ÔÂ·¾¶, Ôò¼Ù¶¨ <em>FilePattern</em> ÔÚ <a href="Variables.htm#WorkingDir">A_WorkingDir</a> ÖÐ) Ôò·µ»Ø¿ÕÖµ (¿Õ×Ö·û´®). ·ñÔò, Ëü·µ»ØÊ×¸öÆ¥ÅäµÄÎÄ¼þ»òÎÄ¼þ¼ÐµÄ <a href="commands/FileGetAttrib.htm#attrib">ÊôÐÔ×Ö·û´®</a> ("RASHNDOCT" µÄ×Ó¼¯). Èç¹ûÎÄ¼þÃ»ÓÐÊôÐÔ (ºÜÉÙ¼û), Ôò·µ»Ø "X". <em>FilePattern</em> ¿ÉÒÔÊÇÎÄ¼þ»òÎÄ¼þ¼ÐµÄ×¼È·Ãû³Æ»ò°üº¬Í¨Åä·û (* »ò ?). ÓÉÓÚ¿Õ×Ö·û´®±»ÊÓÎª "false", ËùÒÔ×Ü¿ÉÒÔ°Ñº¯ÊýµÄ·µ»ØÖµ×÷Îª×¼²¼¶ûÖµÀ´Ê¹ÓÃ. ÀýÈç, <code>if FileExist("C:\My File.txt")</code> Óï¾äµ±ÎÄ¼þ´æÔÚÊ±ÔòÎªÕæ, ·ñÔòÎª¼Ù. Í¬ÑùµØ, <code>if InStr(FileExist("C:\My Folder"), "D")</code> Óï¾ä½öµ±ÎÄ¼þ´æÔÚ <em>²¢ÇÒ</em> ÎªÄ¿Â¼Ê±²ÅÎªÕæ. Ïà¹ØÃüÁî: <a href="commands/IfExist.htm">IfExist</a> ºÍ <a href="commands/FileGetAttrib.htm">FileGetAttrib</a>.</p>
+<p><strong><a name="GetKeyState"></a>GetKeyState(<a href="KeyList.htm">KeyName</a> [, "P"</strong> »ò <strong>"T"])</strong>£ºÓë <a href="commands/GetKeyState.htm">GetKeyState ÃüÁî</a>£¨ËüÔÚ°´ÏÂÊ±·µ»Ø D ¶øµ¯ÆðÊ±·µ»Ø U£©²»Í¬£¬´Ëº¯ÊýÔÚ°´ÏÂÊ±·µ»Ø true£¨1£©¶øµ¯ÆðÊ±·µ»Ø false£¨0£©¡£Èç¹û <em><a href="KeyList.htm">KeyName</a></em> ÎÞÐ§, Ôò·µ»Ø¿Õ×Ö·û´®. Çë²ÎÔÄ <a href="commands/GetKeyState.htm">GetKeyState</a> ÁË½âÆäËû·µ»ØÖµºÍÓÃ·¨.</p>
+<p><strong><a name="InStr"></a>InStr(Haystack, Needle [, CaseSensitive = false, StartingPos = 1, Occurrence = 1])</strong>: ·µ»Ø×Ö·û´® <em>Needle</em> ÔÚ×Ö·û´® <em>Haystack</em> ÖÐµÄ³öÏÖÎ»ÖÃ. Óë <a href="commands/StringGetPos.htm">StringGetPos</a> ²»Í¬, Ê×¸ö×Ö·ûÎ»ÖÃÎª 1; ÕâÊÇÓÉÓÚ 0 Ïàµ±ÓÚ "false", Ê¹Æä³ÉÎªÖ±¹ÛµÄ "Î´ÕÒµ½" µÄÌáÊ¾. Èç¹û²ÎÊý <em>CaseSensitive</em> Ê¡ÂÔ»òÎª false, ËÑË÷²»Çø·Ö´óÐ¡Ð´ (²»Çø·ÖµÄÄ£Ê½È¡¾öÓÚ <a href="commands/StringCaseSense.htm">StringCaseSense</a>); ·ñÔò, ±ØÐë×¼È·Æ¥Åä´óÐ¡Ð´. Èç¹û <em>StartingPos</em> Ê¡ÂÔ, ÄÇÃ´Ê¹ÓÃÄ¬ÈÏÖµ 1 (<em>Haystack</em> µÄÆðÊ¼´¦). ·ñÔò, ´Ó <em>Haystack</em> µÄµÚ¶þ¸ö×Ö·û¿ªÊ¼ÇëÖ¸¶¨ 2, ´ÓµÚÈý¸ö¿ªÊ¼Îª 3, µÈµÈ. Èç¹û <em>StartingPos</em> ³¬¹ýÁË <em>Haystack</em> µÄ³¤¶È, Ôò·µ»Ø 0. Èç¹û <em>StartingPos</em> Îª 0 »ò¸ºÊý, ËÑË÷½«´ÓÄ©Î²µÄÆ«ÒÆ´¦¿ªÊ¼·´Ïò½øÐÐ (´ÓÓÒÍù×ó). ²»ÂÛ <em>StartingPos</em> µÄÖµÊÇ¶àÉÙ, ·µ»ØµÄÎ»ÖÃ×ÜÊÇÏà¶ÔÓÚ <em>Haystack</em> µÄÊ×¸ö×Ö·û. ÀýÈç, "abc" ÔÚ "123abc789" ÖÐµÄÎ»ÖÃ×ÜÎª 4. ÔÚ <i>Occurrence</i> ÖÐÖ¸¶¨ 2 À´·µ»ØµÚ¶þ¸öÆ¥ÅäµÄÎ»ÖÃ, 3 ÎªµÚÈý¸ö, µÈµÈ. Ïà¹ØÏî: <a href="commands/RegExMatch.htm">RegExMatch()</a>, <a href="commands/IfInString.htm">IfInString</a> ºÍ <a href="commands/StringGetPos.htm">StringGetPos</a>.</p>
+<p><strong>RegExMatch(Haystack, NeedleRegEx [, UnquotedOutputVar = "", StartingPos = 1])</strong>£ºÅÐ¶Ï×Ö·û´®ÊÇ·ñ°üº¬Ä³¸öÆ¥ÅäÄ£Ê½£¨ÕýÔò±í´ïÊ½£©¡£Çë²ÎÔÄ <a href="commands/RegExMatch.htm">RegExMatch()</a> ÁË½âÏêÇé¡£</p>
+<p><strong>RegExReplace(Haystack, NeedleRegEx [, Replacement = "", OutputVarCount = "", Limit = -1, StartingPos = 1])</strong>£ºÌæ»»×Ö·û´®ÖÐÆ¥ÅäÄ£Ê½£¨ÕýÔò±í´ïÊ½£©³öÏÖµÄµØ·½¡£Çë²ÎÔÄ <a href="commands/RegExReplace.htm">RegExReplace()</a> ÁË½âÏêÇé¡£</p>
+<p><strong><a name="SubStr"></a>SubStr(String, StartingPos [, Length])</strong> <span class="ver">[v1.0.46+]:</span> ÔÚ <em>String</em> ÖÐ´Ó <em>StartingPos</em> ¿ªÊ¼ÏòÓÒ¸´ÖÆ²»³¬¹ý <em>Length</em> ³¤¶ÈµÄ×Ó×Ö·û´® (Èç¹û <em>Length</em> Ê¡ÂÔ, ÔòÄ¬ÈÏÎª "ËùÓÐ×Ö·û"). ¶ÔÓÚ <em>StartingPos</em>, Ö¸¶¨ 1 ´ÓÊ×¸ö×Ö·û¿ªÊ¼, 2 ´ÓµÚ¶þ¸ö¿ªÊ¼µÈ (Èç¹û <em>StartingPos</em> ³¬¹ýÁË <em>String</em> ³¤¶È, Ôò·µ»Ø¿Õ×Ö·û´®). Èç¹û <em>StartingPos</em> Ð¡ÓÚ 1, ÄÇÃ´Ëü±»¿´³ÉÊÇ´Ó×Ö·û´®Ä©Î²¿ªÊ¼µÄÆ«ÒÆ. ÀýÈç, 0 ÌáÈ¡×îºóÒ»¸ö×Ö·û¶ø -1 ÌáÈ¡×îºóÁ½¸ö×Ö·û (µ«Èç¹û <em>StartingPos</em> ³¬¹ýÁË×Ö·û´®µÄ×ó¶Ë, ÔòÌáÈ¡ÓÖ´ÓÊ×¸ö×Ö·û¿ªÊ¼). <em>Length</em> ÊÇÐèÌáÈ¡×Ö·ûµÄ×î´óÊýÄ¿ (µ±×Ö·û´®Ê£Óà²¿·ÖÌ«¶ÌÊ±ÌáÈ¡µÄÊýÄ¿»á±È×î´óÖµÉÙ). Ö¸¶¨¸ºµÄ <em>Length</em> ´Ó¶øÔÚ·µ»Ø×Ö·û´®µÄÄ©Î²Ê¡ÂÔÕâ¸öÊýÄ¿µÄ×Ö·û£¨Èç¹ûÊ¡ÂÔÁËÈ«²¿»ò¹ý¶à×Ö·ûÔò·µ»Ø¿Õ×Ö·û´®£©¡£Ïà¹ØÏî: <a href="commands/RegExMatch.htm">RegExMatch()</a>, <a href="commands/StringMid.htm">StringMid</a>, <a href="commands/StringLeft.htm">StringLeft/Right</a>, <a href="commands/StringTrimLeft.htm">StringTrimLeft/Right</a>.</p>
+<p><strong><a name="StrLen"></a>StrLen(String)</strong>: ·µ»Ø <em>String</em> µÄ³¤¶È. Çë²ÎÔÄ <a href="commands/StringLen.htm">StrLen()</a> ÁË½âÏêÇé¡£</p>
+<p><strong><a name="StrSplit"></a>StrSplit(String [, Delimiters, OmitChars])</strong> <span class="ver">[v1.1.13+]£º</span>Ê¹ÓÃÖ¸¶¨µÄ·Ö¸ô·û°ÑÒ»¸ö×Ö·û´®·Ö½â³É¶à¸ö×Ó×Ö·û´®²¢±£´æµ½Êý×éÖÐ¡£Çë²ÎÔÄ<a href="commands/StringSplit.htm">StrSplit()</a>ÁË½âÏêÇé¡£</p>
+<p><strong><a name="WinActive"></a>WinActive([WinTitle, WinText, ExcludeTitle, ExcludeText])</strong>£ºÈç¹û»î¶¯´°¿ÚÆ¥ÅäÖ¸¶¨µÄÌõ¼þ£¬Ôò·µ»ØÆä <a href="commands/WinGet.htm">Î¨Ò» ID £¨HWND£©</a>¡£Çë²ÎÔÄ <a href="commands/WinActive.htm">WinActive()</a> ÁË½âÏêÇé¡£</p>
+<p><strong><a name="WinExist"></a>WinExist([WinTitle, WinText, ExcludeTitle, ExcludeText])</strong>£º·µ»ØÊ×¸öÆ¥Åä´°¿ÚµÄ<a href="commands/WinGet.htm">Î¨Ò» ID£¨HWND£©</a>¡£Çë²ÎÔÄ <a href="commands/WinExist.htm">WinExist()</a> ÁË½âÏêÇé¡£</p>
+<h3>ÔÓÏîº¯Êý</h3>
+<p><strong><a name="Asc"></a>Asc(String)</strong>: ·µ»Ø <em>String</em> ÖÐÊ×¸ö×Ö·ûµÄ×Ö·û±àÂë (½éÓÚ 1 ºÍ 255 (ÔÚ ANSI °æ±¾ÖÐ) »ò 65535 (ÔÚ Unicode °æ±¾ÖÐ) µÄÊý×Ö). Èç¹û <em>String</em> Îª¿Õ, Ôò·µ»Ø 0.</p>
+<p><strong><a name="Chr"></a>Chr(Number)</strong>: ·µ»ØÓë <em>Number</em> ±íÊ¾µÄ×Ö·û±àÂëÏà¶ÔÓ¦µÄµ¥¸ö×Ö·û. Èç¹û <em>Number</em> ²»ÔÚÓÐÐ§µÄ×Ö·û±àÂë·¶Î§ÄÚ, Ôò·µ»Ø¿Õ×Ö·û´®. ³£ÓÃµÄ×Ö·û±àÂë°üÀ¨ 9 (tab), 10 (»»ÐÐ), 13 (»Ø³µ), 32 (¿Õ¸ñ), 48-57 (Êý×Ö 0-9), 65-90 (´óÐ´×ÖÄ¸ A-Z) ºÍ 97-122 (Ð¡Ð´×ÖÄ¸ a-z).</p>
+<p><strong>DllCall()</strong>£ºµ÷ÓÃ DLL ÎÄ¼þÖÐµÄº¯Êý£¬ÀýÈç±ê×¼µÄ Windows API º¯Êý¡£Çë²ÎÔÄ <a href="commands/DllCall.htm">DllCall()</a> ÁË½âÏêÇé¡£</p>
+<p><strong>FileOpen()</strong>: Ìá¹©ÃæÏò¶ÔÏóµÄÎÄ¼þ I/O. Çë²ÎÔÄ <a href="commands/FileOpen.htm">FileOpen()</a> ÁË½âÏêÇé¡£</p>
+<p><strong><a name="Func"></a>Func(FunctionName)</strong> <span class="ver">[v1.1.00+]:</span> Èç¹û <em>FunctionName</em> Ã»ÓÐÏÔÊ½³öÏÖÔÚ½Å±¾ÖÐ (Í¨¹ýÀýÈç <a href="commands/_Include.htm">#Include</a> »ò¶Ô <a href="#lib">¿âº¯Êý</a> µÄ·Ç¶¯Ì¬µ÷ÓÃµÄ·½·¨), Ôò Func() ·µ»Ø 0. ·ñÔò, Ëü·µ»Ø <a href="Objects.htm#Function_References">µ½º¯ÊýµÄÒýÓÃ</a>. Õâ¿ÉÒÔÓÃÀ´µ÷ÓÃº¯Êý»ò»ñÈ¡ÀàËÆ²ÎÊýµÄ×îÐ¡ºÍ×î´óÊýÄ¿µÄ <a href="objects/Func.htm">ÐÅÏ¢</a>.</p>
+<p><strong><a name="GetKeyName"></a>GetKeyName(Key), GetKeyVK(Key), GetKeySC(Key)</strong> <span class="ver">[v1.1.01+]:</span> »ñÈ¡°´¼üµÄÃû³Æ/ÎÄ±¾, ÐéÄâ°´¼üÂë»òÉ¨ÃèÂë. <em>Key</em> ¿ÉÒÔÎª VK »ò SC Âë, ÀýÈç "vkA2" »ò "sc01D", ÒÔ¼°Á½ÕßµÄ×éºÏ»ò¼üÃû. ÀýÈç, <code>GetKeyName("vk1B")</code> ºÍ <code>GetKeyName("Esc")</code> ¶¼·µ»Ø "Escape", ¶ø <code>GetKeyVK("Esc")</code> ·µ»Ø 27.</p>
+<p><strong><a name="IsByRef"></a>IsByRef(Var)</strong> <span class="ver">[v1.1.01+]:</span> µ± <em>Var</em> Îª ByRef ²ÎÊýÇÒµ÷ÓÃÕßÌá¹©ÁË±äÁ¿Ê±·µ»Ø 1; ·ñÔòµ± <em>Var</em> ÎªÆäËûÀàÐÍµÄ±äÁ¿Ê±·µ»Ø 0.</p>
+<p><strong><a name="IsFunc"></a>IsFunc(FunctionName)</strong> <span class="ver">[v1.0.48+]:</span> Èç¹û <em>FunctionName</em> ²»ÊÇÏÔÊ½³öÏÖÔÚ½Å±¾ÖÐ (Í¨¹ýÀýÈç <a href="commands/_Include.htm">#Include</a> »ò¶Ô <a href="#lib">¿âº¯Êý</a> µÄ·Ç¶¯Ì¬µ÷ÓÃµÄ·½·¨), Ôò IsFunc() ·µ»Ø 0. ·ñÔòËü·µ»Øº¯ÊýµÄÇ¿ÖÆ²ÎÊý¸öÊý¼ÓÒ»µÄÊý×Ö£¨ÀýÈç 1 Îªº¯Êý¿ÉÒÔ²»ÐèÒª²ÎÊý£¬2 Îªº¯ÊýÐèÒª 1 ¸ö²ÎÊýµÈµÈ£©¡£ÀýÈç, º¯Êý´æÔÚÊ± <code>if IsFunc("MyFunc")</code> ºÍ <code>if IsFunc(VarContainingFunctionName)</code> Óï¾äÎªÕæ, ·ñÔòÎª¼Ù. ÔÚ v1.1.00+, <i>FunctionName</i> Îª¿ÉÒÔ´úÌæº¯ÊýÃûµÄº¯ÊýÒýÓÃ. ÁíÇë²ÎÔÄ: <a href="#DynCall">¶¯Ì¬º¯Êýµ÷ÓÃ</a>, <a href="Variables.htm#ThisFunc">A_ThisFunc</a></p>
+<p><strong><a name="IsLabel"></a>IsLabel(LabelName)</strong>£ºÈç¹û <em>LabelName</em> Îª½Å±¾ÖÐµÄ<a href="commands/Gosub.htm">×Ó³ÌÐò</a>¡¢<a href="Hotkeys.htm">ÈÈ¼ü</a>»ò<a href="Hotstrings.htm">ÈÈ×Ö´®</a>£¨²»°üÀ¨ <em>LabelName</em> ÖÐÄ©Î²µÄÃ°ºÅ£©£¬Ôò·µ»Ø·ÇÁãÊý×Ö¡£ÀýÈç, ±êÇ©´æÔÚÊ± <code>if IsLabel(VarContainingLabelName)</code> ½«ÎªÕæ, ·ñÔòÎª¼Ù. ÔÚÀàËÆ <a href="commands/Gosub.htm">Gosub</a>, <a href="commands/Hotkey.htm">Hotkey</a>, <a href="commands/Menu.htm">Menu</a> ºÍ <a href="commands/Gui.htm">Gui</a> ÃüÁîÖÐÖ¸¶¨¶¯Ì¬±êÇ©Ê±, Ê¹ÓÃ´Ëº¯Êý¿ÉÒÔ±ÜÃâÔËÐÐÊ±´íÎó. ÁíÇë²ÎÔÄ: <a href="misc/Labels.htm">Labels</a>.</p>
+<p><strong><a name="IsObject"></a>IsObject()</strong> <span class="ver">[AHK_L 31+]:</span> ÅÐ¶ÏÄ³¸öÖµÊÇ·ñÎª¶ÔÏó. ÁíÇë²ÎÔÄ: <a href="Objects.htm">¶ÔÏó</a>.</p>
+<p><strong>ListView ºÍ TreeView º¯Êý</strong>£ºÇë²ÎÔÄ <a href="commands/ListView.htm">ListView</a> ºÍ <a href="commands/TreeView.htm">TreeView</a> Ò³ÃæÁË½âÏêÇé¡£</p>
+<p><strong><a name="NumGet"></a>NumGet(VarOrAddress [, Offset = 0][, Type = "UPtr"])</strong>£º·µ»ØÔÚÖ¸¶¨µØÖ·+Æ«ÒÆµÄÎ»ÖÃ´æ´¢µÄ¶þ½øÖÆÊý¡£Çë²ÎÔÄ <a href="commands/NumGet.htm">NumGet</a> ÁË½âÏêÇé¡£</p>
+<p><strong><a name="NumPut"></a>NumPut(Number, VarOrAddress [, Offset = 0][, Type = "UPtr"])</strong>£ºÒÔ¶þ½øÖÆ¸ñÊ½°ÑÊý×Ö´æ´¢µ½Ö¸¶¨µØÖ·+Æ«ÒÆµÄÎ»ÖÃ¡£Çë²ÎÔÄ <a href="commands/NumPut.htm">NumPut</a> ÁË½âÏêÇé¡£</p>
+<p><strong>OnMessage(MsgNumber [, "FunctionName"])</strong>: ¼àÊÓÏûÏ¢/ÊÂ¼þ. Çë²ÎÔÄ <a href="commands/OnMessage.htm">OnMessage()</a> ÁË½âÏêÇé.</p>
+<p><strong>StrGet(Address [, Length] [, Encoding = None ] )</strong> <span class="ver">[AHK_L 46+]:</span> ´ÓÄÚ´æµØÖ·¸´ÖÆ×Ö·û´®, ²¢¿ÉÒÔ¶ÔÆäÔÚ²»Í¬´úÂëÒ³¼ä½øÐÐ×ª»». Çë²ÎÔÄ <a href="commands/StrPutGet.htm">StrGet()</a> ÁË½âÏêÇé.</p>
+<p><strong>StrPut(String, Address [, Length] [, Encoding = None ] )</strong> <span class="ver">[AHK_L 46+]:</span> ¸´ÖÆ×Ö·û´®µ½ÄÚ´æµØÖ·, ²¢¿ÉÒÔ¶ÔÆäÔÚ²»Í¬´úÂëÒ³¼ä½øÐÐ×ª»». Çë²ÎÔÄ <a href="commands/StrPutGet.htm">StrPut()</a> ÁË½âÏêÇé.</p>
+<p><strong>RegisterCallback()</strong>£º´´½¨»úÆ÷ÂëµØÖ·£¬µ±Ëü±»µ÷ÓÃÊ±»áÖØ¶¨Ïòµ½½Å±¾ÖÐµÄº¯Êý¡£Çë²ÎÔÄ <a href="commands/RegisterCallback.htm">RegisterCallback()</a> ÁË½âÏêÇé¡£</p>
+<p><strong>Trim()</strong> <span class="ver">[AHK_L 31+]£º</span>ÒÆ³ý×Ö·û´®µÄ¿ªÊ¼ºÍ/»òÄ©Î²µÄÄ³Ð©×Ö·û¡£Çë²ÎÔÄ <a href="commands/Trim.htm">Trim()</a> ÁË½âÏêÇé¡£</p>
+<p><strong>VarSetCapacity(UnquotedVarName [, RequestedCapacity, FillByte])</strong>: Ôö¼Ó»òÇå¿Õ±äÁ¿Õ¼ÓÃµÄÄÚ´æ. Çë²ÎÔÄ <a href="commands/VarSetCapacity.htm">VarSetCapacity()</a> ÁË½âÏêÇé.</p>
+<h3 id="Math">Í¨ÓÃÊýÑ§º¯Êý</h3>
+<p>×¢Òâ: Èç¹ûÄ³¸ö´«Èë²ÎÊýÎª·ÇÊýÖµÊ±, ÄÇÃ´ÊýÑ§º¯ÊýÍ¨³£·µ»Ø¿ÕÖµ (¿Õ×Ö·û´®).</p>
+<p><strong><a name="Abs"></a>Abs(Number)</strong>: ·µ»Ø <em>Number</em> µÄ¾ø¶ÔÖµ. ·µ»ØÖµµÄÀàÐÍÓë <em>Number</em> ÏàÍ¬ (ÕûÊý»ò¸¡µãÊý).</p>
+<p><strong><a name="Ceil"></a>Ceil(Number)</strong>£º·µ»ØÓÉ <em>Number</em> ÏòÉÏÈ¡Õûµ½×î½üµÄÕûÊý£¨²»´ø .00 ºó×º£©¡£ÀýÈç£¬<code>Ceil(1.2)</code> ½á¹ûÎª 2 ¶ø <code>Ceil(-1.2)</code> ½á¹ûÎª -1¡£</p>
+<p><strong><a name="Exp"></a>Exp(N)</strong>: ·µ»Ø <em>e</em> (Æä½üËÆÖµÎª 2.71828182845905) µÄ <em>N</em> ´ÎÃÝ. <em>N</em> ¿ÉÒÔÎª¸ºÊý, Ò²¿ÉÒÔÎªÐ¡Êý. Òª¼ÆËã <em>e</em> ÒÔÍâµÄÆäËûÊýµÄ´ÎÃÝ, ÇëÊ¹ÓÃ <a href="Variables.htm#pow">** ÔËËã·û</a>.</p>
+<p><strong><a name="Floor"></a>Floor(Number)</strong>: ·µ»ØÓÉ <em>Number</em> ÏòÏÂÈ¡Õûµ½×î½üµÄÕûÊý (²»´øÈÎºÎ .00 ºó×º). ÀýÈç, <code>Floor(1.2)</code> µÄ½á¹ûÎª 1 ¶ø <code>Floor(-1.2)</code> ½á¹ûÎª -2.</p>
+<p><strong><a name="Log"></a>Log(Number)</strong>: ·µ»Ø <em>Number</em> µÄ¶ÔÊý (µ×ÊýÎª 10). ½á¹û¸ñÊ½»¯Îª <a href="commands/SetFormat.htm">¸¡µãÊý</a>. Èç¹û <em>Number</em> Îª¸ºÊý, Ôò·µ»Ø¿Õ×Ö·û´®.</p>
+<p><strong><a name="Ln"></a>Ln(Number)</strong>: ·µ»Ø <em>Number</em> µÄ×ÔÈ»¶ÔÊý (µ×ÊýÎª e). ½á¹û¸ñÊ½»¯Îª <a href="commands/SetFormat.htm">¸¡µãÊý</a>. Èç¹û <em>Number</em> Îª¸ºÊý, Ôò·µ»Ø¿Õ×Ö·û´®.</p>
+<p><strong><a name="Mod"></a>Mod(Dividend, Divisor)</strong>: ÇóÄ£. ·µ»Ø±»³ýÊý <em>Dividend</em> ³ýÒÔ³ýÊý <em>Divisor</em> ºóµÃµ½µÄÓàÊý. ½á¹ûµÄÕý¸º×ÜÊÇÓë±»³ýÊýÒ»ÖÂ. ÀýÈç£¬<code>mod(5, 3)</code> ºÍ <code>mod(5, -3)</code> µÄ½á¹û¶¼Îª 2£¬µ« <code>mod(-5, 3)</code> ºÍ <code>mod(-5, -3)</code> µÄ½á¹ûÎª -2¡£Èç¹ûÆäÖÐÒ»¸ö²ÎÊýÎª¸¡µãÊý, ÄÇÃ´½á¹ûÒ²ÊÇ¸¡µãÊý. ÀýÈç, <code>mod(5.0, 3)</code> µÄ½á¹ûÎª 2.0 ¶ø <code>mod(5, 3.5)</code> µÄ½á¹ûÎª 1.5. Èç¹û³ýÊýÎªÁã, Ôòº¯Êý·µ»Ø¿ÕÖµ (¿Õ×Ö·û´®).</p>
+<p><strong><a name="Round"></a>Round(Number [, N])</strong>: Èç¹û <em>N</em> Ê¡ÂÔ»òÎª 0, Ôò <em>Number</em> ±»È¡Õûµ½×î½üµÄÕûÊý. Èç¹û <em>N</em> ÎªÕýÊý, Ôò <em>Number</em> ±»È¡Õûµ½ <em>N</em> ¸öÐ¡ÊýÎ». Èç¹û <em>N</em> Îª¸ºÊý£¬Ôò <em>Number</em> ±»È¡Õûµ½Ê®½øÖÆÐ¡Êýµã×ó±ß <em>N</em> Î»¡£ÀýÈç£¬<code>Round(345, -1)</code> µÄ½á¹ûÎª 350 ¶ø <code>Round (345, -2)</code> µÄ½á¹ûÎª 300¡£Óë <a href="commands/Transform.htm">Transform Round</a> ²»Í¬, Ã¿µ± <em>N</em> Ê¡ÂÔ»òÐ¡ÓÚ 1 Ê±½á¹û²»´ø .000 ºó×º. ÔÚ v1.0.44.01+£¬<em>N</em> Öµ´óÓÚÁãÊ±»á×¼È·ÏÔÊ¾ <em>N</em> ¸öÐ¡ÊýÎ»¶ø²»×ñÑ­ <a href="commands/SetFormat.htm">SetFormat</a> µÄÉèÖÃ¡£Òª±ÜÃâÕâÖÖÇé¿ö, ÐèÒª¶Ô Round() µÄ·µ»ØÖµÔÙ½øÐÐÒ»´ÎÊýÑ§ÔËËã; ÀýÈç: <code>Round(3.333, 1)<strong>+0</strong></code>.</p>
+<p><strong><a name="Sqrt"></a>Sqrt(Number)</strong>: ·µ»Ø <em>Number</em> µÄÆ½·½¸ù. ½á¹û¸ñÊ½»¯Îª <a href="commands/SetFormat.htm">¸¡µãÊý</a>. Èç¹û <em>Number</em> Îª¸ºÊý, Ôòº¯Êý·µ»Ø¿Õ×ÖÖµ (¿Õ×Ö·û´®).</p>
+<h3>Èý½Çº¯Êý</h3>
+<p><strong><a name="Sin"></a><a name="Cos"></a><a name="Tan"></a>Sin(Number)</strong> | <strong>Cos(Number)</strong> | <strong>Tan(Number)</strong>£º·Ö±ð·µ»Ø <em>Number</em> µÄÕýÏÒ¡¢ÓàÏÒ»òÈý½Çº¯ÊýÖµ¡£<em>Number</em> ±ØÐëÓÃ»¡¶È±íÊ¾.</p>
+<p><strong><a name="ASin"></a>ASin(Number)</strong>: ·µ»Ø»¡¶È±íÊ¾µÄ·´ÕýÏÒÖµ (ÆäÕýÏÒÖµÎª <em>Number</em>). Èç¹û <em>Number</em> Ð¡ÓÚ -1 »ò´óÓÚ 1, Ôòº¯Êý·µ»Ø¿ÕÖµ (¿Õ×Ö·û´®).</p>
+<p><strong><a name="ACos"></a>ACos(Number)</strong>: ·µ»Ø»¡¶È±íÊ¾µÄ·´ÓàÏÒÖµ (ÆäÓàÏÒÖµÎª <em>Number</em>). Èç¹û <em>Number</em> Ð¡ÓÚ -1 »ò´óÓÚ 1, Ôòº¯Êý·µ»Ø¿ÕÖµ (¿Õ×Ö·û´®).</p>
+<p><strong><a name="ATan"></a>ATan(Number)</strong>£º·µ»Ø»¡¶È±íÊ¾µÄ·´ÕýÇÐÖµ£¨ÆäÕýÇÐÖµÎª <em>Number</em>£©¡£</p>
+<p><strong>×¢Òâ:</strong> Òª½«»¡¶È×ª»»³É½Ç¶È, Çë½«Æä³ËÒÔ 180/pi (Ô¼Îª 57.29578). Òª½«½Ç¶È×ª»»³É»¡¶È, Çë½«Æä³ËÒÔ pi/180 (Ô¼Îª 0.01745329252). pi µÄÖµ (Ô¼Îª 3.141592653589793) Îª 1 µÄ·´ÕýÇÐÖµµÄ 4 ±¶.</p>
+<h3>ÆäËûº¯Êý</h3>
+<p><a href="http://www.autohotkey.net/~polyethene/#functions">Polyethene µÄÃüÁîº¯Êý</a>£ºÎªÃ¿¸öÓÐ OutputVar µÄ AutoHotkey ÃüÁîÌá¹©ÁË¿Éµ÷ÓÃµÄº¯Êý¡£¿ÉÒÔÍ¨¹ý <a href="commands/_Include.htm">#Include</a> °ÑÕâ¸ö¿â°üº¬ÔÚÈÎºÎ½Å±¾ÖÐ.</p>
 </body>
 </html>

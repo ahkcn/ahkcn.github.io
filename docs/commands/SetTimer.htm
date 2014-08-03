@@ -3,8 +3,8 @@
 <html>
 <head>
 <title>SetTimer</title>
-<meta name="description" content="使用这个免费的宏程序以指定的间隔执行脚本化动作. SetTimer 会自动并重复运行子程序.">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="description" content="ʹ�������ѵĺ������ָ���ļ��ִ�нű�������. SetTimer ���Զ����ظ������ӳ���.">
+<meta http-equiv="content-type" content="text/html; charset=GBK">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/jquery.js" type="text/javascript"></script>
@@ -15,60 +15,60 @@
 
 <h1>SetTimer</h1>
 
-<p>以指定的时间间隔自动并重复运行子程序。</p>
+<p>��ָ����ʱ�����Զ����ظ������ӳ���</p>
 
 <pre class="Syntax">SetTimer [, Label, Period|On|Off, Priority]</pre>
-<h3>参数</h3>
+<h3>����</h3>
 <dl>
 
-  <dt>标签</dt>
-  <dd><p>跳转的目标 <a href="../misc/Labels.htm">标签</a> 或 <a href="../Hotkeys.htm">热键标签</a> 的名称, 这样会执行 <em>Label</em> 下的命令, 直到遇到 <a href="Return.htm">Return</a> 或 <a href="Exit.htm">Exit</a>. 和几乎其他所有命令的参数一样, <em>Label</em> 可以为 <a href="../Variables.htm">变量</a> 引用 (例如 %MyLabel%), 此时将使用变量中的名称作为跳转的目标.</p>
-      <p><span class="ver">[v1.1.01+]:</span> 如果省略 <em>Label</em>, 则使用 <a href="../Variables.htm#ThisLabel">A_ThisLabel</a>. 例如, <code>SetTimer,, Off</code> 可以用来在定时子程序中关闭计时器.</p></dd>
+  <dt>��ǩ</dt>
+  <dd><p>��ת��Ŀ�� <a href="../misc/Labels.htm">��ǩ</a> �� <a href="../Hotkeys.htm">�ȼ���ǩ</a> ������, ������ִ�� <em>Label</em> �µ�����, ֱ������ <a href="Return.htm">Return</a> �� <a href="Exit.htm">Exit</a>. �ͼ���������������Ĳ���һ��, <em>Label</em> ����Ϊ <a href="../Variables.htm">����</a> ���� (���� %MyLabel%), ��ʱ��ʹ�ñ����е�������Ϊ��ת��Ŀ��.</p>
+      <p><span class="ver">[v1.1.01+]:</span> ���ʡ�� <em>Label</em>, ��ʹ�� <a href="../Variables.htm#ThisLabel">A_ThisLabel</a>. ����, <code>SetTimer,, Off</code> ���������ڶ�ʱ�ӳ����йرռ�ʱ��.</p></dd>
 
   <dt>Period|On|Off</dt>
-  <dd><p><strong>On</strong>: 以原来的 <em>周期</em> 重新启用之前禁用的计时器. 如果计时器不存在, 则进行创建 (使用默认的周期 250). 如果计时器存在但之前被设为 <a href="#once">单次运行模式</a>, 那么它仍然只运行一次.</p>
-      <p><strong>Off</strong>: 禁用现有的计时器.</p>
-      <p><strong>周期</strong>: 把此参数作为上次 <em>Label</em> 子程序启动后必须经过的 <a href="#Precision">近似</a> 的毫秒数来创建或更新计时器. 经过了这个指定的时间值后, 会再次运行 <em>Label</em> (除非自上次启动后仍在运行中). 会自动启用计时器. 要避免这种情况, 紧接着再次使用此命令, 指定此参数为 OFF.</p>
-      <p>如果此参数为空并且:<br>
-      1) 计时器不存在: 则使用 250 的周期进行创建.<br>
-      2) 计时器已经存在: 则启用计时器并 <a href="#reset">重设</a> 为它原来的 <em>周期</em> (除非指定了 <em>Priority</em>).</p>
-      <p><strong><a name="once" id="once"></a>单次运行</strong> <span class="ver">[v1.0.46.16+]:</span> 使用负的 <em>周期</em> 来表示计时器只运行一次. 例如，指定 -100 将会从现在开始的 100 ms 后运行计时器，然后就像使用 <code>SetTimer, Label, Off</code> 那样禁用计时器。<br>
+  <dd><p><strong>On</strong>: ��ԭ���� <em>����</em> ��������֮ǰ���õļ�ʱ��. �����ʱ��������, ����д��� (ʹ��Ĭ�ϵ����� 250). �����ʱ�����ڵ�֮ǰ����Ϊ <a href="#once">��������ģʽ</a>, ��ô����Ȼֻ����һ��.</p>
+      <p><strong>Off</strong>: �������еļ�ʱ��.</p>
+      <p><strong>����</strong>: �Ѵ˲�����Ϊ�ϴ� <em>Label</em> �ӳ�����������뾭���� <a href="#Precision">����</a> �ĺ���������������¼�ʱ��. ���������ָ����ʱ��ֵ��, ���ٴ����� <em>Label</em> (�������ϴ�����������������). ���Զ����ü�ʱ��. Ҫ�����������, �������ٴ�ʹ�ô�����, ָ���˲���Ϊ OFF.</p>
+      <p>����˲���Ϊ�ղ���:<br>
+      1) ��ʱ��������: ��ʹ�� 250 �����ڽ��д���.<br>
+      2) ��ʱ���Ѿ�����: �����ü�ʱ���� <a href="#reset">����</a> Ϊ��ԭ���� <em>����</em> (����ָ���� <em>Priority</em>).</p>
+      <p><strong><a name="once" id="once"></a>��������</strong> <span class="ver">[v1.0.46.16+]:</span> ʹ�ø��� <em>����</em> ����ʾ��ʱ��ֻ����һ��. ���磬ָ�� -100 ��������ڿ�ʼ�� 100 ms �����м�ʱ����Ȼ�����ʹ�� <code>SetTimer, Label, Off</code> �������ü�ʱ����<br>
       </p>
     </dd>
 
   <dt>Priority</dt>
-  <dd><p>这个可选参数是一个介于 -2147483648 和 2147483647 之间的整数 (或为 <a href="../Variables.htm#Expressions">表达式</a>) 来表示计时器的优先级. 如果省略, 则使用 0. 请参阅 <a href="../misc/Threads.htm">线程</a> 了解详情.</p>
-      <p>要改变现有计时器的优先级而不影响其他方面, 请留空前一个参数.</p></dd>
+  <dd><p>�����ѡ������һ������ -2147483648 �� 2147483647 ֮������� (��Ϊ <a href="../Variables.htm#Expressions">����ʽ</a>) ����ʾ��ʱ�������ȼ�. ���ʡ��, ��ʹ�� 0. ����� <a href="../misc/Threads.htm">�߳�</a> �˽�����.</p>
+      <p>Ҫ�ı����м�ʱ�������ȼ�����Ӱ����������, ������ǰһ������.</p></dd>
 
 </dl>
 
-<h3>备注</h3>
-<p>计时器很有用, 因为它们是异步运行的, 这意味着它们会以指定的频率 (间隔) 运行, 即使脚本正等待窗口, 显示对话框或忙于其他任务的时候. 它们的许多应用实例包括了当用户空闲时 (如 <a href="../Variables.htm#TimeIdle">A_TimeIdle</a> 反映的那样) 执行一些动作或在不需要的窗口出现时关闭它们.</p>
-<p>尽管计时器给人一种脚本同时执行多个任务的错觉, 实际并非如此. 相反地, 定时子程序只是被当作其他线程来处理: 它们可以中断另一个线程或被另一个线程中断, 例如 <a href="../Hotkeys.htm">热键子程序</a>. 请参阅 <a href="../misc/Threads.htm">线程</a> 了解详情.</p>
-<p>每当创建或重新启用计时器或用新的<em>周期</em>更新计时器时，它的子程序都不会立即运行，必须先经过它的<em>周期</em> 时间。如果您希望立即开始计时器的首次执行, 请使用 <a href="Gosub.htm">Gosub</a> 来执行计时器的子程序 (但是, 这种方式不会像计时器那样启动新线程; 所以诸如 <a href="SendMode.htm">SendMode</a> 的设置不会以它们的默认值开始).</p>
-<p><a name="reset"></a>如果 SetTimer 用于现有的计时器且第二个参数为数字或单词 ON (或省略), 则计时器内部的 "上次运行的时间" 会被重置为当前时间; 换句话说, 在经过它的整个周期后子程序才会再次运行.</p>
-<p><strong><a name="Precision"></a>计时器精度</strong>: 由于操作系统中计时系统的精确度, <em>周期</em> 通常会被向上取整到最近的 10 或 15.6 毫秒的倍数 (取决于所安装的硬件和驱动的类型). 例如，在 Windows NT/2000/XP 中介于 1 和 10（含边界）的<em>周期</em>通常相当于 10 或 15.6。使用 Loop+Sleep 可以实现更短的延时, 请参阅演示: <a href="Sleep.htm#ShorterSleep">DllCall+<span class="NoIndent">timeBeginPeriod</span>+Sleep</a>.</p>
-<p>计时器在下列情况中可能无法按指定频率运行:</p>
+<h3>��ע</h3>
+<p>��ʱ��������, ��Ϊ�������첽���е�, ����ζ�����ǻ���ָ����Ƶ�� (���) ����, ��ʹ�ű����ȴ�����, ��ʾ�Ի����æ�����������ʱ��. ���ǵ�����Ӧ��ʵ�������˵��û�����ʱ (�� <a href="../Variables.htm#TimeIdle">A_TimeIdle</a> ��ӳ������) ִ��һЩ�������ڲ���Ҫ�Ĵ��ڳ���ʱ�ر�����.</p>
+<p>���ܼ�ʱ������һ�ֽű�ͬʱִ�ж������Ĵ���, ʵ�ʲ������. �෴��, ��ʱ�ӳ���ֻ�Ǳ����������߳�������: ���ǿ����ж���һ���̻߳���һ���߳��ж�, ���� <a href="../Hotkeys.htm">�ȼ��ӳ���</a>. ����� <a href="../misc/Threads.htm">�߳�</a> �˽�����.</p>
+<p>ÿ���������������ü�ʱ�������µ�<em>����</em>���¼�ʱ��ʱ�������ӳ��򶼲����������У������Ⱦ�������<em>����</em> ʱ�䡣�����ϣ��������ʼ��ʱ�����״�ִ��, ��ʹ�� <a href="Gosub.htm">Gosub</a> ��ִ�м�ʱ�����ӳ��� (����, ���ַ�ʽ�������ʱ�������������߳�; �������� <a href="SendMode.htm">SendMode</a> �����ò��������ǵ�Ĭ��ֵ��ʼ).</p>
+<p><a name="reset"></a>��� SetTimer �������еļ�ʱ���ҵڶ�������Ϊ���ֻ򵥴� ON (��ʡ��), ���ʱ���ڲ��� "�ϴ����е�ʱ��" �ᱻ����Ϊ��ǰʱ��; ���仰˵, �ھ��������������ں��ӳ���Ż��ٴ�����.</p>
+<p><strong><a name="Precision"></a>��ʱ������</strong>: ���ڲ���ϵͳ�м�ʱϵͳ�ľ�ȷ��, <em>����</em> ͨ���ᱻ����ȡ��������� 10 �� 15.6 ����ı��� (ȡ��������װ��Ӳ��������������). ���磬�� Windows NT/2000/XP �н��� 1 �� 10�����߽磩��<em>����</em>ͨ���൱�� 10 �� 15.6��ʹ�� Loop+Sleep ����ʵ�ָ��̵���ʱ, �������ʾ: <a href="Sleep.htm#ShorterSleep">DllCall+<span class="NoIndent">timeBeginPeriod</span>+Sleep</a>.</p>
+<p>��ʱ������������п����޷���ָ��Ƶ������:</p>
 <ol>
-  <li>其他程序让 CPU 负载较大.</li>
-  <li>定时子程序运行的时间超过它自己的周期, 或者有太多竞争计时器 (改变 <a href="SetBatchLines.htm">SetBatchLines</a> 可能有帮助).</li>
-  <li>计时器已经被另一个 <a href="../misc/Threads.htm">线程</a> 中断, 即另一个定时子程序, <a href="../Hotkeys.htm">热键子程序</a> 或 <a href="Menu.htm">自定义菜单项</a> (这可以使用 <a href="Critical.htm">Critical</a> 避免). 如果这种情况发生了并且中断的线程花费了很长的时间才结束, 则被中断的计时器在这段时间里会被禁用. 不过, 其他任何计时器会对这个中断首个计时器的 <a href="../misc/Threads.htm">线程</a> 进行中断来继续运行.</li>
-  <li>使用 <a href="Critical.htm">Critical</a> 或 <a href="Thread.htm">Thread Interrupt/Priority</a> 后脚本会变成不可中断的. 在这样的时期, 计时器不会运行. 之后, 当脚本恢复可中断时, 任何过时的计时器会尽快运行一次然后恢复到正常的调度.</li>
+  <li>���������� CPU ���ؽϴ�.</li>
+  <li>��ʱ�ӳ������е�ʱ�䳬�����Լ�������, ������̫�ྺ����ʱ�� (�ı� <a href="SetBatchLines.htm">SetBatchLines</a> �����а���).</li>
+  <li>��ʱ���Ѿ�����һ�� <a href="../misc/Threads.htm">�߳�</a> �ж�, ����һ����ʱ�ӳ���, <a href="../Hotkeys.htm">�ȼ��ӳ���</a> �� <a href="Menu.htm">�Զ���˵���</a> (�����ʹ�� <a href="Critical.htm">Critical</a> ����). ���������������˲����жϵ��̻߳����˺ܳ���ʱ��Ž���, ���жϵļ�ʱ�������ʱ����ᱻ����. ����, �����κμ�ʱ���������ж��׸���ʱ���� <a href="../misc/Threads.htm">�߳�</a> �����ж�����������.</li>
+  <li>ʹ�� <a href="Critical.htm">Critical</a> �� <a href="Thread.htm">Thread Interrupt/Priority</a> ��ű����ɲ����жϵ�. ��������ʱ��, ��ʱ����������. ֮��, ���ű��ָ����ж�ʱ, �κι�ʱ�ļ�ʱ���ᾡ������һ��Ȼ��ָ��������ĵ���.</li>
 </ol>
-<p>尽管计时器在脚本 <a href="Suspend.htm">挂起</a> 时仍会运行, 但是如果 <a href="../misc/Threads.htm">当前线程</a> 的 "<a href="Thread.htm">Thread NoTimers</a>" 正在起作用或者任意线程 <a href="Pause.htm">被暂停</a> 时则不会. 此外, 当用户通过脚本的菜单 (例如托盘图标菜单或菜单栏) 进行导航时它们也不会运行.</p>
-<p>因为计时器是通过临时中断脚本当前线程来运行的, 所以它们的子程序应该保持简短 (以便很快地结束), 无论何时很长的中断都是不好的.</p>
-<p>要在脚本运行期间保持有效的计时器一般应在 <a href="../Scripts.htm#auto">自动执行段</a> 中进行创建. 与之相比, 临时的计时器经常可以在它自己的子程序中禁用 (请参阅此页面底部的示例).</p>
-<p>每当计时子程序运行时，它会使用设置（例如 <a href="SendMode.htm">SendMode</a>）的默认值开始。这些默认值可以在 <a href="../Scripts.htm#auto">自动执行段</a> 改变.</p>
-<p>如果 <a href="../Hotkeys.htm">热键</a> 的响应时间非常重要 (例如在游戏中) 且脚本包含了子程序执行时间超过 5 ms 的计时器, 那么请使用下列命令来避免 15 ms 的延迟. 如果在热键按下时恰好处于计时器线程的不可中断期间, 那么这样的延迟还是会发生.</p>
-<pre><a href="Thread.htm">Thread</a>, interrupt, 0  <em>; 让所有的线程总是不可中断的.</em></pre>
-<p>如果计时器在它的子程序正运行时被禁用, 那么该子程序会继续运行直到完成.</p>
-<p><a href="KeyHistory.htm">KeyHistory</a> 功能会显示存在的计时器数目以及当前启用的数目.</p>
-<p>计时器的周期不能大于 4294967295 毫秒 (49.7 天).</p>
-<p>要让脚本持续运行 (例如只包含计时器的脚本), 请使用 <a href="_Persistent.htm">#Persistent</a>.</p>
-<h3>相关</h3>
-<p><a href="Gosub.htm">Gosub</a>, <a href="Return.htm">Return</a>, <a href="../misc/Threads.htm">线程</a>, <a href="Thread.htm">Thread (命令)</a>, <a href="Critical.htm">Critical</a>, <a href="../Functions.htm#IsLabel">IsLabel()</a>, <a href="Menu.htm">Menu</a>, <a href="_Persistent.htm">#Persistent</a></p>
-<h3>示例</h3>
-<pre class="NoIndent"><em>; 示例 #1: 当不想要的窗口出现时关闭它们:</em>
+<p>���ܼ�ʱ���ڽű� <a href="Suspend.htm">����</a> ʱ�Ի�����, ������� <a href="../misc/Threads.htm">��ǰ�߳�</a> �� "<a href="Thread.htm">Thread NoTimers</a>" ���������û��������߳� <a href="Pause.htm">����ͣ</a> ʱ�򲻻�. ����, ���û�ͨ���ű��Ĳ˵� (��������ͼ��˵���˵���) ���е���ʱ����Ҳ��������.</p>
+<p>��Ϊ��ʱ����ͨ����ʱ�жϽű���ǰ�߳������е�, �������ǵ��ӳ���Ӧ�ñ��ּ�� (�Ա�ܿ�ؽ���), ���ۺ�ʱ�ܳ����ж϶��ǲ��õ�.</p>
+<p>Ҫ�ڽű������ڼ䱣����Ч�ļ�ʱ��һ��Ӧ�� <a href="../Scripts.htm#auto">�Զ�ִ�ж�</a> �н��д���. ��֮���, ��ʱ�ļ�ʱ���������������Լ����ӳ����н��� (����Ĵ�ҳ��ײ���ʾ��).</p>
+<p>ÿ����ʱ�ӳ�������ʱ������ʹ�����ã����� <a href="SendMode.htm">SendMode</a>����Ĭ��ֵ��ʼ����ЩĬ��ֵ������ <a href="../Scripts.htm#auto">�Զ�ִ�ж�</a> �ı�.</p>
+<p>��� <a href="../Hotkeys.htm">�ȼ�</a> ����Ӧʱ��ǳ���Ҫ (��������Ϸ��) �ҽű��������ӳ���ִ��ʱ�䳬�� 5 ms �ļ�ʱ��, ��ô��ʹ���������������� 15 ms ���ӳ�. ������ȼ�����ʱǡ�ô��ڼ�ʱ���̵߳Ĳ����ж��ڼ�, ��ô�������ӳٻ��ǻᷢ��.</p>
+<pre><a href="Thread.htm">Thread</a>, interrupt, 0  <em>; �����е��߳����ǲ����жϵ�.</em></pre>
+<p>�����ʱ���������ӳ���������ʱ������, ��ô���ӳ�����������ֱ�����.</p>
+<p><a href="KeyHistory.htm">KeyHistory</a> ���ܻ���ʾ���ڵļ�ʱ����Ŀ�Լ���ǰ���õ���Ŀ.</p>
+<p>��ʱ�������ڲ��ܴ��� 4294967295 ���� (49.7 ��).</p>
+<p>Ҫ�ýű��������� (����ֻ������ʱ���Ľű�), ��ʹ�� <a href="_Persistent.htm">#Persistent</a>.</p>
+<h3>���</h3>
+<p><a href="Gosub.htm">Gosub</a>, <a href="Return.htm">Return</a>, <a href="../misc/Threads.htm">�߳�</a>, <a href="Thread.htm">Thread (����)</a>, <a href="Critical.htm">Critical</a>, <a href="../Functions.htm#IsLabel">IsLabel()</a>, <a href="Menu.htm">Menu</a>, <a href="_Persistent.htm">#Persistent</a></p>
+<h3>ʾ��</h3>
+<pre class="NoIndent"><em>; ʾ�� #1: ������Ҫ�Ĵ��ڳ���ʱ�ر�����:</em>
 #Persistent
 SetTimer, CloseMailWarnings, 250
 return
@@ -78,7 +78,7 @@ WinClose, Microsoft Outlook, A timeout occured while communicating
 WinClose, Microsoft Outlook, A connection to the server could not be established
 return</pre>
 <p>&nbsp;</p>
-<pre class="NoIndent"><em>; 示例 #2: 等待特定的窗口出现, 然后通知用户:</em>
+<pre class="NoIndent"><em>; ʾ�� #2: �ȴ��ض��Ĵ��ڳ���, Ȼ��֪ͨ�û�:</em>
 #Persistent
 SetTimer, Alert1, 500
 return
@@ -87,43 +87,43 @@ Alert1:
 IfWinNotExist, Video Conversion, Process Complete
     return
 <em>; Otherwise:</em>
-SetTimer, Alert1, Off  <em>; 即此处计时器关闭自己.</em>
+SetTimer, Alert1, Off  <em>; ���˴���ʱ���ر��Լ�.</em>
 SplashTextOn, , , The video conversion is finished.
 Sleep, 3000
 SplashTextOff
 return</pre>
 <p>&nbsp;</p>
-<pre class="NoIndent"><em>; 示例 #3: 检测热键的单次, 两次和三次按下. 这样
-; 允许热键根据您按下次数的多少
-; 执行不同的操作：</em>
+<pre class="NoIndent"><em>; ʾ�� #3: ����ȼ��ĵ���, ���κ����ΰ���. ����
+; �����ȼ����������´����Ķ���
+; ִ�в�ͬ�Ĳ�����</em>
 #c::
-if winc_presses &gt; 0 <em>; SetTimer 已经启动, 所以我们记录键击.</em>
+if winc_presses &gt; 0 <em>; SetTimer �Ѿ�����, �������Ǽ�¼����.</em>
 {
     winc_presses += 1
     return
 }
-<em>; 否则, 这是新开始系列中的首次按下. 把次数设为 1 并启动
-; 计时器：</em>
+<em>; ����, �����¿�ʼϵ���е��״ΰ���. �Ѵ�����Ϊ 1 ������
+; ��ʱ����</em>
 winc_presses = 1
-SetTimer, KeyWinC, 400 <em>; 在 400 毫秒内等待更多的键击.</em>
+SetTimer, KeyWinC, 400 <em>; �� 400 �����ڵȴ�����ļ���.</em>
 return
 
 KeyWinC:
 SetTimer, KeyWinC, off
-if winc_presses = 1 <em>; 此键按下了一次.</em>
+if winc_presses = 1 <em>; �˼�������һ��.</em>
 {
-    Run, m:\  <em>; 打开文件夹.</em>
+    Run, m:\  <em>; ���ļ���.</em>
 }
-else if winc_presses = 2 <em>; 此键按下了两次.</em>
+else if winc_presses = 2 <em>; �˼�����������.</em>
 {
-    Run, m:\multimedia  <em>; 打开不同的文件夹.</em>
+    Run, m:\multimedia  <em>; �򿪲�ͬ���ļ���.</em>
 }
 else if winc_presses &gt; 2
 {
     MsgBox, Three or more clicks detected.
 }
-<em>; 不论触发了上面的哪个动作, 都对 count 进行重置
-; 为下一个系列的按下做准备:</em>
+<em>; ���۴�����������ĸ�����, ���� count ��������
+; Ϊ��һ��ϵ�еİ�����׼��:</em>
 winc_presses = 0
 return</pre>
 

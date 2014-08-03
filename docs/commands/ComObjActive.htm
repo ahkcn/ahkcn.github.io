@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>ComObjActive()</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="content-type" content="text/html; charset=GBK">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/jquery.js" type="text/javascript"></script>
@@ -14,40 +14,40 @@
 
 <h1>ComObjActive() <span class="ver">[AHK_L 53+]</span></h1>
 
-<p>æ£€ç´¢å·²æ³¨å†Œåˆ° OLE çš„æ­£åœ¨è¿è¡Œçš„å¯¹è±¡.</p>
+<p>¼ìË÷ÒÑ×¢²áµ½ OLE µÄÕýÔÚÔËÐÐµÄ¶ÔÏó.</p>
 <pre class="Syntax">ComObject := ComObjActive(CLSID)</pre>
 
-<p id="param">åˆ›å»ºè¡¨ç¤ºä½œä¸ºå‚æ•°æˆ–è¿”å›žå€¼ä¼ é€’çš„ç±»åž‹åŒ–å€¼çš„å¯¹è±¡.</p>
+<p id="param">´´½¨±íÊ¾×÷Îª²ÎÊý»ò·µ»ØÖµ´«µÝµÄÀàÐÍ»¯ÖµµÄ¶ÔÏó.</p>
 <pre class="Syntax">ParamObj := ComObjParameter(VarType, Value [, Flags])</pre>
 
-<p id="missing">åˆ›å»ºåœ¨è°ƒç”¨ COM å¯¹è±¡çš„æ–¹æ³•æ—¶å¯ä»¥ç”¨æ¥ä»£æ›¿å¯é€‰å‚æ•°é»˜è®¤å€¼çš„å¯¹è±¡.</p>
+<p id="missing">´´½¨ÔÚµ÷ÓÃ COM ¶ÔÏóµÄ·½·¨Ê±¿ÉÒÔÓÃÀ´´úÌæ¿ÉÑ¡²ÎÊýÄ¬ÈÏÖµµÄ¶ÔÏó.</p>
 <pre class="Syntax">ParamObj := ComObjMissing()</pre>
 
-<h4>é«˜çº§</h4>
-<p id="enwrap">åŒ…è£…æˆ–è§£å¼€å¯ç”¨å¯¹è±¡ä¸­çš„åŽŸå§‹ <a href="http://msdn.microsoft.com/en-us/library/dd318520.aspx">IDispatch</a> æŒ‡é’ˆ.</p>
+<h4>¸ß¼¶</h4>
+<p id="enwrap">°ü×°»ò½â¿ª¿ÉÓÃ¶ÔÏóÖÐµÄÔ­Ê¼ <a href="http://msdn.microsoft.com/en-us/library/dd318520.aspx">IDispatch</a> Ö¸Õë.</p>
 <pre class="Syntax">ComObject := ComObjEnwrap(DispPtr)
 DispPtr := ComObjUnwrap(ComObject)</pre>
 
-<h3>å‚æ•°</h3>
+<h3>²ÎÊý</h3>
 <dl>
 
   <dt>CLSID</dt>
-  <dd><p>è¦æ£€ç´¢çš„ COM å¯¹è±¡çš„ CLSID æˆ–å¯è¯» Prog ID.</p></dd>
+  <dd><p>Òª¼ìË÷µÄ COM ¶ÔÏóµÄ CLSID »ò¿É¶Á Prog ID.</p></dd>
 
   <dt>ComObject</dt>
-  <dd><p>å¯ä»¥ä½¿ç”¨ <a href="../Objects.htm#Usage_Objects">å¯¹è±¡è¯­æ³•</a> çš„ COM å¯¹è±¡.</p></dd>
+  <dd><p>¿ÉÒÔÊ¹ÓÃ <a href="../Objects.htm#Usage_Objects">¶ÔÏóÓï·¨</a> µÄ COM ¶ÔÏó.</p></dd>
 
   <dt>VarType</dt>
-  <dd><p>è¡¨ç¤ºå€¼ç±»åž‹çš„æ•´æ•°. è¯·å‚é˜… <a href="ComObjType.htm#vt">ComObjType()</a> äº†è§£ç±»åž‹åˆ—è¡¨.</p></dd>
+  <dd><p>±íÊ¾ÖµÀàÐÍµÄÕûÊý. Çë²ÎÔÄ <a href="ComObjType.htm#vt">ComObjType()</a> ÁË½âÀàÐÍÁÐ±í.</p></dd>
 
-  <dt>å€¼</dt>
-  <dd><p>è¦åŒ…è£…çš„å€¼. å½“å‰ä»…æ”¯æŒæ•´æ•°å€¼å’ŒæŒ‡é’ˆå€¼.</p></dd>
+  <dt>Öµ</dt>
+  <dd><p>Òª°ü×°µÄÖµ. µ±Ç°½öÖ§³ÖÕûÊýÖµºÍÖ¸ÕëÖµ.</p></dd>
 
   <dt>Flags</dt>
-  <dd><p>å½±å“æ­¤å‡½æ•°å’ŒåŒ…è£…å™¨å¯¹è±¡è¡Œä¸ºçš„æ ‡å¿—ï¼Œè¯·å‚é˜…åŽé¢ã€‚</p></dd>
+  <dd><p>Ó°Ïì´Ëº¯ÊýºÍ°ü×°Æ÷¶ÔÏóÐÐÎªµÄ±êÖ¾£¬Çë²ÎÔÄºóÃæ¡£</p></dd>
 
   <dt>DispPtr</dt>
-  <dd><p>åŽŸå§‹çš„ IDispatch æŒ‡é’ˆ.</p></dd>
+  <dd><p>Ô­Ê¼µÄ IDispatch Ö¸Õë.</p></dd>
 
 </dl>
 
@@ -55,25 +55,25 @@ DispPtr := ComObjUnwrap(ComObject)</pre>
 <table class="info">
   <tr>
     <td>&nbsp;0&nbsp;</td>
-    <td>é»˜è®¤è¡Œä¸º. ä¸º IUnknown å’Œ IDispatch æŒ‡é’ˆè‡ªåŠ¨è°ƒç”¨ <a href="http://msdn.microsoft.com/en-us/library/ms691379.aspx">AddRef</a>, æ‰€ä»¥è°ƒç”¨è€…åº”è¯¥åœ¨é€‚å½“æ—¶ä½¿ç”¨ <a href="ObjAddRef.htm">ObjRelease</a> é‡Šæ”¾è¿™äº›æŒ‡é’ˆå‰¯æœ¬.</td>
+    <td>Ä¬ÈÏÐÐÎª. Îª IUnknown ºÍ IDispatch Ö¸Õë×Ô¶¯µ÷ÓÃ <a href="http://msdn.microsoft.com/en-us/library/ms691379.aspx">AddRef</a>, ËùÒÔµ÷ÓÃÕßÓ¦¸ÃÔÚÊÊµ±Ê±Ê¹ÓÃ <a href="ObjAddRef.htm">ObjRelease</a> ÊÍ·ÅÕâÐ©Ö¸Õë¸±±¾.</td>
   </tr>
   <tr>
     <td>&nbsp;1&nbsp;</td>
-    <td>å–å¾— IUnknown, IDispatch æˆ– SAFEARRAY æŒ‡é’ˆçš„æ‰€æœ‰æƒ. ä¸è°ƒç”¨ AddRef. å¦‚æžœåŒ…è£…å™¨å¯¹è±¡åŒ…å« SAFEARRAY (VT_BYREF é™¤å¤–), é‚£ä¹ˆå½“åŒ…è£…å™¨å¯¹è±¡è¢«é‡Šæ”¾æ—¶ä¼šè‡ªåŠ¨è°ƒç”¨ <a href="http://msdn.microsoft.com/en-us/library/ms221702.aspx">SafeArrayDestroy</a>.</td>
+    <td>È¡µÃ IUnknown, IDispatch »ò SAFEARRAY Ö¸ÕëµÄËùÓÐÈ¨. ²»µ÷ÓÃ AddRef. Èç¹û°ü×°Æ÷¶ÔÏó°üº¬ SAFEARRAY (VT_BYREF ³ýÍâ), ÄÇÃ´µ±°ü×°Æ÷¶ÔÏó±»ÊÍ·ÅÊ±»á×Ô¶¯µ÷ÓÃ <a href="http://msdn.microsoft.com/en-us/library/ms221702.aspx">SafeArrayDestroy</a>.</td>
   </tr>
 </table>
 
-<h3 id="Remarks">ä¸€èˆ¬è¯´æ˜Ž</h3>
-<p>ComObjActive æ˜¯ <i>å¤šæ€çš„</i>; å³ä»»ä½•åç§°ä»¥ "ComObj" å¼€å§‹ä¸”ä¸åŒ¹é…å…¶ä»–æŸä¸ª COM å‡½æ•°çš„å‡½æ•°è°ƒç”¨å®žé™…åœ¨è°ƒç”¨ ComObjActive. ä¾‹å¦‚, <code>ComObj(9, DispPtr)</code> å’Œ <code>ComObjActive(DispPtr)</code> éƒ½ç­‰åŒäºŽ <code>ComObjEnwrap(DispPtr)</code>. ç„¶è€Œ, åœ¨æœªæ¥çš„ç‰ˆæœ¬ä¸­æ­¤ç‰¹æ€§å¯èƒ½å‘ç”Ÿå˜åŒ– (æˆ–å®žçŽ°äº†æ–°çš„å‡½æ•°), æ‰€ä»¥æœ€å¥½ä»…æ˜¾ç¤ºæ­¤é¡µé¢ä¸­æ¼”ç¤ºçš„å½¢å¼, æ­¤å¤– "ComObject" å¯ä»¥ç”¨æ¥ä»£æ›¿ ComObjEnwrap æˆ– ComObjParameter.</p>
-<p>å½“ä½¿ç”¨æ­¤å‡½æ•°åŒ…è£…æˆ–æ£€ç´¢ IDispatch æˆ– IUnknown æŽ¥å£æŒ‡é’ˆæ—¶, é»˜è®¤çš„è¡Œä¸ºä¼šå¢žåŠ  COM å¯¹è±¡çš„å¼•ç”¨æ•°. ä¸€èˆ¬è€Œè¨€, è„šæœ¬ä¸­æŒ‡é’ˆçš„åŽŸå§‹å‰¯æœ¬è¢«è§†ä¸ºç‹¬ç«‹çš„å¼•ç”¨, å½“ä¸å†éœ€è¦æ—¶å¿…é¡»åœ¨è„šæœ¬ä¸­å¯¹å…¶è¿›è¡Œ <a href="ObjAddRef.htm">æ‰‹åŠ¨é‡Šæ”¾</a>. é‡Šæ”¾åŒ…è£…å™¨å¯¹è±¡æ—¶, ä¹Ÿä¼šåŒæ—¶é‡Šæ”¾å…¶åˆ° COM å¯¹è±¡çš„å¼•ç”¨.</p>
-<p><b>å·²çŸ¥é™åˆ¶:</b> æ¯æ¬¡åŒ…è£… COM å¯¹è±¡æ—¶, éƒ½ä¼šåˆ›å»ºæ–°çš„åŒ…è£…å™¨å¯¹è±¡. æ¯”è¾ƒå’Œèµ‹å€¼è¿ç®—ä¸­, ä¾‹å¦‚ <code>obj1 == obj2</code> å’Œ <code>array[obj1] := value</code>, ä¼šæŠŠä¸¤ä¸ªåŒ…è£…å™¨å¯¹è±¡è§†ä¸ºå”¯ä¸€çš„, å³ä½¿å®ƒä»¬åŒ…å«ç›¸åŒçš„ COM å¯¹è±¡.</p>
+<h3 id="Remarks">Ò»°ãËµÃ÷</h3>
+<p>ComObjActive ÊÇ <i>¶àÌ¬µÄ</i>; ¼´ÈÎºÎÃû³ÆÒÔ "ComObj" ¿ªÊ¼ÇÒ²»Æ¥ÅäÆäËûÄ³¸ö COM º¯ÊýµÄº¯Êýµ÷ÓÃÊµ¼ÊÔÚµ÷ÓÃ ComObjActive. ÀýÈç, <code>ComObj(9, DispPtr)</code> ºÍ <code>ComObjActive(DispPtr)</code> ¶¼µÈÍ¬ÓÚ <code>ComObjEnwrap(DispPtr)</code>. È»¶ø, ÔÚÎ´À´µÄ°æ±¾ÖÐ´ËÌØÐÔ¿ÉÄÜ·¢Éú±ä»¯ (»òÊµÏÖÁËÐÂµÄº¯Êý), ËùÒÔ×îºÃ½öÏÔÊ¾´ËÒ³ÃæÖÐÑÝÊ¾µÄÐÎÊ½, ´ËÍâ "ComObject" ¿ÉÒÔÓÃÀ´´úÌæ ComObjEnwrap »ò ComObjParameter.</p>
+<p>µ±Ê¹ÓÃ´Ëº¯Êý°ü×°»ò¼ìË÷ IDispatch »ò IUnknown ½Ó¿ÚÖ¸ÕëÊ±, Ä¬ÈÏµÄÐÐÎª»áÔö¼Ó COM ¶ÔÏóµÄÒýÓÃÊý. Ò»°ã¶øÑÔ, ½Å±¾ÖÐÖ¸ÕëµÄÔ­Ê¼¸±±¾±»ÊÓÎª¶ÀÁ¢µÄÒýÓÃ, µ±²»ÔÙÐèÒªÊ±±ØÐëÔÚ½Å±¾ÖÐ¶ÔÆä½øÐÐ <a href="ObjAddRef.htm">ÊÖ¶¯ÊÍ·Å</a>. ÊÍ·Å°ü×°Æ÷¶ÔÏóÊ±, Ò²»áÍ¬Ê±ÊÍ·ÅÆäµ½ COM ¶ÔÏóµÄÒýÓÃ.</p>
+<p><b>ÒÑÖªÏÞÖÆ:</b> Ã¿´Î°ü×° COM ¶ÔÏóÊ±, ¶¼»á´´½¨ÐÂµÄ°ü×°Æ÷¶ÔÏó. ±È½ÏºÍ¸³ÖµÔËËãÖÐ, ÀýÈç <code>obj1 == obj2</code> ºÍ <code>array[obj1] := value</code>, »á°ÑÁ½¸ö°ü×°Æ÷¶ÔÏóÊÓÎªÎ¨Ò»µÄ, ¼´Ê¹ËüÃÇ°üº¬ÏàÍ¬µÄ COM ¶ÔÏó.</p>
 
-<h3 id="Related">ç›¸å…³</h3>
+<h3 id="Related">Ïà¹Ø</h3>
 <p><a href="ComObjCreate.htm">ComObjCreate</a>, <a href="ComObjGet.htm">ComObjGet</a>, <a href="ComObjConnect.htm">ComObjConnect</a>, <a href="ComObjError.htm">ComObjError</a>, <a href="ComObjFlags.htm">ComObjFlags</a>, <a href="ObjAddRef.htm">ObjAddRef/ObjRelease</a>, <a href="ComObjQuery.htm">ComObjQuery</a>, <a href="http://msdn.microsoft.com/en-us/library/ms221467.aspx">GetActiveObject (MSDN)</a></p>
 
-<h3>ç¤ºä¾‹</h3>
-<p>ComObjUnwrap: è¯·å‚é˜… <a href="ComObjConnect.htm#Examples">ComObjConnect</a>.</p>
-<pre class="NoIndent" id="ByRefEx"><em>; ç¤ºä¾‹: ä¼ é€’ VARIANT ByRef åˆ° COM å‡½æ•°.</em>
+<h3>Ê¾Àý</h3>
+<p>ComObjUnwrap: Çë²ÎÔÄ <a href="ComObjConnect.htm#Examples">ComObjConnect</a>.</p>
+<pre class="NoIndent" id="ByRefEx"><em>; Ê¾Àý: ´«µÝ VARIANT ByRef µ½ COM º¯Êý.</em>
 
 code =
 (
@@ -89,31 +89,31 @@ var[] := "in value"
 sc.Run("Example", var.ref)
 MsgBox % var[]
 
-<em>; ComVar: åˆ›å»ºç”¨æ¥ä¼ é€’ ByRef å€¼çš„å¯¹è±¡.
-;   ComVar[] æ£€ç´¢å€¼.
-;   ComVar[] := Val è®¾ç½®å€¼.
-;   ComVar.ref æ£€ç´¢ ByRef å¯¹è±¡ç”¨äºŽä¼ é€’åˆ° COM å‡½æ•°.</em>
+<em>; ComVar: ´´½¨ÓÃÀ´´«µÝ ByRef ÖµµÄ¶ÔÏó.
+;   ComVar[] ¼ìË÷Öµ.
+;   ComVar[] := Val ÉèÖÃÖµ.
+;   ComVar.ref ¼ìË÷ ByRef ¶ÔÏóÓÃÓÚ´«µÝµ½ COM º¯Êý.</em>
 ComVar(Type=0xC)
 {
     static <a href="../Objects.htm#Custom_Objects">base</a> := { __Get: "ComVarGet", __Set: "ComVarSet", __Delete: "ComVarDel" }
-    <em>; åˆ›å»ºå« 1 ä¸ª VARIANT ç±»åž‹å˜é‡çš„æ•°ç»„.  æ­¤æ–¹æ³•å¯ä»¥è®©å†…éƒ¨ä»£ç å¤„ç†
-    ; åœ¨ VARIANT å’Œ AutoHotkey å†…éƒ¨ç±»åž‹ä¹‹é—´çš„æ‰€æœ‰è½¬æ¢.</em>
+    <em>; ´´½¨º¬ 1 ¸ö VARIANT ÀàÐÍ±äÁ¿µÄÊý×é.  ´Ë·½·¨¿ÉÒÔÈÃÄÚ²¿´úÂë´¦Àí
+    ; ÔÚ VARIANT ºÍ AutoHotkey ÄÚ²¿ÀàÐÍÖ®¼äµÄËùÓÐ×ª»».</em>
     arr := <a href="ComObjArray.htm">ComObjArray</a>(Type, 1)
-    <em>; é”å®šæ•°ç»„å¹¶æ£€ç´¢åˆ° VARIANT çš„æŒ‡é’ˆ.</em>
+    <em>; Ëø¶¨Êý×é²¢¼ìË÷µ½ VARIANT µÄÖ¸Õë.</em>
     DllCall("oleaut32\SafeArrayAccessData", "ptr", <a href="ComObjValue.htm">ComObjValue</a>(arr), "ptr*", arr_data)
-    <em>; ä¿å­˜å¯ç”¨äºŽä¼ é€’ VARIANT ByRef çš„æ•°ç»„å’Œå¯¹è±¡.</em>
+    <em>; ±£´æ¿ÉÓÃÓÚ´«µÝ VARIANT ByRef µÄÊý×éºÍ¶ÔÏó.</em>
     return { ref: ComObjParameter(0x4000|Type, arr_data), _: arr, base: base }
 }
-ComVarGet(cv, <a href="../Functions.htm#Variadic">p*</a>) { <em>; å½“è„šæœ¬è®¿é—®æœªçŸ¥å­—æ®µæ—¶è°ƒç”¨.</em>
-    if p.MaxIndex() = "" <em>; æ²¡æœ‰åç§°/å‚æ•°, å³ cv[]</em>
+ComVarGet(cv, <a href="../Functions.htm#Variadic">p*</a>) { <em>; µ±½Å±¾·ÃÎÊÎ´Öª×Ö¶ÎÊ±µ÷ÓÃ.</em>
+    if p.MaxIndex() = "" <em>; Ã»ÓÐÃû³Æ/²ÎÊý, ¼´ cv[]</em>
         return cv._[0]
 }
-ComVarSet(cv, v, p*) { <em>; å½“è„šæœ¬è®¾ç½®æœªçŸ¥å­—æ®µæ—¶è°ƒç”¨.</em>
-    if p.MaxIndex() = "" <em>; æ²¡æœ‰åç§°/å‚æ•°, å³ cv[]:=v</em>
+ComVarSet(cv, v, p*) { <em>; µ±½Å±¾ÉèÖÃÎ´Öª×Ö¶ÎÊ±µ÷ÓÃ.</em>
+    if p.MaxIndex() = "" <em>; Ã»ÓÐÃû³Æ/²ÎÊý, ¼´ cv[]:=v</em>
         return cv._[0] := v
 }
-ComVarDel(cv) { <em>; å½“å¯¹è±¡è¢«é‡Šæ”¾æ—¶è°ƒç”¨.
-    ; å¿…é¡»è¿›è¡Œè¿™æ ·çš„å¤„ç†ä»¥é‡Šæ”¾å†…éƒ¨æ•°ç»„.</em>
+ComVarDel(cv) { <em>; µ±¶ÔÏó±»ÊÍ·ÅÊ±µ÷ÓÃ.
+    ; ±ØÐë½øÐÐÕâÑùµÄ´¦ÀíÒÔÊÍ·ÅÄÚ²¿Êý×é.</em>
     DllCall("oleaut32\SafeArrayUnaccessData", "ptr", ComObjValue(cv._))
 }
 

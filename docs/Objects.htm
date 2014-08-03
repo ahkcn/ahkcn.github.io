@@ -2,193 +2,197 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>å¯¹è±¡</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>¶ÔÏó</title>
+<meta http-equiv="content-type" content="text/html; charset=GBK">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="static/theme.css" rel="stylesheet" type="text/css" />
 <script src="static/jquery.js" type="text/javascript"></script>
 <script src="static/tree.jquery.js" type="text/javascript"></script>
 <script src="static/content.js" type="text/javascript"></script>
+<style>
+ul.list_of_p p { margin: 0.5em 0; }
+ul.list_of_p li { margin: 1em 0; }
+</style>
 </head>
 <body>
 
-<h1>å¯¹è±¡</h1>
+<h1>¶ÔÏó</h1>
 
-<p>AutoHotkey ä¸­çš„ <i>å¯¹è±¡</i> æ˜¯ä¸€ç§æŠ½è±¡æ•°æ®ç»“æž„, å®ƒæä¾›ä¸‰ä¸ªåŸºæœ¬åŠŸèƒ½:</p>
+<p>AutoHotkey ÖÐµÄ<i>¶ÔÏó</i>ÊÇ³éÏóµÄÊý¾ÝÀàÐÍ£¬ËüÌá¹©ÁËÈýÖÖ»ù±¾¹¦ÄÜ£º</p>
 <ul>
-  <li>å–å€¼.</li>
-  <li>è®¾ç½®å€¼.</li>
-  <li>è°ƒç”¨æ–¹æ³• (å³å¯ä»¥å¯¹ç›®æ ‡å¯¹è±¡è¿›è¡ŒæŸäº›æ“ä½œçš„å‡½æ•°).</li>
+  <li>È¡Öµ.</li>
+  <li>ÉèÖÃÖµ.</li>
+  <li>µ÷ÓÃ·½·¨ (¼´¿ÉÒÔ¶ÔÄ¿±ê¶ÔÏó½øÐÐÄ³Ð©²Ù×÷µÄº¯Êý).</li>
 </ul>
-<p>å¯¹è±¡ <i>å¼•ç”¨</i> æ˜¯æŒ‡å‘ç‰¹æ®Šå¯¹è±¡çš„æŒ‡é’ˆæˆ– "å¥æŸ„". å’Œå­—ç¬¦ä¸²å’Œæ•°å­—ä¸€æ ·, å¯¹è±¡å¼•ç”¨å¯ä»¥å­˜å‚¨åˆ°å˜é‡ä¸­, ä¼ é€’ç»™å‡½æ•°æˆ–ä»Žå‡½æ•°è¿”å›žä»¥åŠä¿å­˜åˆ°å¯¹è±¡ä¸­. åœ¨ä»Žä¸€ä¸ªå˜é‡å¤åˆ¶å¼•ç”¨åˆ°å¦ä¸€ä¸ªåŽ, ä¾‹å¦‚ <code>x := y</code> , ä¸¤ä¸ªå˜é‡éƒ½å¼•ç”¨ç›¸åŒçš„å¯¹è±¡.</p>
+<p>¶ÔÏó <i>ÒýÓÃ</i> ÊÇÖ¸ÏòÌØÊâ¶ÔÏóµÄÖ¸Õë»ò "¾ä±ú". ºÍ×Ö·û´®ºÍÊý×ÖÒ»Ñù, ¶ÔÏóÒýÓÃ¿ÉÒÔ´æ´¢µ½±äÁ¿ÖÐ, ´«µÝ¸øº¯Êý»ò´Óº¯Êý·µ»ØÒÔ¼°±£´æµ½¶ÔÏóÖÐ. ÔÚ´ÓÒ»¸ö±äÁ¿¸´ÖÆÒýÓÃµ½ÁíÒ»¸öºó, ÀýÈç <code>x := y</code> , Á½¸ö±äÁ¿¶¼ÒýÓÃÏàÍ¬µÄ¶ÔÏó.</p>
 
-<p><b>IsObject</b> å¯ä»¥ç”¨æ¥ç¡®å®šä¸€ä¸ªå€¼æ˜¯å¦ä¸ºå¯¹è±¡:</p>
+<p><b>IsObject</b> ¿ÉÒÔÓÃÀ´È·¶¨Ò»¸öÖµÊÇ·ñÎª¶ÔÏó:</p>
 <pre>Result := IsObject(<i>expression</i>)</pre>
 
-<p>å¯¹è±¡ç±»åž‹åŒ…æ‹¬:</p>
+<p>¶ÔÏóÀàÐÍ°üÀ¨:</p>
 <ul>
-  <li><a href="objects/Object.htm"><b>å¯¹è±¡</b></a> - è„šæœ¬åŒ–å…³è”æ•°ç»„.</li>
-  <li><a href="objects/File.htm">æ–‡ä»¶</a> - ä¸ºæ–‡ä»¶è¾“å…¥/è¾“å‡ºæä¾›æŽ¥å£.</li>
-  <li><a href="objects/Func.htm">Func</a> - å‡½æ•°.</li>
-  <li><a href="commands/ComObjCreate.htm">ComObject</a> - æ‰“åŒ… IDispatch æŽ¥å£ (COM æˆ– "è‡ªåŠ¨åŒ–" å¯¹è±¡).</li>
+  <li><a href="objects/Object.htm"><b>¶ÔÏó</b></a> - ½Å±¾»¯¹ØÁªÊý×é.</li>
+  <li><a href="objects/File.htm">ÎÄ¼þ</a> - ÎªÎÄ¼þÊäÈë/Êä³öÌá¹©½Ó¿Ú.</li>
+  <li><a href="objects/Func.htm">Func</a> - º¯Êý.</li>
+  <li><a href="commands/ComObjCreate.htm">ComObject</a> - ´ò°ü IDispatch ½Ó¿Ú (COM »ò "×Ô¶¯»¯" ¶ÔÏó).</li>
 </ul>
 
-<h2>ç›®å½•</h2>
+<h2>Ä¿Â¼</h2>
 <ul>
-  <li><a href="#Usage">åŸºæœ¬ç”¨æ³•</a> - <a href="#Usage_Simple_Arrays">ç®€å•æ•°ç»„</a>, <a href="#Usage_Associative_Arrays">å…³è”æ•°ç»„</a>, <a href="#Usage_Objects">å¯¹è±¡</a>, <a href="#Usage_Freeing_Objects">é‡Šæ”¾å¯¹è±¡</a>, <a href="#Usage_Remarks">å¤‡æ³¨</a></li>
-  <li><a href="#Extended_Usage">æ‰©å±•ç”¨æ³•</a> - <a href="#Function_References">å‡½æ•°å¼•ç”¨</a>, <a href="#Usage_Arrays_of_Arrays">æ•°ç»„åµŒå¥—</a>, <a href="#Usage_Arrays_of_Functions">å‡½æ•°æ•°ç»„</a></li>
-  <li><a href="#Custom_Objects">è‡ªå®šä¹‰å¯¹è±¡</a> - <a href="#Custom_Prototypes">åŽŸåž‹</a>, <a href="#Custom_Classes">ç±»</a>, <a href="#Custom_NewDelete">åˆ›å»ºå’Œé”€æ¯</a>, <a href="#Meta_Functions">å…ƒå‡½æ•°</a></li>
-  <li><a href="#Default_Base_Object">é»˜è®¤åŸºå¯¹è±¡</a> - <a href="#Automatic_Var_Init">è‡ªåŠ¨åˆå§‹åŒ–å˜é‡</a>, <a href="#Pseudo_Properties">ä¼ªå±žæ€§</a>, <a href="#Default__Warn">è°ƒè¯•</a></li>
-  <li><a href="#Implementation">å®žçŽ°</a> - <a href="#Reference_Counting">å¼•ç”¨è®¡æ•°</a>, <a href="#Implementation_Pointers">æŒ‡å‘å¯¹è±¡çš„æŒ‡é’ˆ</a></li>
+  <li><a href="#Usage">»ù±¾ÓÃ·¨</a> - <a href="#Usage_Simple_Arrays">¼òµ¥Êý×é</a>, <a href="#Usage_Associative_Arrays">¹ØÁªÊý×é</a>, <a href="#Usage_Objects">¶ÔÏó</a>, <a href="#Usage_Freeing_Objects">ÊÍ·Å¶ÔÏó</a>, <a href="#Usage_Remarks">±¸×¢</a></li>
+  <li><a href="#Extended_Usage">À©Õ¹ÓÃ·¨</a> - <a href="#Function_References">º¯ÊýÒýÓÃ</a>, <a href="#Usage_Arrays_of_Arrays">Êý×éÇ¶Ì×</a>, <a href="#Usage_Arrays_of_Functions">º¯ÊýÊý×é</a></li>
+  <li><a href="#Custom_Objects">×Ô¶¨Òå¶ÔÏó</a> - <a href="#Custom_Prototypes">Ô­ÐÍ</a>, <a href="#Custom_Classes">Àà</a>, <a href="#Custom_NewDelete">´´½¨ºÍÏú»Ù</a>, <a href="#Meta_Functions">Ôªº¯Êý</a></li>
+  <li><a href="#Default_Base_Object">Ä¬ÈÏ»ù¶ÔÏó</a> - <a href="#Automatic_Var_Init">×Ô¶¯³õÊ¼»¯±äÁ¿</a>, <a href="#Pseudo_Properties">Î±ÊôÐÔ</a>, <a href="#Default__Warn">µ÷ÊÔ</a></li>
+  <li><a href="#Implementation">ÊµÏÖ</a> - <a href="#Reference_Counting">ÒýÓÃ¼ÆÊý</a>, <a href="#Implementation_Pointers">Ö¸Ïò¶ÔÏóµÄÖ¸Õë</a></li>
 </ul>
 
-<a name="Syntax"></a><h2 id="Usage">åŸºæœ¬ç”¨æ³•</h2>
+<a name="Syntax"></a><h2 id="Usage">»ù±¾ÓÃ·¨</h2>
 
-<h3 id="Usage_Simple_Arrays">ç®€å•æ•°ç»„</h3>
-<p>åˆ›å»ºæ•°ç»„:</p>
+<h3 id="Usage_Simple_Arrays">¼òµ¥Êý×é</h3>
+<p>´´½¨Êý×é:</p>
 <pre>Array := [Item1, Item2, ..., ItemN]
 Array := Array(Item1, Item2, ..., ItemN)</pre>
-<p>èŽ·å–é¡¹:</p>
+<p>»ñÈ¡Ïî:</p>
 <pre>Value := Array[Index]</pre>
-<p>å¯¹é¡¹è¿›è¡Œèµ‹å€¼:</p>
+<p>¶ÔÏî½øÐÐ¸³Öµ:</p>
 <pre>Array[Index] := Value</pre>
-<p>é™„åŠ é¡¹:</p>
+<p>¸½¼ÓÏî:</p>
 <pre>Array.<a href="objects/Object.htm#Insert">Insert</a>(Value)</pre>
-<p>åœ¨æŒ‡å®šçš„ç´¢å¼•æ’å…¥ä¸€é¡¹æˆ–å¤šé¡¹:</p>
+<p>ÔÚÖ¸¶¨µÄË÷Òý²åÈëÒ»Ïî»ò¶àÏî:</p>
 <pre>Array.<a href="objects/Object.htm#Insert">Insert</a>(Index, Value, Value2, ...)</pre>
-<p>ç§»é™¤é¡¹:</p>
+<p>ÒÆ³ýÏî:</p>
 <pre>RemovedValue := Array.<a href="objects/Object.htm#Remove">Remove</a>(Index)</pre>
-<p>å¦‚æžœæ•°ç»„ä¸æ˜¯ç©ºçš„, é‚£ä¹ˆ <a href="objects/Object.htm#MinMaxIndex">MinIndex</a> å’Œ <a href="objects/Object.htm#MinMaxIndex">MaxIndex</a> åˆ†åˆ«è¿”å›žæ•°ç»„ä¸­å½“å‰ä½¿ç”¨çš„æœ€å°å’Œæœ€å¤§çš„ç´¢å¼•. ç”±äºŽæœ€å°çš„ç´¢å¼•å‡ ä¹Žæ€»æ˜¯ 1, æ‰€ä»¥ MaxIndex ç»å¸¸è¿”å›žé¡¹ç›®æ•°. å¯¹æ•°ç»„å†…å®¹è¿›è¡Œä¾æ¬¡å¾ªçŽ¯å¯ä»¥é€šè¿‡ç´¢å¼•æˆ– For å¾ªçŽ¯å®žçŽ°. ä¾‹å¦‚ï¼š</p>
+<p>Èç¹ûÊý×é²»ÊÇ¿ÕµÄ, ÄÇÃ´ <a href="objects/Object.htm#MinMaxIndex">MinIndex</a> ºÍ <a href="objects/Object.htm#MinMaxIndex">MaxIndex</a> ·Ö±ð·µ»ØÊý×éÖÐµ±Ç°Ê¹ÓÃµÄ×îÐ¡ºÍ×î´óµÄË÷Òý. ÓÉÓÚ×îÐ¡µÄË÷Òý¼¸ºõ×ÜÊÇ 1, ËùÒÔ MaxIndex ¾­³£·µ»ØÏîÄ¿Êý. ¶ÔÊý×éÄÚÈÝ½øÐÐÒÀ´ÎÑ­»·¿ÉÒÔÍ¨¹ýË÷Òý»ò For Ñ­»·ÊµÏÖ. ÀýÈç£º</p>
 <pre>array := ["one", "two", "three"]
 
-<em>; ä»Ž 1 åˆ°é¡¹ç›®æ•°è¿›è¡Œé‡å¤:</em>
+<em>; ´Ó 1 µ½ÏîÄ¿Êý½øÐÐÖØ¸´:</em>
 <a href="commands/Loop.htm">Loop</a> % array.MaxIndex()
     MsgBox % array[A_Index]
 
-<em>; æžšä¸¾æ•°ç»„å†…å®¹:</em>
+<em>; Ã¶¾ÙÊý×éÄÚÈÝ:</em>
 <a href="commands/For.htm">For</a> index, value in array
     MsgBox % "Item " index " is '" value "'"
 </pre>
 
-<a name="Arrays"></a><h3 id="Usage_Associative_Arrays">å…³è”æ•°ç»„</h3>
-<p>å…³è”æ•°ç»„æ˜¯åŒ…å«å”¯ä¸€é”®é›†åˆå’Œå€¼é›†åˆçš„å¯¹è±¡, å…¶ä¸­æ¯ä¸ªé”®å’Œä¸€ä¸ªå€¼å…³è”. é”®å¯ä»¥ä¸ºå­—ç¬¦ä¸², æ•´æ•°æˆ–å¯¹è±¡, è€Œå€¼å¯ä»¥ä¸ºä»»ä½•ç±»åž‹. å…³è”æ•°ç»„å¯ä»¥ç”¨å¦‚ä¸‹æ–¹æ³•åˆ›å»º:</p>
+<a name="Arrays"></a><h3 id="Usage_Associative_Arrays">¹ØÁªÊý×é</h3>
+<p>¹ØÁªÊý×éÊÇ°üº¬Î¨Ò»¼ü¼¯ºÏºÍÖµ¼¯ºÏµÄ¶ÔÏó, ÆäÖÐÃ¿¸ö¼üºÍÒ»¸öÖµ¹ØÁª. ¼ü¿ÉÒÔÎª×Ö·û´®, ÕûÊý»ò¶ÔÏó, ¶øÖµ¿ÉÒÔÎªÈÎºÎÀàÐÍ. ¹ØÁªÊý×é¿ÉÒÔÓÃÈçÏÂ·½·¨´´½¨:</p>
 <pre>Array := {KeyA: ValueA, KeyB: ValueB, ..., KeyZ: ValueZ}
 Array := Object("KeyA", ValueA, "KeyB", ValueB, ..., "KeyZ", ValueZ)</pre>
-<p>ä½¿ç”¨ <code>{key:value}</code> è¡¨ç¤ºæ³•æ—¶, å¯¹äºŽä»…ç”±å•è¯å­—ç¬¦ç»„æˆçš„é”®, å…¶ä¸¤è¾¹çš„å¼•å·æ ‡è®°æ˜¯å¯é€‰çš„. å¯ä»¥ä½¿ç”¨ä»»ä½•è¡¨è¾¾å¼ä½œä¸ºé”®, ä½†ä½¿ç”¨å˜é‡ä½œä¸ºé”®æ—¶, å®ƒå¿…é¡»åŒ…å›´åœ¨å°æ‹¬å·ä¸­. ä¾‹å¦‚, <code>{(KeyVar): Value}</code> å’Œ <code>{GetKey(): Value}</code> éƒ½æ˜¯åˆæ³•çš„.</p>
-<p>èŽ·å–é¡¹:</p>
+<p>Ê¹ÓÃ <code>{key:value}</code> ±íÊ¾·¨Ê±, ¶ÔÓÚ½öÓÉµ¥´Ê×Ö·û×é³ÉµÄ¼ü, ÆäÁ½±ßµÄÒýºÅ±ê¼ÇÊÇ¿ÉÑ¡µÄ. ¿ÉÒÔÊ¹ÓÃÈÎºÎ±í´ïÊ½×÷Îª¼ü, µ«Ê¹ÓÃ±äÁ¿×÷Îª¼üÊ±, Ëü±ØÐë°üÎ§ÔÚÐ¡À¨ºÅÖÐ. ÀýÈç, <code>{(KeyVar): Value}</code> ºÍ <code>{GetKey(): Value}</code> ¶¼ÊÇºÏ·¨µÄ.</p>
+<p>»ñÈ¡Ïî:</p>
 <pre>Value := Array[Key]</pre>
-<p>å¯¹é¡¹è¿›è¡Œèµ‹å€¼:</p>
+<p>¶ÔÏî½øÐÐ¸³Öµ:</p>
 <pre>Array[Key] := Value</pre>
-<p>ç§»é™¤é¡¹:</p>
+<p>ÒÆ³ýÏî:</p>
 <pre>RemovedValue := Array.<a href="objects/Object.htm#Remove">Remove</a>(Key)</pre>
-<p>æžšä¸¾é¡¹:</p>
+<p>Ã¶¾ÙÏî:</p>
 <pre>array := {ten: 10, twenty: 20, thirty: 30}
 <a href="commands/For.htm">For</a> key, value in array
     MsgBox %key% = %value%</pre>
-<p>å…³è”æ•°ç»„å¯ä»¥æ˜¯ç¨€ç–åˆ†å¸ƒçš„ - å³ <code>{1:"a",1000:"b"}</code> ä»…åŒ…å«ä¸¤ä¸ªé”®å€¼å¯¹, è€Œä¸æ˜¯ 1000.</p>
-<p id="same_thing">åˆ°çŽ°åœ¨, æ‚¨ä¹Ÿè®¸å·²ç»æ³¨æ„åˆ°å…³è”æ•°ç»„ä½¿ç”¨ä¸Žç®€å•æ•°ç»„éžå¸¸ç›¸ä¼¼çš„è¯­æ³•. äº‹å®žä¸Š, åœ¨ v1.x ä¸­å®ƒä»¬æ˜¯ç›¸åŒçš„ä¸œè¥¿. ç„¶è€Œ, æŠŠ <code>[]</code> è§†ä¸ºç®€å•çº¿æ€§æ•°ç»„æœ‰åŠ©äºŽä¿æŒå…¶ä½œç”¨æ¸…æ™°, å¹¶ä¸”æ”¹å–„æ‚¨è„šæœ¬ä¸Ž AutoHotkey æœªæ¥ç‰ˆæœ¬çš„å…¼å®¹æ€§, æœªæ¥ç‰ˆæœ¬ä¸­å¯èƒ½æ”¹å˜å®žçŽ°æ–¹å¼.</p>
+<p>¹ØÁªÊý×é¿ÉÒÔÊÇÏ¡Êè·Ö²¼µÄ - ¼´ <code>{1:"a",1000:"b"}</code> ½ö°üº¬Á½¸ö¼üÖµ¶Ô, ¶ø²»ÊÇ 1000.</p>
+<p id="same_thing">µ½ÏÖÔÚ, ÄúÒ²ÐíÒÑ¾­×¢Òâµ½¹ØÁªÊý×éÊ¹ÓÃÓë¼òµ¥Êý×é·Ç³£ÏàËÆµÄÓï·¨. ÊÂÊµÉÏ, ÔÚ v1.x ÖÐËüÃÇÊÇÏàÍ¬µÄ¶«Î÷. È»¶ø, °Ñ <code>[]</code> ÊÓÎª¼òµ¥ÏßÐÔÊý×éÓÐÖúÓÚ±£³ÖÆä×÷ÓÃÇåÎú, ²¢ÇÒ¸ÄÉÆÄú½Å±¾Óë AutoHotkey Î´À´°æ±¾µÄ¼æÈÝÐÔ, Î´À´°æ±¾ÖÐ¿ÉÄÜ¸Ä±äÊµÏÖ·½Ê½.</p>
 
-<h3 id="Usage_Objects">å¯¹è±¡</h3>
-<p>èŽ·å–å±žæ€§:</p>
+<h3 id="Usage_Objects">¶ÔÏó</h3>
+<p>»ñÈ¡ÊôÐÔ:</p>
 <pre>Value := Object.Property</pre>
-<p>è®¾ç½®å±žæ€§:</p>
+<p>ÉèÖÃÊôÐÔ:</p>
 <pre>Object.Property := Value</pre>
-<p>è°ƒç”¨æ–¹æ³•:</p>
+<p>µ÷ÓÃ·½·¨:</p>
 <pre>ReturnValue := Object.Method(Parameters)</pre>
-<p>ä½¿ç”¨å¯æŽ¨ç®—çš„æ–¹æ³•åè°ƒç”¨æ–¹æ³•:</p>
+<p>Ê¹ÓÃ¿ÉÍÆËãµÄ·½·¨Ãûµ÷ÓÃ·½·¨:</p>
 <pre>ReturnValue := Object[MethodName](Parameters)</pre>
-<p>COM å¯¹è±¡å’Œç”¨æˆ·å®šä¹‰å¯¹è±¡çš„ä¸€äº›å±žæ€§å¯ä»¥æŽ¥å—å‚æ•°:</p>
+<p>COM ¶ÔÏóºÍÓÃ»§¶¨Òå¶ÔÏóµÄÒ»Ð©ÊôÐÔ¿ÉÒÔ½ÓÊÜ²ÎÊý:</p>
 <pre>Value := Object.Property[Parameters]
 Object.Property[Parameters] := Value</pre>
-<p><strong>ç›¸å…³:</strong> <a href="objects/Object.htm">å¯¹è±¡</a>, <a href="objects/File.htm">æ–‡ä»¶å¯¹è±¡</a>, <a href="objects/Func.htm">Func å¯¹è±¡</a>, <a href="commands/ComObjCreate.htm">COM å¯¹è±¡</a></p>
-<p><b>å·²çŸ¥é™åˆ¶:</b></p>
-<ul><li>å½“å‰ <code><span class="dull">x</span>.y[z]<span class="dull">()</span></code> ä¼šè¢«è§†ä¸º <code><span class="dull">x</span>["y", z]<span class="dull">()</span></code>, è¿™æ˜¯ä¸å—æ”¯æŒçš„. ä½œä¸ºä¸€ç§å˜é€šæ–¹æ³•, <code><span class="red">(</span><span class="dull">x.y</span><span class="red">)</span>[z]()</code> é¦–å…ˆè®¡ç®— <code>x.y</code>, ç„¶åŽæŠŠç»“æžœä½œä¸ºæ–¹æ³•è°ƒç”¨çš„ç›®æ ‡. è¯·æ³¨æ„ <code>x.y[z].()</code> æ²¡æœ‰è¿™ä¸ªé™åˆ¶, å› ä¸ºå¯¹å®ƒæ±‚å€¼çš„æ–¹å¼å’Œ <code>(x.y[z]).()</code> ä¸€æ ·.</li></ul>
+<p><strong>Ïà¹Ø:</strong> <a href="objects/Object.htm">¶ÔÏó</a>, <a href="objects/File.htm">ÎÄ¼þ¶ÔÏó</a>, <a href="objects/Func.htm">Func ¶ÔÏó</a>, <a href="commands/ComObjCreate.htm">COM ¶ÔÏó</a></p>
+<p><b>ÒÑÖªÏÞÖÆ:</b></p>
+<ul><li>µ±Ç° <code><span class="dull">x</span>.y[z]<span class="dull">()</span></code> »á±»ÊÓÎª <code><span class="dull">x</span>["y", z]<span class="dull">()</span></code>, ÕâÊÇ²»ÊÜÖ§³ÖµÄ. ×÷ÎªÒ»ÖÖ±äÍ¨·½·¨, <code><span class="red">(</span><span class="dull">x.y</span><span class="red">)</span>[z]()</code> Ê×ÏÈ¼ÆËã <code>x.y</code>, È»ºó°Ñ½á¹û×÷Îª·½·¨µ÷ÓÃµÄÄ¿±ê. Çë×¢Òâ <code>x.y[z].()</code> Ã»ÓÐÕâ¸öÏÞÖÆ, ÒòÎª¶ÔËüÇóÖµµÄ·½Ê½ºÍ <code>(x.y[z]).()</code> Ò»Ñù.</li></ul>
 
-<h3 id="Usage_Freeing_Objects">é‡Šæ”¾å¯¹è±¡</h3>
-<p>è„šæœ¬ä¸ä¼šæ˜¾å¼çš„é‡Šæ”¾å¯¹è±¡ã€‚å½“åˆ°å¯¹è±¡çš„æœ€åŽä¸€ä¸ªå¼•ç”¨è¢«é‡Šæ”¾æ—¶ï¼Œä¼šè‡ªåŠ¨é‡Šæ”¾è¿™ä¸ªå¯¹è±¡ã€‚å½“æŸä¸ªä¿å­˜å¼•ç”¨çš„å˜é‡è¢«èµ‹ä¸ºå…¶ä»–å€¼æ—¶ï¼Œä¼šè‡ªåŠ¨é‡Šæ”¾å®ƒåŽŸæ¥ä¿å­˜çš„å¼•ç”¨ã€‚ä¾‹å¦‚ï¼š</p>
-<pre>obj := {}  <em>; åˆ›å»ºå¯¹è±¡ã€‚</em>
-obj := ""  <em>; é‡Šæ”¾æœ€åŽä¸€ä¸ªå¼•ç”¨ï¼Œå› æ­¤é‡Šæ”¾å¯¹è±¡ã€‚</em></pre>
-<p>åŒæ ·åœ°ï¼Œå½“å¦ä¸€ä¸ªå¯¹è±¡çš„æŸä¸ªå­—æ®µè¢«èµ‹ä¸ºå…¶ä»–å€¼æˆ–ä»Žå¯¹è±¡ä¸­ç§»é™¤æ—¶ï¼Œä¿å­˜åœ¨è¿™ä¸ªå­—æ®µä¸­çš„å¼•ç”¨ä¼šè¢«é‡Šæ”¾ã€‚è¿™åŒæ ·é€‚ç”¨äºŽæ•°ç»„ï¼Œå› ä¸ºå®ƒæ˜¯çœŸæ­£çš„å¯¹è±¡ã€‚</p>
-<pre>arr := [{}]  <em>; åˆ›å»ºåŒ…å«å¯¹è±¡çš„æ•°ç»„ã€‚</em>
-arr[1] := {}  <em>; å†åˆ›å»ºä¸€ä¸ªå¯¹è±¡ï¼Œéšå¼é‡Šæ”¾ç¬¬ä¸€ä¸ªå¯¹è±¡ã€‚</em>
-arr.Remove(1)  <em>; ç§»é™¤å¹¶é‡Šæ”¾ç¬¬äºŒä¸ªå¯¹è±¡ã€‚</em></pre>
-<p id="Circular_References">ç”±äºŽåœ¨é‡Šæ”¾ä¸€ä¸ªå¯¹è±¡æ—¶ï¼Œåˆ°è¿™ä¸ªå¯¹è±¡çš„æ‰€æœ‰å¼•ç”¨éƒ½å¿…é¡»è¢«é‡Šæ”¾ï¼Œæ‰€ä»¥åŒ…å«å¾ªçŽ¯å¼•ç”¨çš„å¯¹è±¡æ— æ³•è¢«è‡ªåŠ¨é‡Šæ”¾ã€‚ä¾‹å¦‚ï¼Œå¦‚æžœ <code>x.child</code> å¼•ç”¨ <code>y</code> ä¸” <code>y.parent</code> å¼•ç”¨äº† <code>x</code>ï¼Œåˆ™æ¸…é™¤ <code>x</code> å’Œ <code>y</code> æ˜¯ä¸å¤Ÿçš„ï¼Œå› ä¸ºçˆ¶å¯¹è±¡ä»ç„¶åŒ…å«åˆ°è¿™ä¸ªå­å¯¹è±¡çš„å¼•ç”¨ï¼Œåä¹‹äº¦ç„¶ã€‚è¦é¿å…æ­¤é—®é¢˜ï¼Œè¯·é¦–å…ˆç§»é™¤å¾ªçŽ¯å¼•ç”¨ã€‚</p>
+<h3 id="Usage_Freeing_Objects">ÊÍ·Å¶ÔÏó</h3>
+<p>½Å±¾²»»áÏÔÊ½µÄÊÍ·Å¶ÔÏó¡£µ±µ½¶ÔÏóµÄ×îºóÒ»¸öÒýÓÃ±»ÊÍ·ÅÊ±£¬»á×Ô¶¯ÊÍ·ÅÕâ¸ö¶ÔÏó¡£µ±Ä³¸ö±£´æÒýÓÃµÄ±äÁ¿±»¸³ÎªÆäËûÖµÊ±£¬»á×Ô¶¯ÊÍ·ÅËüÔ­À´±£´æµÄÒýÓÃ¡£ÀýÈç£º</p>
+<pre>obj := {}  <em>; ´´½¨¶ÔÏó¡£</em>
+obj := ""  <em>; ÊÍ·Å×îºóÒ»¸öÒýÓÃ£¬Òò´ËÊÍ·Å¶ÔÏó¡£</em></pre>
+<p>Í¬ÑùµØ£¬µ±ÁíÒ»¸ö¶ÔÏóµÄÄ³¸ö×Ö¶Î±»¸³ÎªÆäËûÖµ»ò´Ó¶ÔÏóÖÐÒÆ³ýÊ±£¬±£´æÔÚÕâ¸ö×Ö¶ÎÖÐµÄÒýÓÃ»á±»ÊÍ·Å¡£ÕâÍ¬ÑùÊÊÓÃÓÚÊý×é£¬ÒòÎªËüÊÇÕæÕýµÄ¶ÔÏó¡£</p>
+<pre>arr := [{}]  <em>; ´´½¨°üº¬¶ÔÏóµÄÊý×é¡£</em>
+arr[1] := {}  <em>; ÔÙ´´½¨Ò»¸ö¶ÔÏó£¬ÒþÊ½ÊÍ·ÅµÚÒ»¸ö¶ÔÏó¡£</em>
+arr.Remove(1)  <em>; ÒÆ³ý²¢ÊÍ·ÅµÚ¶þ¸ö¶ÔÏó¡£</em></pre>
+<p id="Circular_References">ÓÉÓÚÔÚÊÍ·ÅÒ»¸ö¶ÔÏóÊ±£¬µ½Õâ¸ö¶ÔÏóµÄËùÓÐÒýÓÃ¶¼±ØÐë±»ÊÍ·Å£¬ËùÒÔ°üº¬Ñ­»·ÒýÓÃµÄ¶ÔÏóÎÞ·¨±»×Ô¶¯ÊÍ·Å¡£ÀýÈç£¬Èç¹û <code>x.child</code> ÒýÓÃ <code>y</code> ÇÒ <code>y.parent</code> ÒýÓÃÁË <code>x</code>£¬ÔòÇå³ý <code>x</code> ºÍ <code>y</code> ÊÇ²»¹»µÄ£¬ÒòÎª¸¸¶ÔÏóÈÔÈ»°üº¬µ½Õâ¸ö×Ó¶ÔÏóµÄÒýÓÃ£¬·´Ö®ÒàÈ»¡£Òª±ÜÃâ´ËÎÊÌâ£¬ÇëÊ×ÏÈÒÆ³ýÑ­»·ÒýÓÃ¡£</p>
 <pre>
-x := {}, y := {}             <em>; åˆ›å»ºä¸¤ä¸ªå¯¹è±¡ã€‚</em>
-x.child := y, y.parent := x  <em>; åˆ›å»ºå¾ªçŽ¯å¼•ç”¨ã€‚</em>
+x := {}, y := {}             <em>; ´´½¨Á½¸ö¶ÔÏó¡£</em>
+x.child := y, y.parent := x  <em>; ´´½¨Ñ­»·ÒýÓÃ¡£</em>
 
-y.parent := ""               <em>; åœ¨é‡Šæ”¾å¯¹è±¡å‰å¿…é¡»ç§»é™¤å¾ªçŽ¯å¼•ç”¨ã€‚</em>
-x := "", y := ""             <em>; å¦‚æžœæ²¡æœ‰ä¸Šä¸€è¡Œï¼Œåˆ™æ­¤è¡Œæ— æ³•é‡Šæ”¾å¯¹è±¡ã€‚</em>
+y.parent := ""               <em>; ÔÚÊÍ·Å¶ÔÏóÇ°±ØÐëÒÆ³ýÑ­»·ÒýÓÃ¡£</em>
+x := "", y := ""             <em>; Èç¹ûÃ»ÓÐÉÏÒ»ÐÐ£¬Ôò´ËÐÐÎÞ·¨ÊÍ·Å¶ÔÏó¡£</em>
 </pre>
-<p>æƒ³äº†è§£æ›´å¤šé«˜çº§ç”¨æ³•å’Œç»†èŠ‚ï¼Œè¯·å‚é˜…<a href="#Reference_Counting">å¼•ç”¨è®¡æ•°</a>ã€‚</p>
+<p>ÏëÁË½â¸ü¶à¸ß¼¶ÓÃ·¨ºÍÏ¸½Ú£¬Çë²ÎÔÄ<a href="#Reference_Counting">ÒýÓÃ¼ÆÊý</a>¡£</p>
 
-<h3 id="Usage_Remarks">å¤‡æ³¨</h3>
+<h3 id="Usage_Remarks">±¸×¢</h3>
 
-<h4>è¯­æ³•</h4>
-<p>å¯¹äºŽæ‰€æœ‰ç±»åž‹çš„å¯¹è±¡éƒ½æ”¯æŒæ•°ç»„è¯­æ³• (æ–¹æ‹¬å·) å’Œå¯¹è±¡è¯­æ³• (å¥ç‚¹).</p>
-<p>åŒæ—¶, å¯¹è±¡å¼•ç”¨è‡ªèº«ä¹Ÿå¯ä»¥ç”¨åœ¨è¡¨è¾¾å¼ä¸­:</p>
+<h4>Óï·¨</h4>
+<p>¶ÔÓÚËùÓÐÀàÐÍµÄ¶ÔÏó¶¼Ö§³ÖÊý×éÓï·¨ (·½À¨ºÅ) ºÍ¶ÔÏóÓï·¨ (¾äµã).</p>
+<p>Í¬Ê±, ¶ÔÏóÒýÓÃ×ÔÉíÒ²¿ÉÒÔÓÃÔÚ±í´ïÊ½ÖÐ:</p>
 <ul>
-  <li>å½“å¯¹è±¡å¼•ç”¨ä½¿ç”¨ <code>= == != &lt;&gt;</code> ä¸­çš„ä¸€ç§æ¯”è¾ƒè¿ç®—ç¬¦å’Œå…¶ä»–å€¼æ¯”è¾ƒæ—¶, ä»…åœ¨ä¸¤ä¸ªå€¼éƒ½ä¸ºæŒ‡å‘ç›¸åŒå¯¹è±¡çš„å¼•ç”¨æ—¶å®ƒä»¬æ‰è¢«è§†ä¸ºç›¸ç­‰çš„.</li>
-  <li>è¿›è¡Œé€»è¾‘è¿ç®—æ—¶å¯¹è±¡æ€»æ˜¯è¢«è§†ä¸º <i>true</i>, ä¾‹å¦‚åœ¨ <code>if obj</code>, <code>!obj</code> æˆ– <code>obj ? x : y</code> ä¸­.</li>
-  <li>ä½¿ç”¨ <code>&amp;</code> å–å€è¿ç®—ç¬¦å¯ä»¥èŽ·å–å¯¹è±¡çš„åœ°å€. å®ƒä»Žæ­¤å¯¹è±¡åˆ›å»ºæ—¶åˆ°æ­¤å¯¹è±¡çš„æœ€åŽä¸€ä¸ªå¼•ç”¨è¢« <a href="#Refs">é‡Šæ”¾</a> æœŸé—´å”¯ä¸€æ ‡è¯†æ­¤å¯¹è±¡.</li>
+  <li>µ±¶ÔÏóÒýÓÃÊ¹ÓÃ <code>= == != &lt;&gt;</code> ÖÐµÄÒ»ÖÖ±È½ÏÔËËã·ûºÍÆäËûÖµ±È½ÏÊ±, ½öÔÚÁ½¸öÖµ¶¼ÎªÖ¸ÏòÏàÍ¬¶ÔÏóµÄÒýÓÃÊ±ËüÃÇ²Å±»ÊÓÎªÏàµÈµÄ.</li>
+  <li>½øÐÐÂß¼­ÔËËãÊ±¶ÔÏó×ÜÊÇ±»ÊÓÎª <i>true</i>, ÀýÈçÔÚ <code>if obj</code>, <code>!obj</code> »ò <code>obj ? x : y</code> ÖÐ.</li>
+  <li>Ê¹ÓÃ <code>&amp;</code> È¡Ö·ÔËËã·û¿ÉÒÔ»ñÈ¡¶ÔÏóµÄµØÖ·. Ëü´Ó´Ë¶ÔÏó´´½¨Ê±µ½´Ë¶ÔÏóµÄ×îºóÒ»¸öÒýÓÃ±» <a href="#Refs">ÊÍ·Å</a> ÆÚ¼äÎ¨Ò»±êÊ¶´Ë¶ÔÏó.</li>
 </ul>
-<p>å¦‚æžœåœ¨ä¸æœŸæœ›å¯¹è±¡çš„åœ°æ–¹ä½¿ç”¨å¯¹è±¡, é‚£ä¹ˆå®ƒè¢«è§†ä¸ºç©ºå­—ç¬¦ä¸². ä¾‹å¦‚, <code>MsgBox %object%</code> æ˜¾ç¤ºç©ºçš„ MsgBox ä¸” <code>object + 1</code> äº§ç”Ÿç©ºå­—ç¬¦ä¸². ç”±äºŽè¿™ç§ç‰¹æ€§å¯èƒ½ä¼šå˜åŒ–, æ‰€ä»¥ä¸è¦ä¾èµ–å®ƒ.</p>
-<p>å½“æ–¹æ³•è°ƒç”¨ç´§æŽ¥ç€èµ‹å€¼è¿ç®—ç¬¦, é‚£ä¹ˆå®ƒç­‰åŒäºŽç”¨å‚æ•°æ¥è®¾ç½®å±žæ€§. ä¾‹å¦‚, ä¸‹é¢çš„æ–¹å¼æ˜¯ç­‰åŒçš„:</p>
+<p>Èç¹ûÔÚ²»ÆÚÍû¶ÔÏóµÄµØ·½Ê¹ÓÃ¶ÔÏó, ÄÇÃ´Ëü±»ÊÓÎª¿Õ×Ö·û´®. ÀýÈç, <code>MsgBox %object%</code> ÏÔÊ¾¿ÕµÄ MsgBox ÇÒ <code>object + 1</code> ²úÉú¿Õ×Ö·û´®. ÓÉÓÚÕâÖÖÌØÐÔ¿ÉÄÜ»á±ä»¯, ËùÒÔ²»ÒªÒÀÀµËü.</p>
+<p>µ±·½·¨µ÷ÓÃ½ô½Ó×Å¸³ÖµÔËËã·û, ÄÇÃ´ËüµÈÍ¬ÓÚÓÃ²ÎÊýÀ´ÉèÖÃÊôÐÔ. ÀýÈç, ÏÂÃæµÄ·½Ê½ÊÇµÈÍ¬µÄ:</p>
 <pre>obj.item(x) := y
 obj.item[x] := y</pre>
-<p id="cassign">è¿˜æ”¯æŒå¤åˆèµ‹å€¼ä¾‹å¦‚ <code>x.y += 1</code> å’Œ <code>--arr[1]</code>.</p>
+<p id="cassign">»¹Ö§³Ö¸´ºÏ¸³ÖµÀýÈç <code>x.y += 1</code> ºÍ <code>--arr[1]</code>.</p>
 
-<h4>é”®</h4>
-<p>å¯¹äºŽå“ªç§å€¼å¯ä»¥åœ¨é€šè¿‡ <code>[]</code>, <code>{}</code> æˆ– <code>new</code> è¿ç®—ç¬¦åˆ›å»ºçš„å¯¹è±¡ä¸­ä½œä¸ºé”®ä½¿ç”¨çš„ä¸€äº›é™åˆ¶:</p>
+<h4>¼ü</h4>
+<p>¶ÔÓÚÄÄÖÖÖµ¿ÉÒÔÔÚÍ¨¹ý <code>[]</code>, <code>{}</code> »ò <code>new</code> ÔËËã·û´´½¨µÄ¶ÔÏóÖÐ×÷Îª¼üÊ¹ÓÃµÄÒ»Ð©ÏÞÖÆ:</p>
 <ul>
-  <li>æ•´æ•°é”®ä½¿ç”¨æœ¬æœºæœ‰ç¬¦å·æ•´æ•°ç±»åž‹å­˜å‚¨. AutoHotkey 32 ä½æ”¯æŒä½¿ç”¨ä»Ž -2147483648 åˆ° 2147483647 èŒƒå›´å†…çš„æ•´æ•°ä½œä¸ºé”®. AutoHotkey æ”¯æŒ 64 ä½æ•´æ•°, ä½†ä»… AutoHotkey 64 ä½ç‰ˆæœ¬æ‰æ”¯æŒå®Œæ•´èŒƒå›´çš„æ•´æ•°åœ¨å¯¹è±¡ä¸­ä½œä¸ºé”®ä½¿ç”¨.</li>
-  <li>ç”±ä¸Šé¢è¿™ç‚¹å¯çŸ¥, æ•´æ•°å€¼çš„å­—ç¬¦ä¸²æ ¼å¼ä¸ä¼šè¢«ä¿ç•™. ä¾‹å¦‚, <code>x[0x10]</code>, <code>x[16]</code> å’Œ <code>x[00016]</code> éƒ½æ˜¯ç­‰åŒçš„. è¿™ç‚¹åŒæ ·é€‚ç”¨äºŽä¸å«å°æ•°ç‚¹çš„æ•°å€¼åž‹å­—ç¬¦ä¸².</li>
-  <li>ç”¨å¼•å·æ‹¬èµ·æ¥çš„åŽŸä¹‰å­—ç¬¦ä¸²åœ¨ v1.x ä¸­è¢«è§†ä¸ºçº¯éžæ•°å€¼åž‹, æ‰€ä»¥ <code>x[1]</code> å’Œ <code>x["1"]</code> æ˜¯ <i>ä¸</i> ç­‰åŒçš„. åŒæ—¶, å¦‚æžœåŽŸä¹‰å­—ç¬¦ä¸²å’Œå¦ä¸€ä¸ªå€¼ä¸²è”åœ¨ä¸€èµ· (å¦‚åŒåœ¨ <code>"0x" x</code>), ç»“æžœè¢«è§†ä¸ºçº¯éžæ•°å€¼åž‹. ä¸è¿‡, è¿™ä¸é€‚ç”¨äºŽå˜é‡, æ‰€ä»¥ <code>x[1]</code> å’Œ <code>x[y:="1"]</code> æ˜¯ç­‰åŒçš„. æ­¤é—®é¢˜å°†åœ¨ v2 ä¸­è§£å†³, æ‰€ä»¥è„šæœ¬åº”é¿å…ä½¿ç”¨ç”¨å¼•å·æ‹¬èµ·æ¥çš„åŽŸä¹‰å­—ç¬¦ä¸²ä½œä¸ºé”®.</li>
-  <li>ä¸æ”¯æŒä½¿ç”¨æµ®ç‚¹æ•°ä½œä¸ºé”® - è€Œæ˜¯æŠŠå®ƒä»¬è½¬æ¢æˆå­—ç¬¦ä¸². åœ¨ v1.x ä¸­, æµ®ç‚¹æ•°æ–‡å­—ä¿ç•™å®ƒä»¬åŽŸå§‹çš„æ ¼å¼, è€Œçº¯æµ®ç‚¹æ•° (ä¾‹å¦‚ <code>0+1.0</code> æˆ– <code>Sqrt(y)</code> çš„ç»“æžœ) è¢«å¼ºåˆ¶è½¬æ¢æˆå½“å‰çš„ <a href="commands/SetFormat.htm">æµ®ç‚¹æ ¼å¼</a>. è€ƒè™‘åˆ°ä¸€è‡´å’Œæ¸…æ™°, è„šæœ¬ä¸­åº”é¿å…ä½¿ç”¨æµ®ç‚¹æ–‡å­—ä½œä¸ºé”®.</li>
-  <li>å­—ç¬¦ä¸²é”® <a href="#Custom_Objects">"base"</a> æ²¡æœ‰å’Œ <a href="objects/Object.htm#Insert">Insert</a> ä¸€èµ·ä½¿ç”¨æ—¶å…·æœ‰ç‰¹æ®Šå«ä¹‰.</li>
+  <li>ÕûÊý¼üÊ¹ÓÃ±¾»úÓÐ·ûºÅÕûÊýÀàÐÍ´æ´¢. AutoHotkey 32 Î»Ö§³ÖÊ¹ÓÃ´Ó -2147483648 µ½ 2147483647 ·¶Î§ÄÚµÄÕûÊý×÷Îª¼ü. AutoHotkey Ö§³Ö 64 Î»ÕûÊý, µ«½ö AutoHotkey 64 Î»°æ±¾²ÅÖ§³ÖÍêÕû·¶Î§µÄÕûÊýÔÚ¶ÔÏóÖÐ×÷Îª¼üÊ¹ÓÃ.</li>
+  <li>ÓÉÉÏÃæÕâµã¿ÉÖª, ÕûÊýÖµµÄ×Ö·û´®¸ñÊ½²»»á±»±£Áô. ÀýÈç, <code>x[0x10]</code>, <code>x[16]</code> ºÍ <code>x[00016]</code> ¶¼ÊÇµÈÍ¬µÄ. ÕâµãÍ¬ÑùÊÊÓÃÓÚ²»º¬Ð¡ÊýµãµÄÊýÖµÐÍ×Ö·û´®.</li>
+  <li>ÓÃÒýºÅÀ¨ÆðÀ´µÄÔ­Òå×Ö·û´®ÔÚ v1.x ÖÐ±»ÊÓÎª´¿·ÇÊýÖµÐÍ, ËùÒÔ <code>x[1]</code> ºÍ <code>x["1"]</code> ÊÇ <i>²»</i> µÈÍ¬µÄ. Í¬Ê±, Èç¹ûÔ­Òå×Ö·û´®ºÍÁíÒ»¸öÖµ´®ÁªÔÚÒ»Æð (ÈçÍ¬ÔÚ <code>"0x" x</code>), ½á¹û±»ÊÓÎª´¿·ÇÊýÖµÐÍ. ²»¹ý, Õâ²»ÊÊÓÃÓÚ±äÁ¿, ËùÒÔ <code>x[1]</code> ºÍ <code>x[y:="1"]</code> ÊÇµÈÍ¬µÄ. ´ËÎÊÌâ½«ÔÚ v2 ÖÐ½â¾ö, ËùÒÔ½Å±¾Ó¦±ÜÃâÊ¹ÓÃÓÃÒýºÅÀ¨ÆðÀ´µÄÔ­Òå×Ö·û´®×÷Îª¼ü.</li>
+  <li>²»Ö§³ÖÊ¹ÓÃ¸¡µãÊý×÷Îª¼ü - ¶øÊÇ°ÑËüÃÇ×ª»»³É×Ö·û´®. ÔÚ v1.x ÖÐ, ¸¡µãÊýÎÄ×Ö±£ÁôËüÃÇÔ­Ê¼µÄ¸ñÊ½, ¶ø´¿¸¡µãÊý (ÀýÈç <code>0+1.0</code> »ò <code>Sqrt(y)</code> µÄ½á¹û) ±»Ç¿ÖÆ×ª»»³Éµ±Ç°µÄ <a href="commands/SetFormat.htm">¸¡µã¸ñÊ½</a>. ¿¼ÂÇµ½Ò»ÖÂºÍÇåÎú, ½Å±¾ÖÐÓ¦±ÜÃâÊ¹ÓÃ¸¡µãÎÄ×Ö×÷Îª¼ü.</li>
+  <li>×Ö·û´®¼ü <a href="#Custom_Objects">"base"</a> Ã»ÓÐºÍ <a href="objects/Object.htm#Insert">Insert</a> Ò»ÆðÊ¹ÓÃÊ±¾ßÓÐÌØÊâº¬Òå.</li>
 </ul>
 
-<h2 id="Extended_Usage">æ‰©å±•ç”¨æ³•</h2>
-<h3 id="Function_References">å‡½æ•°å¼•ç”¨ <span class="ver">[v1.1.00+]</span></h3>
-<p>å¦‚æžœå˜é‡ <i>func</i> åŒ…å«ä¸€ä¸ªå‡½æ•°å, æ­¤å‡½æ•°å¯ä»¥é€šè¿‡ä¸¤ç§æ–¹å¼è¿›è¡Œè°ƒç”¨: <code>%func%()</code> æˆ– <code>func.()</code>. ç„¶è€Œï¼Œç”±äºŽå‰è€…æ¯æ¬¡éƒ½éœ€è¦è§£æžå‡½æ•°åï¼Œæ‰€ä»¥å¤šæ¬¡è°ƒç”¨æ—¶æ•ˆçŽ‡ä½Žä¸‹ã€‚ä¸ºäº†æ”¹å–„æ€§èƒ½, è„šæœ¬å¯ä»¥èŽ·å–åˆ°å‡½æ•°çš„å¼•ç”¨å¹¶ä¿å­˜ä»¥ä¾›åŽé¢ä½¿ç”¨:</p>
+<h2 id="Extended_Usage">À©Õ¹ÓÃ·¨</h2>
+<h3 id="Function_References">º¯ÊýÒýÓÃ <span class="ver">[v1.1.00+]</span></h3>
+<p>Èç¹û±äÁ¿ <i>func</i> °üº¬Ò»¸öº¯ÊýÃû, ´Ëº¯Êý¿ÉÒÔÍ¨¹ýÁ½ÖÖ·½Ê½½øÐÐµ÷ÓÃ: <code>%func%()</code> »ò <code>func.()</code>. È»¶ø£¬ÓÉÓÚÇ°ÕßÃ¿´Î¶¼ÐèÒª½âÎöº¯ÊýÃû£¬ËùÒÔ¶à´Îµ÷ÓÃÊ±Ð§ÂÊµÍÏÂ¡£ÎªÁË¸ÄÉÆÐÔÄÜ, ½Å±¾¿ÉÒÔ»ñÈ¡µ½º¯ÊýµÄÒýÓÃ²¢±£´æÒÔ¹©ºóÃæÊ¹ÓÃ:</p>
 <pre>Func := Func("MyFunc")</pre>
-<p>é€šè¿‡å¼•ç”¨è°ƒç”¨å‡½æ•°æ—¶, å¿…é¡»ä½¿ç”¨ä¸‹é¢çš„è¯­æ³•:</p>
+<p>Í¨¹ýÒýÓÃµ÷ÓÃº¯ÊýÊ±, ±ØÐëÊ¹ÓÃÏÂÃæµÄÓï·¨:</p>
 <pre>RetVal := Func.(<i>Params</i>)</pre>
-<p>æœ‰å…³å‡½æ•°å¼•ç”¨çš„é™„åŠ å±žæ€§çš„è¯¦ç»†ä¿¡æ¯ï¼Œè¯·å‚é˜… <a href="objects/Func.htm">Func å¯¹è±¡</a>ã€‚</p>
-<p><a name="ExitLimitation"></a><b>å·²çŸ¥é™åˆ¶:</b></p>
-<ul><li>åœ¨ v1.1.07.00 å·²ä¿®å¤: å¦‚æžœå®ƒæ‰€è°ƒç”¨çš„å‡½æ•°æˆ–å­ç¨‹åºä¸­ä½¿ç”¨äº† <a href="commands/Exit.htm">Exit</a>, å®ƒè¡¨çŽ°çš„å¦‚åŒå‡½æ•°è°ƒç”¨åˆ›å»ºäº†æ–°çº¿ç¨‹. å³å®ƒç«‹å³è¿”å›žåˆ°å‡½æ•°çš„è°ƒç”¨è€…è€Œä¸ä¼šç»ˆæ­¢å½“å‰çº¿ç¨‹. ä½†æ˜¯, å¦‚æžœè„šæœ¬ä¸æ˜¯ <a href="commands/_Persistent.htm">æŒç»­è¿è¡Œçš„</a>, é‚£ä¹ˆå®ƒä»ä¼šä½¿è„šæœ¬ç»ˆæ­¢.</li></ul>
+<p>ÓÐ¹Øº¯ÊýÒýÓÃµÄ¸½¼ÓÊôÐÔµÄÏêÏ¸ÐÅÏ¢£¬Çë²ÎÔÄ <a href="objects/Func.htm">Func ¶ÔÏó</a>¡£</p>
+<p><a name="ExitLimitation"></a><b>ÒÑÖªÏÞÖÆ:</b></p>
+<ul><li>ÔÚ v1.1.07.00 ÒÑÐÞ¸´: Èç¹ûËüËùµ÷ÓÃµÄº¯Êý»ò×Ó³ÌÐòÖÐÊ¹ÓÃÁË <a href="commands/Exit.htm">Exit</a>, Ëü±íÏÖµÄÈçÍ¬º¯Êýµ÷ÓÃ´´½¨ÁËÐÂÏß³Ì. ¼´ËüÁ¢¼´·µ»Øµ½º¯ÊýµÄµ÷ÓÃÕß¶ø²»»áÖÕÖ¹µ±Ç°Ïß³Ì. µ«ÊÇ, Èç¹û½Å±¾²»ÊÇ <a href="commands/_Persistent.htm">³ÖÐøÔËÐÐµÄ</a>, ÄÇÃ´ËüÈÔ»áÊ¹½Å±¾ÖÕÖ¹.</li></ul>
 
-<h3 id="Usage_Arrays_of_Arrays"><a name="JaggedArrays"></a>æ•°ç»„åµŒå¥—</h3>
-<p>åœ¨ AutoHotkey ä¸­å¯ä»¥é€šè¿‡é€æ˜Žåœ°æŠŠæ•°ç»„å­˜å‚¨åˆ°å…¶ä»–æ•°ç»„ä¸­æ¥æ”¯æŒâ€œå¤šç»´â€æ•°ç»„ã€‚ä¾‹å¦‚, è¡¨æ ¼å¯ä»¥è¡¨ç¤ºä¸ºè¡Œæ•°ç»„, è¿™é‡Œæ¯ä¸ªè¡Œè‡ªèº«æ˜¯ä¸€ä¸ªåˆ—æ•°ç»„. æ­¤æ—¶,  <code>x</code> è¡Œ <code>y</code> åˆ—çš„å†…å®¹å¯ä»¥ç”¨ä»¥ä¸‹ä¸¤ç§æ–¹æ³•çš„å…¶ä¸­ä¸€ä¸ªè¿›è¡Œè®¾ç½®:</p>
+<h3 id="Usage_Arrays_of_Arrays"><a name="JaggedArrays"></a>Êý×éÇ¶Ì×</h3>
+<p>ÔÚ AutoHotkey ÖÐ¿ÉÒÔÍ¨¹ýÍ¸Ã÷µØ°ÑÊý×é´æ´¢µ½ÆäËûÊý×éÖÐÀ´Ö§³Ö¡°¶àÎ¬¡±Êý×é¡£ÀýÈç, ±í¸ñ¿ÉÒÔ±íÊ¾ÎªÐÐÊý×é, ÕâÀïÃ¿¸öÐÐ×ÔÉíÊÇÒ»¸öÁÐÊý×é. ´ËÊ±,  <code>x</code> ÐÐ <code>y</code> ÁÐµÄÄÚÈÝ¿ÉÒÔÓÃÒÔÏÂÁ½ÖÖ·½·¨µÄÆäÖÐÒ»¸ö½øÐÐÉèÖÃ:</p>
 <pre>table[x][y] := content  <em>; A</em>
 table[x, y] := content  <em>; B</em></pre>
-<p>å¦‚æžœ <code>table[x]</code> ä¸å­˜åœ¨, <span class="Code"><em>A</em></span> å’Œ <span class="Code"><em>B</em></span> åœ¨ä¸¤ä¸ªæ–¹é¢æœ‰åŒºåˆ«:</p>
+<p>Èç¹û <code>table[x]</code> ²»´æÔÚ, <span class="Code"><em>A</em></span> ºÍ <span class="Code"><em>B</em></span> ÔÚÁ½¸ö·½ÃæÓÐÇø±ð:</p>
 <ul>
-  <li><span class="Code"><em>A</em></span> å¤±è´¥è€Œ <span class="Code"><em>B</em></span> ä¼šè‡ªåŠ¨åˆ›å»ºä¸€ä¸ªå¯¹è±¡å¹¶æŠŠå®ƒå­˜å‚¨åˆ° <code>table[x]</code> ä¸­.</li>
-  <li>å¦‚æžœ <code>table</code> çš„ <a href="#Custom_Objects">base</a> å®šä¹‰äº† <a href="#Meta_Functions">å…ƒå‡½æ•°</a>, å¯ä»¥ç”¨å¦‚ä¸‹æ–¹å¼è°ƒç”¨å®ƒä»¬:
+  <li><span class="Code"><em>A</em></span> Ê§°Ü¶ø <span class="Code"><em>B</em></span> »á×Ô¶¯´´½¨Ò»¸ö¶ÔÏó²¢°ÑËü´æ´¢µ½ <code>table[x]</code> ÖÐ.</li>
+  <li>Èç¹û <code>table</code> µÄ <a href="#Custom_Objects">base</a> ¶¨ÒåÁË <a href="#Meta_Functions">Ôªº¯Êý</a>, ¿ÉÒÔÓÃÈçÏÂ·½Ê½µ÷ÓÃËüÃÇ:
   <pre>table.base.__Get(table, x)<span class="dull">[y] := content</span>   <em>; A</em>
 table.base.__Set(table, x, y, content)     <em>; B</em></pre>
-  å› æ­¤, <span class="Code"><em>B</em></span> å¯ä»¥è®©å¯¹è±¡ä¸ºå…¨é¢èµ‹å€¼å®šä¹‰å®šåˆ¶çš„è¡Œä¸º.</li>
+  Òò´Ë, <span class="Code"><em>B</em></span> ¿ÉÒÔÈÃ¶ÔÏóÎªÈ«Ãæ¸³Öµ¶¨Òå¶¨ÖÆµÄÐÐÎª.</li>
 </ul>
-<p>ç±»ä¼¼ <code>table[a, b, c, d] := value</code> è¿™æ ·çš„å¤šç»´èµ‹å€¼æŒ‰ä»¥ä¸‹æ–¹å¼å¤„ç†ï¼š</p>
+<p>ÀàËÆ <code>table[a, b, c, d] := value</code> ÕâÑùµÄ¶àÎ¬¸³Öµ°´ÒÔÏÂ·½Ê½´¦Àí£º</p>
 <ul>
-  <li>å¦‚æžœä»…å‰©ä¸€ä¸ªé”®ï¼Œåˆ™æ‰§è¡Œèµ‹å€¼æ“ä½œå¹¶è¿”å›žã€‚åœ¨å…¶ä»–æƒ…å†µæ—¶ï¼š</li>
-  <li>åœ¨å¯¹è±¡ä¸­æŸ¥æ‰¾åˆ—è¡¨ä¸­çš„é¦–ä¸ªé”®ã€‚</li>
-  <li>å¦‚æžœæ‰¾åˆ°éžå¯¹è±¡å€¼ï¼Œåˆ™å¤±è´¥ã€‚</li>
-  <li>å¦‚æžœæ²¡æœ‰æ‰¾åˆ°å¯¹è±¡ï¼Œåˆ™åˆ›å»ºä¸€ä¸ªå¹¶ä¿å­˜ã€‚</li>
-  <li>é‡å¤è°ƒç”¨å­å¯¹è±¡ï¼Œä»Žé¡¶éƒ¨å¼€å§‹æŠŠå‰©ä¸‹çš„é”®å’Œå€¼ä¼ é€’è¿‡åŽ»ã€‚</li>
+  <li>Èç¹û½öÊ£Ò»¸ö¼ü£¬ÔòÖ´ÐÐ¸³Öµ²Ù×÷²¢·µ»Ø¡£ÔÚÆäËûÇé¿öÊ±£º</li>
+  <li>ÔÚ¶ÔÏóÖÐ²éÕÒÁÐ±íÖÐµÄÊ×¸ö¼ü¡£</li>
+  <li>Èç¹ûÕÒµ½·Ç¶ÔÏóÖµ£¬ÔòÊ§°Ü¡£</li>
+  <li>Èç¹ûÃ»ÓÐÕÒµ½¶ÔÏó£¬Ôò´´½¨Ò»¸ö²¢±£´æ¡£</li>
+  <li>ÖØ¸´µ÷ÓÃ×Ó¶ÔÏó£¬´Ó¶¥²¿¿ªÊ¼°ÑÊ£ÏÂµÄ¼üºÍÖµ´«µÝ¹ýÈ¥¡£</li>
 </ul>
-<p>è¿™ç§è¡Œä¸ºä»…é€‚ç”¨äºŽç”±è„šæœ¬åˆ›å»ºçš„å¯¹è±¡, è€Œä¸é€‚åˆç‰¹æ®Šçš„å¯¹è±¡ç±»åž‹ä¾‹å¦‚ COM å¯¹è±¡æˆ– COM æ•°ç»„.</p>
+<p>ÕâÖÖÐÐÎª½öÊÊÓÃÓÚÓÉ½Å±¾´´½¨µÄ¶ÔÏó, ¶ø²»ÊÊºÏÌØÊâµÄ¶ÔÏóÀàÐÍÀýÈç COM ¶ÔÏó»ò COM Êý×é.</p>
 
-<h3 id="Usage_Arrays_of_Functions"><a name="FuncArrays"></a>å‡½æ•°æ•°ç»„</h3>
-<p>å‡½æ•°æ•°ç»„æ˜¯åŒ…å«å‡½æ•°åæˆ–å¼•ç”¨çš„ç®€å•æ•°ç»„. ä¾‹å¦‚ï¼š</p>
+<h3 id="Usage_Arrays_of_Functions"><a name="FuncArrays"></a>º¯ÊýÊý×é</h3>
+<p>º¯ÊýÊý×éÊÇ°üº¬º¯ÊýÃû»òÒýÓÃµÄ¼òµ¥Êý×é. ÀýÈç£º</p>
 <pre>array := [Func("FirstFunc"), Func("SecondFunc")]
 
-<em>; è°ƒç”¨æ¯ä¸ªå‡½æ•°, ä¼ é€’ "foo" å‚æ•°:</em>
+<em>; µ÷ÓÃÃ¿¸öº¯Êý, ´«µÝ "foo" ²ÎÊý:</em>
 Loop 2
     array[A_Index].("foo")
 
-<em>; è°ƒç”¨æ¯ä¸ªå‡½æ•°, éšå¼åœ°æŠŠæ•°ç»„è‡ªå·±ä½œä¸ºå‚æ•°ä¼ é€’:</em>
+<em>; µ÷ÓÃÃ¿¸öº¯Êý, ÒþÊ½µØ°ÑÊý×é×Ô¼º×÷Îª²ÎÊý´«µÝ:</em>
 Loop 2
     array[A_Index]()
 
@@ -198,41 +202,47 @@ FirstFunc(param) {
 SecondFunc(param) {
     MsgBox % A_ThisFunc ": " (IsObject(param) ? "object" : param)
 }</pre>
-<p>ä¸ºäº†å‘åŽå…¼å®¹ï¼Œå¦‚æžœ<code>array[A_Index]</code>å«æœ‰å‡½æ•°åè€Œéžå‡½æ•°å¼•ç”¨æ—¶ï¼Œåœ¨ç¬¬äºŒç§å½¢å¼ä¸­<i>array</i>å°†ä¸ä¼šä½œä¸ºå‚æ•°è¢«ä¼ é€’ã€‚ä½†æ˜¯, å¦‚æžœ <code>array[A_Index]</code> <a href="#Custom_Objects">ç»§æ‰¿</a> è‡ª <code>array.base[A_Index]</code>, é‚£ä¹ˆ <i>array</i> å°†ä½œä¸ºå‚æ•°è¢«ä¼ é€’.</p>
+<p>ÎªÁËÏòºó¼æÈÝ£¬Èç¹û<code>array[A_Index]</code>º¬ÓÐº¯ÊýÃû¶ø·Çº¯ÊýÒýÓÃÊ±£¬ÔÚµÚ¶þÖÖÐÎÊ½ÖÐ<i>array</i>½«²»»á×÷Îª²ÎÊý±»´«µÝ¡£µ«ÊÇ, Èç¹û <code>array[A_Index]</code> <a href="#Custom_Objects">¼Ì³Ð</a> ×Ô <code>array.base[A_Index]</code>, ÄÇÃ´ <i>array</i> ½«×÷Îª²ÎÊý±»´«µÝ.</p>
 
-<h2 id="Custom_Objects">è‡ªå®šä¹‰å¯¹è±¡</h2>
-<p>AutoHotkey ä¸­çš„å¯¹è±¡æ˜¯åŸºäºŽåŽŸåž‹è€Œä¸æ˜¯åŸºäºŽç±». å³å¯¹è±¡å¯ä»¥ä»Žå…¶åŽŸåž‹æˆ– <code>base</code> å¯¹è±¡ä¸­ç»§æ‰¿å±žæ€§å’Œæ–¹æ³•, ä½†ä¸éœ€è¦æœ‰é¢„å®šä¹‰ç»“æž„. åœ¨ä»»ä½•æ—¶å€™, å±žæ€§å’Œæ–¹æ³•è¿˜å¯ä»¥æ·»åŠ åˆ° (æˆ–ä»Žä¸­ç§»é™¤) ä¸€ä¸ªå¯¹è±¡æˆ–å®ƒæ‰€æ´¾ç”Ÿè‡ªçš„ä»»ä½•å¯¹è±¡. ä¸è¿‡, AutoHotkey é€šè¿‡æŠŠ <a href="#Custom_Classes">ç±»å®šä¹‰</a> è½¬åŒ–ä¸ºæ™®é€šå¯¹è±¡æ¥æ¨¡ä»¿ç±». æœ‰å…³æ›´å¤šå¤æ‚æˆ–ç‰¹æ®Šè§£å†³æ–¹æ³•, é€šè¿‡å®šä¹‰ <a href="#Meta_Functions"><i>å…ƒå‡½æ•°</i></a> åŸºå¯¹è±¡å¯ä»¥è¦†ç›–æ ‡å‡†è¡Œä¸º.</p>
-<p>è¦ä»Žå…¶ä»–å¯¹è±¡ç»§æ‰¿åˆ›å»ºå¯¹è±¡, è„šæœ¬å¯ä»¥èµ‹å€¼ <code>base</code> æˆ–ä½¿ç”¨ <code>new</code> å…³é”®å­—:</p>
-<pre>baseObject := {foo: "bar"}
-obj1 := Object(), obj1.base := baseObject
+<h2 id="Custom_Objects">×Ô¶¨Òå¶ÔÏó</h2>
+<p>ÓÉ½Å±¾´´½¨µÄ¶ÔÏó¿ÉÒÔ²»°üº¬Ô¤¶¨Òå½á¹¹¡£ÏàÓ¦µÄÃ¿¸ö¶ÔÏó¿ÉÒÔ´ÓÆä<code>»ù</code>¶ÔÏóÖÐ¼Ì³ÐÊôÐÔºÍ·½·¨£¨ÔÚÆäËûµØ·½±»³ÆÎª¡°Ô­ÐÍ¡±»ò¡°Àà¡±£©¡£»¹¿ÉÒÔËæÊ±Ìí¼Ó»òÒÆ³ý¶ÔÏóÖÐµÄÊôÐÔºÍ·½·¨£¬ÕâÐ©¸Ä±ä»áÓ°ÏìËüµÄËùÓÐÅÉÉú¶ÔÏó¡£¸ü¶à¸´ÔÓ»ò×¨ÓÃ·½°¸£¬¿ÉÍ¨¹ý¶¨Òå<a href="#Meta_Functions"><i>Ôªº¯Êý</i></a>À´¸²¸ÇËüËùÅÉÉú¶ÔÏóµÄ±ê×¼ÐÐÎª¡£</p>
+<p><em>»ù</em>¶ÔÏóÖ»ÊÇÆÕÍ¨¶ÔÏó£¬Í¨³£ÓÐÁ½ÖÖ´´½¨·½·¨£º</p>
+<pre>class baseObject {
+    static foo := "bar"
+}
+<em>; »ò</em>
+baseObject := {foo: "bar"}</pre>
+<p>Òª¼Ì³ÐÆäËû¶ÔÏóÀ´´´½¨ÐÂ¶ÔÏó£¬½Å±¾¿ÉÒÔ¸³ÖµÎª <code>base</code> ÊôÐÔ»òÊ¹ÓÃ <a href="#Custom_NewDelete"><code>new</code> ¹Ø¼ü×Ö</a>£º</p>
+<pre>obj1 := Object(), obj1.base := baseObject
 obj2 := {base: baseObject}
 obj3 := new baseObject
 MsgBox % obj1.foo " " obj2.foo " " obj3.foo</pre>
+<p>¿ÉËæÊ±ÖØÐÂ¸³Öµ¶ÔÏóµÄ <code>base</code>£¬ÕâÑùÄÜÓÐÐ§¸²¸Ç¸Ã¶ÔÏó¼Ì³ÐµÄËùÓÐÊôÐÔºÍ·½·¨¡£</p>
 
-<h3 id="Custom_Prototypes">åŽŸåž‹</h3>
-<p>åŽŸåž‹æˆ– <code>base</code> å¯¹è±¡å’Œå…¶ä»–ä»»ä½•å¯¹è±¡ä¸€æ ·åˆ›å»ºå’Œæ“ä½œ. ä¾‹å¦‚, å¸¦æœ‰å•å±žæ€§å’Œå•æ–¹æ³•çš„æ™®é€šå¯¹è±¡å¯ä»¥è¿™æ ·åˆ›å»º:</p>
-<pre><em>; åˆ›å»ºå¯¹è±¡.</em>
+<h3 id="Custom_Prototypes">Ô­ÐÍ</h3>
+<p>Ô­ÐÍ»ò <code>base</code> ¶ÔÏóºÍÆäËûÈÎºÎ¶ÔÏóÒ»Ñù´´½¨ºÍ²Ù×÷. ÀýÈç, ´øÓÐµ¥ÊôÐÔºÍµ¥·½·¨µÄÆÕÍ¨¶ÔÏó¿ÉÒÔÕâÑù´´½¨:</p>
+<pre><em>; ´´½¨¶ÔÏó.</em>
 thing := {}
-<em>; å­˜å‚¨å€¼.</em>
+<em>; ´æ´¢Öµ.</em>
 thing.foo := "bar"
-<em>; é€šè¿‡å­˜å‚¨å‡½æ•°å¼•ç”¨åˆ›å»ºæ–¹æ³•.</em>
+<em>; Í¨¹ý´æ´¢º¯ÊýÒýÓÃ´´½¨·½·¨.</em>
 thing.test := Func("thing_test")
-<em>; è°ƒç”¨æ–¹æ³•.</em>
+<em>; µ÷ÓÃ·½·¨.</em>
 thing.test()
 
 thing_test(this) {
    MsgBox % this.foo
 }</pre>
-<p>è°ƒç”¨ <code>thing.test()</code> æ—¶, <i>thing</i> ä¼šè‡ªåŠ¨è¢«æ’å…¥åˆ°å‚æ•°åˆ—è¡¨çš„å¼€å§‹å¤„. ç„¶è€Œ, ä¸ºäº†èƒ½å¤Ÿå‘åŽå…¼å®¹, é€šè¿‡åç§° (è€Œä¸æ˜¯é€šè¿‡å¼•ç”¨) æŠŠå‡½æ•°ç›´æŽ¥ä¿å­˜åˆ°å¯¹è±¡ä¸­ (è€Œä¸æ˜¯ç»§æ‰¿è‡ªåŸºå¯¹è±¡) æ—¶è¿™ç§æƒ…å†µä¸ä¼šå‘ç”Ÿ. æŒ‰ç…§çº¦å®š, é€šè¿‡ç»“åˆå¯¹è±¡ "ç±»åž‹" å’Œæ–¹æ³•åæ¥å‘½åå‡½æ•°.</p>
-<p>å¦‚æžœå¦ä¸€ä¸ªå¯¹è±¡ç»§æ‰¿è‡ªæŸä¸ªå¯¹è±¡ï¼Œé‚£ä¹ˆè¿™ä¸ªå¯¹è±¡è¢«ç§°ä¸º<i>åŽŸåž‹</i>æˆ–<i>åŸº</i>ï¼š</p>
+<p>µ÷ÓÃ <code>thing.test()</code> Ê±, <i>thing</i> »á×Ô¶¯±»²åÈëµ½²ÎÊýÁÐ±íµÄ¿ªÊ¼´¦. È»¶ø, ÎªÁËÄÜ¹»Ïòºó¼æÈÝ, Í¨¹ýÃû³Æ (¶ø²»ÊÇÍ¨¹ýÒýÓÃ) °Ñº¯ÊýÖ±½Ó±£´æµ½¶ÔÏóÖÐ (¶ø²»ÊÇ¼Ì³Ð×Ô»ù¶ÔÏó) Ê±ÕâÖÖÇé¿ö²»»á·¢Éú. °´ÕÕÔ¼¶¨, Í¨¹ý½áºÏ¶ÔÏó "ÀàÐÍ" ºÍ·½·¨ÃûÀ´ÃüÃûº¯Êý.</p>
+<p>Èç¹ûÁíÒ»¸ö¶ÔÏó¼Ì³Ð×ÔÄ³¸ö¶ÔÏó£¬ÄÇÃ´Õâ¸ö¶ÔÏó±»³ÆÎª<i>Ô­ÐÍ</i>»ò<i>»ù</i>£º</p>
 <pre>other := {}
 other.base := thing
 other.test()</pre>
-<p>æ­¤æ—¶, <i>other</i> ä»Ž <i>thing</i> ç»§æ‰¿äº† <i>foo</i> å’Œ <i>test</i>. è¿™ç§ç»§æ‰¿æ˜¯åŠ¨æ€çš„, æ‰€ä»¥å¦‚æžœ <code>thing.foo</code> è¢«æ”¹å˜äº†, è¿™æ”¹å˜ä¹Ÿä¼šç”± <code>other.foo</code> è¡¨çŽ°å‡ºæ¥. å¦‚æžœè„šæœ¬èµ‹å€¼ç»™ <code>other.foo</code>, å€¼å­˜å‚¨åˆ° <i>other</i> ä¸­å¹¶ä¸”ä¹‹åŽå¯¹ <code>thing.foo</code> ä»»ä½•æ”¹å˜éƒ½ä¸ä¼šå½±å“ <code>other.foo</code>. è°ƒç”¨ <code>other.test()</code> æ—¶, å®ƒ <i>è¿™é‡Œçš„</i> å‚æ•°åŒ…å«åˆ° <i>other</i> è€Œä¸æ˜¯ <i>thing</i> çš„å¼•ç”¨.
+<p>´ËÊ±, <i>other</i> ´Ó <i>thing</i> ¼Ì³ÐÁË <i>foo</i> ºÍ <i>test</i>. ÕâÖÖ¼Ì³ÐÊÇ¶¯Ì¬µÄ, ËùÒÔÈç¹û <code>thing.foo</code> ±»¸Ä±äÁË, Õâ¸Ä±äÒ²»áÓÉ <code>other.foo</code> ±íÏÖ³öÀ´. Èç¹û½Å±¾¸³Öµ¸ø <code>other.foo</code>, Öµ´æ´¢µ½ <i>other</i> ÖÐ²¢ÇÒÖ®ºó¶Ô <code>thing.foo</code> ÈÎºÎ¸Ä±ä¶¼²»»áÓ°Ïì <code>other.foo</code>. µ÷ÓÃ <code>other.test()</code> Ê±, Ëü <i>ÕâÀïµÄ</i> ²ÎÊý°üº¬µ½ <i>other</i> ¶ø²»ÊÇ <i>thing</i> µÄÒýÓÃ.
 </p>
 
-<h3 id="Custom_Classes">ç±» <span class="ver">[v1.1.00+]</span></h3>
-<p>ä¸ºäº†ç®€ä¾¿ï¼Œå¯ä»¥ä½¿ç”¨â€œclassâ€å…³é”®å­—åˆ›å»ºåŸºå¯¹è±¡ã€‚åŸºç±»å®šä¹‰çœ‹èµ·æ¥ç±»ä¼¼è¿™æ ·ï¼š</p>
+<h3 id="Custom_Classes">Àà <span class="ver">[v1.1.00+]</span></h3>
+<p>ÎªÁË¼ò±ã£¬¿ÉÒÔÊ¹ÓÃ¡°class¡±¹Ø¼ü×Ö´´½¨»ù¶ÔÏó¡£»ùÀà¶¨Òå¿´ÆðÀ´ÀàËÆÕâÑù£º</p>
 <pre>class ClassName extends BaseClassName
 {
     InstanceVar := Expression
@@ -249,39 +259,39 @@ other.test()</pre>
     }
 }
 </pre>
-<p>åœ¨åŠ è½½è„šæœ¬æ—¶, è¿™é‡Œä¼šåˆ›å»ºå¯¹è±¡å¹¶å°†å…¶å­˜å‚¨åˆ°å…¨å±€ (è€Œåœ¨ v1.1.05+, <a href="Functions.htm#SuperGlobal">è¶…çº§å…¨å±€</a>) å˜é‡ <i>ClassName</i>. åœ¨ v1.1.05 ä¹‹å‰, è¦åœ¨å‡½æ•°ä¸­å¼•ç”¨è¿™ä¸ªç±», å¦‚æžœå‡½æ•°ä¸å¤„äºŽ <a href="Functions.htm#AssumeGlobal">å‡è®¾å…¨å±€æ¨¡å¼</a>, é‚£ä¹ˆéœ€è¦è¿›è¡Œå£°æ˜Ž, ä¾‹å¦‚ <code>global ClassName</code>. å¦‚æžœå­˜åœ¨ <code>extends BaseClassName</code>ï¼Œé‚£ä¹ˆ <i>BaseClassName</i> å¿…é¡»ä¸ºå¦ä¸€ä¸ªç±»çš„å®Œæ•´åç§°ï¼ˆä»Ž v1.1.11 å¼€å§‹ï¼Œå¯¹äºŽæ—©æœŸçš„ç‰ˆæœ¬å®ƒä»¬æ‰€å®šä¹‰çš„æ— å…³ç´§è¦ï¼‰ã€‚æ¯ä¸ªç±»çš„å®Œæ•´åç§°å­˜å‚¨åœ¨ <code><i>object</i>.__Class</code>.</p>
-<p>ç±»å®šä¹‰å¯ä»¥åŒ…å«å˜é‡å£°æ˜Ž, æ–¹æ³•å®šä¹‰å’Œå†…åµŒçš„ç±»å®šä¹‰.</p>
+<p>ÔÚ¼ÓÔØ½Å±¾Ê±, ÕâÀï»á´´½¨¶ÔÏó²¢½«Æä´æ´¢µ½È«¾Ö (¶øÔÚ v1.1.05+, <a href="Functions.htm#SuperGlobal">³¬¼¶È«¾Ö</a>) ±äÁ¿ <i>ClassName</i>. ÔÚ v1.1.05 Ö®Ç°, ÒªÔÚº¯ÊýÖÐÒýÓÃÕâ¸öÀà, Èç¹ûº¯Êý²»´¦ÓÚ <a href="Functions.htm#AssumeGlobal">¼ÙÉèÈ«¾ÖÄ£Ê½</a>, ÄÇÃ´ÐèÒª½øÐÐÉùÃ÷, ÀýÈç <code>global ClassName</code>. Èç¹û´æÔÚ <code>extends BaseClassName</code>£¬ÄÇÃ´ <i>BaseClassName</i> ±ØÐëÎªÁíÒ»¸öÀàµÄÍêÕûÃû³Æ£¨´Ó v1.1.11 ¿ªÊ¼£¬¶ÔÓÚÔçÆÚµÄ°æ±¾ËüÃÇËù¶¨ÒåµÄÎÞ¹Ø½ôÒª£©¡£Ã¿¸öÀàµÄÍêÕûÃû³Æ´æ´¢ÔÚ <code><i>object</i>.__Class</code>.</p>
+<p>Àà¶¨Òå¿ÉÒÔ°üº¬±äÁ¿ÉùÃ÷, ·½·¨¶¨ÒåºÍÄÚÇ¶µÄÀà¶¨Òå.</p>
 <pre id="Custom_Classes_var">
     InstanceVar := Expression
 </pre>
-<p><b>å®žä¾‹å˜é‡</b> å£°æ˜Ž <span class="ver">[v1.1.01+]</span> åœ¨æ¯æ¬¡ä½¿ç”¨ <a href="#Custom_NewDelete">new</a> å…³é”®å­—åˆ›å»ºç±»çš„æ–°å®žä¾‹æ—¶éƒ½è¿›è¡Œæ±‚å€¼. åœ¨è°ƒç”¨ <a href="#Custom_NewDelete">__New()</a> æ–¹æ³•ä¹‹å‰å¯¹æ‰€æœ‰è¿™æ ·çš„å£°æ˜Žè¿›è¡Œæ±‚å€¼ï¼ŒåŒ…æ‹¬åœ¨åŸºç±»ä¸­å®šä¹‰çš„é‚£äº›ã€‚<i>è¡¨è¾¾å¼</i> å¯ä»¥é€šè¿‡ <code>this</code> è®¿é—®å…¶ä»–å®žä¾‹å˜é‡å’Œæ–¹æ³•, ä½†å…¶ä»–æ‰€æœ‰çš„å˜é‡å¼•ç”¨éƒ½å‡å®šä¸ºå…¨å±€çš„. è¦è®¿é—®å®žä¾‹å˜é‡, æ€»æ˜¯è¦æŒ‡å®šç›®æ ‡å¯¹è±¡; ä¾‹å¦‚, <code><b>this</b>.InstanceVar</code>.</p>
+<p><b>ÊµÀý±äÁ¿</b> ÉùÃ÷ <span class="ver">[v1.1.01+]</span> ÔÚÃ¿´ÎÊ¹ÓÃ <a href="#Custom_NewDelete">new</a> ¹Ø¼ü×Ö´´½¨ÀàµÄÐÂÊµÀýÊ±¶¼½øÐÐÇóÖµ. ÔÚµ÷ÓÃ <a href="#Custom_NewDelete">__New()</a> ·½·¨Ö®Ç°¶ÔËùÓÐÕâÑùµÄÉùÃ÷½øÐÐÇóÖµ£¬°üÀ¨ÔÚ»ùÀàÖÐ¶¨ÒåµÄÄÇÐ©¡£<i>±í´ïÊ½</i> ¿ÉÒÔÍ¨¹ý <code>this</code> ·ÃÎÊÆäËûÊµÀý±äÁ¿ºÍ·½·¨, µ«ÆäËûËùÓÐµÄ±äÁ¿ÒýÓÃ¶¼¼Ù¶¨ÎªÈ«¾ÖµÄ. Òª·ÃÎÊÊµÀý±äÁ¿, ×ÜÊÇÒªÖ¸¶¨Ä¿±ê¶ÔÏó; ÀýÈç, <code><b>this</b>.InstanceVar</code>.</p>
 <pre id="Custom_Classes_staticvar">
     static ClassVar := Expression
 </pre>
-<p><b>ç±»å˜é‡</b> å£°æ˜Ž <span class="ver">[v1.1.00.01+]</span> ä»…åœ¨ <a href="Scripts.htm#auto">è‡ªåŠ¨æ‰§è¡Œæ®µ</a> ä¹‹å‰æ ¹æ®å®ƒä»¬åœ¨è„šæœ¬ä¸­å‡ºçŽ°çš„é¡ºåºè¢«æ±‚å€¼ä¸€æ¬¡. æ¯ä¸ªå£°æ˜Žä¿å­˜å€¼åˆ°ç±»å¯¹è±¡ä¸­. å¦‚åŒç±»å¯¹è±¡åŒ…å«çš„ä»»ä½•å€¼æˆ–æ–¹æ³•, è¿™ä¸ªå€¼å¯ä»¥è¢«æ´¾ç”Ÿå¯¹è±¡ç»§æ‰¿. <i>è¡¨è¾¾å¼</i> ä¸­çš„ä»»ä½•å˜é‡å¼•ç”¨éƒ½å‡å®šä¸ºå…¨å±€çš„. è¦è®¿é—®ç±»å˜é‡, æ€»æ˜¯è¦æŒ‡å®šç±»æˆ–æˆ–æ´¾ç”Ÿå¯¹è±¡; ä¾‹å¦‚, <code><b>ClassName</b>.ClassVar</code>.</p>
+<p><b>Àà±äÁ¿</b> ÉùÃ÷ <span class="ver">[v1.1.00.01+]</span> ½öÔÚ <a href="Scripts.htm#auto">×Ô¶¯Ö´ÐÐ¶Î</a> Ö®Ç°¸ù¾ÝËüÃÇÔÚ½Å±¾ÖÐ³öÏÖµÄË³Ðò±»ÇóÖµÒ»´Î. Ã¿¸öÉùÃ÷±£´æÖµµ½Àà¶ÔÏóÖÐ. ÈçÍ¬Àà¶ÔÏó°üº¬µÄÈÎºÎÖµ»ò·½·¨, Õâ¸öÖµ¿ÉÒÔ±»ÅÉÉú¶ÔÏó¼Ì³Ð. <i>±í´ïÊ½</i> ÖÐµÄÈÎºÎ±äÁ¿ÒýÓÃ¶¼¼Ù¶¨ÎªÈ«¾ÖµÄ. Òª·ÃÎÊÀà±äÁ¿, ×ÜÊÇÒªÖ¸¶¨Àà»ò»òÅÉÉú¶ÔÏó; ÀýÈç, <code><b>ClassName</b>.ClassVar</code>.</p>
 <pre id="Custom_Classes_class">
     class NestedClass
     {
         ...
     }
 </pre>
-<p><b>åµŒå¥—ç±»</b> å®šä¹‰å…è®¸ç±»å¯¹è±¡å­˜å‚¨åˆ°å¦ä¸€ä¸ªç±»å¯¹è±¡ä¸­è€Œä¸ä½œä¸ºå•ç‹¬çš„å…¨å±€å˜é‡. åœ¨ä¸Šé¢çš„ä¾‹å­ä¸­, <code>class NestedClass</code> åˆ›å»ºäº†ä¸€ä¸ªå¯¹è±¡å¹¶æŠŠå®ƒä¿å­˜åˆ° <code>ClassName.NestedClass</code>. å› æ­¤, <i>NestedClass</i> å¯ä»¥è¢«æ´¾ç”Ÿè‡ª <i>ClassName</i> çš„ä»»ä½•ç±»æˆ–å¯¹è±¡ç»§æ‰¿.</p>
+<p><b>Ç¶Ì×Àà</b> ¶¨ÒåÔÊÐíÀà¶ÔÏó´æ´¢µ½ÁíÒ»¸öÀà¶ÔÏóÖÐ¶ø²»×÷Îªµ¥¶ÀµÄÈ«¾Ö±äÁ¿. ÔÚÉÏÃæµÄÀý×ÓÖÐ, <code>class NestedClass</code> ´´½¨ÁËÒ»¸ö¶ÔÏó²¢°ÑËü±£´æµ½ <code>ClassName.NestedClass</code>. Òò´Ë, <i>NestedClass</i> ¿ÉÒÔ±»ÅÉÉú×Ô <i>ClassName</i> µÄÈÎºÎÀà»ò¶ÔÏó¼Ì³Ð.</p>
 <pre id="Custom_Classes_method">
     Method()
     {
         ...
     }
 </pre>
-<p><b>æ–¹æ³•</b> å®šä¹‰çœ‹èµ·æ¥å’Œå‡½æ•°å®šä¹‰ç›¸åŒ. æ¯ä¸ªæ–¹æ³•éƒ½æœ‰ä¸€ä¸ªåç§°ä¸º <code>this</code> çš„éšè—å‚æ•°, å®ƒå®žé™…ä¸ŠåŒ…å«äº†æŒ‡å‘ç»§æ‰¿è‡ªæ­¤ç±»çš„å¯¹è±¡çš„å¼•ç”¨. ä¸è¿‡, å®ƒä¹Ÿå¯ä»¥åŒ…å«æŒ‡å‘æ­¤ç±»è‡ªèº«æˆ–æ´¾ç”Ÿç±»çš„å¼•ç”¨, å–å†³äºŽå¦‚ä½•è°ƒç”¨è¿™ä¸ªæ–¹æ³•. æ–¹æ³•è¢« <a href="#Function_References">é€šè¿‡å¼•ç”¨</a> å­˜å‚¨åˆ°ç±»å¯¹è±¡ä¸­.</p>
-<p id="Custom_Classes_base">é™¤äº†éšè—å‚æ•° <code>this</code>, æ–¹æ³•å®šä¹‰ä¸­è¿˜å¯ä»¥ä½¿ç”¨ä¼ªå…³é”®å­— <code>base</code> ä»¥è°ƒç”¨åŒ…å«äº†æ­¤æ–¹æ³•å®šä¹‰çš„ç±»çš„åŸºç±». ä¾‹å¦‚, åœ¨ä¸Šé¢çš„æ–¹æ³•ä¸­ <code>base.Method()</code> ç›¸å½“äºŽ <code>BaseClassName.Method.(this)</code>. æ³¨æ„å®ƒä¸Ž<code>this.base.base.Method()</code>åœ¨å…¶ä»–ä¸¤æ–¹é¢æœ‰åŒºåˆ«ï¼š</p>
+<p><b>·½·¨</b> ¶¨Òå¿´ÆðÀ´ºÍº¯Êý¶¨ÒåÏàÍ¬. Ã¿¸ö·½·¨¶¼ÓÐÒ»¸öÃû³ÆÎª <code>this</code> µÄÒþ²Ø²ÎÊý, ËüÊµ¼ÊÉÏ°üº¬ÁËÖ¸Ïò¼Ì³Ð×Ô´ËÀàµÄ¶ÔÏóµÄÒýÓÃ. ²»¹ý, ËüÒ²¿ÉÒÔ°üº¬Ö¸Ïò´ËÀà×ÔÉí»òÅÉÉúÀàµÄÒýÓÃ, È¡¾öÓÚÈçºÎµ÷ÓÃÕâ¸ö·½·¨. ·½·¨±» <a href="#Function_References">Í¨¹ýÒýÓÃ</a> ´æ´¢µ½Àà¶ÔÏóÖÐ.</p>
+<p id="Custom_Classes_base">³ýÁËÒþ²Ø²ÎÊý <code>this</code>, ·½·¨¶¨ÒåÖÐ»¹¿ÉÒÔÊ¹ÓÃÎ±¹Ø¼ü×Ö <code>base</code> ÒÔµ÷ÓÃ°üº¬ÁË´Ë·½·¨¶¨ÒåµÄÀàµÄ»ùÀà. ÀýÈç, ÔÚÉÏÃæµÄ·½·¨ÖÐ <code>base.Method()</code> Ïàµ±ÓÚ <code>BaseClassName.Method.(this)</code>. ×¢ÒâËüÓë<code>this.base.base.Method()</code>ÔÚÆäËûÁ½·½ÃæÓÐÇø±ð£º</p>
 <ul>
-  <li>å®ƒæ€»æ˜¯è°ƒç”¨å½“å‰ç±»çš„åŸº, å³ä½¿ <code>this</code> ç»§æ‰¿è‡ªå½“å‰ç±»çš„ <i>å­ç±»</i>.</li>
-  <li>å®ƒè‡ªåŠ¨ä¼ é€’ <code>this</code>, è€Œä¸æ˜¯ <code>this.base.base</code>.</li>
+  <li>Ëü×ÜÊÇµ÷ÓÃµ±Ç°ÀàµÄ»ù, ¼´Ê¹ <code>this</code> ¼Ì³Ð×Ôµ±Ç°ÀàµÄ <i>×ÓÀà</i>.</li>
+  <li>Ëü×Ô¶¯´«µÝ <code>this</code>, ¶ø²»ÊÇ <code>this.base.base</code>.</li>
 </ul>
-<p><code>base</code> ä»…åœ¨åŽé¢è·Ÿç€ç‚¹ <code>.</code> æˆ–æ–¹æ‹¬å· <code>[]</code> æ—¶æ‰æœ‰ç‰¹æ®Šå«ä¹‰, æ‰€ä»¥åƒ <code>obj := base, obj.Method()</code> è¿™æ ·çš„ä»£ç å°†ä¸èµ·ä½œç”¨. é€šè¿‡æŠŠ<i>base</i>èµ‹ä¸ºéžç©ºå€¼å¯ä»¥ç¦ç”¨å®ƒçš„ç‰¹æ®Šè¡Œä¸ºï¼Œä½†æ˜¯ä¸å»ºè®®è¿™æ ·åšã€‚å› ä¸ºå˜é‡ <i>base</i> å¿…é¡»ä¸ºç©º, æ‰€ä»¥å¦‚æžœè„šæœ¬ä¸­ä¸å«æœ‰ <a href="commands/_NoEnv.htm">#NoEnv</a> æŒ‡ä»¤é‚£ä¹ˆæ€§èƒ½å¯èƒ½ä¼šé™ä½Ž.</p>
+<p><code>base</code> ½öÔÚºóÃæ¸ú×Åµã <code>.</code> »ò·½À¨ºÅ <code>[]</code> Ê±²ÅÓÐÌØÊâº¬Òå, ËùÒÔÏñ <code>obj := base, obj.Method()</code> ÕâÑùµÄ´úÂë½«²»Æð×÷ÓÃ. Í¨¹ý°Ñ<i>base</i>¸³Îª·Ç¿ÕÖµ¿ÉÒÔ½ûÓÃËüµÄÌØÊâÐÐÎª£¬µ«ÊÇ²»½¨ÒéÕâÑù×ö¡£ÒòÎª±äÁ¿ <i>base</i> ±ØÐëÎª¿Õ, ËùÒÔÈç¹û½Å±¾ÖÐ²»º¬ÓÐ <a href="commands/_NoEnv.htm">#NoEnv</a> Ö¸ÁîÄÇÃ´ÐÔÄÜ¿ÉÄÜ»á½µµÍ.</p>
 
-<h3 id="Custom_NewDelete">åˆ›å»ºå’Œé”€æ¯</h3>
-<p>æ¯å½“ä½¿ç”¨ <code>new</code> å…³é”®å­— <span class="ver">[éœ€è¦ v1.1.00+]</span> åˆ›å»ºæ´¾ç”Ÿå¯¹è±¡æ—¶, é‚£ä¹ˆè°ƒç”¨ç”±å…¶åŸºå¯¹è±¡å®šä¹‰çš„ <code>__New</code> æ–¹æ³•. æ­¤æ–¹æ³•å¯ä»¥æŽ¥å—å‚æ•°, åˆå§‹åŒ–å¯¹è±¡å¹¶é€šè¿‡è¿”å›žå€¼è¦†ç›– <code>new</code> è¿ç®—ç¬¦çš„ç»“æžœ. é”€æ¯å¯¹è±¡æ—¶, åˆ™è°ƒç”¨ <code>__Delete</code>. ä¾‹å¦‚ï¼š</p>
+<h3 id="Custom_NewDelete">´´½¨ºÍÏú»Ù</h3>
+<p>Ã¿µ±Ê¹ÓÃ <code>new</code> ¹Ø¼ü×Ö <span class="ver">[ÐèÒª v1.1.00+]</span> ´´½¨ÅÉÉú¶ÔÏóÊ±, ÄÇÃ´µ÷ÓÃÓÉÆä»ù¶ÔÏó¶¨ÒåµÄ <code>__New</code> ·½·¨. ´Ë·½·¨¿ÉÒÔ½ÓÊÜ²ÎÊý, ³õÊ¼»¯¶ÔÏó²¢Í¨¹ý·µ»ØÖµ¸²¸Ç <code>new</code> ÔËËã·ûµÄ½á¹û. Ïú»Ù¶ÔÏóÊ±, Ôòµ÷ÓÃ <code>__Delete</code>. ÀýÈç£º</p>
 <pre>m1 := new GMem(0, 20)
 m2 := {base: GMem}.__New(0, 30)
 
@@ -293,7 +303,7 @@ class GMem
         if !this.ptr
             return ""
         MsgBox % "New GMem of " aSize " bytes at address " this.ptr "."
-        return this  <em>; ä½¿ç”¨â€œnewâ€è¿ç®—ç¬¦æ—¶å¯ä»¥çœç•¥æ­¤è¡Œã€‚</em>
+        return this  <em>; Ê¹ÓÃ¡°new¡±ÔËËã·ûÊ±¿ÉÒÔÊ¡ÂÔ´ËÐÐ¡£</em>
     }
 
     __Delete()
@@ -303,45 +313,54 @@ class GMem
     }
 }</pre>
 
-<h3 id="Meta_Functions">å…ƒå‡½æ•°</h3>
+<h3 id="Meta_Functions">Ôªº¯Êý</h3>
 <pre class="Syntax">
-<strong>æ–¹æ³•è¯­æ³•ï¼š</strong>
+<strong>·½·¨Óï·¨£º</strong>
 class <i>ClassName</i> {
     __Get([Key, Key2, ...])
     __Set([Key, Key2, ...], Value)
     __Call(Name [, Params...])
 }
 
-<strong>å‡½æ•°è¯­æ³•ï¼š</strong>
+<strong>º¯ÊýÓï·¨£º</strong>
 <i>MyGet</i>(this [, Key, Key2, ...])
 <i>MySet</i>(this [, Key, Key2, ...], Value)
 <i>MyCall</i>(this, Name [, Params...])
 
 <i>ClassName</i> := { __Get: Func("<i>MyGet</i>"), __Set: Func("<i>MySet</i>"), __Call: Func("<i>MyCall</i>") }
 </pre>
-<p>å…ƒå‡½æ•°æ˜¯ç”±å¯¹è±¡çš„åŸºå®šä¹‰çš„æ–¹æ³•, è¿™é‡Œå¯ä»¥æ˜Žç¡®å®šä¹‰åœ¨æŽ¥å—æœªçŸ¥é”®çš„è¯·æ±‚æ—¶å¯¹è±¡åº”å¦‚ä½•å¤„ç†. ä¾‹å¦‚, å¦‚æžœ <code>obj.key</code> å°šæœªèµ‹å€¼, é‚£ä¹ˆå®ƒä¼šè°ƒç”¨ <i>__Get</i> å…ƒå‡½æ•°. åŒæ ·åœ°, <code>obj.key := value</code> è°ƒç”¨ <i>__Set</i> è€Œ <code>obj.key()</code> è°ƒç”¨ <i>__Call</i>.</p>
-<p>åœ¨è¿™äº›æƒ…å†µä¸­, æŒ‰å¦‚ä¸‹æ–¹å¼è°ƒç”¨åŸºå¯¹è±¡:</p>
-<ul>
-  <li>å¦‚æžœæ­¤åŸºå¯¹è±¡å®šä¹‰äº†ç›¸åº”çš„å…ƒå‡½æ•°, é‚£ä¹ˆè°ƒç”¨å®ƒ. å¦‚æžœå…ƒå‡½æ•°æ˜Žç¡® <code>return</code>, é‚£ä¹ˆæŠŠè¿”å›žå€¼ä½œä¸ºè¿ç®—çš„ç»“æžœä¸”ä¸è¿›è¡Œè¿›ä¸€æ­¥çš„å¤„ç†.
-    <p><i>Set</i>ï¼šå¦‚æžœè¿ç®—æˆåŠŸï¼Œ<i>__Set</i>åº”è¯¥è¿”å›žè¿™ä¸ªå­—æ®µçš„æ–°å€¼ï¼Œè¿™å¯èƒ½ä¸ŽåŽŸå§‹çš„rå€¼ä¸åŒã€‚è¿™æ ·å…è®¸èµ‹å€¼é“¾, ä¾‹å¦‚ <code>a.x := b.y := z</code>. å¦‚æžœèµ‹å€¼å¤±è´¥é‚£ä¹ˆåº”è¯¥è¿”å›žç©ºå­—ç¬¦ä¸², è¿™æ ·è„šæœ¬å¯ä»¥æ£€æµ‹åˆ°å‘ç”Ÿäº†é”™è¯¯.</p></li>
-  <li>å¦‚æžœæ˜¯ <i>get</i> æˆ– <i>call</i> è¿ç®—, é‚£ä¹ˆåœ¨åŸºå¯¹è±¡è‡ªèº«çš„å­—æ®µä¸­æœç´¢åŒ¹é…çš„é”®.
-    <p><i>Get</i>: å¦‚æžœæ‰¾åˆ°, é‚£ä¹ˆè¿”å›žè¿™ä¸ªå­—æ®µçš„å€¼.<br>
-    <i>Call</i>: å¦‚æžœæ‰¾åˆ°, é‚£ä¹ˆ (é€šè¿‡åç§°æˆ– <a href="#Function_References">å¼•ç”¨</a>) è°ƒç”¨ä¿å­˜åœ¨è¿™ä¸ªå­—æ®µä¸­çš„å‡½æ•°, å¹¶æŠŠåŽŸå§‹ç›®æ ‡å¯¹è±¡ä½œä¸º <i>this</i> å‚æ•°ä¼ é€’è¿‡åŽ».</p></li>
-  <li>é€’å½’è°ƒç”¨å…¶è‡ªå·±çš„åŸºå¯¹è±¡. è¿™æ ·å°±å¯ä»¥ä»Žå…¶åŸºå¯¹è±¡, åŸºå¯¹è±¡çš„åŸºç­‰ "ç»§æ‰¿" å¯¹è±¡çš„å±žæ€§.</li>
+<p>Ôªº¯Êý¶¨ÒåÁËÏòÄ¿±ê¶ÔÏóÖÐÇëÇó²»´æÔÚµÄ¼üÊ±µÄÐÐÎª¡£ÀýÈç, Èç¹û <code>obj.key</code> ÉÐÎ´¸³Öµ, ÄÇÃ´Ëü»áµ÷ÓÃ <i>__Get</i> Ôªº¯Êý. Í¬ÑùµØ, <code>obj.key := value</code> µ÷ÓÃ <i>__Set</i> ¶ø <code>obj.key()</code> µ÷ÓÃ <i>__Call</i>. ÕâÐ©Ôªº¯Êý£¨»ò·½·¨£©ÐèÒªÔÚ <code>obj.base</code>¡¢<code>obj.base.base</code> »òÀàËÆµÄ»ùÖÐ¶¨Òå¡£</p>
+<p>µ±½Å±¾»ñÈ¡¡¢ÉèÖÃ»òµ÷ÓÃÄ¿±ê¶ÔÏóÖÐµÄ¼ü²»´æÔÚÊ±£¬°´ÈçÏÂ·½Ê½µ÷ÓÃ»ù¶ÔÏó£º</p>
+<ul class="list_of_p">
+  <li>Èç¹û´Ë»ù¶ÔÏó¶¨ÒåÁËÏàÓ¦µÄÔªº¯Êý£¬ÄÇÃ´µ÷ÓÃËü¡£Èç¹ûÔªº¯ÊýÃ÷È· <code>return</code>£¬Ôò°Ñ·µ»ØÖµ×÷ÎªÔËËãµÄ½á¹û£¨²»ÊÜµ÷ÓÃÔªº¯Êý·½Ê½µÄÓ°Ïì£©²¢°Ñ¿ØÖÆÈ¨¹é»¹½Å±¾¡£ÆäËûÇé¿ö¼ÌÐø°´ÒÔÏÂ·½·¨½øÐÐ¡£
+    <p><i>Set</i>£ºÈç¹ûÔªº¯Êý´¦Àí¸³Öµ£¬ÔòËüÓ¦·µ»ØËù¸³µÄÖµ¡£ÕâÑùÔÊÐí¸³ÖµÁ´£¬Èç <code>a.x := b.y := z</code>¡£·µ»ØÖµ¿ÉÄÜÓë <code>z</code> µÄÔ­Ê¼Öµ²»Í¬£¨¼´Èç¹û¶ÔËù¸³µÄÖµÊ©¼ÓÏÞÖÆµÄ»°£©¡£</p></li>
+  <li>Èç¹ûÊÇ <i>get</i> »ò <i>call</i> ÔËËã, ÄÇÃ´ÔÚ»ù¶ÔÏó×ÔÉíµÄ×Ö¶ÎÖÐËÑË÷Æ¥ÅäµÄ¼ü.</li>
+  <li>Èç¹ûÎ´ÕÒµ½¼ü£¬ÔòµÝ¹éµ÷ÓÃ¸Ã»ù¶ÔÏó×Ô¼ºµÄ»ù¶ÔÏó£¨´Ó¸ÃÁÐ±íµÄ¶¥²¿¿ªÊ¼Ó¦ÓÃÃ¿¸ö²½Öè£©¡£Èç¹ûÉÐÎ´½áÊø£¬ÔòÔÙ´ÎËÑË÷¸Ã»ù¶ÔÏóÒÔÑ°ÕÒÆ¥Åä¼ü£¬ÒÔ·ÀÔªº¯ÊýÌí¼ÓµÄÇé¿ö¡£</li>
+  <li>Èç¹ûÔÚ <i>get</i> »ò <i>set</i> Ö¸¶¨ÁË¶à¸ö²ÎÊýÇÒÕÒµ½ÁË¼ü£¬Ôò¼ì²éÆäÖµ¡£Èç¹ûÄÇ¸öÖµÎª¶ÔÏó£¬Ôòµ÷ÓÃËü´¦ÀíÊ£Óà²ÎÊý£¬²»×ö½øÒ»²½´¦Àí¡£</li>
+  <li>Èç¹ûÕÒµ½ÁË¼ü£¬<br>
+    <i>Get</i>£º·µ»ØÖµ¡£<br>
+    <i>Call</i>£ºÈç¹ûÖµÎªº¯ÊýÃû»ò<a href="#Function_References">ÒýÓÃ</a>£¬Ôò°ÑÄ¿±ê¶ÔÏó£¨<code>this</code>£©×÷ÎªÊ×¸ö²ÎÊýµ÷ÓÃËü¡£</p></li>
 </ul>
-<p>å½“ (ä¸”ä»…å½“) æ²¡æœ‰åŸºå¯¹è±¡å¤„ç†è¿ç®—æ—¶, å¤„ç†ç…§å¸¸è¿›è¡Œ:</p>
+<p>Èç¹ûÔªº¯Êý°ÑÆ¥ÅäµÄ¼ü±£´æÔÚ¶ÔÏóÖÐµ«Î´ <code>return</code>£¬ÔòÐÐÎªÀàËÆÓÚ¸Ã¼üÔ­±¾¾Í´æÔÚÓÚ¶ÔÏóÖÐ¡£Ê¹ÓÃ __Set µÄÊ¾Àý£¬Çë²ÎÔÄ<a href="#Subclassing_aoa">×ÓÀà»¯Êý×éµÄÊý×é</a>¡£</p>
+<p>Èç¹û²Ù×÷ÈÔÎªµÃµ½´¦Àí£¬Ôò¼ì²éÊÇ·ñÓÐÄÚÖÃ·½·¨»òÊôÐÔ£º</p>
 <ul>
-  <li><i>Get</i>: å¦‚æžœæ­¤é”®ä¸º "base", é‚£ä¹ˆèŽ·å–å¯¹è±¡çš„åŸº.</li>
-  <li><i>Set</i>: å¦‚æžœæ­¤é”®ä¸º "base", é‚£ä¹ˆè®¾ç½®å¯¹è±¡çš„åŸº; éžå¯¹è±¡çš„å€¼ä¼šç§»é™¤çŽ°æœ‰çš„åŸº.
-  <p style="margin-left:2.6em;margin-top:0.25em;">å¦åˆ™åˆ›å»ºä¸€ä¸ªæ–°é”®å€¼å¯¹å¹¶å­˜å‚¨åˆ°å¯¹è±¡ä¸­.</p></li>
-  <li><i>Call</i>: è°ƒç”¨ <a href="objects/Object.htm">å†…ç½®æ–¹æ³•</a>.</li>
+  <li><i>Get</i>£ºÈç¹û¸Ã¼üÊÇ¡°base¡±£¬Ôò·µ»Ø¶ÔÏóµÄ»ù¡£</li>
+  <li><i>Set</i>£ºÈç¹û¸Ã¼üÊÇ¡°base¡±£¬ÔòÉèÖÃ¶ÔÏóµÄ»ù£¨Èç¹ûÖµ²»ÊÇ¶ÔÏóÔòÒÆ³ý£©¡£</li>
+  <li><i>Call</i>£ºÊÊÓÃÊ±µ÷ÓÃ<a href="objects/Object.htm">ÄÚÖÃ·½·¨</a>¡£</li>
 </ul>
-<p><b>å·²çŸ¥é™åˆ¶:</b></p>
-<ul><li>ä½¿ç”¨ä¸å¸¦å€¼çš„ <code>return</code> ç­‰åŒäºŽ <code>return ""</code>. è¿™ç§æƒ…å†µå¯èƒ½åœ¨æœªæ¥çš„ç‰ˆæœ¬ä¸­æ”¹å˜, æ‰€ä»¥å¯ä»¥ä½¿ç”¨ <code>return</code> æ¥ä»Žå…ƒå‡½æ•° "é€€å‡º" è€Œä¸è¦†ç›–é»˜è®¤è¡Œä¸º.</li>
-<li>è¯·å‚é˜… <a href="#ExitLimitation">Exit é™åˆ¶</a>ã€‚</li></ul>
+<p>Èç¹û²Ù×÷ÈÔÎ´µÃµ½´¦Àí£¬</p>
+<ul>
+  <li><i>Get</i> ºÍ <i>Call</i> ·µ»Ø¿Õ×Ö·û´®¡£</li>
+  <li><i>Set</i>£ºÈç¹ûÖ»¸ø³öÁËÒ»¸ö¼ü²ÎÊý£¬Ôò±£´æ¼üºÍÖµµ½Ä¿±ê¶ÔÏóÖÐ²¢·µ»ØËù¸³µÄÖµ¡£Èç¹û¸ø³öÁË¶à¸ö²ÎÊý£¬Ôò´´½¨ÐÂ¶ÔÏó²¢°ÑÊ×¸ö²ÎÊý×÷Îª¼ü±£´æ£¬È»ºóµ÷ÓÃÐÂ¶ÔÏó´¦ÀíÊ£Óà²ÎÊý¡££¨Çë²ÎÔÄ<a href="#Usage_Arrays_of_Arrays">Êý×éµÄÊý×é</a>¡££©</li>
 
-<h4 id="Dynamic_Properties">åŠ¨æ€å±žæ€§</h4>
-<p><i>__Get</i> å’Œ <i>__Set</i> å¯ä»¥ç”¨æ¥å®žçŽ°åœ¨æŸäº›æƒ…å†µä¸‹å¯ä»¥è®¡ç®—æˆ–é™åˆ¶çš„å€¼çš„å±žæ€§. ä¾‹å¦‚, å¯ä»¥ç”¨æ¥å®žçŽ°å« R, G, B å’Œ RGB å±žæ€§çš„ "Color" å¯¹è±¡, è¿™é‡Œåªæœ‰ RGB å€¼æ˜¯å®žé™…å­˜å‚¨çš„:</p>
+</ul>
+    
+<p><b>ÒÑÖªÏÞÖÆ:</b></p>
+<ul><li>Ê¹ÓÃ²»´øÖµµÄ <code>return</code> µÈÍ¬ÓÚ <code>return ""</code>. ÕâÖÖÇé¿ö¿ÉÄÜÔÚÎ´À´µÄ°æ±¾ÖÐ¸Ä±ä, ËùÒÔ¿ÉÒÔÊ¹ÓÃ <code>return</code> À´´ÓÔªº¯Êý "ÍË³ö" ¶ø²»¸²¸ÇÄ¬ÈÏÐÐÎª.</li>
+<li>Çë²ÎÔÄ <a href="#ExitLimitation">Exit ÏÞÖÆ</a>¡£</li></ul>
+
+<h4 id="Dynamic_Properties">¶¯Ì¬ÊôÐÔ</h4>
+<p><i>__Get</i> ºÍ <i>__Set</i> ¿ÉÒÔÓÃÀ´ÊµÏÖÔÚÄ³Ð©Çé¿öÏÂ¿ÉÒÔ¼ÆËã»òÏÞÖÆµÄÖµµÄÊôÐÔ. ÀýÈç, ¿ÉÒÔÓÃÀ´ÊµÏÖº¬ R, G, B ºÍ RGB ÊôÐÔµÄ "Color" ¶ÔÏó, ÕâÀïÖ»ÓÐ RGB ÖµÊÇÊµ¼Ê´æ´¢µÄ:</p>
 <pre>red  := new Color(0xff0000), red.R -= 5
 cyan := new Color(0x00ffff)
 
@@ -378,27 +397,27 @@ class Color
             else  <em>; (aName = "B")</em>
                 this.RGB :=  aValue        | (this.RGB &amp; ~0x0000ff)
 
-            <em>; å¿…é¡»ä½¿ç”¨ 'Return' è¡¨ç¤ºä¸åº”è¯¥åˆ›å»ºä¸€ä¸ªæ–°é”®å€¼å¯¹.
-            ; è¿™é‡Œä¹Ÿå®šä¹‰äº†åœ¨ 'x := clr[name] := val' ä¸­å°†è¦å­˜å‚¨åˆ° 'x' ä¸­çš„å†…å®¹:</em>
+            <em>; ±ØÐëÊ¹ÓÃ 'Return' ±íÊ¾²»Ó¦¸Ã´´½¨Ò»¸öÐÂ¼üÖµ¶Ô.
+            ; ÕâÀïÒ²¶¨ÒåÁËÔÚ 'x := clr[name] := val' ÖÐ½«Òª´æ´¢µ½ 'x' ÖÐµÄÄÚÈÝ:</em>
             return aValue
         }
     }
 }</pre>
 
-<h4 id="Objects_as_Functions">å¯¹è±¡å‡½æ•°åŒ–</h4>
-<p>ç”Ÿæˆä¸€ä¸ªè°ƒç”¨ï¼ˆä¾‹å¦‚<code>obj.func(param)</code>ï¼‰æ—¶ï¼Œ<i>obj.func</i>å¯ä»¥åŒ…å«å‡½æ•°åæˆ–å¯¹è±¡ã€‚å¦‚æžœ<i>obj.func</i>åŒ…å«å¯¹è±¡ï¼Œåˆ™å¯ä»¥ç”¨<i>obj</i>ä»£æ›¿æ–¹æ³•åè°ƒç”¨æ­¤å¯¹è±¡ï¼Œåƒåœ¨<code>(obj.func)[obj]()</code>é‚£æ ·ã€‚åœ¨å¤§å¤šæ•°æƒ…å†µä¸‹<code>obj.func[obj]</code>ä¸å­˜åœ¨ï¼Œä½œä¸ºæ›¿ä»£è€Œè°ƒç”¨<i>obj.func</i>çš„__Call <a href="#Meta_Functions">å…ƒå‡½æ•°</a>ã€‚è¿™å¯ä»¥ç”¨æ¥ä»¥ä¸€ç§æŠ½è±¡çš„æ–¹å¼æ”¹å˜å‡½æ•°è°ƒç”¨çš„è¡Œä¸º, å¦‚ä»¥ä¸‹ç¤ºä¾‹æ‰€ç¤º:</p>
-<pre><em>; ä¸ºå‡½æ•°æ•°ç»„åˆ›å»ºåŽŸåž‹.</em>
+<h4 id="Objects_as_Functions">¶ÔÏóº¯Êý»¯</h4>
+<p>Éú³ÉÒ»¸öµ÷ÓÃ£¨ÀýÈç<code>obj.func(param)</code>£©Ê±£¬<i>obj.func</i>¿ÉÒÔ°üº¬º¯ÊýÃû»ò¶ÔÏó¡£Èç¹û<i>obj.func</i>°üº¬¶ÔÏó£¬Ôò¿ÉÒÔÓÃ<i>obj</i>´úÌæ·½·¨Ãûµ÷ÓÃ´Ë¶ÔÏó£¬ÏñÔÚ<code>(obj.func)[obj]()</code>ÄÇÑù¡£ÔÚ´ó¶àÊýÇé¿öÏÂ<code>obj.func[obj]</code>²»´æÔÚ£¬×÷ÎªÌæ´ú¶øµ÷ÓÃ<i>obj.func</i>µÄ__Call <a href="#Meta_Functions">Ôªº¯Êý</a>¡£Õâ¿ÉÒÔÓÃÀ´ÒÔÒ»ÖÖ³éÏóµÄ·½Ê½¸Ä±äº¯Êýµ÷ÓÃµÄÐÐÎª, ÈçÒÔÏÂÊ¾ÀýËùÊ¾:</p>
+<pre><em>; Îªº¯ÊýÊý×é´´½¨Ô­ÐÍ.</em>
 FuncArrayType := {__Call: "FuncType_Call"}
-<em>; åˆ›å»ºå‡½æ•°æ•°ç»„.</em>
+<em>; ´´½¨º¯ÊýÊý×é.</em>
 funcArray := {1: "One", 2: "Two", base: FuncArrayType}
-<em>; æŠŠæ­¤æ•°ç»„ä½œä¸ºæ–¹æ³•åˆ›å»ºå¯¹è±¡.</em>
+<em>; °Ñ´ËÊý×é×÷Îª·½·¨´´½¨¶ÔÏó.</em>
 obj := {func: funcArray}
-<em>; è°ƒç”¨æ–¹æ³•.</em>
+<em>; µ÷ÓÃ·½·¨.</em>
 obj.func("foo", "bar")
 
 FuncType_Call(func, obj, params*)
 {
-    <em>; è°ƒç”¨å‡½æ•°åˆ—è¡¨.</em>
+    <em>; µ÷ÓÃº¯ÊýÁÐ±í.</em>
     Loop % ObjMaxIndex(func)
         func[A_Index](params*)
 }
@@ -411,7 +430,7 @@ Two(param1, param2) {
     ListVars
     Pause
 }</pre>
-<p>æŠŠè¿™ç§æŠ€æœ¯å’Œç±»å®šä¹‰ç»„åˆåœ¨ä¸€èµ·ä¸ºå®šä¹‰ç±»ä¼¼äºŽå‰é¢éƒ¨åˆ†çš„åŠ¨æ€å±žæ€§æä¾›äº†ä¾¿åˆ©çš„æ–¹æ³•:</p>
+<p>°ÑÕâÖÖ¼¼ÊõºÍÀà¶¨Òå×éºÏÔÚÒ»ÆðÎª¶¨ÒåÀàËÆÓÚÇ°Ãæ²¿·ÖµÄ¶¯Ì¬ÊôÐÔÌá¹©ÁË±ãÀûµÄ·½·¨:</p>
 <pre>blue := new Color(0x0000ff)
 MsgBox % blue.R "," blue.G "," blue.B
 
@@ -419,8 +438,8 @@ class Properties
 {
     __Call(aTarget, aName, aParams*)
     {
-        <em>; å¦‚æžœ this å±žæ€§å¯¹è±¡åŒ…å«æ­¤åŠå±žæ€§çš„å®šä¹‰, é‚£ä¹ˆè°ƒç”¨å®ƒ.
-        ; å°å¿ƒåˆ«ä½¿ç”¨ this.HasKey(aName), å› ä¸ºè¿™æ ·ä¼šé€’å½’è¿› __Call.</em>
+        <em>; Èç¹û this ÊôÐÔ¶ÔÏó°üº¬´Ë°ëÊôÐÔµÄ¶¨Òå, ÄÇÃ´µ÷ÓÃËü.
+        ; Ð¡ÐÄ±ðÊ¹ÓÃ this.HasKey(aName), ÒòÎªÕâÑù»áµÝ¹é½ø __Call.</em>
         if IsObject(aTarget) &amp;&amp; ObjHasKey(this, aName)
             return this[aName].(aTarget, aParams*)
     }
@@ -449,14 +468,14 @@ class Color
     <em>;...</em>
 }</pre>
 
-<h4 id="Subclassing_aoa">å­ç±»åŒ–æ•°ç»„åµŒå¥—</h4>
-<p>åœ¨ <a href="#Usage_Arrays_of_Arrays">å¤šå‚æ•°èµ‹å€¼</a> ä¾‹å¦‚ <code>table[x, y] := content</code> ä¼šéšå¼åœ°åˆ›å»ºä¸€ä¸ªæ–°å¯¹è±¡, è¿™ä¸ªæ–°å¯¹è±¡ä¸€èˆ¬ä¸å«åŸº, å› æ­¤æ²¡æœ‰è‡ªå®šä¹‰æ–¹æ³•æˆ–ç‰¹æ®Šè¡Œä¸º. <code>__Set</code> å¯ä»¥ç”¨æ¥åˆå§‹åŒ–è¿™æ ·çš„å¯¹è±¡, å¦‚ä¸‹æ‰€ç¤º.</p>
+<h4 id="Subclassing_aoa">×ÓÀà»¯Êý×éÇ¶Ì×</h4>
+<p>ÔÚ <a href="#Usage_Arrays_of_Arrays">¶à²ÎÊý¸³Öµ</a> ÀýÈç <code>table[x, y] := content</code> »áÒþÊ½µØ´´½¨Ò»¸öÐÂ¶ÔÏó, Õâ¸öÐÂ¶ÔÏóÒ»°ã²»º¬»ù, Òò´ËÃ»ÓÐ×Ô¶¨Òå·½·¨»òÌØÊâÐÐÎª. <code>__Set</code> ¿ÉÒÔÓÃÀ´³õÊ¼»¯ÕâÑùµÄ¶ÔÏó, ÈçÏÂËùÊ¾.</p>
 <pre>x := {base: {addr: Func("x_Addr"), __Set: Func("x_Setter")}}
 
-<em>; èµ‹å€¼, éšå¼è°ƒç”¨ x_Setter æ¥åˆ›å»ºå­å¯¹è±¡.</em>
+<em>; ¸³Öµ, ÒþÊ½µ÷ÓÃ x_Setter À´´´½¨×Ó¶ÔÏó.</em>
 x[1,2,3] := "..."
 
-<em>; èŽ·å–å€¼å¹¶è°ƒç”¨ç¤ºä¾‹æ–¹æ³•.</em>
+<em>; »ñÈ¡Öµ²¢µ÷ÓÃÊ¾Àý·½·¨.</em>
 MsgBox % x[1,2,3] "`n" x.addr() "`n" x[1].addr() "`n" x[1,2].addr()
 
 x_Setter(x, p1, p2, p3) {
@@ -466,26 +485,26 @@ x_Setter(x, p1, p2, p3) {
 x_Addr(x) {
     return &amp;x
 }</pre>
-<p>ç”±äºŽ <code>x_Setter</code> å«æœ‰å››ä¸ªå¿…éœ€å‚æ•°, æ‰€ä»¥åªæœ‰åœ¨æœ‰ä¸¤ä¸ªæˆ–æ›´å¤šé”®å‚æ•°æ—¶æ‰ä¼šè°ƒç”¨å®ƒ. å½“ä¸Šé¢çš„èµ‹å€¼å‡ºçŽ°æ—¶, ä¼šå‘ç”Ÿä¸‹é¢çš„æƒ…å†µ:</p>
+<p>ÓÉÓÚ <code>x_Setter</code> º¬ÓÐËÄ¸ö±ØÐè²ÎÊý, ËùÒÔÖ»ÓÐÔÚÓÐÁ½¸ö»ò¸ü¶à¼ü²ÎÊýÊ±²Å»áµ÷ÓÃËü. µ±ÉÏÃæµÄ¸³Öµ³öÏÖÊ±, »á·¢ÉúÏÂÃæµÄÇé¿ö:</p>
 <ul>
-  <li><code>x[1]</code> ä¸å­˜åœ¨, æ‰€ä»¥è°ƒç”¨ <code>x_Setter(x,1,2,3)</code> (ç”±äºŽå‚æ•°è¿‡å°‘æ‰€ä»¥ <code>"..."</code> ä¸ä¼šè¢«ä¼ é€’).
+  <li><code>x[1]</code> ²»´æÔÚ, ËùÒÔµ÷ÓÃ <code>x_Setter(x,1,2,3)</code> (ÓÉÓÚ²ÎÊý¹ýÉÙËùÒÔ <code>"..."</code> ²»»á±»´«µÝ).
   <ul>
-    <li><code>x[1]</code> è¢«èµ‹å€¼ä¸ºä¸Ž <code>x</code> å«æœ‰ç›¸åŒåŸºçš„æ–°å¯¹è±¡.</li>
-    <li>ä¸è¿”å›žä»»ä½•å€¼ â€“ èµ‹å€¼ç»§ç»­.</li>
+    <li><code>x[1]</code> ±»¸³ÖµÎªÓë <code>x</code> º¬ÓÐÏàÍ¬»ùµÄÐÂ¶ÔÏó.</li>
+    <li>²»·µ»ØÈÎºÎÖµ ¨C ¸³Öµ¼ÌÐø.</li>
   </ul></li>
-  <li><code>x[1][2]</code> ä¸å­˜åœ¨, æ‰€ä»¥è°ƒç”¨ <code>x_Setter(x[1],2,3,"...")</code>.
+  <li><code>x[1][2]</code> ²»´æÔÚ, ËùÒÔµ÷ÓÃ <code>x_Setter(x[1],2,3,"...")</code>.
   <ul>
-    <li><code>x[1][2]</code> è¢«èµ‹å€¼ä¸ºä¸Ž <code>x[1]</code> å«æœ‰ç›¸åŒåŸºçš„æ–°å¯¹è±¡.</li>
-    <li>ä¸è¿”å›žä»»ä½•å€¼ â€“ èµ‹å€¼ç»§ç»­.</li>
+    <li><code>x[1][2]</code> ±»¸³ÖµÎªÓë <code>x[1]</code> º¬ÓÐÏàÍ¬»ùµÄÐÂ¶ÔÏó.</li>
+    <li>²»·µ»ØÈÎºÎÖµ ¨C ¸³Öµ¼ÌÐø.</li>
   </ul></li>
-  <li><code>x[1][2][3]</code> ä¸å­˜åœ¨, ä½†ç”±äºŽ <code>x_Setter</code> éœ€è¦å››ä¸ªå‚æ•°è€Œè¿™é‡Œåªæœ‰ä¸‰ä¸ª (<code>x[1][2], 3, "..."</code>), æ‰€ä»¥ä¸ä¼šè°ƒç”¨å®ƒä¸”èµ‹å€¼æ­£å¸¸å®Œæˆ.</li>
+  <li><code>x[1][2][3]</code> ²»´æÔÚ, µ«ÓÉÓÚ <code>x_Setter</code> ÐèÒªËÄ¸ö²ÎÊý¶øÕâÀïÖ»ÓÐÈý¸ö (<code>x[1][2], 3, "..."</code>), ËùÒÔ²»»áµ÷ÓÃËüÇÒ¸³ÖµÕý³£Íê³É.</li>
 </ul>
 
-<h2 id="Default_Base_Object">é»˜è®¤åŸºå¯¹è±¡</h2>
-<p>å½“éžå¯¹è±¡å€¼ç”¨äºŽå¯¹è±¡è¯­æ³•æ—¶, åˆ™è°ƒç”¨ <i>é»˜è®¤åŸºå¯¹è±¡</i>. è¿™å¯ä»¥ç”¨äºŽè°ƒè¯•æˆ–ä¸ºå­—ç¬¦ä¸², æ•°å­—å’Œ/æˆ–å˜é‡å®šä¹‰å…¨å±€çš„ç±»å¯¹è±¡è¡Œä¸º. é»˜è®¤åŸºå¯ä»¥ä½¿ç”¨å¸¦ä»»ä½•éžå¯¹è±¡å€¼çš„ <code>.base</code> è¿›è¡Œè®¿é—®; ä¾‹å¦‚, <code>"".base</code>. å°½ç®¡é»˜è®¤åŸºæ— æ³•åƒ <code>"".base := Object()</code> è¿™æ ·è¿›è¡Œ <i>set</i>, ä¸è¿‡å®ƒå¯ä»¥æœ‰è‡ªå·±çš„åŸºå¦‚åŒåœ¨ <code>"".base.base := Object()</code> ä¸­é‚£æ ·.</p>
+<h2 id="Default_Base_Object">Ä¬ÈÏ»ù¶ÔÏó</h2>
+<p>µ±·Ç¶ÔÏóÖµÓÃÓÚ¶ÔÏóÓï·¨Ê±, Ôòµ÷ÓÃ <i>Ä¬ÈÏ»ù¶ÔÏó</i>. Õâ¿ÉÒÔÓÃÓÚµ÷ÊÔ»òÎª×Ö·û´®, Êý×ÖºÍ/»ò±äÁ¿¶¨ÒåÈ«¾ÖµÄÀà¶ÔÏóÐÐÎª. Ä¬ÈÏ»ù¿ÉÒÔÊ¹ÓÃ´øÈÎºÎ·Ç¶ÔÏóÖµµÄ <code>.base</code> ½øÐÐ·ÃÎÊ; ÀýÈç, <code>"".base</code>. ¾¡¹ÜÄ¬ÈÏ»ùÎÞ·¨Ïñ <code>"".base := Object()</code> ÕâÑù½øÐÐ <i>set</i>, ²»¹ýËü¿ÉÒÔÓÐ×Ô¼ºµÄ»ùÈçÍ¬ÔÚ <code>"".base.base := Object()</code> ÖÐÄÇÑù.</p>
 
-<h4 id="Automatic_Var_Init">è‡ªåŠ¨åˆå§‹åŒ–å˜é‡</h4>
-<p>å½“ä½¿ç”¨ç©ºå˜é‡ä½œä¸º <i>set</i> è¿ç®—çš„ç›®æ ‡æ—¶, å®ƒç›´æŽ¥è¢«ä¼ é€’ç»™ __Set å…ƒå‡½æ•°, è¿™æ ·å®ƒå°±æœ‰æœºä¼šæ’å…¥æ–°å¯¹è±¡åˆ°å˜é‡ä¸­. ä¸ºç®€æ´èµ·è§, æ­¤ç¤ºä¾‹ä¸æ”¯æŒå¤šä¸ªå‚æ•°; å¦‚æžœéœ€è¦, å¯ä»¥ä½¿ç”¨ <a href="Functions.htm#Variadic">å¯å˜å‚æ•°å‡½æ•°</a> å®žçŽ°.</p>
+<h4 id="Automatic_Var_Init">×Ô¶¯³õÊ¼»¯±äÁ¿</h4>
+<p>µ±Ê¹ÓÃ¿Õ±äÁ¿×÷Îª <i>set</i> ÔËËãµÄÄ¿±êÊ±, ËüÖ±½Ó±»´«µÝ¸ø __Set Ôªº¯Êý, ÕâÑùËü¾ÍÓÐ»ú»á²åÈëÐÂ¶ÔÏóµ½±äÁ¿ÖÐ. Îª¼ò½àÆð¼û, ´ËÊ¾Àý²»Ö§³Ö¶à¸ö²ÎÊý; Èç¹ûÐèÒª, ¿ÉÒÔÊ¹ÓÃ <a href="Functions.htm#Variadic">¿É±ä²ÎÊýº¯Êý</a> ÊµÏÖ.</p>
 <pre>"".base.__Set := Func("Default_Set_AutomaticVarInit")
 
 empty_var.foo := "bar"
@@ -497,8 +516,8 @@ Default_Set_AutomaticVarInit(ByRef var, key, value)
         var := Object(key, value)
 }</pre>
 
-<h4 id="Pseudo_Properties">ä¼ªå±žæ€§</h4>
-<p>å¯¹è±¡ "è¯­æ³•ç³–" å¯ä»¥é€‚ç”¨äºŽå­—ç¬¦ä¸²å’Œæ•°å­—.</p>
+<h4 id="Pseudo_Properties">Î±ÊôÐÔ</h4>
+<p>¶ÔÏó "Óï·¨ÌÇ" ¿ÉÒÔÊÊÓÃÓÚ×Ö·û´®ºÍÊý×Ö.</p>
 <pre>"".base.__Get := Func("Default_Get_PseudoProperty")
 "".base.is    := Func("Default_is")
 
@@ -517,12 +536,12 @@ Default_is(nonobj, type)
         return true
     return false
 }</pre>
-<p>æ³¨æ„ä¹Ÿå¯ä»¥ä½¿ç”¨å†…ç½®å‡½æ•°, ä¸è¿‡è¿™æ—¶ä¸èƒ½çœç•¥å¤§æ‹¬å·:</p>
+<p>×¢ÒâÒ²¿ÉÒÔÊ¹ÓÃÄÚÖÃº¯Êý, ²»¹ýÕâÊ±²»ÄÜÊ¡ÂÔ´óÀ¨ºÅ:</p>
 <pre>"".base.length := Func("StrLen")
 MsgBox % A_AhkPath.length() " == " StrLen(A_AhkPath)</pre>
 
-<h4 id="Default__Warn">è°ƒè¯•</h4>
-<p>å¦‚æžœä¸å¸Œæœ›æŠŠä¸€ä¸ªå€¼è§†ä¸ºå¯¹è±¡, æ¯å½“è°ƒç”¨éžå¯¹è±¡å€¼å¯ä»¥æ˜¾ç¤ºè­¦å‘Š:</p>
+<h4 id="Default__Warn">µ÷ÊÔ</h4>
+<p>Èç¹û²»Ï£Íû°ÑÒ»¸öÖµÊÓÎª¶ÔÏó, Ã¿µ±µ÷ÓÃ·Ç¶ÔÏóÖµ¿ÉÒÔÏÔÊ¾¾¯¸æ:</p>
 <pre>"".base.__Get := "".base.__Set := "".base.__Call := Func("Default__Warn")
 
 empty_var.foo := "bar"
@@ -534,32 +553,32 @@ Default__Warn(nonobj, p1="", p2="", p3="", p4="")
     MsgBox A non-object value was improperly invoked.`n`nSpecifically: %nonobj%
 }</pre>
 
-<h2 id="Implementation">å®žçŽ°</h2>
-<a name="Refs"></a><h3 id="Reference_Counting">å¼•ç”¨è®¡æ•°</h3>
-<p>å½“è„šæœ¬ä¸å†å¼•ç”¨å¯¹è±¡æ—¶, AutoHotkey ä½¿ç”¨åŸºæœ¬å¼•ç”¨è®¡æ•°ç»“æž„æ¥è‡ªåŠ¨é‡Šæ”¾å¯¹è±¡ä½¿ç”¨çš„èµ„æº. è„šæœ¬ä½œè€…ä¸åº”è¯¥æ˜Žç¡®è°ƒç”¨æ­¤ç»“æž„, é™¤éžåœ¨ç›´æŽ¥å¤„ç†æŒ‡å‘å¯¹è±¡çš„æœªæ‰˜ç®¡æŒ‡é’ˆæ—¶. æƒ³äº†è§£æ›´å¤šç»†èŠ‚ï¼Œè¯·å‚é˜… <a href="commands/ObjAddRef.htm">ObjAddRef</a>ã€‚</p>
-<pre><em>; å¢žåŠ å¯¹è±¡çš„å¼•ç”¨æ•°ä»¥ "ä½¿å…¶ä¿æŒæ´»è·ƒ":</em>
+<h2 id="Implementation">ÊµÏÖ</h2>
+<a name="Refs"></a><h3 id="Reference_Counting">ÒýÓÃ¼ÆÊý</h3>
+<p>µ±½Å±¾²»ÔÙÒýÓÃ¶ÔÏóÊ±, AutoHotkey Ê¹ÓÃ»ù±¾ÒýÓÃ¼ÆÊý½á¹¹À´×Ô¶¯ÊÍ·Å¶ÔÏóÊ¹ÓÃµÄ×ÊÔ´. ½Å±¾×÷Õß²»Ó¦¸ÃÃ÷È·µ÷ÓÃ´Ë½á¹¹, ³ý·ÇÔÚÖ±½Ó´¦ÀíÖ¸Ïò¶ÔÏóµÄÎ´ÍÐ¹ÜÖ¸ÕëÊ±. ÏëÁË½â¸ü¶àÏ¸½Ú£¬Çë²ÎÔÄ <a href="commands/ObjAddRef.htm">ObjAddRef</a>¡£</p>
+<pre><em>; Ôö¼Ó¶ÔÏóµÄÒýÓÃÊýÒÔ "Ê¹Æä±£³Ö»îÔ¾":</em>
 <a href="commands/ObjAddRef.htm">ObjAddRef</a>(address)
 ...
-<em>; å‡å°‘å¯¹è±¡çš„å¼•ç”¨æ•°, è¿™æ ·å¯ä»¥é‡Šæ”¾å®ƒ:</em>
+<em>; ¼õÉÙ¶ÔÏóµÄÒýÓÃÊý, ÕâÑù¿ÉÒÔÊÍ·ÅËü:</em>
 ObjRelease(address)
 </pre>
-<p>ç„¶è€Œ, æœ€åˆé€šè¿‡ <code><a href="#AddressCast">Object(obj)</a></code> èŽ·å–åœ°å€æ—¶ä¸éœ€è¦ä½¿ç”¨ ObjAddRef.</p>
-<p>é€šå¸¸æ¯ä¸ªæ–°çš„å¯¹è±¡åœ°å€å‰¯æœ¬éƒ½åº”è¢«è§†ä¸ºå¯¹è±¡å¼•ç”¨, é™¤éžè„šæœ¬ä¼šè´Ÿè´£åœ¨é€‚å½“æ—¶è°ƒç”¨ ObjAddRef å’Œ/æˆ– ObjRelease. ä¾‹å¦‚, æ¯å½“é€šè¿‡ç±»ä¼¼ <code>x := address</code> è¿™æ ·çš„æ–¹å¼å¤åˆ¶åœ°å€æ—¶, åº”è°ƒç”¨ ObjAddRef æ¥å¢žåŠ å¼•ç”¨æ•°. åŒæ ·åœ°, æ¯å½“å«å¯¹è±¡åœ°å€ç‰¹æ®Šå‰¯æœ¬çš„è„šæœ¬ç»“æŸæ—¶, å®ƒåº”è¯¥è°ƒç”¨ ObjRelease. è¿™æ ·ç¡®ä¿äº†å½“æŒ‡å‘å¯¹è±¡çš„æœ€åŽä¸€ä¸ªå¼•ç”¨å¤±åŽ»æ—¶å¯¹è±¡è¢«é‡Šæ”¾ - è€Œä¸æ˜¯åœ¨è¿™ä¹‹å‰.</p>
-<p>è¦åœ¨æŒ‡å‘å¯¹è±¡çš„æœ€åŽä¸€ä¸ªå¼•ç”¨è¢«é‡Šæ”¾æ—¶è¿è¡Œä»£ç , å®žçŽ° <a href="#Custom_NewDelete">__Delete</a> å…ƒå‡½æ•°.</p>
-<p><b>å·²çŸ¥é™åˆ¶:</b></p>
+<p>È»¶ø, ×î³õÍ¨¹ý <code><a href="#AddressCast">Object(obj)</a></code> »ñÈ¡µØÖ·Ê±²»ÐèÒªÊ¹ÓÃ ObjAddRef.</p>
+<p>Í¨³£Ã¿¸öÐÂµÄ¶ÔÏóµØÖ·¸±±¾¶¼Ó¦±»ÊÓÎª¶ÔÏóÒýÓÃ, ³ý·Ç½Å±¾»á¸ºÔðÔÚÊÊµ±Ê±µ÷ÓÃ ObjAddRef ºÍ/»ò ObjRelease. ÀýÈç, Ã¿µ±Í¨¹ýÀàËÆ <code>x := address</code> ÕâÑùµÄ·½Ê½¸´ÖÆµØÖ·Ê±, Ó¦µ÷ÓÃ ObjAddRef À´Ôö¼ÓÒýÓÃÊý. Í¬ÑùµØ, Ã¿µ±º¬¶ÔÏóµØÖ·ÌØÊâ¸±±¾µÄ½Å±¾½áÊøÊ±, ËüÓ¦¸Ãµ÷ÓÃ ObjRelease. ÕâÑùÈ·±£ÁËµ±Ö¸Ïò¶ÔÏóµÄ×îºóÒ»¸öÒýÓÃÊ§È¥Ê±¶ÔÏó±»ÊÍ·Å - ¶ø²»ÊÇÔÚÕâÖ®Ç°.</p>
+<p>ÒªÔÚÖ¸Ïò¶ÔÏóµÄ×îºóÒ»¸öÒýÓÃ±»ÊÍ·ÅÊ±ÔËÐÐ´úÂë, ÊµÏÖ <a href="#Custom_NewDelete">__Delete</a> Ôªº¯Êý.</p>
+<p><b>ÒÑÖªÏÞÖÆ:</b></p>
 <ul>
-  <li>åœ¨é‡Šæ”¾å¯¹è±¡å‰å¿…é¡»æ–­å¼€å¾ªçŽ¯å¼•ç”¨. æƒ³äº†è§£ç»†èŠ‚å’ŒæŸ¥çœ‹ç¤ºä¾‹ï¼Œè¯·å‚é˜…<a href="#Circular_References">é‡Šæ”¾å¯¹è±¡</a>ã€‚</li>
-  <li>å°½ç®¡åœ¨ç¨‹åºé€€å‡ºæ—¶é™æ€å’Œå…¨å±€å˜é‡ä¸­çš„å¼•ç”¨ä¼šè‡ªåŠ¨é‡Šæ”¾, ä½†åœ¨éžé™æ€å±€éƒ¨å˜é‡æˆ–è¡¨è¾¾å¼æ±‚å€¼å †æ ˆä¸­çš„å¼•ç”¨åˆ™ä¸ä¼š. åªæœ‰è®©å‡½æ•°æˆ–è¡¨è¾¾å¼æ­£å¸¸ç»“æŸè¿™äº›å¼•ç”¨æ‰ä¼šé‡Šæ”¾.</li>
+  <li>ÔÚÊÍ·Å¶ÔÏóÇ°±ØÐë¶Ï¿ªÑ­»·ÒýÓÃ. ÏëÁË½âÏ¸½ÚºÍ²é¿´Ê¾Àý£¬Çë²ÎÔÄ<a href="#Circular_References">ÊÍ·Å¶ÔÏó</a>¡£</li>
+  <li>¾¡¹ÜÔÚ³ÌÐòÍË³öÊ±¾²Ì¬ºÍÈ«¾Ö±äÁ¿ÖÐµÄÒýÓÃ»á×Ô¶¯ÊÍ·Å, µ«ÔÚ·Ç¾²Ì¬¾Ö²¿±äÁ¿»ò±í´ïÊ½ÇóÖµ¶ÑÕ»ÖÐµÄÒýÓÃÔò²»»á. Ö»ÓÐÈÃº¯Êý»ò±í´ïÊ½Õý³£½áÊøÕâÐ©ÒýÓÃ²Å»áÊÍ·Å.</li>
 </ul>
-<p>å°½ç®¡å½“ç¨‹åºé€€å‡ºæ—¶æ“ä½œç³»ç»Ÿä¼šå›žæ”¶å¯¹è±¡æ‰€ä½¿ç”¨çš„å†…å­˜, ä½†åªæœ‰åœ¨æŒ‡å‘å¯¹è±¡çš„æ‰€æœ‰å¼•ç”¨éƒ½é‡Šæ”¾æ—¶æ‰ä¼šè°ƒç”¨ <a href="#Custom_NewDelete">__Delete</a>. è¿™æ ·é‡Šæ”¾äº†ä¸ä¼šç”±æ“ä½œç³»ç»Ÿè‡ªåŠ¨å›žæ”¶çš„å…¶ä»–èµ„æº, ä¾‹å¦‚ä¸´æ—¶æ–‡ä»¶, æ‰€ä»¥è¿™å¾ˆé‡è¦.</p>
+<p>¾¡¹Üµ±³ÌÐòÍË³öÊ±²Ù×÷ÏµÍ³»á»ØÊÕ¶ÔÏóËùÊ¹ÓÃµÄÄÚ´æ, µ«Ö»ÓÐÔÚÖ¸Ïò¶ÔÏóµÄËùÓÐÒýÓÃ¶¼ÊÍ·ÅÊ±²Å»áµ÷ÓÃ <a href="#Custom_NewDelete">__Delete</a>. ÕâÑùÊÍ·ÅÁË²»»áÓÉ²Ù×÷ÏµÍ³×Ô¶¯»ØÊÕµÄÆäËû×ÊÔ´, ÀýÈçÁÙÊ±ÎÄ¼þ, ËùÒÔÕâºÜÖØÒª.</p>
 
-<a name="AddressCast"></a><h3 id="Implementation_Pointers">æŒ‡å‘å¯¹è±¡çš„æŒ‡é’ˆ</h3>
-<p>åœ¨ä¸€äº›ç½•è§çš„æƒ…å†µä¸­, å¯èƒ½éœ€è¦é€šè¿‡ DllCall ä¼ é€’å¯¹è±¡åˆ°å¤–éƒ¨ä»£ç æˆ–æŠŠå®ƒå­˜å‚¨åˆ°äºŒè¿›åˆ¶æ•°æ®ç»“æž„ä»¥ä¾›ä»¥åŽå–å›ž. é€šè¿‡ <code>x := &amp;obj</code> å¯ä»¥èŽ·å–å¯¹è±¡çš„åœ°å€; ç„¶è€Œ, å¦‚æžœå˜é‡ <i>obj</i> è¢«æ¸…é™¤, æ­¤å¯¹è±¡å¯èƒ½è¢«è¿‡æ—©é‡Šæ”¾. ä¸ºç¡®ä¿ä¸å‘ç”Ÿè¿™æ ·çš„æƒ…å†µ, æŒ‰ä¸Šé¢æ¼”ç¤ºé‚£æ ·ä½¿ç”¨ ObjAddRef æˆ–æŒ‰ä¸‹é¢æ¼”ç¤ºé‚£æ ·ä½¿ç”¨ <code>Object()</code>:</p>
+<a name="AddressCast"></a><h3 id="Implementation_Pointers">Ö¸Ïò¶ÔÏóµÄÖ¸Õë</h3>
+<p>ÔÚÒ»Ð©º±¼ûµÄÇé¿öÖÐ, ¿ÉÄÜÐèÒªÍ¨¹ý DllCall ´«µÝ¶ÔÏóµ½Íâ²¿´úÂë»ò°ÑËü´æ´¢µ½¶þ½øÖÆÊý¾Ý½á¹¹ÒÔ¹©ÒÔºóÈ¡»Ø. Í¨¹ý <code>x := &amp;obj</code> ¿ÉÒÔ»ñÈ¡¶ÔÏóµÄµØÖ·; È»¶ø, Èç¹û±äÁ¿ <i>obj</i> ±»Çå³ý, ´Ë¶ÔÏó¿ÉÄÜ±»¹ýÔçÊÍ·Å. ÎªÈ·±£²»·¢ÉúÕâÑùµÄÇé¿ö, °´ÉÏÃæÑÝÊ¾ÄÇÑùÊ¹ÓÃ ObjAddRef »ò°´ÏÂÃæÑÝÊ¾ÄÇÑùÊ¹ÓÃ <code>Object()</code>:</p>
 <pre>address := Object(object)</pre>
-<p>æ­¤å¤–, è¿˜å¯ä»¥ä½¿ç”¨æ­¤å‡½æ•°æŠŠåœ°å€è½¬æ¢å›žå¼•ç”¨:</p>
+<p>´ËÍâ, »¹¿ÉÒÔÊ¹ÓÃ´Ëº¯Êý°ÑµØÖ·×ª»»»ØÒýÓÃ:</p>
 <pre>object := Object(address)</pre>
-<p>åœ¨è¿™ä¸¤ç§æƒ…å†µä¸­, å¯¹è±¡çš„ <a href="#Refs">å¼•ç”¨æ•°</a> éƒ½ä¼šè‡ªåŠ¨å¢žåŠ , è¿™æ ·å¯¹è±¡ä¸ä¼šè¢«è¿‡æ—©é‡Šæ”¾.</p>
-<p>æ³¨æ„æ­¤å‡½æ•°åŒæ ·é€‚ç”¨äºŽä¸æ˜¯ç”± <a href="#Arrays">Object()</a> åˆ›å»ºçš„å¯¹è±¡, ä¾‹å¦‚ <a href="commands/ComObjCreate.htm">COM å¯¹è±¡åŒ…è£…å™¨</a> æˆ– <a href="objects/File.htm">æ–‡ä»¶å¯¹è±¡</a>.</p>
+<p>ÔÚÕâÁ½ÖÖÇé¿öÖÐ, ¶ÔÏóµÄ <a href="#Refs">ÒýÓÃÊý</a> ¶¼»á×Ô¶¯Ôö¼Ó, ÕâÑù¶ÔÏó²»»á±»¹ýÔçÊÍ·Å.</p>
+<p>×¢Òâ´Ëº¯ÊýÍ¬ÑùÊÊÓÃÓÚ²»ÊÇÓÉ <a href="#Arrays">Object()</a> ´´½¨µÄ¶ÔÏó, ÀýÈç <a href="commands/ComObjCreate.htm">COM ¶ÔÏó°ü×°Æ÷</a> »ò <a href="objects/File.htm">ÎÄ¼þ¶ÔÏó</a>.</p>
 
 </body>
 </html>
