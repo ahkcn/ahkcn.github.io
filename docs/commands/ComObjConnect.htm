@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>ComObjConnect()</title>
-<meta http-equiv="content-type" content="text/html; charset=GBK">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/jquery.js" type="text/javascript"></script>
@@ -13,49 +13,49 @@
 <body>
 
 <h1>ComObjConnect() <span class="ver">[AHK_L 53+]</span></h1>
-<p>Á¬½Ó¶ÔÏóµÄÊÂ¼þÔ´µ½´øÓÐ¸ø¶¨Ç°×ºµÄº¯Êý.</p>
+<p>è¿žæŽ¥å¯¹è±¡çš„äº‹ä»¶æºåˆ°å¸¦æœ‰ç»™å®šå‰ç¼€çš„å‡½æ•°.</p>
 <pre class="Syntax">ComObjConnect(ComObject [, Prefix])</pre>
 
-<h3>²ÎÊý</h3>
+<h3>å‚æ•°</h3>
 <dl>
 
   <dt>ComObject</dt>
-  <dd><p>²úÉúÊÂ¼þµÄ¶ÔÏó.</p></dd>
+  <dd><p>äº§ç”Ÿäº‹ä»¶çš„å¯¹è±¡.</p></dd>
 
   <dt>Prefix</dt>
   <dd>
-      <p>ÓÃÓÚÈ·¶¨µ±ÊÂ¼þ·¢ÉúÊ±Ó¦µ÷ÓÃÄÄ¸öº¯ÊýµÄµÄÊÂ¼þÃû³ÆÇ°×ºµÄ×Ö·û´®.</p>
-      <p>Èç¹ûÊ¡ÂÔ, ÄÇÃ´¶ÔÏóÎª "Î´Á¬½ÓµÄ"; ¼´½Å±¾½«²»ÔÙ½ÓÊÕÆäÊÂ¼þÍ¨¸æ.</p>
-      <p><span class="ver">[v1.1.01+]:</span> ´Ë²ÎÊý¿ÉÒÔÎª½Å±¾¶¨ÒåµÄ¶ÔÏó. ÊÂ¼þ·¢ÉúÊ±, »áµ÷ÓÃÏàÓ¦µÄ·½·¨. Ê×¸ö²ÎÊý, Í¨³£ÎªÒþ²ØµÄ <code>this</code> ²ÎÊý, ÒýÓÃ½Å±¾¶¨ÒåµÄ¶ÔÏó, ¶ø²»ÊÇ COM ¶ÔÏó. Òª²»ÎªÃ¿¸öÊÂ¼þ¶¨Òå·½·¨¶ø²¶»ñËùÓÐÊÂ¼þ, Çë¶¨Òå <a href="../Objects.htm#Meta_Functions">__Call Ôªº¯Êý</a>.</p>
+      <p>ç”¨äºŽç¡®å®šå½“äº‹ä»¶å‘ç”Ÿæ—¶åº”è°ƒç”¨å“ªä¸ªå‡½æ•°çš„çš„äº‹ä»¶åç§°å‰ç¼€çš„å­—ç¬¦ä¸².</p>
+      <p>å¦‚æžœçœç•¥, é‚£ä¹ˆå¯¹è±¡ä¸º "æœªè¿žæŽ¥çš„"; å³è„šæœ¬å°†ä¸å†æŽ¥æ”¶å…¶äº‹ä»¶é€šå‘Š.</p>
+      <p><span class="ver">[v1.1.01+]:</span> æ­¤å‚æ•°å¯ä»¥ä¸ºè„šæœ¬å®šä¹‰çš„å¯¹è±¡. äº‹ä»¶å‘ç”Ÿæ—¶, ä¼šè°ƒç”¨ç›¸åº”çš„æ–¹æ³•. é¦–ä¸ªå‚æ•°, é€šå¸¸ä¸ºéšè—çš„ <code>this</code> å‚æ•°, å¼•ç”¨è„šæœ¬å®šä¹‰çš„å¯¹è±¡, è€Œä¸æ˜¯ COM å¯¹è±¡. è¦ä¸ä¸ºæ¯ä¸ªäº‹ä»¶å®šä¹‰æ–¹æ³•è€Œæ•èŽ·æ‰€æœ‰äº‹ä»¶, è¯·å®šä¹‰ <a href="../Objects.htm#Meta_Functions">__Call å…ƒå‡½æ•°</a>.</p>
     </dd>
 
 </dl>
 
-<h3 id="Usage">ÓÃ·¨</h3>
-<p>ÒªÈÃ ComObjConnect ÓÐÒâÒå, Ê×ÏÈÄú±ØÐëÔÚ½Å±¾ÖÐ±àÐ´´¦ÀíÈÎºÎ¸ÐÐËÈ¤ÊÂ¼þµÄº¯Êý. ÕâÀàº¯Êý»ò "ÊÂ¼þ´¦Àí³ÌÐò" ¾ßÓÐÏÂÁÐ½á¹¹:</p>
+<h3 id="Usage">ç”¨æ³•</h3>
+<p>è¦è®© ComObjConnect æœ‰æ„ä¹‰, é¦–å…ˆæ‚¨å¿…é¡»åœ¨è„šæœ¬ä¸­ç¼–å†™å¤„ç†ä»»ä½•æ„Ÿå…´è¶£äº‹ä»¶çš„å‡½æ•°. è¿™ç±»å‡½æ•°æˆ– "äº‹ä»¶å¤„ç†ç¨‹åº" å…·æœ‰ä¸‹åˆ—ç»“æž„:</p>
 <pre class="Syntax Short NoIndent"><i>Prefix</i><b>EventName</b>([<i>Params...</i>, ComObject])
 {
-    <i class="dull">... ´¦ÀíÊÂ¼þµÄ´úÂë ...</i>
+    <i class="dull">... å¤„ç†äº‹ä»¶çš„ä»£ç  ...</i>
     return <i>returnValue</i>
 }</pre>
-<p><i>Prefix</i> ÎªÄúÑ¡ÔñµÄÇ°×º, ¶ø <b>EventName</b> Îªº¯ÊýÐèÒª´¦ÀíµÄÃ¿ÖÖÊÂ¼þµÄÃû³Æ.</p>
-<p><i>Params</i> ¶ÔÓ¦ÓÚÊÂ¼þ°üº¬µÄËùÓÐ²ÎÊý. Èç¹ûÊÂ¼þ²»º¬ÓÐ²ÎÊý, <i>Params</i> Ó¦¸ÃÍêÈ«Ê¡ÂÔ. <i>ComObject</i> ÊÇ¿ÉÑ¡µÄ, ²¢ÇÒ¿ÉÒÔÔÚ¶¨ÒåµÄ <i>Params</i> ÊýÄ¿ÕýÈ·Ê±²ÅÊ¹ÓÃ; Ëü°üº¬ÁËµ½´«µÝ¸ø ComObjConnect µÄÔ­Ê¼°ü×°Æ÷¶ÔÏóµÄÒýÓÃ. "ComObject" Ó¦¸ÃÌæ»»ÎªÓëÄú½Å±¾ÉÏÏÂÎÄÏà¹ØµÄ¸üÓÐÒâÒåµÄÃû³Æ.</p>
-<p>×¢ÒâÊÂ¼þ´¦Àí³ÌÐò¿ÉÒÔ²úÉú·µ»ØÖµ. Òª·µ»ØÌØ¶¨µÄ COM ÀàÐÍµÄÖµ, ÇëÊ¹ÓÃ <a href="ComObjActive.htm#param">ComObjParameter</a>, ËüÒ²¿ÉÒÔÐ´³É <code>ComObjRetVal(type, value)</code> »ò¼ò»¯³É <code>ComObj(type, value)</code>.</p>
-<p>µ÷ÓÃ <code>ComObjConnect(yourObject, "<i>Prefix</i>")</code> À´ÆôÓÃÊÂ¼þ´¦Àí.</p>
-<p>µ÷ÓÃ <code>ComObjConnect(yourObject)</code> À´¶Ï¿ªµ½¶ÔÏóµÄÁ¬½Ó (Í£Ö¹´¦ÀíÊÂ¼þ).</p>
-<p>Èç¹û²ÎÊýµÄÊýÄ¿Î´Öª, ÄÇÃ´¿ÉÒÔÊ¹ÓÃ <a href="../Functions.htm#Variadic">¿É±ä²ÎÊýº¯Êý</a>.</p>
+<p><i>Prefix</i> ä¸ºæ‚¨é€‰æ‹©çš„å‰ç¼€, è€Œ <b>EventName</b> ä¸ºå‡½æ•°éœ€è¦å¤„ç†çš„æ¯ç§äº‹ä»¶çš„åç§°.</p>
+<p><i>Params</i> å¯¹åº”äºŽäº‹ä»¶åŒ…å«çš„æ‰€æœ‰å‚æ•°. å¦‚æžœäº‹ä»¶ä¸å«æœ‰å‚æ•°, <i>Params</i> åº”è¯¥å®Œå…¨çœç•¥. <i>ComObject</i> æ˜¯å¯é€‰çš„, å¹¶ä¸”å¯ä»¥åœ¨å®šä¹‰çš„ <i>Params</i> æ•°ç›®æ­£ç¡®æ—¶æ‰ä½¿ç”¨; å®ƒåŒ…å«äº†åˆ°ä¼ é€’ç»™ ComObjConnect çš„åŽŸå§‹åŒ…è£…å™¨å¯¹è±¡çš„å¼•ç”¨. "ComObject" åº”è¯¥æ›¿æ¢ä¸ºä¸Žæ‚¨è„šæœ¬ä¸Šä¸‹æ–‡ç›¸å…³çš„æ›´æœ‰æ„ä¹‰çš„åç§°.</p>
+<p>æ³¨æ„äº‹ä»¶å¤„ç†ç¨‹åºå¯ä»¥äº§ç”Ÿè¿”å›žå€¼. è¦è¿”å›žç‰¹å®šçš„ COM ç±»åž‹çš„å€¼, è¯·ä½¿ç”¨ <a href="ComObjActive.htm#param">ComObjParameter</a>, å®ƒä¹Ÿå¯ä»¥å†™æˆ <code>ComObjRetVal(type, value)</code> æˆ–ç®€åŒ–æˆ <code>ComObj(type, value)</code>.</p>
+<p>è°ƒç”¨ <code>ComObjConnect(yourObject, "<i>Prefix</i>")</code> æ¥å¯ç”¨äº‹ä»¶å¤„ç†.</p>
+<p>è°ƒç”¨ <code>ComObjConnect(yourObject)</code> æ¥æ–­å¼€åˆ°å¯¹è±¡çš„è¿žæŽ¥ (åœæ­¢å¤„ç†äº‹ä»¶).</p>
+<p>å¦‚æžœå‚æ•°çš„æ•°ç›®æœªçŸ¥, é‚£ä¹ˆå¯ä»¥ä½¿ç”¨ <a href="../Functions.htm#Variadic">å¯å˜å‚æ•°å‡½æ•°</a>.</p>
 
-<h3>Ïà¹Ø</h3>
+<h3>ç›¸å…³</h3>
 <p><a href="ComObjCreate.htm">ComObjCreate</a>, <a href="ComObjGet.htm">ComObjGet</a>, <a href="ComObjActive.htm">ComObjActive</a>, <a href="ComObjConnect.htm">ComObjConnect</a>, <a href="ComObjError.htm">ComObjError</a>, <a href="http://msdn.microsoft.com/en-us/library/ccxe1xe6.aspx">WScript.ConnectObject (MSDN)</a></p>
 
-<h3 id="Examples">Ê¾Àý</h3>
+<h3 id="Examples">ç¤ºä¾‹</h3>
 <pre class="NoIndent">
 ie := ComObjCreate("<a href="http://msdn.microsoft.com/en-us/library/aa752084.aspx">InternetExplorer.Application</a>")
 
-<em>; °ÑÊÂ¼þÁ¬½Óµ½´ø¡°IE_¡±Ç°×ºµÄ½Å±¾º¯Êý¡£</em>
+<em>; æŠŠäº‹ä»¶è¿žæŽ¥åˆ°å¸¦â€œIE_â€å‰ç¼€çš„è„šæœ¬å‡½æ•°ã€‚</em>
 <b>ComObjConnect</b>(ie, "IE_")
 
-ie.Visible := true  <em>; ÒÑÖª´ËÓï¾äÔÚIE7ÉÏÎÞ·¨Õý³£Ö´ÐÐ¡£</em>
+ie.Visible := true  <em>; å·²çŸ¥æ­¤è¯­å¥åœ¨IE7ä¸Šæ— æ³•æ­£å¸¸æ‰§è¡Œã€‚</em>
 ie.Navigate("http://ahkscript.org/")
 #Persistent
 

@@ -3,8 +3,8 @@
 <html>
 <head>
 <title>PostMessage / SendMessage</title>
-<meta name="description" content="ʹ�������ѵĺ��������Ϣ������. PostMessage ����Ϣ�ŵ�Ŀ�괰�ڵ���Ϣ������, �� SendMessage ��ȴ��ظ�.">
-<meta http-equiv="content-type" content="text/html; charset=GBK">
+<meta name="description" content="使用这个免费的宏程序发送消息到窗口. PostMessage 把消息放到目标窗口的消息队列中, 但 SendMessage 会等待回复.">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/jquery.js" type="text/javascript"></script>
@@ -15,102 +15,102 @@
 
 <h1>PostMessage / SendMessage</h1>
 
-<p>������Ϣ�����ڻ�ؼ���SendMessage ����ȴ��ظ�����</p>
+<p>发送消息到窗口或控件（SendMessage 还会等待回复）。</p>
 
 <pre class="Syntax">PostMessage, Msg [, wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, ExcludeText]
 SendMessage, Msg [, wParam, lParam, Control, WinTitle, WinText, ExcludeTitle, ExcludeText, Timeout]</pre>
-<h3>����</h3>
+<h3>参数</h3>
 <dl>
 
   <dt>Msg</dt>
-  <dd><p>Ҫ���͵���Ϣ��, ����Ϊ <a href="../Variables.htm#Expressions">����ʽ</a>. ����� <a href="../misc/SendMessageList.htm">��Ϣ�б�</a> ��ȷ�����.</p></dd>
+  <dd><p>要发送的消息号, 可以为 <a href="../Variables.htm#Expressions">表达式</a>. 请参阅 <a href="../misc/SendMessageList.htm">消息列表</a> 来确定编号.</p></dd>
 
   <dt>wParam</dt>
-  <dd><p>��Ϣ�ĵ�һ�����, ����Ϊ <a href="../Variables.htm#Expressions">����ʽ</a>. ���Ϊ�ջ�ʡ��, ��ᱻ����Ϊ 0.</p></dd>
+  <dd><p>消息的第一个组件, 可以为 <a href="../Variables.htm#Expressions">表达式</a>. 如果为空或省略, 则会被设置为 0.</p></dd>
 
   <dt>lParam</dt>
-  <dd><p>��Ϣ�ĵڶ������, ����Ϊ <a href="../Variables.htm#Expressions">����ʽ</a>. ���Ϊ�ջ�ʡ��, ��ᱻ����Ϊ 0.</p></dd>
+  <dd><p>消息的第二个组件, 可以为 <a href="../Variables.htm#Expressions">表达式</a>. 如果为空或省略, 则会被设置为 0.</p></dd>
 
-  <dt>�ؼ�</dt>
-  <dd><p>����˲���Ϊ�ջ�ʡ��, ����Ϣ�ᱻֱ�ӷ��͵�Ŀ�괰�ڶ���������ĳ���ؼ�. ���ߴ˲��������� ClassNN���ؼ���������ʵ����ţ���ؼ����ı������Ƕ�����ͨ�� Window Spy ��ȡ��ʹ���ı�ʱ��ƥ����Ϊ�� <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> ������</p>
-    <p>Ҫ�Կؼ��� HWND�����ھ�������в������뽫 <em>Control</em> ��������ͬʱ�� <em>WinTitle</em> ������ָ�� <code>ahk_id %ControlHwnd%</code>����ʹ�� <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> ���ùر�ʱ������Ҳ���Բ������ؿؼ�������ȡ�ؼ��� HWND ��һ�㷽����ʹ�� <a href="ControlGet.htm#Hwnd">ControlGet Hwnd</a>, <a href="MouseGetPos.htm">MouseGetPos</a> �� <a href="DllCall.htm">DllCall</a>.</p>
+  <dt>控件</dt>
+  <dd><p>如果此参数为空或省略, 则消息会被直接发送到目标窗口而不是它的某个控件. 或者此参数可以是 ClassNN（控件的类名和实例编号）或控件的文本，它们都可以通过 Window Spy 获取。使用文本时，匹配行为由 <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> 决定。</p>
+    <p>要对控件的 HWND（窗口句柄）进行操作，请将 <em>Control</em> 参数留空同时在 <em>WinTitle</em> 参数中指定 <code>ahk_id %ControlHwnd%</code>（即使在 <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> 设置关闭时，这样也可以操作隐藏控件）。获取控件的 HWND 的一般方法是使用 <a href="ControlGet.htm#Hwnd">ControlGet Hwnd</a>, <a href="MouseGetPos.htm">MouseGetPos</a> 或 <a href="DllCall.htm">DllCall</a>.</p>
     </dd>
 
   <dt>WinTitle</dt>
-  <dd><p>���ڱ����ʶ��Ŀ�괰�ڵ���������������� <a href="../misc/WinTitle.htm">WinTitle</a>��</p></dd>
+  <dd><p>窗口标题或识别目标窗口的其他条件。请参阅 <a href="../misc/WinTitle.htm">WinTitle</a>。</p></dd>
 
   <dt>WinText</dt>
-  <dd><p>���ʹ�ô˲���, ��ô��������Ŀ�괰���е����ı�Ԫ�ص����ַ��� (�����õ� Window Spy ������ʾ��һ��). �� <a href="DetectHiddenText.htm">DetectHiddenText</a> ������Ϊ ON ʱ, ��ô���⵽�����ı�Ԫ��.</p></dd>
+  <dd><p>如果使用此参数, 那么它必须是目标窗口中单个文本元素的子字符串 (和内置的 Window Spy 工具显示的一样). 当 <a href="DetectHiddenText.htm">DetectHiddenText</a> 的设置为 ON 时, 那么会检测到隐藏文本元素.</p></dd>
 
   <dt>ExcludeTitle</dt>
-  <dd><p>�����к��д˲���ֵ�Ĵ��ڽ����ų�.</p></dd>
+  <dd><p>标题中含有此参数值的窗口将被排除.</p></dd>
 
   <dt>ExcludeText</dt>
-  <dd><p>�ı��к��д˲���ֵ�Ĵ��ڽ����ų�.</p></dd>
+  <dd><p>文本中含有此参数值的窗口将被排除.</p></dd>
 
-  <dt>��ʱ</dt>
-  <dd><p><span class="ver">[AHK_L 42+]��</span>�ȴ�Ŀ�괰�ڴ�����Ϣ���������������ʡ�ԣ���Ĭ��Ϊ 5000 �����룩����ͬʱҲ�ǲ�֧�ִ˲����� AutoHotkey �ɰ汾��Ĭ����Ϊ���������ʱ������Ϣû�б�����, ��������������� ErrorLevel Ϊ���� FAIL. �˲�������Ϊ <a href="../Variables.htm#Expressions">����ʽ</a>.</p></dd>
+  <dt>超时</dt>
+  <dd><p><span class="ver">[AHK_L 42+]：</span>等待目标窗口处理消息的最大毫秒数。如果省略，则默认为 5000 （毫秒），这同时也是不支持此参数的 AutoHotkey 旧版本的默认行为。如果在这时间内消息没有被处理, 则命令结束并设置 ErrorLevel 为单词 FAIL. 此参数可以为 <a href="../Variables.htm#Expressions">表达式</a>.</p></dd>
 
 </dl>
 
 <h3>ErrorLevel</h3>
-<p><span class="ver">[v1.1.04+]</span> ����������ʧ��ʱ���׳��쳣. ���˽������Ϣ, ����� <a href="Catch.htm#RuntimeErrors">����ʱ����</a>.</p>
-<p>PostMessage: ����������� (����Ŀ�괰�ڻ�ؼ�������) �� <a href="../misc/ErrorLevel.htm">ErrorLevel</a> ����Ϊ 1. ������Ϊ 0.</p>
-<p>SendMessage�����������������ʱ���� <a href="../misc/ErrorLevel.htm">ErrorLevel</a> ������Ϊ���� FAIL������, ��������Ϊ����Ϣ����ֵ���, ����ʱ����������Ϣ�����ʺ�Ŀ�괰�ھ����� "�ظ�". �������ǽ��� 0 �� 4294967295 ֮�������. ������Ӧ��Ϊ�з���������������������ת��Ϊ������</p>
+<p><span class="ver">[v1.1.04+]</span> 这两个命令失败时会抛出异常. 想了解更多信息, 请参阅 <a href="Catch.htm#RuntimeErrors">运行时错误</a>.</p>
+<p>PostMessage: 如果遇到问题 (例如目标窗口或控件不存在) 则 <a href="../misc/ErrorLevel.htm">ErrorLevel</a> 被置为 1. 否则被置为 0.</p>
+<p>SendMessage：如果遇到问题或命令超时，则 <a href="../misc/ErrorLevel.htm">ErrorLevel</a> 被设置为单词 FAIL。否则, 它被设置为此消息的数值结果, 这有时可能是由消息的性质和目标窗口决定的 "回复". 这个结果是介于 0 和 4294967295 之间的整数. 如果结果应该为有符号整数，请参照这个例子转换为负数：</p>
 <pre>MsgReply := ErrorLevel &gt; 0x7FFFFFFF ? -(~ErrorLevel) - 1 : ErrorLevel</pre>
-<h3>��ע</h3>
-<p>Ӧ��С��ʹ����Щ����, ��Ϊ������Ϣ������Ĵ��� (���ʹ������Ϣ) ���ܵ����������Ϊ����������Ŀ��Ӧ�ó������. ������Ϊ�����Ӧ�ó��������ʱ���ῼ�ǵ����ⲿ��Դ�н���ĳЩ���͵���Ϣ.</p>
-<p>PostMessage ����Ϣ���õ���Ŀ�괰�ڹ�������Ϣ������. ������ȴ��𸴻��Ӧ. ��֮��ȣ�SendMessage �ڵ��ﳬʱʱ��ǰ��ȴ�Ŀ�괰�ڴ�����Ϣ��</p>
-<p>���� <em>Msg</em>, <em>wParam</em> �� <em>lParam</em> ��Ӧ���ǽ��� -2147483648 �� 4294967295 (0xFFFFFFFF) ֮�������. �� AutoHotkey �е���������ֵ��ͬ, ���Լ��� 0x ǰ׺��ʾʮ������ֵ. ����, 0xFF ��ͬ�� 255.</p>
-<p>ͨ�� <em>wParam</em> �� <em>lParam</em> ָ�������ĵ�ַ���Է����ַ���. ���������ʹ�� <a href="../Variables.htm#amp">��ַ����� (&amp;)</a> ��ʵ�����Ŀ��:</p>
-<pre>SendMessage, 0xC, 0, <strong>&amp;MyVar</strong>, ClassNN, WinTitle  <em>; 0XC Ϊ WM_SETTEXT</em></pre>
-<p>�� v1.0.43.06+, ����Ϣ�Ľ����߷��� MyVar ���ַ���������ȷʶ�������Ҫ����Ĳ���. ��������ֻ���ڲ������׸��ַ�Ϊ�ͷ��ţ�&amp;��ʱ�ſ��ԣ����磬<code>5+&amp;MyVar</code> ���е� <code>&amp;MyVar</code> �� <code>&amp;MyVar+5</code> ���ԡ�</p>
-<p>���Ű�Χ��/ԭ����ַ���Ҳ���Է���, �����������������ʾ�� (��ʱ��Ӧ��ʹ�� &amp; �����):</p>
+<h3>备注</h3>
+<p>应该小心使用这些命令, 因为发送消息到错误的窗口 (或发送错误的消息) 可能导致意外的行为或者甚至让目标应用程序崩溃. 这是因为大多数应用程序在设计时不会考虑到从外部来源中接受某些类型的消息.</p>
+<p>PostMessage 把消息放置到和目标窗口关联的消息队列中. 它不会等待答复或回应. 与之相比，SendMessage 在到达超时时间前会等待目标窗口处理消息。</p>
+<p>参数 <em>Msg</em>, <em>wParam</em> 和 <em>lParam</em> 都应该是介于 -2147483648 和 4294967295 (0xFFFFFFFF) 之间的整数. 和 AutoHotkey 中的所有整数值相同, 可以加上 0x 前缀表示十六进制值. 例如, 0xFF 等同于 255.</p>
+<p>通过 <em>wParam</em> 或 <em>lParam</em> 指定变量的地址可以发送字符串. 下面的例子使用 <a href="../Variables.htm#amp">地址运算符 (&amp;)</a> 来实现这个目的:</p>
+<pre>SendMessage, 0xC, 0, <strong>&amp;MyVar</strong>, ClassNN, WinTitle  <em>; 0XC 为 WM_SETTEXT</em></pre>
+<p>在 v1.0.43.06+, 由消息的接收者放入 MyVar 的字符串可以正确识别而不需要额外的步骤. 不过，这只有在参数的首个字符为和符号（&amp;）时才可以；例如，<code>5+&amp;MyVar</code> 不行但 <code>&amp;MyVar</code> 或 <code>&amp;MyVar+5</code> 可以。</p>
+<p>引号包围的/原义的字符串也可以发送, 例如下面这个可运行示例 (此时不应该使用 &amp; 运算符):</p>
 <pre>Run Notepad
 WinWait Untitled - Notepad
-SendMessage, 0xC, 0, <strong>"New Notepad Title"</strong>  <em>; 0XC Ϊ WM_SETTEXT</em></pre>
-<p>Ҫ������Ϣ��ϵͳ�е����д��ڣ��������ػ���õ���Щ�������� <em>WinTitle</em> ��ָ�� <code>ahk_id 0xFFFF</code>��0xFFFF Ϊ HWND_BROADCAST�������ּ���Ӧ��ֻ����Ŀ��Ϊ�㲥����Ϣ, ����:</p>
-<pre>SendMessage, 0x1A,,,, ahk_id 0xFFFF  <em>; 0x1A Ϊ WM_SETTINGCHANGE</em></pre>
-<p>Ҫ�ýű�������Ϣ, ��ʹ�� <a href="OnMessage.htm">OnMessage()</a>.</p>
-<p>����� <a href="../misc/SendMessage.htm">��Ϣָ��</a> ���鿴ʹ����Щ����Ľ���.</p>
-<p>���ڱ�����ı������ִ�Сд��. ֻ���ڴ� <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> ����ʱ�����ܼ�⵽���ش��ڡ�</p>
+SendMessage, 0xC, 0, <strong>"New Notepad Title"</strong>  <em>; 0XC 为 WM_SETTEXT</em></pre>
+<p>要发送消息到系统中的所有窗口（包括隐藏或禁用的那些），请在 <em>WinTitle</em> 中指定 <code>ahk_id 0xFFFF</code>（0xFFFF 为 HWND_BROADCAST）。这种技术应该只用于目标为广播的消息, 例如:</p>
+<pre>SendMessage, 0x1A,,,, ahk_id 0xFFFF  <em>; 0x1A 为 WM_SETTINGCHANGE</em></pre>
+<p>要让脚本接收消息, 请使用 <a href="OnMessage.htm">OnMessage()</a>.</p>
+<p>请参阅 <a href="../misc/SendMessage.htm">消息指南</a> 来查看使用这些命令的介绍.</p>
+<p>窗口标题和文本是区分大小写的. 只有在打开 <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> 设置时，才能检测到隐藏窗口。</p>
 
-<h3>���</h3>
-<p><a href="../misc/SendMessageList.htm">��Ϣ�б�</a>, <a href="../misc/SendMessage.htm">��Ϣָ��</a>, <a href="OnMessage.htm">OnMessage()</a>, <a href="../misc/Winamp.htm">�Զ��� Winamp</a>, <a href="DllCall.htm">DllCall</a>, <a href="ControlSend.htm">ControlSend</a>, <a href="WinMenuSelectItem.htm">WinMenuSelectItem</a></p>
-<h3 id="Examples">ʾ��</h3>
-<pre class="NoIndent">#o::  <em>; Win+O �ȼ��ر���ʾ��.</em>
-Sleep 1000  <em>; ���û��л����ͷŰ��� (�Է��ͷ�����ʱ�ٴλ���������).
-; �ر���ʾ��:</em>
-SendMessage, 0x112, 0xF170, 2,, Program Manager  <em>; 0x112 Ϊ WM_SYSCOMMAND, 0xF170 Ϊ SC_MONITORPOWER.
-; �����������ע��: ʹ�� -1 ���� 2 ������ʾ��.
-; ʹ�� 1 ���� 2 ��������ʾ���Ľ���ģʽ.</em>
+<h3>相关</h3>
+<p><a href="../misc/SendMessageList.htm">消息列表</a>, <a href="../misc/SendMessage.htm">消息指南</a>, <a href="OnMessage.htm">OnMessage()</a>, <a href="../misc/Winamp.htm">自动化 Winamp</a>, <a href="DllCall.htm">DllCall</a>, <a href="ControlSend.htm">ControlSend</a>, <a href="WinMenuSelectItem.htm">WinMenuSelectItem</a></p>
+<h3 id="Examples">示例</h3>
+<pre class="NoIndent">#o::  <em>; Win+O 热键关闭显示器.</em>
+Sleep 1000  <em>; 让用户有机会释放按键 (以防释放它们时再次唤醒显视器).
+; 关闭显示器:</em>
+SendMessage, 0x112, 0xF170, 2,, Program Manager  <em>; 0x112 为 WM_SYSCOMMAND, 0xF170 为 SC_MONITORPOWER.
+; 对上面命令的注释: 使用 -1 代替 2 来打开显示器.
+; 使用 1 代替 2 来激活显示器的节能模式.</em>
 return
 
-<em>; �����û�ѡ�����Ļ��������:</em>
-SendMessage, 0x112, 0xF140, 0,, Program Manager  <em>; 0x112 Ϊ WM_SYSCOMMAND, �� 0xF140 Ϊ SC_SCREENSAVE.</em>
+<em>; 启动用户选择的屏幕保护程序:</em>
+SendMessage, 0x112, 0xF140, 0,, Program Manager  <em>; 0x112 为 WM_SYSCOMMAND, 而 0xF140 为 SC_SCREENSAVE.</em>
 
-<em>; ���Ϲ���һ�� (���ں���ֱ�������Ŀؼ�):</em>
+<em>; 向上滚动一行 (用于含垂直滚动条的控件):</em>
 ControlGetFocus, control, A
 SendMessage, 0x115, 0, 0, %control%, A
 
-<em>; ���¹���һ��:</em>
+<em>; 向下滚动一行:</em>
 ControlGetFocus, control, A
 SendMessage, 0x115, 1, 0, %control%, A
 
-<em>; �л�����ڵļ��̲���/����ΪӢ��:</em>
-PostMessage, 0x50, 0, 0x4090409,, A  <em>; 0x50 Ϊ WM_INPUTLANGCHANGEREQUEST.</em>
+<em>; 切换活动窗口的键盘布局/语言为英语:</em>
+PostMessage, 0x50, 0, 0x4090409,, A  <em>; 0x50 为 WM_INPUTLANGCHANGEREQUEST.</em>
 
-<em>; ����������� Winamp �ĵ�ǰ��Ĺ�����:</em>
+<em>; 这个例子请求 Winamp 的当前活动的轨道编号:</em>
 SetTitleMatchMode, 2
 SendMessage, 1024, 0, 120, - Winamp
 if ErrorLevel &lt;&gt; FAIL
 {
-    ErrorLevel++  <em>; Winamp �ļ����� "0" ��ʼ, ���Լ� 1 ���е���.</em>
+    ErrorLevel++  <em>; Winamp 的计数从 "0" 开始, 所以加 1 进行调整.</em>
     MsgBox, Track #%ErrorLevel% is active or playing.
 }
-<em>; ����� <a href="../misc/Winamp.htm">�Զ��� Winamp</a> �˽�����.</em>
+<em>; 请参阅 <a href="../misc/Winamp.htm">自动化 Winamp</a> 了解详情.</em>
 
-<em>; �ҳ� AHK �ű��Ľ��� ID (��һ�ַ����� "<a href="WinGet.htm">WinGet PID</a>"):</em>
+<em>; 找出 AHK 脚本的进程 ID (另一种方法是 "<a href="WinGet.htm">WinGet PID</a>"):</em>
 SetTitleMatchMode, 2
 DetectHiddenWindows, on
 SendMessage, 0x44, 0x405, 0, , SomeOtherScript.ahk - AutoHotkey v

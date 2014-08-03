@@ -2,8 +2,8 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>ÖÇÄÜ¸ĞÓ¦ -- ×÷Õß: Rajat (ĞèÒª XP/2k/NT)</title>
-<meta http-equiv="content-type" content="text/html; charset=GBK">
+<title>æ™ºèƒ½æ„Ÿåº” -- ä½œè€…: Rajat (éœ€è¦ XP/2k/NT)</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/jquery.js" type="text/javascript"></script>
@@ -12,11 +12,11 @@
 </head>
 <body>
 
-<h1>ÖÇÄÜ¸ĞÓ¦ -- ×÷Õß: Rajat (ĞèÒª XP/2k/NT)</h1>
+<h1>æ™ºèƒ½æ„Ÿåº” -- ä½œè€…: Rajat (éœ€è¦ XP/2k/NT)</h1>
 
-<p>´Ë½Å±¾»áÔÚÄú±à¼­ AutoHotkey ½Å±¾Ê±½øĞĞ¼àÊÓ. µ±Ëü¿´µ½ÄúÊäÈëÃüÁîºó¸ú×Å¶ººÅ»ò¿Õ¸ñºó, »áÏÔÊ¾´ËÃüÁîµÄ²ÎÊıÁĞ±íÒÔ¸øÄúÌáÊ¾. ´ËÍâ, Äú¿ÉÒÔ°´ÏÂ Ctrl+F1 (»òÄúÑ¡ÔñµÄÆäËûÈÈ¼ü) À´ÏÔÊ¾°ïÖúÎÄ¼şÖĞ´ËÃüÁîµÄÒ³Ãæ. ÒªÈ¡Ïû²ÎÊıÁĞ±í, Çë°´ Escape »ò Enter.
+<p>æ­¤è„šæœ¬ä¼šåœ¨æ‚¨ç¼–è¾‘ AutoHotkey è„šæœ¬æ—¶è¿›è¡Œç›‘è§†. å½“å®ƒçœ‹åˆ°æ‚¨è¾“å…¥å‘½ä»¤åè·Ÿç€é€—å·æˆ–ç©ºæ ¼å, ä¼šæ˜¾ç¤ºæ­¤å‘½ä»¤çš„å‚æ•°åˆ—è¡¨ä»¥ç»™æ‚¨æç¤º. æ­¤å¤–, æ‚¨å¯ä»¥æŒ‰ä¸‹ Ctrl+F1 (æˆ–æ‚¨é€‰æ‹©çš„å…¶ä»–çƒ­é”®) æ¥æ˜¾ç¤ºå¸®åŠ©æ–‡ä»¶ä¸­æ­¤å‘½ä»¤çš„é¡µé¢. è¦å–æ¶ˆå‚æ•°åˆ—è¡¨, è¯·æŒ‰ Escape æˆ– Enter.
 </p>
-<p><a href="IntelliSense.ahk">ÏÂÔØ´Ë½Å±¾</a> &nbsp;| &nbsp;<a href="index.htm">ÆäËûÊ¾Àı½Å±¾</a> &nbsp;| &nbsp;<a href="../AutoHotkey.htm">Ö÷Ò³</a></p>
+<p><a href="IntelliSense.ahk">ä¸‹è½½æ­¤è„šæœ¬</a> &nbsp;| &nbsp;<a href="index.htm">å…¶ä»–ç¤ºä¾‹è„šæœ¬</a> &nbsp;| &nbsp;<a href="../AutoHotkey.htm">ä¸»é¡µ</a></p>
 
 <pre class="NoIndent"><em>; Requires v1.0.41+</em>
 
@@ -109,7 +109,7 @@ Loop
     {
         ToolTip
         Sleep, 500
-        ¼ÌĞø
+        ç»§ç»­
     }
     
     <em>; Get all keys till endkey:</em>
@@ -120,7 +120,7 @@ Loop
     if I_EndKey in EndKey:Enter,EndKey:Escape
     {
         ToolTip
-        ¼ÌĞø
+        ç»§ç»­
     }
 
     <em>; Editor window check again!</em>
@@ -128,23 +128,23 @@ Loop
     IfNotInString, ActiveTitle, %I_Editor%
     {
         ToolTip
-        ¼ÌĞø
+        ç»§ç»­
     }
 
     <em>; Compensate for any indentation that is present:</em>
     StringReplace, I_Word, I_Word, %A_Space%,, All
     StringReplace, I_Word, I_Word, %A_Tab%,, All
     if I_Word =
-        ¼ÌĞø
+        ç»§ç»­
     
     <em>; Check for commented line:</em>
     StringLeft, I_Check, I_Word, 1
     if (I_Check = ";" or I_Word = "If")  <em>; "If" seems a little too annoying to show tooltip for.</em>
-        ¼ÌĞø
+        ç»§ç»­
 
     <em>; Match word with command:</em>
     I_Index =
-    Ñ­»·
+    å¾ªç¯
     {
         <em>; It helps performance to resolve dynamic variables only once.</em>
         <em>; In addition, the value put into I_ThisCmd is also used by the</em>
@@ -162,7 +162,7 @@ Loop
     
     <em>; If no match then resume watching user input:</em>
     if I_Index =
-        ¼ÌĞø
+        ç»§ç»­
     
     <em>; Show matched command to guide the user:</em>
     I_ThisFullCmd := I_FullCmd%I_Index%

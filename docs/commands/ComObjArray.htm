@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>ComObjArray()</title>
-<meta http-equiv="content-type" content="text/html; charset=GBK">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/jquery.js" type="text/javascript"></script>
@@ -14,46 +14,46 @@
 
 <h1>ComObjArray() <span class="ver">[v1.0.91+]</span></h1>
 
-<p>´´½¨ÓÃÓÚ COM µÄ SafeArray.</p>
+<p>åˆ›å»ºç”¨äºŽ COM çš„ SafeArray.</p>
 
 <pre class="Syntax">ArrayObj := ComObjArray(VarType, Count1 [, Count2, ... Count8])</pre>
 
-<h3>²ÎÊý</h3>
+<h3>å‚æ•°</h3>
 <dl>
 
   <dt>VarType</dt>
-  <dd>Êý×éµÄ»ùÀàÐÍ (Êý×éÖÐÃ¿¸öÔªËØµÄ VARTYPE). VARTYPE ±»ÏÞÖÆÎª±äÁ¿ÀàÐÍµÄ×Ó¼¯. ²»ÄÜÉèÖÃÎª VT_ARRAY ºÍ VT_BYREF. ¶ÔÓÚÊý×éµÄ»ùÀàÐÍ VT_EMPTY ºÍ VT_NULL ¶¼ÊÇÎÞÐ§µÄ. ÆäËûËùÓÐÀàÐÍ¶¼ÊÇºÏ·¨µÄ.
-    <p>Çë²ÎÔÄ <a href="ComObjType.htm">ComObjType</a> ÁË½âÔÊÐíÖµµÄÁÐ±í.</p></dd>
+  <dd>æ•°ç»„çš„åŸºç±»åž‹ (æ•°ç»„ä¸­æ¯ä¸ªå…ƒç´ çš„ VARTYPE). VARTYPE è¢«é™åˆ¶ä¸ºå˜é‡ç±»åž‹çš„å­é›†. ä¸èƒ½è®¾ç½®ä¸º VT_ARRAY å’Œ VT_BYREF. å¯¹äºŽæ•°ç»„çš„åŸºç±»åž‹ VT_EMPTY å’Œ VT_NULL éƒ½æ˜¯æ— æ•ˆçš„. å…¶ä»–æ‰€æœ‰ç±»åž‹éƒ½æ˜¯åˆæ³•çš„.
+    <p>è¯·å‚é˜… <a href="ComObjType.htm">ComObjType</a> äº†è§£å…è®¸å€¼çš„åˆ—è¡¨.</p></dd>
 
   <dt>Count<i>N</i></dt>
-  <dd><p>Ã¿¸öÎ¬¶ÈµÄ´óÐ¡¡£¿ÉÒÔÖ§³Ö¶à´ï 8 Î¬µÄÊý×é.</p></dd>
+  <dd><p>æ¯ä¸ªç»´åº¦çš„å¤§å°ã€‚å¯ä»¥æ”¯æŒå¤šè¾¾ 8 ç»´çš„æ•°ç»„.</p></dd>
 
   <dt>ArrayObj</dt>
-  <dd><p>°üº¬ SafeArray µÄ°ü×°Æ÷¶ÔÏó.</p></dd>
+  <dd><p>åŒ…å« SafeArray çš„åŒ…è£…å™¨å¯¹è±¡.</p></dd>
 
 </dl>
 
-<h3>·½·¨</h3>
-<p>Êý×é°ü×°Æ÷¶ÔÏóÖ§³ÖÏÂÁÐ·½·¨:</p>
-<p><code class="Syntax">Array.MaxIndex(n)</code>: ·µ»ØµÚ <i>n</i> Î¬µÄÉÏ½ç. Èç¹û <i>n</i> Ê¡ÂÔ, Ä¬ÈÏÎª 1.</p>
-<p><code class="Syntax">Array.MinIndex(n)</code>: ·µ»ØµÚ <i>n</i> Î¬µÄÏÂ½ç. Èç¹û <i>n</i> Ê¡ÂÔ, Ä¬ÈÏÎª 1.</p>
-<p><code class="Syntax">Array.Clone()</code> <span class="ver">[v1.0.96.00+]</span>: ·µ»ØÊý×éµÄ¸±±¾.</p>
-<p><code class="Syntax">Array._NewEnum()</code> <span class="ver">[v1.0.96.00+]</span>: Í¨³£²»ÊÇÓÉ½Å±¾µ÷ÓÃ; ÔÊÐí <a href="For.htm">for Ñ­»·</a> ºÍ SafeArray Ò»ÆðÊ¹ÓÃ.</p>
+<h3>æ–¹æ³•</h3>
+<p>æ•°ç»„åŒ…è£…å™¨å¯¹è±¡æ”¯æŒä¸‹åˆ—æ–¹æ³•:</p>
+<p><code class="Syntax">Array.MaxIndex(n)</code>: è¿”å›žç¬¬ <i>n</i> ç»´çš„ä¸Šç•Œ. å¦‚æžœ <i>n</i> çœç•¥, é»˜è®¤ä¸º 1.</p>
+<p><code class="Syntax">Array.MinIndex(n)</code>: è¿”å›žç¬¬ <i>n</i> ç»´çš„ä¸‹ç•Œ. å¦‚æžœ <i>n</i> çœç•¥, é»˜è®¤ä¸º 1.</p>
+<p><code class="Syntax">Array.Clone()</code> <span class="ver">[v1.0.96.00+]</span>: è¿”å›žæ•°ç»„çš„å‰¯æœ¬.</p>
+<p><code class="Syntax">Array._NewEnum()</code> <span class="ver">[v1.0.96.00+]</span>: é€šå¸¸ä¸æ˜¯ç”±è„šæœ¬è°ƒç”¨; å…è®¸ <a href="For.htm">for å¾ªçŽ¯</a> å’Œ SafeArray ä¸€èµ·ä½¿ç”¨.</p>
 
-<h3>Ò»°ãËµÃ÷</h3>
-<p>COM ·½·¨ºÍ <a href="ComObjActive.htm">ComObjActive</a> Ò²¿ÉÒÔ·µ»ØÊý×é°ü×°Æ÷¶ÔÏó. ½Å±¾ÖÐ¿ÉÒÔÊ¹ÓÃÈçÏÂ·½·¨ÅÐ¶ÏÒ»¸öÖµÊÇ·ñÎªÊý×é:</p>
+<h3>ä¸€èˆ¬è¯´æ˜Ž</h3>
+<p>COM æ–¹æ³•å’Œ <a href="ComObjActive.htm">ComObjActive</a> ä¹Ÿå¯ä»¥è¿”å›žæ•°ç»„åŒ…è£…å™¨å¯¹è±¡. è„šæœ¬ä¸­å¯ä»¥ä½¿ç”¨å¦‚ä¸‹æ–¹æ³•åˆ¤æ–­ä¸€ä¸ªå€¼æ˜¯å¦ä¸ºæ•°ç»„:</p>
 <pre>if ComObjType(<i>obj</i>) &amp; 0x2000
     MsgBox % "Array subtype: " . ComObjType(obj) &amp; 0xfff
 else
     MsgBox Not an array.</pre>
-<p>¿ÉÒÔÖ§³Ö¶à´ï 8 Î¬µÄÊý×é.</p>
-<p><span class="ver">[v1.0.96.00+]:</span> ÓÉÓÚ SafeArray Ã»ÓÐÉè¼ÆÓÃÒÔÖ§³Ö¶àÖÖÒýÓÃ, µ±Ò»¸ö SafeArray ±»¸³ÖµÎªÁíÒ»¸ö SafeArray µÄÔªËØÊ±, »á´´½¨Ò»¸ö¶ÀÁ¢µÄ¸±±¾. ²»¹ý, Ö»ÓÐµ±°ü×°Æ÷¶ÔÏóº¬ÓÐ F_OWNVALUE ±êÖ¾Ê±²Å»á·¢ÉúÕâÖÖÇé¿ö, Õâ¸ö±êÖ¾±íÊ¾Ëü¸ºÔðÏú»Ù´ËÊý×é. ´Ë±êÖ¾¿ÉÒÔÊ¹ÓÃ <a href="ComObjFlags.htm">ComObjFlags</a> ½øÐÐÒÆ³ý.</p>
+<p>å¯ä»¥æ”¯æŒå¤šè¾¾ 8 ç»´çš„æ•°ç»„.</p>
+<p><span class="ver">[v1.0.96.00+]:</span> ç”±äºŽ SafeArray æ²¡æœ‰è®¾è®¡ç”¨ä»¥æ”¯æŒå¤šç§å¼•ç”¨, å½“ä¸€ä¸ª SafeArray è¢«èµ‹å€¼ä¸ºå¦ä¸€ä¸ª SafeArray çš„å…ƒç´ æ—¶, ä¼šåˆ›å»ºä¸€ä¸ªç‹¬ç«‹çš„å‰¯æœ¬. ä¸è¿‡, åªæœ‰å½“åŒ…è£…å™¨å¯¹è±¡å«æœ‰ F_OWNVALUE æ ‡å¿—æ—¶æ‰ä¼šå‘ç”Ÿè¿™ç§æƒ…å†µ, è¿™ä¸ªæ ‡å¿—è¡¨ç¤ºå®ƒè´Ÿè´£é”€æ¯æ­¤æ•°ç»„. æ­¤æ ‡å¿—å¯ä»¥ä½¿ç”¨ <a href="ComObjFlags.htm">ComObjFlags</a> è¿›è¡Œç§»é™¤.</p>
 
-<h3>Ïà¹Ø</h3>
-<p><a href="ComObjType.htm">ComObjType</a>, <a href="ComObjValue.htm">ComObjValue</a>, <a href="ComObjActive.htm">ComObjActive</a>, <a href="ComObjFlags.htm">ComObjFlags</a>, <a href="http://msdn.microsoft.com/en-us/library/ms221145.aspx">Êý×é²Ù×÷º¯Êý (MSDN)</a></p>
+<h3>ç›¸å…³</h3>
+<p><a href="ComObjType.htm">ComObjType</a>, <a href="ComObjValue.htm">ComObjValue</a>, <a href="ComObjActive.htm">ComObjActive</a>, <a href="ComObjFlags.htm">ComObjFlags</a>, <a href="http://msdn.microsoft.com/en-us/library/ms221145.aspx">æ•°ç»„æ“ä½œå‡½æ•° (MSDN)</a></p>
 
-<h3>Ê¾Àý</h3>
-<pre class="NoIndent" id="Ex1"><em>; Ê¾Àý #1£º¼òµ¥ÓÃ·¨¡£</em>
+<h3>ç¤ºä¾‹</h3>
+<pre class="NoIndent" id="Ex1"><em>; ç¤ºä¾‹ #1ï¼šç®€å•ç”¨æ³•ã€‚</em>
 
 arr := ComObjArray(VT_VARIANT:=12, 3)
 arr[0] := "Auto"
@@ -64,19 +64,19 @@ Loop % arr.MaxIndex() + 1
 MsgBox % t
 </pre>
 
-<pre class="NoIndent" id="Ex2"><em>; Ê¾Àý #2£º¶àÎ¬Êý×é¡£</em>
+<pre class="NoIndent" id="Ex2"><em>; ç¤ºä¾‹ #2ï¼šå¤šç»´æ•°ç»„ã€‚</em>
 
 arr := ComObjArray(VT_VARIANT:=12, 3, 4)
 
-<em>; »ñÈ¡Êý×éµÄÎ¬Êý¸öÊý:</em>
+<em>; èŽ·å–æ•°ç»„çš„ç»´æ•°ä¸ªæ•°:</em>
 dim := DllCall("oleaut32\SafeArrayGetDim", "ptr", ComObjValue(arr))
 
-<em>; »ñÈ¡Ã¿¸öÎ¬ÊýµÄ±ß½ç:</em>
+<em>; èŽ·å–æ¯ä¸ªç»´æ•°çš„è¾¹ç•Œ:</em>
 Loop %dim%
     dims .= arr.MinIndex(A_Index) " .. " arr.MaxIndex(A_Index) "`n"
 MsgBox %dims%
 
-<em>; ¼òµ¥ÓÃ·¨:</em>
+<em>; ç®€å•ç”¨æ³•:</em>
 Loop 3 {
     x := A_Index-1
     Loop 4 {

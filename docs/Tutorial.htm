@@ -2,9 +2,9 @@
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=GBK">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>AutoHotkey Ïòµ¼£º´´½¨ºêºÍÈÈ¼ü</title>
+<title>AutoHotkey å‘å¯¼ï¼šåˆ›å»ºå®å’Œçƒ­é”®</title>
 <link href="static/theme.css" rel="stylesheet" type="text/css" />
 <script src="static/jquery.js" type="text/javascript"></script>
 <script src="static/tree.jquery.js" type="text/javascript"></script>
@@ -17,90 +17,90 @@
 </head>
 <body>
 
-<h1>Ö¸ÄÏºÍ¸ÅÊö</h1>
+<h1>æŒ‡å—å’Œæ¦‚è¿°</h1>
 
 
-<p>Õâ¸ö¼ò¶ÌµÄ½éÉÜ½«°ïÖúÄúÂíÉÏ¿ªÊ¼±àÐ´Äú×Ô¼ºµÄºêºÍÈÈ¼ü½Å±¾.</p>
-<h2>Ö¸ÄÏÄ¿Â¼</h2>
+<p>è¿™ä¸ªç®€çŸ­çš„ä»‹ç»å°†å¸®åŠ©æ‚¨é©¬ä¸Šå¼€å§‹ç¼–å†™æ‚¨è‡ªå·±çš„å®å’Œçƒ­é”®è„šæœ¬.</p>
+<h2>æŒ‡å—ç›®å½•</h2>
 <ul>
-  <li class="style1"><a href="#Create">´´½¨½Å±¾</a></li>
-  <li class="style1"><a href="#Launch">Æô¶¯³ÌÐò»òÎÄµµ</a></li>
-  <li class="style1"><a href="#Send">·¢ËÍ¼ü»÷ºÍÊó±êµã»÷</a></li>
-  <li class="style1"><a href="#Activate">¼¤»îºÍ²Ù×÷´°¿Ú</a></li>
-  <li class="style1"><a href="#Dialogs">ÀûÓÃ MsgBox, InputBox µÈ´ÓÓÃ»§ÖÐ»ñÈ¡ÊäÈë.</a></li>
-  <li class="style1"><a href="#Variables">Ê¹ÓÃ±äÁ¿ºÍ¼ôÌù°å</a></li>
-  <li class="style1"><a href="#Loop">·´¸´ÖØ¸´Ò»ÏµÁÐ¶¯×÷</a></li>
-  <li class="style1"><a href="#Files">²Ù×÷ÎÄ¼þºÍÎÄ¼þ¼Ð</a></li>
-  <li class="style1"><a href="#Overview">ÆäËû¹¦ÄÜ¸ÅÊö</a></li>
+  <li class="style1"><a href="#Create">åˆ›å»ºè„šæœ¬</a></li>
+  <li class="style1"><a href="#Launch">å¯åŠ¨ç¨‹åºæˆ–æ–‡æ¡£</a></li>
+  <li class="style1"><a href="#Send">å‘é€é”®å‡»å’Œé¼ æ ‡ç‚¹å‡»</a></li>
+  <li class="style1"><a href="#Activate">æ¿€æ´»å’Œæ“ä½œçª—å£</a></li>
+  <li class="style1"><a href="#Dialogs">åˆ©ç”¨ MsgBox, InputBox ç­‰ä»Žç”¨æˆ·ä¸­èŽ·å–è¾“å…¥.</a></li>
+  <li class="style1"><a href="#Variables">ä½¿ç”¨å˜é‡å’Œå‰ªè´´æ¿</a></li>
+  <li class="style1"><a href="#Loop">åå¤é‡å¤ä¸€ç³»åˆ—åŠ¨ä½œ</a></li>
+  <li class="style1"><a href="#Files">æ“ä½œæ–‡ä»¶å’Œæ–‡ä»¶å¤¹</a></li>
+  <li class="style1"><a href="#Overview">å…¶ä»–åŠŸèƒ½æ¦‚è¿°</a></li>
 </ul>
-<h2 id="Create">´´½¨½Å±¾</h2>
-<p>Ã¿¸ö½Å±¾¶¼ÊÇÐèÓÉ³ÌÐò (AutoHotkey.exe) Ö´ÐÐµÄ°üº¬ÃüÁîµÄ´¿ÎÄ±¾. ½Å±¾ÖÐ»¹¿ÉÒÔ°üº¬ <a href="Hotkeys.htm">ÈÈ¼ü</a> ºÍ <a href="Hotstrings.htm">ÈÈ×Ö´®</a> »òÕßÉõÖÁÍêÈ«ÓÉËüÃÇ×é³É. ²»¹ý, ÔÚ²»°üº¬ÈÈ¼üºÍÈÈ×Ö´®Ê±, ½Å±¾»áÔÚÆô¶¯ºó´ÓÉÏÍùÏÂ°´Ë³ÐòÖ´ÐÐÆäÖÐµÄÃüÁî.</p>
-<p>´´½¨ÐÂ½Å±¾:</p>
+<h2 id="Create">åˆ›å»ºè„šæœ¬</h2>
+<p>æ¯ä¸ªè„šæœ¬éƒ½æ˜¯éœ€ç”±ç¨‹åº (AutoHotkey.exe) æ‰§è¡Œçš„åŒ…å«å‘½ä»¤çš„çº¯æ–‡æœ¬. è„šæœ¬ä¸­è¿˜å¯ä»¥åŒ…å« <a href="Hotkeys.htm">çƒ­é”®</a> å’Œ <a href="Hotstrings.htm">çƒ­å­—ä¸²</a> æˆ–è€…ç”šè‡³å®Œå…¨ç”±å®ƒä»¬ç»„æˆ. ä¸è¿‡, åœ¨ä¸åŒ…å«çƒ­é”®å’Œçƒ­å­—ä¸²æ—¶, è„šæœ¬ä¼šåœ¨å¯åŠ¨åŽä»Žä¸Šå¾€ä¸‹æŒ‰é¡ºåºæ‰§è¡Œå…¶ä¸­çš„å‘½ä»¤.</p>
+<p>åˆ›å»ºæ–°è„šæœ¬:</p>
 <ol>
-  <li><a href="http://ahkscript.org/">ÏÂÔØ</a> ²¢°²×° AutoHotkey.</li>
-  <li>ÔÚ×ÀÃæ»òÄúÑ¡ÔñµÄÎÄ¼þ¼ÐÖÐÓÒ¼üµã»÷¿Õ°×´¦.</li>
-  <li>ÔÚ²Ëµ¥ÖÐ, Ñ¡Ôñ <em>ÐÂ½¨-&gt; AutoHotkey ½Å±¾</em>.</li>
-  <li>ÊäÈëÎÄ¼þÃû, È·±£ËüÒÔ <strong>.ahk</strong> ½áÎ². ÀýÈç£º<code>Test.ahk</code>¡£</li>
-  <li>ÓÒ¼üµã»÷´ËÎÄ¼þ²¢Ñ¡Ôñ Edit Script.</li>
-  <li>ÔÚÐÂµÄ¿ÕÐÐÖÐ£¬ÊäÈëÏÂÁÐÄÚÈÝ£º<code>#space::Run www.google.com</code>¡£</li>
+  <li><a href="http://ahkscript.org/">ä¸‹è½½</a> å¹¶å®‰è£… AutoHotkey.</li>
+  <li>åœ¨æ¡Œé¢æˆ–æ‚¨é€‰æ‹©çš„æ–‡ä»¶å¤¹ä¸­å³é”®ç‚¹å‡»ç©ºç™½å¤„.</li>
+  <li>åœ¨èœå•ä¸­, é€‰æ‹© <em>æ–°å»º-&gt; AutoHotkey è„šæœ¬</em>.</li>
+  <li>è¾“å…¥æ–‡ä»¶å, ç¡®ä¿å®ƒä»¥ <strong>.ahk</strong> ç»“å°¾. ä¾‹å¦‚ï¼š<code>Test.ahk</code>ã€‚</li>
+  <li>å³é”®ç‚¹å‡»æ­¤æ–‡ä»¶å¹¶é€‰æ‹© Edit Script.</li>
+  <li>åœ¨æ–°çš„ç©ºè¡Œä¸­ï¼Œè¾“å…¥ä¸‹åˆ—å†…å®¹ï¼š<code>#space::Run www.google.com</code>ã€‚</li>
 </ol>
-<p>ÔÚÉÏÃæµÄÓï¾äÐÐÖÐ, Ê×¸ö×Ö·û "#" ±íÊ¾ Windows ¼ü; ËùÒÔ #space ±íÊ¾°´×¡ Windows ¼üÈ»ºó°´ÏÂ¿Õ¸ñ¼üÀ´¼¤»îÈÈ¼ü. Ë«Ã°ºÅ :: ±íÊ¾Ã¿´Î°´ÏÂ´ËÈÈ¼üÊ±»áÖ´ÐÐÆäºóÐøÃüÁî, ÕâÀïÊÇ×ªµ½ Google ÍøÕ¾. ÒªÊÔÓÃ´Ë½Å±¾, Çë¼ÌÐøÏÂÁÐ²Ù×÷:</p>
+<p>åœ¨ä¸Šé¢çš„è¯­å¥è¡Œä¸­, é¦–ä¸ªå­—ç¬¦ "#" è¡¨ç¤º Windows é”®; æ‰€ä»¥ #space è¡¨ç¤ºæŒ‰ä½ Windows é”®ç„¶åŽæŒ‰ä¸‹ç©ºæ ¼é”®æ¥æ¿€æ´»çƒ­é”®. åŒå†’å· :: è¡¨ç¤ºæ¯æ¬¡æŒ‰ä¸‹æ­¤çƒ­é”®æ—¶ä¼šæ‰§è¡Œå…¶åŽç»­å‘½ä»¤, è¿™é‡Œæ˜¯è½¬åˆ° Google ç½‘ç«™. è¦è¯•ç”¨æ­¤è„šæœ¬, è¯·ç»§ç»­ä¸‹åˆ—æ“ä½œ:</p>
 <ol>
-  <li>±£´æ²¢¹Ø±Õ´ËÎÄ¼þ.</li>
-  <li>Ë«»÷´ËÎÄ¼þÀ´ÔËÐÐ. ÔÚÈÎÎñÀ¸Í¨ÖªÇøÓò»á³öÏÖÐÂµÄÍ¼±ê.</li>
-  <li>°´×¡ Windows ¼ü²¢°´ÏÂ¿Õ¸ñ¼ü. ÔÚÄ¬ÈÏä¯ÀÀÆ÷ÖÐ»á´ò¿ªÍøÒ³.</li>
-  <li>ÒªÍË³ö»ò±à¼­´Ë½Å±¾, ÔòÔÚÈÎÎñÀ¸Í¨ÖªÇøÓòµÄÂÌÉ« "H" Í¼±êÉÏµã»÷ÓÒ¼ü.</li>
+  <li>ä¿å­˜å¹¶å…³é—­æ­¤æ–‡ä»¶.</li>
+  <li>åŒå‡»æ­¤æ–‡ä»¶æ¥è¿è¡Œ. åœ¨ä»»åŠ¡æ é€šçŸ¥åŒºåŸŸä¼šå‡ºçŽ°æ–°çš„å›¾æ ‡.</li>
+  <li>æŒ‰ä½ Windows é”®å¹¶æŒ‰ä¸‹ç©ºæ ¼é”®. åœ¨é»˜è®¤æµè§ˆå™¨ä¸­ä¼šæ‰“å¼€ç½‘é¡µ.</li>
+  <li>è¦é€€å‡ºæˆ–ç¼–è¾‘æ­¤è„šæœ¬, åˆ™åœ¨ä»»åŠ¡æ é€šçŸ¥åŒºåŸŸçš„ç»¿è‰² "H" å›¾æ ‡ä¸Šç‚¹å‡»å³é”®.</li>
 </ol>
-<p>×¢Òâ:</p>
+<p>æ³¨æ„:</p>
 <ul>
-  <li>¶à¸ö½Å±¾¿ÉÒÔÍ¬Ê±ÔËÐÐ, ÆäÖÐµÄÃ¿¸ö½Å±¾ÔÚÈÎÎñÀ¸Í¨ÖªÇøÓòÊ¹ÓÃ×Ô¼ºµÄÍ¼±ê.</li>
-  <li>Ã¿¸ö½Å±¾¿ÉÒÔ°üº¬¶à¸ö <a href="Hotkeys.htm">ÈÈ¼ü</a> ºÍ <a href="Hotstrings.htm">ÈÈ×Ö´®</a>.</li>
-  <li>ÒªÈÃÄúµÄ½Å±¾ÔÚÆô¶¯¼ÆËã»úÊ±×Ô¶¯ÔËÐÐ, <a href="FAQ.htm#Startup">ÇëÔÚ¿ªÊ¼²Ëµ¥µÄÆô¶¯ÎÄ¼þ¼ÐÖÐ¸øÄúµÄ½Å±¾´´½¨¿ì½Ý·½Ê½</a>.</li>
+  <li>å¤šä¸ªè„šæœ¬å¯ä»¥åŒæ—¶è¿è¡Œ, å…¶ä¸­çš„æ¯ä¸ªè„šæœ¬åœ¨ä»»åŠ¡æ é€šçŸ¥åŒºåŸŸä½¿ç”¨è‡ªå·±çš„å›¾æ ‡.</li>
+  <li>æ¯ä¸ªè„šæœ¬å¯ä»¥åŒ…å«å¤šä¸ª <a href="Hotkeys.htm">çƒ­é”®</a> å’Œ <a href="Hotstrings.htm">çƒ­å­—ä¸²</a>.</li>
+  <li>è¦è®©æ‚¨çš„è„šæœ¬åœ¨å¯åŠ¨è®¡ç®—æœºæ—¶è‡ªåŠ¨è¿è¡Œ, <a href="FAQ.htm#Startup">è¯·åœ¨å¼€å§‹èœå•çš„å¯åŠ¨æ–‡ä»¶å¤¹ä¸­ç»™æ‚¨çš„è„šæœ¬åˆ›å»ºå¿«æ·æ–¹å¼</a>.</li>
 </ul>
-<h2 id="Launch">Æô¶¯³ÌÐò»òÎÄµµ</h2>
-<p>¿ÉÒÔÊ¹ÓÃ <a href="commands/Run.htm">Run</a> ÃüÁîÀ´ÆäÖÐ³ÌÐò, ÎÄµµ, URL »ò¿ì½Ý·½Ê½. ÕâÀïÓÐÒ»Ð©³£¼ûÊ¾Àý:</p>
+<h2 id="Launch">å¯åŠ¨ç¨‹åºæˆ–æ–‡æ¡£</h2>
+<p>å¯ä»¥ä½¿ç”¨ <a href="commands/Run.htm">Run</a> å‘½ä»¤æ¥å…¶ä¸­ç¨‹åº, æ–‡æ¡£, URL æˆ–å¿«æ·æ–¹å¼. è¿™é‡Œæœ‰ä¸€äº›å¸¸è§ç¤ºä¾‹:</p>
 <pre>Run Notepad
 Run C:\My Documents\Address List.doc
 Run C:\My Documents\My Shortcut.lnk
 Run www.yahoo.com
 Run mailto:someone@somedomain.com</pre>
-<p>Í¨¹ý¼ÓÉÏ <a href="Hotkeys.htm">ÈÈ¼ü±êÇ©</a> ¿ÉÒÔ°ÑÉÏÃæÀý×ÓµÄÈÎºÎÒ»¸öÉèÖÃÎªÈÈ¼ü. ÔÚÏÂÃæµÄÊ×¸öÀý×ÓÖÐ, ÉèÖÃµÄÈÈ¼üÎª Win+N, ¶øÔÚµÚ¶þ¸öÖÐÎª Control+Alt+C:</p>
+<p>é€šè¿‡åŠ ä¸Š <a href="Hotkeys.htm">çƒ­é”®æ ‡ç­¾</a> å¯ä»¥æŠŠä¸Šé¢ä¾‹å­çš„ä»»ä½•ä¸€ä¸ªè®¾ç½®ä¸ºçƒ­é”®. åœ¨ä¸‹é¢çš„é¦–ä¸ªä¾‹å­ä¸­, è®¾ç½®çš„çƒ­é”®ä¸º Win+N, è€Œåœ¨ç¬¬äºŒä¸ªä¸­ä¸º Control+Alt+C:</p>
 <pre>#n::Run Notepad
 ^!c::Run calc.exe</pre>
-<p>ÉÏÃæµÄÀý×Ó±»³ÆÎªµ¥ÐÐÈÈ¼ü, ÒòÎªËüÃÇÖ»°üº¬µ¥¸öÃüÁî. ÒªÔÚÒ»¸öÈÈ¼üÖÐÖ´ÐÐ¶à¸öÃüÁî£¬Çë°ÑÊ×ÐÐ·ÅÔÚÈÈ¼ü¶¨ÒåµÄ<u>ÏÂÃæ</u>£¬ÇÒÔÚ×îºóÐÐÃüÁîµÄÏÂÒ»ÐÐÌí¼Ó <code><a href="commands/Return.htm">return</a></code>¡£ÀýÈç£º</p>
+<p>ä¸Šé¢çš„ä¾‹å­è¢«ç§°ä¸ºå•è¡Œçƒ­é”®, å› ä¸ºå®ƒä»¬åªåŒ…å«å•ä¸ªå‘½ä»¤. è¦åœ¨ä¸€ä¸ªçƒ­é”®ä¸­æ‰§è¡Œå¤šä¸ªå‘½ä»¤ï¼Œè¯·æŠŠé¦–è¡Œæ”¾åœ¨çƒ­é”®å®šä¹‰çš„<u>ä¸‹é¢</u>ï¼Œä¸”åœ¨æœ€åŽè¡Œå‘½ä»¤çš„ä¸‹ä¸€è¡Œæ·»åŠ  <code><a href="commands/Return.htm">return</a></code>ã€‚ä¾‹å¦‚ï¼š</p>
 <pre>#n::
 Run http://www.google.com
 Run Notepad.exe
 return</pre>
-<p>Èç¹ûÒªÔËÐÐµÄ³ÌÐò»òÎÄµµÃ»ÓÐÔÚ»·¾³±äÁ¿ÖÐ, ÄÇÃ´ÐèÒªÖ¸¶¨ËüµÄÍêÕûÂ·¾¶²ÅÄÜÔËÐÐ:</p>
+<p>å¦‚æžœè¦è¿è¡Œçš„ç¨‹åºæˆ–æ–‡æ¡£æ²¡æœ‰åœ¨çŽ¯å¢ƒå˜é‡ä¸­, é‚£ä¹ˆéœ€è¦æŒ‡å®šå®ƒçš„å®Œæ•´è·¯å¾„æ‰èƒ½è¿è¡Œ:</p>
 <pre>Run %A_ProgramFiles%\Winamp\Winamp.exe</pre>
-<p>ÔÚÉÏÃæµÄÀý×ÓÖÐ, %A_ProgramFiles% ÊÇ <a href="Variables.htm#BuiltIn">ÄÚÖÃ±äÁ¿</a>. Ê¹ÓÃËü¶ø²»Ê¹ÓÃÏñ <em>C:\Program Files</em> ÕâÑùµÄ, ½Å±¾¿ÉÒÔÓÐ¸üºÃµÄÒÆÖ²ÐÔ, Õâ±íÊ¾ËüÔÚÆäËûµçÄÔÉÏÄÜÖ´ÐÐµÄ¿ÉÄÜÐÔ¸ü´ó. ×¢Òâ: ÃüÁîºÍ±äÁ¿µÄÃû³ÆÊÇ²»Çø·Ö´óÐ¡Ð´µÄ. ÀýÈç, "Run" µÈÍ¬ÓÚ "run", ¶ø "A_ProgramFiles" µÈÍ¬ÓÚ "a_programfiles".</p>
-<p>ÒªÈÃ½Å±¾µÈµ½³ÌÐò»òÎÄµµ¹Ø±Õºó²Å¼ÌÐøÖ´ÐÐ, ÇëÊ¹ÓÃ <a href="commands/Run.htm">RunWait</a> ´úÌæ Run. ÔÚÏÂÃæµÄÀý×ÓÖÐ, Ò»Ö±µ½ÓÃ»§¹Ø±Õ¼ÇÊÂ±¾ºó <a href="commands/MsgBox.htm">MsgBox</a> ÃüÁî²Å»á¼ÌÐøÖ´ÐÐ.</p>
+<p>åœ¨ä¸Šé¢çš„ä¾‹å­ä¸­, %A_ProgramFiles% æ˜¯ <a href="Variables.htm#BuiltIn">å†…ç½®å˜é‡</a>. ä½¿ç”¨å®ƒè€Œä¸ä½¿ç”¨åƒ <em>C:\Program Files</em> è¿™æ ·çš„, è„šæœ¬å¯ä»¥æœ‰æ›´å¥½çš„ç§»æ¤æ€§, è¿™è¡¨ç¤ºå®ƒåœ¨å…¶ä»–ç”µè„‘ä¸Šèƒ½æ‰§è¡Œçš„å¯èƒ½æ€§æ›´å¤§. æ³¨æ„: å‘½ä»¤å’Œå˜é‡çš„åç§°æ˜¯ä¸åŒºåˆ†å¤§å°å†™çš„. ä¾‹å¦‚, "Run" ç­‰åŒäºŽ "run", è€Œ "A_ProgramFiles" ç­‰åŒäºŽ "a_programfiles".</p>
+<p>è¦è®©è„šæœ¬ç­‰åˆ°ç¨‹åºæˆ–æ–‡æ¡£å…³é—­åŽæ‰ç»§ç»­æ‰§è¡Œ, è¯·ä½¿ç”¨ <a href="commands/Run.htm">RunWait</a> ä»£æ›¿ Run. åœ¨ä¸‹é¢çš„ä¾‹å­ä¸­, ä¸€ç›´åˆ°ç”¨æˆ·å…³é—­è®°äº‹æœ¬åŽ <a href="commands/MsgBox.htm">MsgBox</a> å‘½ä»¤æ‰ä¼šç»§ç»­æ‰§è¡Œ.</p>
 <pre>RunWait Notepad
 MsgBox The user has finished (Notepad has been closed).</pre>
-<p>ÒªÑ§Ï°¹ØÓÚÆô¶¯³ÌÐòµÄ¸ü¶àÄÚÈÝ, ÀýÈç´«µÝ²ÎÊý, Ö¸¶¨¹¤×÷Ä¿Â¼ºÍÕÒµ½³ÌÐòµÄÍË³ö´úÂë, Çëµã»÷ <a href="TutorialLaunch.htm">´Ë´¦</a>.</p>
-<h2 id="Send">·¢ËÍ¼ü»÷ºÍÊó±êµã»÷</h2>
-<p>Ê¹ÓÃ <a href="commands/Send.htm">Send</a> ÃüÁî¿ÉÒÔ·¢ËÍ¼ü»÷µ½»î¶¯µÄ (×îÇ°ÃæµÄ) ´°¿Ú. ÔÚÏÂÃæµÄÀý×ÓÖÐ£¬Control+Alt+S±»ÉèÖÃÎªÊäÈëÇ©ÃûµÄÈÈ¼ü£¨ÔÚ°´ÏÂ´ËÈÈ¼üÇ°±ØÐëÈ·±£±à¼­Æ÷»òµç×ÓÓÊ¼þÕâÑùµÄ´°¿ÚÊÇ»î¶¯µÄ£©£º</p>
+<p>è¦å­¦ä¹ å…³äºŽå¯åŠ¨ç¨‹åºçš„æ›´å¤šå†…å®¹, ä¾‹å¦‚ä¼ é€’å‚æ•°, æŒ‡å®šå·¥ä½œç›®å½•å’Œæ‰¾åˆ°ç¨‹åºçš„é€€å‡ºä»£ç , è¯·ç‚¹å‡» <a href="TutorialLaunch.htm">æ­¤å¤„</a>.</p>
+<h2 id="Send">å‘é€é”®å‡»å’Œé¼ æ ‡ç‚¹å‡»</h2>
+<p>ä½¿ç”¨ <a href="commands/Send.htm">Send</a> å‘½ä»¤å¯ä»¥å‘é€é”®å‡»åˆ°æ´»åŠ¨çš„ (æœ€å‰é¢çš„) çª—å£. åœ¨ä¸‹é¢çš„ä¾‹å­ä¸­ï¼ŒControl+Alt+Sè¢«è®¾ç½®ä¸ºè¾“å…¥ç­¾åçš„çƒ­é”®ï¼ˆåœ¨æŒ‰ä¸‹æ­¤çƒ­é”®å‰å¿…é¡»ç¡®ä¿ç¼–è¾‘å™¨æˆ–ç”µå­é‚®ä»¶è¿™æ ·çš„çª—å£æ˜¯æ´»åŠ¨çš„ï¼‰ï¼š</p>
 <pre>^!s::
 Send Sincerely,{Enter}John Smith
 return</pre>
-<p>ÔÚÉÏÃæµÄÀý×ÓÖÐ, ³ý {Enter} ÍâµÄËùÓÐ×Ö·û¶¼°´Ô­Òå·¢ËÍ, ¶øËüÔòÄ£Äâ°´ÏÂÁË Enter ¼ü. ÏÂÒ»¸öÀý×ÓÑÝÊ¾ÁËÆäËûÒ»Ð©³£ÓÃµÄÌØÊâ×Ö·û:</p>
+<p>åœ¨ä¸Šé¢çš„ä¾‹å­ä¸­, é™¤ {Enter} å¤–çš„æ‰€æœ‰å­—ç¬¦éƒ½æŒ‰åŽŸä¹‰å‘é€, è€Œå®ƒåˆ™æ¨¡æ‹ŸæŒ‰ä¸‹äº† Enter é”®. ä¸‹ä¸€ä¸ªä¾‹å­æ¼”ç¤ºäº†å…¶ä»–ä¸€äº›å¸¸ç”¨çš„ç‰¹æ®Šå­—ç¬¦:</p>
 
 <pre>Send ^c!{tab}pasted:^v</pre>
-<p>ÉÏÃæÕâÐÐ·¢ËÍ Control+C ¸ú×Å Alt+Tab ¸ú×Å×Ö·û´® "pasted:" ºÍ Control+V. ÒªÁË½âÌØÊâ×Ö·ûºÍ°´¼üµÄÍêÕûÁÐ±í, Çë²ÎÔÄ <a href="commands/Send.htm">Send</a>.</p>
-<p>×îºó, ¿ÉÒÔÓÃÄúÊäÈëµÄËõÐ´À´´¥·¢·¢ËÍ¼ü»÷µÄ¶¯×÷, Õâ±»³ÆÎª <a href="Hotstrings.htm">ÈÈ×Ö´®</a>. ÀýÈç£¬Ã¿µ±ÄúÊäÈë¡°Btw¡±¸ú×Å¿Õ¸ñ»ò¶ººÅÊ±£¬ÏÂÃæÕâÐÐ»á°ÑËüÌæ»»Îª¡°By the way¡±£º</p>
+<p>ä¸Šé¢è¿™è¡Œå‘é€ Control+C è·Ÿç€ Alt+Tab è·Ÿç€å­—ç¬¦ä¸² "pasted:" å’Œ Control+V. è¦äº†è§£ç‰¹æ®Šå­—ç¬¦å’ŒæŒ‰é”®çš„å®Œæ•´åˆ—è¡¨, è¯·å‚é˜… <a href="commands/Send.htm">Send</a>.</p>
+<p>æœ€åŽ, å¯ä»¥ç”¨æ‚¨è¾“å…¥çš„ç¼©å†™æ¥è§¦å‘å‘é€é”®å‡»çš„åŠ¨ä½œ, è¿™è¢«ç§°ä¸º <a href="Hotstrings.htm">çƒ­å­—ä¸²</a>. ä¾‹å¦‚ï¼Œæ¯å½“æ‚¨è¾“å…¥â€œBtwâ€è·Ÿç€ç©ºæ ¼æˆ–é€—å·æ—¶ï¼Œä¸‹é¢è¿™è¡Œä¼šæŠŠå®ƒæ›¿æ¢ä¸ºâ€œBy the wayâ€ï¼š</p>
 <pre>::btw::by the way</pre>
 <br>
-<p><u><strong>Êó±êµã»÷</strong></u>£ºÒª·¢ËÍÊó±êµã»÷µ½´°¿Ú£¬Ê×ÏÈ±ØÐëÈ·¶¨Òªµã»÷µÄ X ºÍ Y ×ø±ê¡£Õâ¸ö¿ÉÒÔÓÃ Window Spy À´Íê³É, Ëü°üº¬ÔÚ AutoHotkey ÖÐ. ÏÂÁÐ²½ÖèËµÃ÷ÁËÊ¹ÓÃ Window Spy µÄ·½·¨:</p>
+<p><u><strong>é¼ æ ‡ç‚¹å‡»</strong></u>ï¼šè¦å‘é€é¼ æ ‡ç‚¹å‡»åˆ°çª—å£ï¼Œé¦–å…ˆå¿…é¡»ç¡®å®šè¦ç‚¹å‡»çš„ X å’Œ Y åæ ‡ã€‚è¿™ä¸ªå¯ä»¥ç”¨ Window Spy æ¥å®Œæˆ, å®ƒåŒ…å«åœ¨ AutoHotkey ä¸­. ä¸‹åˆ—æ­¥éª¤è¯´æ˜Žäº†ä½¿ç”¨ Window Spy çš„æ–¹æ³•:</p>
 <ol>
-  <li>ÔÚ½Å±¾ÍÐÅÌÍ¼±ê²Ëµ¥»ò¿ªÊ¼²Ëµ¥ÖÐÔËÐÐ Window Spy.</li>
-  <li>Í¨¹ýµã»÷¸ÐÐËÈ¤µÄ±êÌâÀ¸, alt-tab ÇÐ»»»òÆäËû·½·¨¼¤»î´°¿Ú (Window Spy ±»Éè¼ÆÎª±£³Ö "ÖÃ¶¥").</li>
-  <li>ÒÆ¶¯Êó±ê¹â±êµ½Ä¿±ê´°¿ÚÖÐÏëÒªµÄÎ»ÖÃ²¢¼ÇÏÂ Window Spy ÖÐÏÔÊ¾µÄÊó±ê×ø±ê (»òÔÚ Windows XP ºÍÔçÆÚ°æ±¾ÖÐ, °´ÏÂ Shift-Alt-Tab À´¼¤»î Window Spy, ÕâÑù¿ÉÒÔ¸´ÖÆºÍÕ³Ìù "¶³½áµÄ" ×ø±ê).</li>
-  <li>ÔÚ <a href="commands/Click.htm">Click</a> ÃüÁîÖÐÊ¹ÓÃÉÏÃæÕÒµ½µÄ×ø±ê. ÏÂÃæµÄÀý×Óµã»÷Êó±ê×ó¼ü£º<code>Click 112, 223</code>¡£</li>
+  <li>åœ¨è„šæœ¬æ‰˜ç›˜å›¾æ ‡èœå•æˆ–å¼€å§‹èœå•ä¸­è¿è¡Œ Window Spy.</li>
+  <li>é€šè¿‡ç‚¹å‡»æ„Ÿå…´è¶£çš„æ ‡é¢˜æ , alt-tab åˆ‡æ¢æˆ–å…¶ä»–æ–¹æ³•æ¿€æ´»çª—å£ (Window Spy è¢«è®¾è®¡ä¸ºä¿æŒ "ç½®é¡¶").</li>
+  <li>ç§»åŠ¨é¼ æ ‡å…‰æ ‡åˆ°ç›®æ ‡çª—å£ä¸­æƒ³è¦çš„ä½ç½®å¹¶è®°ä¸‹ Window Spy ä¸­æ˜¾ç¤ºçš„é¼ æ ‡åæ ‡ (æˆ–åœ¨ Windows XP å’Œæ—©æœŸç‰ˆæœ¬ä¸­, æŒ‰ä¸‹ Shift-Alt-Tab æ¥æ¿€æ´» Window Spy, è¿™æ ·å¯ä»¥å¤åˆ¶å’Œç²˜è´´ "å†»ç»“çš„" åæ ‡).</li>
+  <li>åœ¨ <a href="commands/Click.htm">Click</a> å‘½ä»¤ä¸­ä½¿ç”¨ä¸Šé¢æ‰¾åˆ°çš„åæ ‡. ä¸‹é¢çš„ä¾‹å­ç‚¹å‡»é¼ æ ‡å·¦é”®ï¼š<code>Click 112, 223</code>ã€‚</li>
 </ol>
-<p>ÒªÒÆ¶¯Êó±ê¶ø²»½øÐÐµã»÷, ÇëÊ¹ÓÃ <a href="commands/MouseMove.htm">MouseMove</a>. ÒªÍÏÀ­Êó±ê, ÇëÊ¹ÓÃ<a href="commands/MouseClickDrag.htm">MouseClickDrag</a>.</p>
-<h2 id="Activate">¼¤»îºÍ²Ù×÷´°¿Ú</h2>
-<p>Òª¼¤»î´°¿Ú (Ê¹Ëü×îÇ°Ãæ), ÇëÊ¹ÓÃ <a href="commands/WinActivate.htm">WinActivate</a>. ÒªÅÐ¶Ï´°¿ÚÊÇ·ñ´æÔÚ, ÇëÊ¹ÓÃ <a href="commands/WinExist.htm">IfWinExist</a> »ò <a href="commands/WinWait.htm">WinWait</a>. ÏÂÃæµÄÀý×ÓÑÝÊ¾ÁËÕâÐ©ÃüÁî:</p>
+<p>è¦ç§»åŠ¨é¼ æ ‡è€Œä¸è¿›è¡Œç‚¹å‡», è¯·ä½¿ç”¨ <a href="commands/MouseMove.htm">MouseMove</a>. è¦æ‹–æ‹‰é¼ æ ‡, è¯·ä½¿ç”¨<a href="commands/MouseClickDrag.htm">MouseClickDrag</a>.</p>
+<h2 id="Activate">æ¿€æ´»å’Œæ“ä½œçª—å£</h2>
+<p>è¦æ¿€æ´»çª—å£ (ä½¿å®ƒæœ€å‰é¢), è¯·ä½¿ç”¨ <a href="commands/WinActivate.htm">WinActivate</a>. è¦åˆ¤æ–­çª—å£æ˜¯å¦å­˜åœ¨, è¯·ä½¿ç”¨ <a href="commands/WinExist.htm">IfWinExist</a> æˆ– <a href="commands/WinWait.htm">WinWait</a>. ä¸‹é¢çš„ä¾‹å­æ¼”ç¤ºäº†è¿™äº›å‘½ä»¤:</p>
 <pre>IfWinExist Untitled - Notepad
 {
     WinActivate
@@ -111,33 +111,33 @@ else
     WinWait Untitled - Notepad
     WinActivate
 }</pre>
-<p>ÉÏÃæµÄÀý×Ó»áÊ×ÏÈËÑË÷±êÌâÒÔ "ÎÞ±êÌâ - ¼ÇÊÂ±¾" (Çø·Ö´óÐ¡Ð´) ¿ªÊ¼µÄÈÎºÎÏÖÓÐµÄ´°¿Ú. Èç¹ûÕÒµ½ÕâÑùµÄ´°¿Ú, Ôò¼¤»îËü. ·ñÔò, Æô¶¯¼ÇÊÂ±¾²¢µÈ´ýÎÞ±êÌâ´°¿ÚµÄ³öÏÖ, ³öÏÖºó¼¤»îËü. ÉÏÃæµÄÀý×Ó»¹ÀûÓÃÁË <a href="misc/WinTitle.htm#LastFoundWindow">×î½üÕÒµ½µÄ´°¿Ú</a>, ÕâÑù¿ÉÒÔ²»ÐèÒªÔÚÃ¿¸ö WinActivate ÖÐÖ¸¶¨´°¿Ú±êÌâ.</p>
-<p>ÆäËûÒ»Ð©³£ÓÃµÄ´°¿ÚÃüÁîÊÇ:</p>
+<p>ä¸Šé¢çš„ä¾‹å­ä¼šé¦–å…ˆæœç´¢æ ‡é¢˜ä»¥ "æ— æ ‡é¢˜ - è®°äº‹æœ¬" (åŒºåˆ†å¤§å°å†™) å¼€å§‹çš„ä»»ä½•çŽ°æœ‰çš„çª—å£. å¦‚æžœæ‰¾åˆ°è¿™æ ·çš„çª—å£, åˆ™æ¿€æ´»å®ƒ. å¦åˆ™, å¯åŠ¨è®°äº‹æœ¬å¹¶ç­‰å¾…æ— æ ‡é¢˜çª—å£çš„å‡ºçŽ°, å‡ºçŽ°åŽæ¿€æ´»å®ƒ. ä¸Šé¢çš„ä¾‹å­è¿˜åˆ©ç”¨äº† <a href="misc/WinTitle.htm#LastFoundWindow">æœ€è¿‘æ‰¾åˆ°çš„çª—å£</a>, è¿™æ ·å¯ä»¥ä¸éœ€è¦åœ¨æ¯ä¸ª WinActivate ä¸­æŒ‡å®šçª—å£æ ‡é¢˜.</p>
+<p>å…¶ä»–ä¸€äº›å¸¸ç”¨çš„çª—å£å‘½ä»¤æ˜¯:</p>
 <ul>
-  <li><a href="commands/WinActive.htm">IfWinActive</a>: ¼ì²éÖ¸¶¨µÄ´°¿Úµ±Ç°ÊÇ·ñ»î¶¯.</li>
-  <li><a href="commands/WinWaitActive.htm">WinWaitActive</a>: µÈ´ýÖ¸¶¨´°¿Ú±äÎª»î¶¯´°¿Ú (Í¨³£ÓÃÔÚ¼¤»î´°¿ÚµÄ¼ü»÷ºóÃæ, ÀýÈç°´ÏÂ Control-F À´´ò¿ª "²éÕÒ" ´°¿Ú).</li>
-  <li><a href="commands/WinClose.htm">WinClose</a>: ¹Ø±ÕÖ¸¶¨µÄ´°¿Ú.</li>
-  <li><a href="commands/WinMove.htm">WinMove</a>: ¸Ä±äÖ¸¶¨´°¿ÚµÄÎ»ÖÃºÍ/»ò´óÐ¡.</li>
-  <li><a href="commands/WinMinimize.htm">WinMinimize</a>, <a href="commands/WinMaximize.htm">WinMaximize</a>, <a href="commands/WinRestore.htm">WinRestore</a>: ·Ö±ð×îÐ¡»¯, ×î´ó»¯»ò»¹Ô­Ö¸¶¨´°¿Ú.</li>
+  <li><a href="commands/WinActive.htm">IfWinActive</a>: æ£€æŸ¥æŒ‡å®šçš„çª—å£å½“å‰æ˜¯å¦æ´»åŠ¨.</li>
+  <li><a href="commands/WinWaitActive.htm">WinWaitActive</a>: ç­‰å¾…æŒ‡å®šçª—å£å˜ä¸ºæ´»åŠ¨çª—å£ (é€šå¸¸ç”¨åœ¨æ¿€æ´»çª—å£çš„é”®å‡»åŽé¢, ä¾‹å¦‚æŒ‰ä¸‹ Control-F æ¥æ‰“å¼€ "æŸ¥æ‰¾" çª—å£).</li>
+  <li><a href="commands/WinClose.htm">WinClose</a>: å…³é—­æŒ‡å®šçš„çª—å£.</li>
+  <li><a href="commands/WinMove.htm">WinMove</a>: æ”¹å˜æŒ‡å®šçª—å£çš„ä½ç½®å’Œ/æˆ–å¤§å°.</li>
+  <li><a href="commands/WinMinimize.htm">WinMinimize</a>, <a href="commands/WinMaximize.htm">WinMaximize</a>, <a href="commands/WinRestore.htm">WinRestore</a>: åˆ†åˆ«æœ€å°åŒ–, æœ€å¤§åŒ–æˆ–è¿˜åŽŸæŒ‡å®šçª—å£.</li>
 </ul>
-<h2 id="Dialogs">ÀûÓÃ MsgBox, InputBox µÈ´ÓÓÃ»§ÖÐ»ñÈ¡ÊäÈë.</h2>
-<p>ÏÂÃæµÄÀý×ÓÏÔÊ¾´øÁ½¸ö°´Å¥µÄ¶Ô»°¿ò (ÊÇ ºÍ ·ñ):</p>
+<h2 id="Dialogs">åˆ©ç”¨ MsgBox, InputBox ç­‰ä»Žç”¨æˆ·ä¸­èŽ·å–è¾“å…¥.</h2>
+<p>ä¸‹é¢çš„ä¾‹å­æ˜¾ç¤ºå¸¦ä¸¤ä¸ªæŒ‰é’®çš„å¯¹è¯æ¡† (æ˜¯ å’Œ å¦):</p>
 <pre><a href="commands/MsgBox.htm">MsgBox</a>, 4, , Would you like to continue?
 <a href="commands/IfMsgBox.htm">IfMsgBox</a>, No
     return
-<em>; ·ñÔò, ÓÃ»§Ñ¡ÔñÁËÊÇ.</em>
+<em>; å¦åˆ™, ç”¨æˆ·é€‰æ‹©äº†æ˜¯.</em>
 MsgBox You pressed YES.</pre>
-<p>Ê¹ÓÃ <a href="commands/InputBox.htm">InputBox</a> ÃüÁîÀ´ÌáÊ¾ÓÃ»§ÊäÈë×Ö·û´®. Ê¹ÓÃ <a href="commands/FileSelectFile.htm">FileSelectFile</a> »ò <a href="commands/FileSelectFolder.htm">FileSelectFolder</a> À´ÈÃÓÃ»§Ñ¡ÔñÎÄ¼þ»òÎÄ¼þ¼Ð. ¶ÔÓÚ¸ü¸ß¼¶µÄÈÎÎñ, ÇëÊ¹ÓÃ <a href="commands/Gui.htm">Gui</a> ÃüÁîÀ´´´½¨×Ô¶¨ÒåÊý¾ÝÊäÈë´°ÌåºÍÓÃ»§½çÃæ.</p>
-<p>ÌáÊ¾: ÄúÒ²ÐíÒÑ¾­´ÓÆäËûÀý×ÓÖÐ×¢Òâµ½ÈÎºÎÃüÁîÖÐµÄÊ×¸ö¶ººÅ¿ÉÒÔÊ¡ÂÔ (³ý·ÇÊ×¸ö²ÎÊýÎª¿Õ»òÒÔ := »ò = ¿ªÊ¼, »òÃüÁîµ¥¶À´¦ÓÚ <a href="Scripts.htm#continuation">ÑÓÐøÆ¬¶Î</a> µÄ¶¥²¿). ÀýÈç£º</p>
+<p>ä½¿ç”¨ <a href="commands/InputBox.htm">InputBox</a> å‘½ä»¤æ¥æç¤ºç”¨æˆ·è¾“å…¥å­—ç¬¦ä¸². ä½¿ç”¨ <a href="commands/FileSelectFile.htm">FileSelectFile</a> æˆ– <a href="commands/FileSelectFolder.htm">FileSelectFolder</a> æ¥è®©ç”¨æˆ·é€‰æ‹©æ–‡ä»¶æˆ–æ–‡ä»¶å¤¹. å¯¹äºŽæ›´é«˜çº§çš„ä»»åŠ¡, è¯·ä½¿ç”¨ <a href="commands/Gui.htm">Gui</a> å‘½ä»¤æ¥åˆ›å»ºè‡ªå®šä¹‰æ•°æ®è¾“å…¥çª—ä½“å’Œç”¨æˆ·ç•Œé¢.</p>
+<p>æç¤º: æ‚¨ä¹Ÿè®¸å·²ç»ä»Žå…¶ä»–ä¾‹å­ä¸­æ³¨æ„åˆ°ä»»ä½•å‘½ä»¤ä¸­çš„é¦–ä¸ªé€—å·å¯ä»¥çœç•¥ (é™¤éžé¦–ä¸ªå‚æ•°ä¸ºç©ºæˆ–ä»¥ := æˆ– = å¼€å§‹, æˆ–å‘½ä»¤å•ç‹¬å¤„äºŽ <a href="Scripts.htm#continuation">å»¶ç»­ç‰‡æ®µ</a> çš„é¡¶éƒ¨). ä¾‹å¦‚ï¼š</p>
 <pre>MsgBox This is ok.
 MsgBox<strong>,</strong> This is ok too (it has an explicit comma).</pre>
-<h2 id="Variables">Ê¹ÓÃ±äÁ¿ºÍ¼ôÌù°å</h2>
-<p><em>±äÁ¿</em> ÊÇ½Å±¾ÓÃÀ´´æ´¢ÎÄ±¾»òÊý×ÖµÄÄÚ´æ¿é. Ö»°üº¬Êý×ÖµÄ±äÁ¿ (¿ÉÒÔº¬Ð¡Êýµã) ÔÚÊýÑ§ÔËËã»ò±È½ÏÊ±»á±»×Ô¶¯×ª»»ÎªÊý×Ö.</p>
-<p>³ýÁË <a href="Functions.htm#Locals">º¯Êý</a> ÖÐµÄ¾Ö²¿±äÁ¿Íâ, ËùÓÐµÄ±äÁ¿¶¼ÊÇÈ«¾ÖµÄ; ¼´¿ÉÒÔÔÚ½Å±¾µÄÈÎÒâÎ»ÖÃ¶ÁÈ¡»ò¸Ä±äËüÃÇµÄÄÚÈÝ. ´ËÍâ, ±äÁ¿²»ÐèÒªÉùÃ÷; ¼òµ¥µØÊ¹ÓÃËüÃÇ¾Í¿ÉÒÔÈÃËüÃÇ´æÔÚ (ÇÒÃ¿¸ö±äÁ¿¶¼ÒÔ¿Õ»ò¿Õ°×¿ªÊ¼).</p>
-<p>Òª°Ñ×Ö·û´®¸³Öµ¸ø±äÁ¿, Çë²ÎÕÕÕâÐ©Àý×Ó:</p>
+<h2 id="Variables">ä½¿ç”¨å˜é‡å’Œå‰ªè´´æ¿</h2>
+<p><em>å˜é‡</em> æ˜¯è„šæœ¬ç”¨æ¥å­˜å‚¨æ–‡æœ¬æˆ–æ•°å­—çš„å†…å­˜å—. åªåŒ…å«æ•°å­—çš„å˜é‡ (å¯ä»¥å«å°æ•°ç‚¹) åœ¨æ•°å­¦è¿ç®—æˆ–æ¯”è¾ƒæ—¶ä¼šè¢«è‡ªåŠ¨è½¬æ¢ä¸ºæ•°å­—.</p>
+<p>é™¤äº† <a href="Functions.htm#Locals">å‡½æ•°</a> ä¸­çš„å±€éƒ¨å˜é‡å¤–, æ‰€æœ‰çš„å˜é‡éƒ½æ˜¯å…¨å±€çš„; å³å¯ä»¥åœ¨è„šæœ¬çš„ä»»æ„ä½ç½®è¯»å–æˆ–æ”¹å˜å®ƒä»¬çš„å†…å®¹. æ­¤å¤–, å˜é‡ä¸éœ€è¦å£°æ˜Ž; ç®€å•åœ°ä½¿ç”¨å®ƒä»¬å°±å¯ä»¥è®©å®ƒä»¬å­˜åœ¨ (ä¸”æ¯ä¸ªå˜é‡éƒ½ä»¥ç©ºæˆ–ç©ºç™½å¼€å§‹).</p>
+<p>è¦æŠŠå­—ç¬¦ä¸²èµ‹å€¼ç»™å˜é‡, è¯·å‚ç…§è¿™äº›ä¾‹å­:</p>
 <pre>MyVar1 = 123
 MyVar2 = my string</pre>
-Òª°Ñ±äÁ¿µÄÄÚÈÝºÍÊý×Ö»ò×Ö·û´®½øÐÐ±È½Ï, Çë²ÎÕÕÕâÐ©Àý×Ó:
+è¦æŠŠå˜é‡çš„å†…å®¹å’Œæ•°å­—æˆ–å­—ç¬¦ä¸²è¿›è¡Œæ¯”è¾ƒ, è¯·å‚ç…§è¿™äº›ä¾‹å­:
 <pre>if MyVar2 = my string
 {
     MsgBox MyVar2 contains the string "my string".
@@ -146,83 +146,83 @@ if MyVar1 &gt;= 100
 {
     MsgBox MyVar1 contains %MyVar1%, which is a number greater than or equal to 100.
 }</pre>
-<p>ÔÚÉÏÃæµÄ MsgBox ÐÐÖÐ, ×¢ÒâµÚ¶þ¸ö³öÏÖµÄ <em>MyVar1</em> ±»À¨ÔÚ°Ù·ÖºÅÄÚ. ÕâÑùÔÚÄÇÀïÏÔÊ¾ÁË <em>MyVar1</em> µÄÄÚÈÝ. Ê¹ÓÃÏàÍ¬µÄÊÖ·¨ÄÜÓÃÀ´¸´ÖÆÒ»¸ö±äÁ¿µÄÄÚÈÝ¸øÁíÒ»¸ö±äÁ¿. ÀýÈç£º</p>
+<p>åœ¨ä¸Šé¢çš„ MsgBox è¡Œä¸­, æ³¨æ„ç¬¬äºŒä¸ªå‡ºçŽ°çš„ <em>MyVar1</em> è¢«æ‹¬åœ¨ç™¾åˆ†å·å†…. è¿™æ ·åœ¨é‚£é‡Œæ˜¾ç¤ºäº† <em>MyVar1</em> çš„å†…å®¹. ä½¿ç”¨ç›¸åŒçš„æ‰‹æ³•èƒ½ç”¨æ¥å¤åˆ¶ä¸€ä¸ªå˜é‡çš„å†…å®¹ç»™å¦ä¸€ä¸ªå˜é‡. ä¾‹å¦‚ï¼š</p>
 <pre>MyVarConcatenated = %MyVar1% %MyVar2%</pre>
-<p>ÉÏÃæÕâÐÐ°Ñ×Ö·û´® "123 my string" (²»º¬ÒýºÅ) ±£´æµ½±äÁ¿ MyVarConcatenated.</p>
-<p>Òª±È½ÏÁ½¸ö±äÁ¿µÄÄÚÈÝ, Çë²ÎÕÕ´ËÀý:</p>
+<p>ä¸Šé¢è¿™è¡ŒæŠŠå­—ç¬¦ä¸² "123 my string" (ä¸å«å¼•å·) ä¿å­˜åˆ°å˜é‡ MyVarConcatenated.</p>
+<p>è¦æ¯”è¾ƒä¸¤ä¸ªå˜é‡çš„å†…å®¹, è¯·å‚ç…§æ­¤ä¾‹:</p>
 <pre>if (ItemCount &gt; ItemLimit)
 {
     MsgBox The value in ItemCount, which is %ItemCount%, is greater than %ItemLimit%.
 }</pre>
-<p>×¢ÒâÉÏÃæÀý×ÓµÄÊ×ÐÐ°üº¬Ð¡À¨ºÅ. Ð¡À¨ºÅ±íÊ¾Õâ¸ö if Óï¾ä°üº¬ <a href="Variables.htm#Expressions">±í´ïÊ½</a>. Èç¹ûÃ»ÓÐËüÃÇ, ÄÇÐÐ½«±»ÊÓÎª "·Ç±í´ïÊ½ if Óï¾ä", ²¢ÇÒÒò´ËÐèÒªÊ¹ÓÃ°Ù·ÖºÅÀ¨×¡ ItemLimit (ÕâÑùµÄ if Óï¾ä±»ÏÞÖÆÎªÖ»ÄÜ°üº¬¼òµ¥µÄ±È½ÏÔËËã·û, ¶ø²»ÄÜ°üº¬ÊýÑ§ÔËËã·û»òÏñ "AND" ºÍ "OR" ÕâÑùµÄÁªºÏÔËËã·û).</p>
+<p>æ³¨æ„ä¸Šé¢ä¾‹å­çš„é¦–è¡ŒåŒ…å«å°æ‹¬å·. å°æ‹¬å·è¡¨ç¤ºè¿™ä¸ª if è¯­å¥åŒ…å« <a href="Variables.htm#Expressions">è¡¨è¾¾å¼</a>. å¦‚æžœæ²¡æœ‰å®ƒä»¬, é‚£è¡Œå°†è¢«è§†ä¸º "éžè¡¨è¾¾å¼ if è¯­å¥", å¹¶ä¸”å› æ­¤éœ€è¦ä½¿ç”¨ç™¾åˆ†å·æ‹¬ä½ ItemLimit (è¿™æ ·çš„ if è¯­å¥è¢«é™åˆ¶ä¸ºåªèƒ½åŒ…å«ç®€å•çš„æ¯”è¾ƒè¿ç®—ç¬¦, è€Œä¸èƒ½åŒ…å«æ•°å­¦è¿ç®—ç¬¦æˆ–åƒ "AND" å’Œ "OR" è¿™æ ·çš„è”åˆè¿ç®—ç¬¦).</p>
 <br>
-<p><u><strong>ÊýÑ§</strong></u>£ºÒªÖ´ÐÐÊýÑ§ÔËËã£¬ÇëÊ¹ÓÃÃ°ºÅ-µÈºÅÔËËã·û£¨:=£©À´°Ñ<a href="Variables.htm#Expressions">±í´ïÊ½</a>µÄ½á¹û¸³Öµ¸ø±äÁ¿£¬ÀýÈç£º</p>
+<p><u><strong>æ•°å­¦</strong></u>ï¼šè¦æ‰§è¡Œæ•°å­¦è¿ç®—ï¼Œè¯·ä½¿ç”¨å†’å·-ç­‰å·è¿ç®—ç¬¦ï¼ˆ:=ï¼‰æ¥æŠŠ<a href="Variables.htm#Expressions">è¡¨è¾¾å¼</a>çš„ç»“æžœèµ‹å€¼ç»™å˜é‡ï¼Œä¾‹å¦‚ï¼š</p>
 <pre>NetPrice := Price * (1 - Discount/100)</pre>
-<p>Çë²ÎÔÄ <a href="Variables.htm#Expressions">±í´ïÊ½</a> À´ÁË½âÊýÑ§ÔËËã·ûµÄÍêÕûÁÐ±í.</p>
+<p>è¯·å‚é˜… <a href="Variables.htm#Expressions">è¡¨è¾¾å¼</a> æ¥äº†è§£æ•°å­¦è¿ç®—ç¬¦çš„å®Œæ•´åˆ—è¡¨.</p>
 <p><br>
-<u><strong>¼ôÌù°å</strong></u>: <em>Clipboard</em> ±äÁ¿ÊÇÌØÊâ±äÁ¿, ÒòÎªËü°üº¬ÁË Windows ¼ôÌù°åÖÐµ±Ç°µÄÎÄ±¾. ¼´Ê¹Èç´Ë, ËüµÄÓÃ·¨Ò²ºÍÆÕÍ¨±äÁ¿Ò»Ñù. ÀýÈç, ÏÂÃæÕâÐÐ½«ÏÔÊ¾¼ôÌù°åµ±Ç°µÄÄÚÈÝ:</p>
+<u><strong>å‰ªè´´æ¿</strong></u>: <em>Clipboard</em> å˜é‡æ˜¯ç‰¹æ®Šå˜é‡, å› ä¸ºå®ƒåŒ…å«äº† Windows å‰ªè´´æ¿ä¸­å½“å‰çš„æ–‡æœ¬. å³ä½¿å¦‚æ­¤, å®ƒçš„ç”¨æ³•ä¹Ÿå’Œæ™®é€šå˜é‡ä¸€æ ·. ä¾‹å¦‚, ä¸‹é¢è¿™è¡Œå°†æ˜¾ç¤ºå‰ªè´´æ¿å½“å‰çš„å†…å®¹:</p>
 <pre>MsgBox %clipboard%</pre>
-<p>Òª¸Ä±ä¼ôÌù°åµÄÄÚÈÝ, Çë²Î¿¼ÏÂÃæµÄÀý×Ó, ËüÓÃÐÂÎÄ±¾Ìæ»»ÁË¼ôÌù°åµÄµ±Ç°ÄÚÈÝ:</p>
+<p>è¦æ”¹å˜å‰ªè´´æ¿çš„å†…å®¹, è¯·å‚è€ƒä¸‹é¢çš„ä¾‹å­, å®ƒç”¨æ–°æ–‡æœ¬æ›¿æ¢äº†å‰ªè´´æ¿çš„å½“å‰å†…å®¹:</p>
 <pre>clipboard = A line of text.`r`nA second line of text.`r`n</pre>
-<p>ÔÚÉÏÃæ, `r ºÍ `n (ÖØÒô·ûºó¸ú×Å×ÖÄ¸ "r" »ò "n") ÓÃÀ´±íÊ¾Á½¸öÌØÊâ×Ö·û: »Ø³µºÍ»»ÐÐ. ÕâÁ½¸ö×Ö·ûÔÚÎÄ±¾ÖÐ¿ªÊ¼ÐÂÐÐ, ¾ÍÏñÓÃ»§°´ÏÂÁË Enter ¼ü.</p>
-<p>Òª×·¼ÓÎÄ±¾µ½¼ôÌù°å (»òÆäËûÈÎºÎ±äÁ¿), Çë²ÎÕÕ´ËÀý:</p>
+<p>åœ¨ä¸Šé¢, `r å’Œ `n (é‡éŸ³ç¬¦åŽè·Ÿç€å­—æ¯ "r" æˆ– "n") ç”¨æ¥è¡¨ç¤ºä¸¤ä¸ªç‰¹æ®Šå­—ç¬¦: å›žè½¦å’Œæ¢è¡Œ. è¿™ä¸¤ä¸ªå­—ç¬¦åœ¨æ–‡æœ¬ä¸­å¼€å§‹æ–°è¡Œ, å°±åƒç”¨æˆ·æŒ‰ä¸‹äº† Enter é”®.</p>
+<p>è¦è¿½åŠ æ–‡æœ¬åˆ°å‰ªè´´æ¿ (æˆ–å…¶ä»–ä»»ä½•å˜é‡), è¯·å‚ç…§æ­¤ä¾‹:</p>
 <pre>clipboard = %clipboard% And here is the text to append.</pre>
-<p>Çë²ÎÔÄ <a href="misc/Clipboard.htm">¼ôÌù°å</a> ºÍ <a href="Variables.htm">±äÁ¿</a> ÕÂ½ÚÁË½âÏêÇé.</p>
-<h2 id="Loop">·´¸´ÖØ¸´Ò»ÏµÁÐ¶¯×÷</h2>
-<p>Òª¶à´ÎÁ¬ÐøµØÖØ¸´Ö´ÐÐÒ»Ð©²Ù×÷, ÇëÊ¹ÓÃ <a href="commands/Loop.htm">Ñ­»·</a>. ÏÂÃæµÄÑ­»·»áÏÔÊ¾Èý´Î <a href="commands/MsgBox.htm">MsgBox</a>:</p>
+<p>è¯·å‚é˜… <a href="misc/Clipboard.htm">å‰ªè´´æ¿</a> å’Œ <a href="Variables.htm">å˜é‡</a> ç« èŠ‚äº†è§£è¯¦æƒ….</p>
+<h2 id="Loop">åå¤é‡å¤ä¸€ç³»åˆ—åŠ¨ä½œ</h2>
+<p>è¦å¤šæ¬¡è¿žç»­åœ°é‡å¤æ‰§è¡Œä¸€äº›æ“ä½œ, è¯·ä½¿ç”¨ <a href="commands/Loop.htm">å¾ªçŽ¯</a>. ä¸‹é¢çš„å¾ªçŽ¯ä¼šæ˜¾ç¤ºä¸‰æ¬¡ <a href="commands/MsgBox.htm">MsgBox</a>:</p>
 <pre>Loop 3
 {
     MsgBox This window will be displayed three times.
 }</pre>
-<p>Äú»¹¿ÉÒÔÔÚµ¥´Ê Loop ºóÖ¸¶¨±äÁ¿, Õâ¿ÉÒÔÓÃÓÚÑ­»·´ÎÊýÔÚ½Å±¾Ä³¸öÎ»ÖÃ¶¨ÒåµÄÊ±ºò:</p>
+<p>æ‚¨è¿˜å¯ä»¥åœ¨å•è¯ Loop åŽæŒ‡å®šå˜é‡, è¿™å¯ä»¥ç”¨äºŽå¾ªçŽ¯æ¬¡æ•°åœ¨è„šæœ¬æŸä¸ªä½ç½®å®šä¹‰çš„æ—¶å€™:</p>
 <pre>Loop %RunCount%
 {
     Run C:\Check Server Status.exe
-    Sleep 60000  <em>; ÔÝÍ£ 60 Ãë.</em>
+    Sleep 60000  <em>; æš‚åœ 60 ç§’.</em>
 }</pre>
-<p>ÔÚÉÏÃæµÄÀý×ÓÖÐ, Ñ­»·»áÖ´ÐÐÖ¸¶¨µÄ´ÎÊý, µ«ÊÇÈç¹û RunCount µÄÖµÎª 0, Ôò»áÍêÈ«Ìø¹ýÑ­»·.</p>
-<p>µ±Ò»¸ö»ò¶à¸öÌõ¼þ¸Ä±äÊ±Ñ­»·»¹¿ÉÒÔÖÕÖ¹Ëü×Ô¼º. ÏÂÃæµÄÀý×ÓÖÐµ±ÓÃ»§°´×¡ F1 ¼üÊ±»áÖØ¸´µã»÷Êó±ê×ó¼ü:</p>
-<pre>$F1::  <em>; °Ñ F1 ¼üÉèÖÃÎªÈÈ¼ü ($ ·ûºÅ»áÓÐÖúÓÚÏÂÃæ GetKeyState µÄ "P" Ä£Ê½).</em>
-Loop  <em>; ÓÉÓÚÃ»ÓÐÖ¸¶¨Êý×Ö, ËùÒÔÕâÊÇ¸öÎÞÏÞÑ­»·, Ö±µ½Óöµ½ÄÚ²¿µÄ "break" »ò "return".</em>
+<p>åœ¨ä¸Šé¢çš„ä¾‹å­ä¸­, å¾ªçŽ¯ä¼šæ‰§è¡ŒæŒ‡å®šçš„æ¬¡æ•°, ä½†æ˜¯å¦‚æžœ RunCount çš„å€¼ä¸º 0, åˆ™ä¼šå®Œå…¨è·³è¿‡å¾ªçŽ¯.</p>
+<p>å½“ä¸€ä¸ªæˆ–å¤šä¸ªæ¡ä»¶æ”¹å˜æ—¶å¾ªçŽ¯è¿˜å¯ä»¥ç»ˆæ­¢å®ƒè‡ªå·±. ä¸‹é¢çš„ä¾‹å­ä¸­å½“ç”¨æˆ·æŒ‰ä½ F1 é”®æ—¶ä¼šé‡å¤ç‚¹å‡»é¼ æ ‡å·¦é”®:</p>
+<pre>$F1::  <em>; æŠŠ F1 é”®è®¾ç½®ä¸ºçƒ­é”® ($ ç¬¦å·ä¼šæœ‰åŠ©äºŽä¸‹é¢ GetKeyState çš„ "P" æ¨¡å¼).</em>
+Loop  <em>; ç”±äºŽæ²¡æœ‰æŒ‡å®šæ•°å­—, æ‰€ä»¥è¿™æ˜¯ä¸ªæ— é™å¾ªçŽ¯, ç›´åˆ°é‡åˆ°å†…éƒ¨çš„ "break" æˆ– "return".</em>
 {
-    if not GetKeyState("F1", "P")  <em>; Èç¹û´Ë×´Ì¬Îª true, ÄÇÃ´ÓÃ»§Êµ¼ÊÒÑ¾­ÊÍ·ÅÁË F1 ¼ü.</em>
-        break  <em>; ÖÐ¶ÏÑ­»·.</em>
-    <em>; ·ñÔò (ÓÉÓÚÉÏÃæÃ»ÓÐ "ÖÐ¶Ï"), ¼ÌÐøµã»÷Êó±ê.</em>
-    Click  <em>; ÔÚµ±Ç°Ö¸ÕëÎ»ÖÃµã»÷Êó±ê×ó¼ü.</em>
+    if not GetKeyState("F1", "P")  <em>; å¦‚æžœæ­¤çŠ¶æ€ä¸º true, é‚£ä¹ˆç”¨æˆ·å®žé™…å·²ç»é‡Šæ”¾äº† F1 é”®.</em>
+        break  <em>; ä¸­æ–­å¾ªçŽ¯.</em>
+    <em>; å¦åˆ™ (ç”±äºŽä¸Šé¢æ²¡æœ‰ "ä¸­æ–­"), ç»§ç»­ç‚¹å‡»é¼ æ ‡.</em>
+    Click  <em>; åœ¨å½“å‰æŒ‡é’ˆä½ç½®ç‚¹å‡»é¼ æ ‡å·¦é”®.</em>
 }
 return</pre>
-<p>ÔÚÉÏÃæµÄÀý×ÓÖÐ, µ±ÓÃ»§°´ÏÂ F1 ¼üÊ±, Ñ­»·»á¼ì²âµ½²¢Í¨¹ý <a href="commands/Break.htm">break</a> ÃüÁîÍ£Ö¹Ëü×Ô¼º. <em>Break</em> »áÊ¹µÃÖ´ÐÐÌø×ªµ½Ñ­»·±ÕÀ¨ºÅºóµÄÐÐ.</p>
-<p>ÁíÒ»ÖÖÊµÏÖ´ËÄ¿µÄµÄ·½·¨ÊÇÊ¹ÓÃ <a href="commands/While.htm">"while" Ñ­»·</a>:</p>
+<p>åœ¨ä¸Šé¢çš„ä¾‹å­ä¸­, å½“ç”¨æˆ·æŒ‰ä¸‹ F1 é”®æ—¶, å¾ªçŽ¯ä¼šæ£€æµ‹åˆ°å¹¶é€šè¿‡ <a href="commands/Break.htm">break</a> å‘½ä»¤åœæ­¢å®ƒè‡ªå·±. <em>Break</em> ä¼šä½¿å¾—æ‰§è¡Œè·³è½¬åˆ°å¾ªçŽ¯é—­æ‹¬å·åŽçš„è¡Œ.</p>
+<p>å¦ä¸€ç§å®žçŽ°æ­¤ç›®çš„çš„æ–¹æ³•æ˜¯ä½¿ç”¨ <a href="commands/While.htm">"while" å¾ªçŽ¯</a>:</p>
 <pre>$F1::
-while GetKeyState("F1", "P")  <em>; µ± F1 ¼üÊµ¼Ê±»°´×¡Ê±.</em>
+while GetKeyState("F1", "P")  <em>; å½“ F1 é”®å®žé™…è¢«æŒ‰ä½æ—¶.</em>
 {
     Click
 }
 return</pre>
-<p>ÉÏÃæµÄÊ¾ÀýÑÝÊ¾ÁËÒ»°ãÓÃÍ¾µÄÑ­»·. ¶ÔÓÚ¸ü¶àÌØÊâµÄÐèÒª, Çë¿¼ÂÇÏÂÃæÕâÐ©Ñ­»·:</p>
-<p><a href="commands/LoopReadFile.htm">ÎÄ¼þ¶ÁÈ¡/Ð´ÈëÑ­»·</a>: ÖðÐÐ¶ÁÈ¡ÎÄ±¾ÎÄ¼þµÄÄÚÈÝ, Ã¿´ÎÒ»ÐÐ. Õâ¿ÉÒÔÓÃÀ´Ò»ÐÐ½ÓÒ»ÐÐµØ°ÑÎÄ¼þ×ª»»³É²»Í¬µÄ¸ñÊ½. Ëü»¹¿ÉÒÔÓÃÀ´ËÑË÷Æ¥ÅäÌõ¼þµÄÐÐ.</p>
-<p><a href="commands/LoopFile.htm">ÎÄ¼þºÍÎÄ¼þ¼ÐÑ­»·</a>: »ñÈ¡Ö¸¶¨µÄÎÄ¼þ»òÎÄ¼þ¼Ð, Ã¿´ÎÒ»¸ö. Õâ¿ÉÒÔÓÃÀ´¶Ô·ûºÏÌõ¼þµÄÎÄ¼þ»òÎÄ¼þ¼Ð½øÐÐ²Ù×÷.</p>
-<p><a href="commands/LoopParse.htm">½âÎöÑ­»·</a>: ´ÓÒ»¸ö×Ö·û´®ÖÐ»ñÈ¡×Ó×Ö·û´®, Ã¿´ÎÒ»¸ö. Õâ¿ÉÒÔÓÃÀ´ºÜÈÝÒ×µÄ·Ö½âÏñ "Red,Green,Blue" ÕâÑùµÄ×Ö·û´®ÎªÈý¸ö×ÓÆ¬¶Î.</p>
-<p><a href="commands/LoopReg.htm">×¢²á±íÑ­»·</a>: »ñÈ¡Ö¸¶¨µÄ×¢²á±í×Ó¼üµÄÄÚÈÝ, Ã¿´ÎÒ»¸öÏîÄ¿.</p>
-<h2 id="Files">²Ù×÷ÎÄ¼þºÍÎÄ¼þ¼Ð</h2>
-<p>ÒªÌí¼ÓÎÄ±¾µ½ÎÄ¼þµÄÄ©Î² (»ò´´½¨ÐÂÎÄ¼þ), ÇëÊ¹ÓÃ <a href="commands/FileAppend.htm">FileAppend</a>, ÈçÏÂÃæµÄÀý×ÓËùÊ¾. ×¢ÒâËüÊ¹ÓÃ `n (»»ÐÐ·û) À´¿ªÊ¼ÐÂµÄÎÄ±¾ÐÐ:</p>
+<p>ä¸Šé¢çš„ç¤ºä¾‹æ¼”ç¤ºäº†ä¸€èˆ¬ç”¨é€”çš„å¾ªçŽ¯. å¯¹äºŽæ›´å¤šç‰¹æ®Šçš„éœ€è¦, è¯·è€ƒè™‘ä¸‹é¢è¿™äº›å¾ªçŽ¯:</p>
+<p><a href="commands/LoopReadFile.htm">æ–‡ä»¶è¯»å–/å†™å…¥å¾ªçŽ¯</a>: é€è¡Œè¯»å–æ–‡æœ¬æ–‡ä»¶çš„å†…å®¹, æ¯æ¬¡ä¸€è¡Œ. è¿™å¯ä»¥ç”¨æ¥ä¸€è¡ŒæŽ¥ä¸€è¡Œåœ°æŠŠæ–‡ä»¶è½¬æ¢æˆä¸åŒçš„æ ¼å¼. å®ƒè¿˜å¯ä»¥ç”¨æ¥æœç´¢åŒ¹é…æ¡ä»¶çš„è¡Œ.</p>
+<p><a href="commands/LoopFile.htm">æ–‡ä»¶å’Œæ–‡ä»¶å¤¹å¾ªçŽ¯</a>: èŽ·å–æŒ‡å®šçš„æ–‡ä»¶æˆ–æ–‡ä»¶å¤¹, æ¯æ¬¡ä¸€ä¸ª. è¿™å¯ä»¥ç”¨æ¥å¯¹ç¬¦åˆæ¡ä»¶çš„æ–‡ä»¶æˆ–æ–‡ä»¶å¤¹è¿›è¡Œæ“ä½œ.</p>
+<p><a href="commands/LoopParse.htm">è§£æžå¾ªçŽ¯</a>: ä»Žä¸€ä¸ªå­—ç¬¦ä¸²ä¸­èŽ·å–å­å­—ç¬¦ä¸², æ¯æ¬¡ä¸€ä¸ª. è¿™å¯ä»¥ç”¨æ¥å¾ˆå®¹æ˜“çš„åˆ†è§£åƒ "Red,Green,Blue" è¿™æ ·çš„å­—ç¬¦ä¸²ä¸ºä¸‰ä¸ªå­ç‰‡æ®µ.</p>
+<p><a href="commands/LoopReg.htm">æ³¨å†Œè¡¨å¾ªçŽ¯</a>: èŽ·å–æŒ‡å®šçš„æ³¨å†Œè¡¨å­é”®çš„å†…å®¹, æ¯æ¬¡ä¸€ä¸ªé¡¹ç›®.</p>
+<h2 id="Files">æ“ä½œæ–‡ä»¶å’Œæ–‡ä»¶å¤¹</h2>
+<p>è¦æ·»åŠ æ–‡æœ¬åˆ°æ–‡ä»¶çš„æœ«å°¾ (æˆ–åˆ›å»ºæ–°æ–‡ä»¶), è¯·ä½¿ç”¨ <a href="commands/FileAppend.htm">FileAppend</a>, å¦‚ä¸‹é¢çš„ä¾‹å­æ‰€ç¤º. æ³¨æ„å®ƒä½¿ç”¨ `n (æ¢è¡Œç¬¦) æ¥å¼€å§‹æ–°çš„æ–‡æœ¬è¡Œ:</p>
 <pre>FileAppend, A line of text to append.`n, C:\My Documents\My Text File.txt</pre>
-<p>Òª¸²¸ÇÏÖÓÐµÄÎÄ¼þ, ÇëÔÚ FileAppend Ö®Ç°Ê¹ÓÃ <a href="commands/FileDelete.htm">FileDelete</a>. ÀýÈç£º</p>
+<p>è¦è¦†ç›–çŽ°æœ‰çš„æ–‡ä»¶, è¯·åœ¨ FileAppend ä¹‹å‰ä½¿ç”¨ <a href="commands/FileDelete.htm">FileDelete</a>. ä¾‹å¦‚ï¼š</p>
 <pre>FileDelete, C:\My Documents\My Text File.txt</pre>
-<p>ÆäËûÒ»Ð©³£ÓÃµÄÎÄ¼þºÍÎÄ¼þ¼ÐÃüÁîÊÇ:</p>
-<ul><li><a href="commands/FileRead.htm">FileRead</a>: ¶ÁÈ¡Õû¸öÎÄ¼þµÄÄÚÈÝµ½±äÁ¿.</li>
-  <li><a href="commands/LoopReadFile.htm">ÎÄ¼þ¶ÁÈ¡Ñ­»·</a>: ÖðÐÐ¶ÁÈ¡ÎÄ±¾ÎÄ¼þµÄÄÚÈÝ.</li>
-  <li><a href="commands/IfExist.htm">IfExist</a>: ¼ì²éÎÄ¼þ»òÎÄ¼þ¼ÐÊÇ·ñ´æÔÚ.</li>
-  <li><a href="commands/FileSelectFile.htm">FileSelectFile</a> ºÍ <a href="commands/FileSelectFolder.htm">FileSelectFolder</a>: ÏÔÊ¾¿ÉÒÔÈÃÓÃ»§Ñ¡È¡ÎÄ¼þ»òÎÄ¼þ¼ÐµÄ¶Ô»°¿ò.</li>
-  <li><a href="commands/FileDelete.htm">FileDelete</a>/<a href="commands/FileRecycle.htm">FileRecycle</a>: É¾³ý/»ØÊÕÒ»¸ö»ò¶à¸öÎÄ¼þ. Ê¹ÓÃ <a href="commands/FileRemoveDir.htm">FileRemoveDir</a> À´É¾³ýÕû¸öÎÄ¼þ¼Ð.</li>
-  <li><a href="commands/FileCopy.htm">FileCopy</a>/<a href="commands/FileMove.htm">FileMove</a>: ¸´ÖÆ/ÒÆ¶¯Ò»¸ö»ò¶à¸öÎÄ¼þ. Ê¹ÓÃ <a href="commands/FileCopyDir.htm">FileCopyDir</a>/<a href="commands/FileMoveDir.htm">FileMoveDir</a> À´¸´ÖÆ/ÒÆ¶¯Õû¸öÎÄ¼þ¼Ð.</li>
-  <li><a href="commands/LoopFile.htm">ÎÄ¼þºÍÎÄ¼þ¼ÐÑ­»·</a>: »ñÈ¡ÎÄ¼þ¼ÐÖÐ°üº¬µÄ×ÓÎÄ¼þ¼ÐºÍÎÄ¼þ, Ã¿´ÎÒ»¸ö.</li>
-  <li><a href="commands/FileSetAttrib.htm">FileSetAttrib</a> ºÍ <a href="commands/FileSetTime.htm">FileSetTime</a>: ¸Ä±äÒ»¸ö»ò¶à¸öÎÄ¼þµÄÊôÐÔ»òÊ±¼ä´Á.</li>
-  <li><a href="commands/IniRead.htm">IniRead</a>, <a href="commands/IniWrite.htm">IniWrite</a> ºÍ <a href="commands/IniDelete.htm">IniDelete</a>: ´´½¨, ·ÃÎÊºÍ²Ù×÷±ê×¼¸ñÊ½µÄ INI ÎÄ¼þ.</li>
-  <li><a href="commands/RegRead.htm">RegRead</a>, <a href="commands/RegWrite.htm">RegWrite</a>, <a href="commands/RegDelete.htm">RegDelete</a> ºÍ <a href="commands/LoopReg.htm">×¢²á±íÑ­»·</a>: ²Ù×÷ Windows ×¢²á±í.</li>
+<p>å…¶ä»–ä¸€äº›å¸¸ç”¨çš„æ–‡ä»¶å’Œæ–‡ä»¶å¤¹å‘½ä»¤æ˜¯:</p>
+<ul><li><a href="commands/FileRead.htm">FileRead</a>: è¯»å–æ•´ä¸ªæ–‡ä»¶çš„å†…å®¹åˆ°å˜é‡.</li>
+  <li><a href="commands/LoopReadFile.htm">æ–‡ä»¶è¯»å–å¾ªçŽ¯</a>: é€è¡Œè¯»å–æ–‡æœ¬æ–‡ä»¶çš„å†…å®¹.</li>
+  <li><a href="commands/IfExist.htm">IfExist</a>: æ£€æŸ¥æ–‡ä»¶æˆ–æ–‡ä»¶å¤¹æ˜¯å¦å­˜åœ¨.</li>
+  <li><a href="commands/FileSelectFile.htm">FileSelectFile</a> å’Œ <a href="commands/FileSelectFolder.htm">FileSelectFolder</a>: æ˜¾ç¤ºå¯ä»¥è®©ç”¨æˆ·é€‰å–æ–‡ä»¶æˆ–æ–‡ä»¶å¤¹çš„å¯¹è¯æ¡†.</li>
+  <li><a href="commands/FileDelete.htm">FileDelete</a>/<a href="commands/FileRecycle.htm">FileRecycle</a>: åˆ é™¤/å›žæ”¶ä¸€ä¸ªæˆ–å¤šä¸ªæ–‡ä»¶. ä½¿ç”¨ <a href="commands/FileRemoveDir.htm">FileRemoveDir</a> æ¥åˆ é™¤æ•´ä¸ªæ–‡ä»¶å¤¹.</li>
+  <li><a href="commands/FileCopy.htm">FileCopy</a>/<a href="commands/FileMove.htm">FileMove</a>: å¤åˆ¶/ç§»åŠ¨ä¸€ä¸ªæˆ–å¤šä¸ªæ–‡ä»¶. ä½¿ç”¨ <a href="commands/FileCopyDir.htm">FileCopyDir</a>/<a href="commands/FileMoveDir.htm">FileMoveDir</a> æ¥å¤åˆ¶/ç§»åŠ¨æ•´ä¸ªæ–‡ä»¶å¤¹.</li>
+  <li><a href="commands/LoopFile.htm">æ–‡ä»¶å’Œæ–‡ä»¶å¤¹å¾ªçŽ¯</a>: èŽ·å–æ–‡ä»¶å¤¹ä¸­åŒ…å«çš„å­æ–‡ä»¶å¤¹å’Œæ–‡ä»¶, æ¯æ¬¡ä¸€ä¸ª.</li>
+  <li><a href="commands/FileSetAttrib.htm">FileSetAttrib</a> å’Œ <a href="commands/FileSetTime.htm">FileSetTime</a>: æ”¹å˜ä¸€ä¸ªæˆ–å¤šä¸ªæ–‡ä»¶çš„å±žæ€§æˆ–æ—¶é—´æˆ³.</li>
+  <li><a href="commands/IniRead.htm">IniRead</a>, <a href="commands/IniWrite.htm">IniWrite</a> å’Œ <a href="commands/IniDelete.htm">IniDelete</a>: åˆ›å»º, è®¿é—®å’Œæ“ä½œæ ‡å‡†æ ¼å¼çš„ INI æ–‡ä»¶.</li>
+  <li><a href="commands/RegRead.htm">RegRead</a>, <a href="commands/RegWrite.htm">RegWrite</a>, <a href="commands/RegDelete.htm">RegDelete</a> å’Œ <a href="commands/LoopReg.htm">æ³¨å†Œè¡¨å¾ªçŽ¯</a>: æ“ä½œ Windows æ³¨å†Œè¡¨.</li>
 </ul>
-<h2 id="Overview">ÆäËû¹¦ÄÜ¸ÅÊö</h2>
-<p>Çë²ÎÔÄ <a href="commands/index.htm">ÃüÁîÁÐ±í</a> ÁË½âÃ¿¸öÃüÁîµÄ¸ÅÊö.</p>
+<h2 id="Overview">å…¶ä»–åŠŸèƒ½æ¦‚è¿°</h2>
+<p>è¯·å‚é˜… <a href="commands/index.htm">å‘½ä»¤åˆ—è¡¨</a> äº†è§£æ¯ä¸ªå‘½ä»¤çš„æ¦‚è¿°.</p>
 <p>&nbsp;</p>
 </body>
 </html>

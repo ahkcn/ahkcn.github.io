@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>#IfTimeout</title>
-<meta http-equiv="content-type" content="text/html; charset=GBK">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/jquery.js" type="text/javascript"></script>
@@ -15,26 +15,26 @@
 
 <h1>#IfTimeout <span class="ver">[AHK_L 8+]</span></h1>
 
-<p>���ü��㵥�� <a href="_If.htm">#If</a> ����ʽ����ʹ�õ����ʱ��.</p>
+<p>设置计算单个 <a href="_If.htm">#If</a> 表达式可以使用的最大时间.</p>
 
 <pre class="Syntax">#IfTimeout Timeout</pre>
-<h3>����</h3>
+<h3>参数</h3>
 <dl>
 
-  <dt>��ʱ</dt>
-  <dd><p>ȫ����Ч�ĳ�ʱʱ��ֵ, ��λΪ����.</p></dd>
+  <dt>超时</dt>
+  <dd><p>全局有效的超时时间值, 单位为毫秒.</p></dd>
 
 </dl>
 
-<h3>��ע</h3>
-<p>���ó�ʱʱ����Ϊ�˷�ֹ��ʱ��������ʽ���ӳ��˼�������Ĵ���. ��������˴˳�ʱʱ��ֵ���������������ʽ�������̹��ӽ��ٶ�����ʽ���Ϊ�ٶ�����ִ�С�</p>
-<p>����ű���δʹ�ô�ָ��, ��ô������ֵľ��������Ϊ 1000 ����.</p>
-<p>ע��ϵͳʹ�����Լ��ĳ�ʱʱ��. ���������ϵͳ�ĳ�ʱʱ��, ��ô���ܻ�ͬʱ�����ȼ��Ͱ���ԭ�еĹ���. ϵͳ��ʱʱ��ֵ����Ϊ DWORD ����ֵ <em>LowLevelHooksTimeout</em>, �������ں����ע�������:</p>
+<h3>备注</h3>
+<p>设置超时时间是为了防止长时间计算表达式而延迟了键盘输入的处理. 如果超过了此超时时间值，则会继续计算表达式，但键盘钩子将假定表达式结果为假而继续执行。</p>
+<p>如果脚本中未使用此指令, 那么它会表现的就像此设置为 1000 那样.</p>
+<p>注意系统使用它自己的超时时间. 如果超过了系统的超时时间, 那么可能会同时激活热键和按键原有的功能. 系统超时时间值定义为 DWORD 类型值 <em>LowLevelHooksTimeout</em>, 并保存在后面的注册表键中:</p>
 <p><b>HKEY_CURRENT_USER\Control Panel\Desktop</b></p>
-<h3>���</h3>
+<h3>相关</h3>
 <p><a href="_If.htm">#If</a></p>
-<h3>ʾ��</h3>
-<pre class="NoIndent">#IfTimeout 10 <em>; ���ó�ʱʱ��Ϊ 10 ms.</em></pre>
+<h3>示例</h3>
+<pre class="NoIndent">#IfTimeout 10 <em>; 设置超时时间为 10 ms.</em></pre>
 
 </body>
 </html>

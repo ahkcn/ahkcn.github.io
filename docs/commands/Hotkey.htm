@@ -3,7 +3,7 @@
 <html>
 <head>
 <title>Hotkey</title>
-<meta http-equiv="content-type" content="text/html; charset=GBK">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="../static/theme.css" rel="stylesheet" type="text/css" />
 <script src="../static/jquery.js" type="text/javascript"></script>
@@ -14,143 +14,143 @@
 
 <h1>Hotkey</h1>
 
-<p>ÔÚ½Å±¾ÔËÐÐÊ±´´½¨¡¢ÐÞ¸Ä¡¢ÆôÓÃ»ò½ûÓÃÈÈ¼ü¡£</p>
+<p>åœ¨è„šæœ¬è¿è¡Œæ—¶åˆ›å»ºã€ä¿®æ”¹ã€å¯ç”¨æˆ–ç¦ç”¨çƒ­é”®ã€‚</p>
 
 <pre class="Syntax">Hotkey, KeyName [, Label, Options]
 Hotkey, IfWinActive/Exist [, WinTitle, WinText]
 Hotkey, If [, Expression]</pre>
-<h3>²ÎÊý</h3>
+<h3>å‚æ•°</h3>
 <dl>
 
   <dt>KeyName</dt>
-  <dd><p>ÈÈ¼ü´¥·¢¼üµÄÃû³Æ, °üÀ¨ËùÓÐ <a href="../Hotkeys.htm#Symbols">ÐÞÊÎ·û</a>. ÀýÈç£¬Ö¸¶¨ <code>#c</code> À´´¥·¢ Win+C ÈÈ¼ü¡£</p>
-    <p>Èç¹û <em>KeyName</em> ÊÇÏÖÓÐµÄÈÈ¼ü, ÄÇÃ´½«Ê¹ÓÃ´ËÃüÁîµÄÆäËû²ÎÊýÖµ¸üÐÂÔ­À´µÄÈÈ¼ü.</p>
-    <p><em>KeyName</em> Ò²¿ÉÒÔÊÇÏÖÓÐµÄÈÈ¼ü±êÇ©µÄÃû³Æ (¼´Ë«Ã°ºÅ±êÇ©), ÕâÑù»áÊ¹ÓÃ´ËÃüÁîµÄÆäËû²ÎÊýÖµ¸üÐÂÔ­À´µÄÈÈ¼ü.</p>
-    <p>Ö¸¶¨ <em>ÏÖÓÐµÄ</em> ÈÈ¼üÊ±, <em>KeyName</em> ÊÇ²»Çø·Ö´óÐ¡Ð´µÄ. µ«ÊÇ, °´¼üÃû³Æ±ØÐëºÍÏÖÓÐµÄÈÈ¼üÆ´Ð´ÏàÍ¬ (ÀýÈçÔÚÕâÖÖÇé¿öÏÂ Esc Óë Escape ÊÇ²»Í¬µÄ). ´ËÍâ, <a href="../Hotkeys.htm#Symbols">ÐÞÊÎ·û</a> (ÀýÈç ^!+#) ÊÇÎÞ¹Ø½ôÒªµÄ.</p>
-    <p>Ê×´Î´´½¨Ò»¸öÈÈ¼üÊ± (Í¨¹ý Hotkey ÃüÁî»ò½Å±¾ÖÐµÄ <a href="../Hotkeys.htm">Ë«Ã°ºÅ±êÇ©</a>), Æä¼üÃûÒÔ¼°ÐÞÊÎ·ûµÄË³Ðò³ÉÎª´ËÈÈ¼üµÄ¹Ì¶¨Ãû³Æ, Ïñ <a href="../Variables.htm#ThisHotkey">A_ThisHotkey</a> °üº¬µÄÄÇÑù. ¼´Ê¹Ö®ºó Hotkey ÃüÁîÊ¹ÓÃ²»Í¬µÄÐÞÊÎ·ûË³Ðò²Ù×÷´ËÈÈ¼ü, ´ËÃû³ÆÒ²²»»á¸Ä±ä.</p>
-    <p><span class="ver">[v1.1.15+]£º</span>Èç¹ûÒÑ´æÔÚ¸ÃÈÈ¼ü±äÌå£¬Ôò¸ù¾Ý <em>KeyName</em> ÊÇ·ñ°üº¬<a href="../Hotkeys.htm#Tilde">ò¦»¯·û£¨~£©Ç°×º</a>¸üÐÂËüµÄÐÐÎª¡£</p>
+  <dd><p>çƒ­é”®è§¦å‘é”®çš„åç§°, åŒ…æ‹¬æ‰€æœ‰ <a href="../Hotkeys.htm#Symbols">ä¿®é¥°ç¬¦</a>. ä¾‹å¦‚ï¼ŒæŒ‡å®š <code>#c</code> æ¥è§¦å‘ Win+C çƒ­é”®ã€‚</p>
+    <p>å¦‚æžœ <em>KeyName</em> æ˜¯çŽ°æœ‰çš„çƒ­é”®, é‚£ä¹ˆå°†ä½¿ç”¨æ­¤å‘½ä»¤çš„å…¶ä»–å‚æ•°å€¼æ›´æ–°åŽŸæ¥çš„çƒ­é”®.</p>
+    <p><em>KeyName</em> ä¹Ÿå¯ä»¥æ˜¯çŽ°æœ‰çš„çƒ­é”®æ ‡ç­¾çš„åç§° (å³åŒå†’å·æ ‡ç­¾), è¿™æ ·ä¼šä½¿ç”¨æ­¤å‘½ä»¤çš„å…¶ä»–å‚æ•°å€¼æ›´æ–°åŽŸæ¥çš„çƒ­é”®.</p>
+    <p>æŒ‡å®š <em>çŽ°æœ‰çš„</em> çƒ­é”®æ—¶, <em>KeyName</em> æ˜¯ä¸åŒºåˆ†å¤§å°å†™çš„. ä½†æ˜¯, æŒ‰é”®åç§°å¿…é¡»å’ŒçŽ°æœ‰çš„çƒ­é”®æ‹¼å†™ç›¸åŒ (ä¾‹å¦‚åœ¨è¿™ç§æƒ…å†µä¸‹ Esc ä¸Ž Escape æ˜¯ä¸åŒçš„). æ­¤å¤–, <a href="../Hotkeys.htm#Symbols">ä¿®é¥°ç¬¦</a> (ä¾‹å¦‚ ^!+#) æ˜¯æ— å…³ç´§è¦çš„.</p>
+    <p>é¦–æ¬¡åˆ›å»ºä¸€ä¸ªçƒ­é”®æ—¶ (é€šè¿‡ Hotkey å‘½ä»¤æˆ–è„šæœ¬ä¸­çš„ <a href="../Hotkeys.htm">åŒå†’å·æ ‡ç­¾</a>), å…¶é”®åä»¥åŠä¿®é¥°ç¬¦çš„é¡ºåºæˆä¸ºæ­¤çƒ­é”®çš„å›ºå®šåç§°, åƒ <a href="../Variables.htm#ThisHotkey">A_ThisHotkey</a> åŒ…å«çš„é‚£æ ·. å³ä½¿ä¹‹åŽ Hotkey å‘½ä»¤ä½¿ç”¨ä¸åŒçš„ä¿®é¥°ç¬¦é¡ºåºæ“ä½œæ­¤çƒ­é”®, æ­¤åç§°ä¹Ÿä¸ä¼šæ”¹å˜.</p>
+    <p><span class="ver">[v1.1.15+]ï¼š</span>å¦‚æžœå·²å­˜åœ¨è¯¥çƒ­é”®å˜ä½“ï¼Œåˆ™æ ¹æ® <em>KeyName</em> æ˜¯å¦åŒ…å«<a href="../Hotkeys.htm#Tilde">é¢šåŒ–ç¬¦ï¼ˆ~ï¼‰å‰ç¼€</a>æ›´æ–°å®ƒçš„è¡Œä¸ºã€‚</p>
     </dd>
 
-  <dt>±êÇ©</dt>
-  <dd><p>°´ÏÂÈÈ¼üÊ±»áÖ´ÐÐ (×÷ÎªÐÂ <a href="../misc/Threads.htm">Ïß³Ì</a>) µÄ <a href="../misc/Labels.htm">±êÇ©</a> µÄÃû³Æ. ¿ÉÒÔÊ¹ÓÃÆÕÍ¨±êÇ©»ò <a href="../Hotkeys.htm">ÈÈ¼ü</a>/<a href="../Hotstrings.htm">ÈÈ×Ö´®</a> ±êÇ©. ²»Òª°üº¬Î²ËæµÄÃ°ºÅ. Èç¹ûÊ¹ÓÃ¶¯Ì¬µÄ <em>Label</em> (ÀýÈç %VarContainingLabelName%), ÇëÊ×ÏÈµ÷ÓÃ <a href="../Functions.htm#IsLabel">IsLabel(VarContainingLabelName)</a> À´¼ì²é´Ë±êÇ©ÊÇ·ñ´æÔÚ.</p>
-      <p>Èç¹û <em>KeyName</em> ÎªÏÖÓÐµÄÈÈ¼ü, Ôò´Ë²ÎÊý¿ÉÒÔÁô¿Õ, ´ËÊ±Æä±êÇ©²»»á·¢Éú±ä»¯. Õâ¿ÉÓÃÓÚ½öÐèÒªÐÞ¸ÄÈÈ¼üµÄ <em>Options</em> Ê±.</p>
-      <p><strong>Èç¹ûÖ¸¶¨ÁË±êÇ©µ«ÈÈ¼üÖ®Ç°ÒÑ¾­Ê¹ÓÃ´ËÃüÁî½ûÓÃÁË, ÄÇÃ´ÈÈ¼ü»á±£³Ö½ûÓÃ×´Ì¬. ÒªÆôÓÃËü, ÇëÔÚ <em>Options</em> ÖÐ°üº¬µ¥´Ê ON.</strong></p>
-      <p>´Ë²ÎÊý»¹¿ÉÒÔÊÇÏÂÁÐÌØ¶¨ÖµµÄÆäÖÐÒ»¸ö:</p>
-      <p><strong>On</strong>: ÆôÓÃÈÈ¼ü. Èç¹ûÈÈ¼üÒÑ¾­´¦ÓÚÆôÓÃ×´Ì¬, Ôò²»½øÐÐ²Ù×÷.</p>
-      <p><strong>Off</strong>: ½ûÓÃÈÈ¼ü. Èç¹ûÈÈ¼üÒÑ¾­´¦ÓÚ½ûÓÃ×´Ì¬, Ôò²»½øÐÐ²Ù×÷.</p>
-      <p><strong>Toggle</strong>: ÉèÖÃÈÈ¼üµ½Ïà·´µÄ×´Ì¬ (ÆôÓÃ»ò½ûÓÃ).</p>
-      <p><strong>AltTab</strong> (¼°ÆäËû): ÕâÐ©ÊÇ <a href="../Hotkeys.htm#alttab">ÕâÀï</a> ÃèÊöµÄÌØÊâµÄ Alt-Tab ÈÈ¼ü¶¯×÷.</p>
-      <p>×¢: <u>½öµ±²»´æÔÚÏàÓ¦µÄ±êÇ©Ê±</u> ÕâÐ©Öµ²ÅÓÐÌØÊâº¬Òå. ÀýÈç, Èç¹û±êÇ© <code>On:</code> ´æÔÚ²¢ÇÒ´Ë²ÎÊýÎªµ¥´Ê ON, ÔòËü±»µ±³É±êÇ©µÄÃû³Æ. ÒªÆôÓÃ»ò½ûÓÃÕâÑùµÄÈÈ¼ü, ÇëÊ¹ÓÃ <i>Options</i> ²ÎÊý. ¿ÉÒÔÊ¡ÂÔ <i>Label</i>; ÀýÈç, <code>Hotkey Esc,, Off</code>.</p>
+  <dt>æ ‡ç­¾</dt>
+  <dd><p>æŒ‰ä¸‹çƒ­é”®æ—¶ä¼šæ‰§è¡Œ (ä½œä¸ºæ–° <a href="../misc/Threads.htm">çº¿ç¨‹</a>) çš„ <a href="../misc/Labels.htm">æ ‡ç­¾</a> çš„åç§°. å¯ä»¥ä½¿ç”¨æ™®é€šæ ‡ç­¾æˆ– <a href="../Hotkeys.htm">çƒ­é”®</a>/<a href="../Hotstrings.htm">çƒ­å­—ä¸²</a> æ ‡ç­¾. ä¸è¦åŒ…å«å°¾éšçš„å†’å·. å¦‚æžœä½¿ç”¨åŠ¨æ€çš„ <em>Label</em> (ä¾‹å¦‚ %VarContainingLabelName%), è¯·é¦–å…ˆè°ƒç”¨ <a href="../Functions.htm#IsLabel">IsLabel(VarContainingLabelName)</a> æ¥æ£€æŸ¥æ­¤æ ‡ç­¾æ˜¯å¦å­˜åœ¨.</p>
+      <p>å¦‚æžœ <em>KeyName</em> ä¸ºçŽ°æœ‰çš„çƒ­é”®, åˆ™æ­¤å‚æ•°å¯ä»¥ç•™ç©º, æ­¤æ—¶å…¶æ ‡ç­¾ä¸ä¼šå‘ç”Ÿå˜åŒ–. è¿™å¯ç”¨äºŽä»…éœ€è¦ä¿®æ”¹çƒ­é”®çš„ <em>Options</em> æ—¶.</p>
+      <p><strong>å¦‚æžœæŒ‡å®šäº†æ ‡ç­¾ä½†çƒ­é”®ä¹‹å‰å·²ç»ä½¿ç”¨æ­¤å‘½ä»¤ç¦ç”¨äº†, é‚£ä¹ˆçƒ­é”®ä¼šä¿æŒç¦ç”¨çŠ¶æ€. è¦å¯ç”¨å®ƒ, è¯·åœ¨ <em>Options</em> ä¸­åŒ…å«å•è¯ ON.</strong></p>
+      <p>æ­¤å‚æ•°è¿˜å¯ä»¥æ˜¯ä¸‹åˆ—ç‰¹å®šå€¼çš„å…¶ä¸­ä¸€ä¸ª:</p>
+      <p><strong>On</strong>: å¯ç”¨çƒ­é”®. å¦‚æžœçƒ­é”®å·²ç»å¤„äºŽå¯ç”¨çŠ¶æ€, åˆ™ä¸è¿›è¡Œæ“ä½œ.</p>
+      <p><strong>Off</strong>: ç¦ç”¨çƒ­é”®. å¦‚æžœçƒ­é”®å·²ç»å¤„äºŽç¦ç”¨çŠ¶æ€, åˆ™ä¸è¿›è¡Œæ“ä½œ.</p>
+      <p><strong>Toggle</strong>: è®¾ç½®çƒ­é”®åˆ°ç›¸åçš„çŠ¶æ€ (å¯ç”¨æˆ–ç¦ç”¨).</p>
+      <p><strong>AltTab</strong> (åŠå…¶ä»–): è¿™äº›æ˜¯ <a href="../Hotkeys.htm#alttab">è¿™é‡Œ</a> æè¿°çš„ç‰¹æ®Šçš„ Alt-Tab çƒ­é”®åŠ¨ä½œ.</p>
+      <p>æ³¨: <u>ä»…å½“ä¸å­˜åœ¨ç›¸åº”çš„æ ‡ç­¾æ—¶</u> è¿™äº›å€¼æ‰æœ‰ç‰¹æ®Šå«ä¹‰. ä¾‹å¦‚, å¦‚æžœæ ‡ç­¾ <code>On:</code> å­˜åœ¨å¹¶ä¸”æ­¤å‚æ•°ä¸ºå•è¯ ON, åˆ™å®ƒè¢«å½“æˆæ ‡ç­¾çš„åç§°. è¦å¯ç”¨æˆ–ç¦ç”¨è¿™æ ·çš„çƒ­é”®, è¯·ä½¿ç”¨ <i>Options</i> å‚æ•°. å¯ä»¥çœç•¥ <i>Label</i>; ä¾‹å¦‚, <code>Hotkey Esc,, Off</code>.</p>
       </dd>
 
-  <dt>Ñ¡Ïî</dt>
-  <dd><p>ÓÉÁã¸ö»ò¶à¸öÏÂÁÐ×ÖÄ¸×é³ÉµÄ×Ö·û´®, ×ÖÄ¸¼ä¿ÉÒÔÓÃ¿Õ¸ñ·Ö¸ô. ÀýÈç£º<code>UseErrorLevel B0</code>¡£</p>
-      <p><strong><a name="UseErrorLevel"></a>UseErrorLevel</strong>: Èç¹ûÃüÁîÓöµ½ÎÊÌâ, Ê¹ÓÃ´ËÑ¡Ïî»áÌø¹ý¾¯¸æ¶Ô»°¿ò, ÉèÖÃ <a href="../misc/ErrorLevel.htm">ErrorLevel</a> Îª <a href="#ErrorLevel">ÏÂ±í</a> ÖÐµÄÒ»¸ö´úÂë, È»ºóÈÃ <a href="../misc/Threads.htm">µ±Ç°Ïß³Ì</a> ¼ÌÐøÖ´ÐÐ.</p>
-      <p><strong>On</strong>: Èç¹ûÈÈ¼üµ±Ç°ÊÇ½ûÓÃµÄÔòÆôÓÃËü.</p>
-      <p><strong>Off</strong>: Èç¹ûÈÈ¼üµ±Ç°ÊÇÆôÓÃµÄÔò½ûÓÃËü. ´ËÑ¡Ïî³£ÓÃÀ´´´½¨³õÊ¼×´Ì¬Îª½ûÓÃµÄÈÈ¼ü.</p>
-      <p><strong>B</strong> »ò <strong>B0</strong>: Ö¸¶¨×ÖÄ¸ B ½«°´ÕÕ <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a> ÃèÊöµÄ·½·¨»º³åÈÈ¼ü. Ö¸¶¨ B0 (B ºó¸ú×ÅÊý×Ö 0) À´½ûÓÃÕâÖÖÀàÐÍµÄ»º³å.</p>
-      <p><strong>Pn</strong>: Ö¸¶¨×ÖÄ¸ P ºóÃæ¸ú×ÅÈÈ¼üµÄ <a href="../misc/Threads.htm">Ïß³ÌÓÅÏÈ¼¶</a>. Èç¹û´´½¨ÈÈ¼üÊ±Ê¡ÂÔ P Ñ¡Ïî, ÔòÉèÖÃÓÅÏÈ¼¶Îª 0.</p>
-      <p><strong>Tn</strong>: Ö¸¶¨×ÖÄ¸ T ºóÃæ¸ú×ÅÒ»¸ö±íÊ¾´ËÈÈ¼üÔÊÐíµÄÏß³ÌÊý, ÈçÍ¬ <a href="_MaxThreadsPerHotkey.htm">#MaxThreadsPerHotkey</a> ÖÐÃèÊöµÄÄÇÑù. ÀýÈç£º<code>T5</code>¡£</p>
-      <p>Èç¹û <strong>B</strong> ºÍ <strong>T</strong> Ñ¡ÏîÍ¬Ê±Ê¡ÂÔ»òÊ¡ÂÔÁËÆäÖÐÒ»¸öÇÒÈÈ¼üÒÑ¾­´æÔÚ, ÔòÕâÐ©ÉèÖÃ²»»á¸Ä±ä. µ«Èç¹ûÈÈ¼ü»¹²»´æÔÚ (¼´Ê¹ÓÃµ±Ç°ÃüÁî´´½¨Ê±), ËüÃÇ½«Ê¹ÓÃ×î½üÊ¹ÓÃµÄÖµ. ÀýÈç, »áÊ¹ÓÃ×î¿¿½ü½Å±¾Ä©Î²µÄ <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a> ÊµÀý. Èç¹û½Å±¾ÖÐÃ»ÓÐÊ¹ÓÃ <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a>, ÔòÊ¹ÓÃÆäÄ¬ÈÏÉèÖÃ (´ËÊ±Îª OFF). ¶ÔÓÚ <a href="_IfWinActive.htm">#IfWin</a> Ò²ÊÇÕâÑù: ³ý·Ç½Å±¾Æô¶¯ºóÖ´ÐÐ¹ý "<a href="#IfWin">Hotkey IfWin</a>", ·ñÔò½«¶ÔÐÂ´´½¨µÄÈÈ¼üÓ¦ÓÃ×î½üµÄÊµÀý.</p>
+  <dt>é€‰é¡¹</dt>
+  <dd><p>ç”±é›¶ä¸ªæˆ–å¤šä¸ªä¸‹åˆ—å­—æ¯ç»„æˆçš„å­—ç¬¦ä¸², å­—æ¯é—´å¯ä»¥ç”¨ç©ºæ ¼åˆ†éš”. ä¾‹å¦‚ï¼š<code>UseErrorLevel B0</code>ã€‚</p>
+      <p><strong><a name="UseErrorLevel"></a>UseErrorLevel</strong>: å¦‚æžœå‘½ä»¤é‡åˆ°é—®é¢˜, ä½¿ç”¨æ­¤é€‰é¡¹ä¼šè·³è¿‡è­¦å‘Šå¯¹è¯æ¡†, è®¾ç½® <a href="../misc/ErrorLevel.htm">ErrorLevel</a> ä¸º <a href="#ErrorLevel">ä¸‹è¡¨</a> ä¸­çš„ä¸€ä¸ªä»£ç , ç„¶åŽè®© <a href="../misc/Threads.htm">å½“å‰çº¿ç¨‹</a> ç»§ç»­æ‰§è¡Œ.</p>
+      <p><strong>On</strong>: å¦‚æžœçƒ­é”®å½“å‰æ˜¯ç¦ç”¨çš„åˆ™å¯ç”¨å®ƒ.</p>
+      <p><strong>Off</strong>: å¦‚æžœçƒ­é”®å½“å‰æ˜¯å¯ç”¨çš„åˆ™ç¦ç”¨å®ƒ. æ­¤é€‰é¡¹å¸¸ç”¨æ¥åˆ›å»ºåˆå§‹çŠ¶æ€ä¸ºç¦ç”¨çš„çƒ­é”®.</p>
+      <p><strong>B</strong> æˆ– <strong>B0</strong>: æŒ‡å®šå­—æ¯ B å°†æŒ‰ç…§ <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a> æè¿°çš„æ–¹æ³•ç¼“å†²çƒ­é”®. æŒ‡å®š B0 (B åŽè·Ÿç€æ•°å­— 0) æ¥ç¦ç”¨è¿™ç§ç±»åž‹çš„ç¼“å†².</p>
+      <p><strong>Pn</strong>: æŒ‡å®šå­—æ¯ P åŽé¢è·Ÿç€çƒ­é”®çš„ <a href="../misc/Threads.htm">çº¿ç¨‹ä¼˜å…ˆçº§</a>. å¦‚æžœåˆ›å»ºçƒ­é”®æ—¶çœç•¥ P é€‰é¡¹, åˆ™è®¾ç½®ä¼˜å…ˆçº§ä¸º 0.</p>
+      <p><strong>Tn</strong>: æŒ‡å®šå­—æ¯ T åŽé¢è·Ÿç€ä¸€ä¸ªè¡¨ç¤ºæ­¤çƒ­é”®å…è®¸çš„çº¿ç¨‹æ•°, å¦‚åŒ <a href="_MaxThreadsPerHotkey.htm">#MaxThreadsPerHotkey</a> ä¸­æè¿°çš„é‚£æ ·. ä¾‹å¦‚ï¼š<code>T5</code>ã€‚</p>
+      <p>å¦‚æžœ <strong>B</strong> å’Œ <strong>T</strong> é€‰é¡¹åŒæ—¶çœç•¥æˆ–çœç•¥äº†å…¶ä¸­ä¸€ä¸ªä¸”çƒ­é”®å·²ç»å­˜åœ¨, åˆ™è¿™äº›è®¾ç½®ä¸ä¼šæ”¹å˜. ä½†å¦‚æžœçƒ­é”®è¿˜ä¸å­˜åœ¨ (å³ä½¿ç”¨å½“å‰å‘½ä»¤åˆ›å»ºæ—¶), å®ƒä»¬å°†ä½¿ç”¨æœ€è¿‘ä½¿ç”¨çš„å€¼. ä¾‹å¦‚, ä¼šä½¿ç”¨æœ€é è¿‘è„šæœ¬æœ«å°¾çš„ <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a> å®žä¾‹. å¦‚æžœè„šæœ¬ä¸­æ²¡æœ‰ä½¿ç”¨ <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a>, åˆ™ä½¿ç”¨å…¶é»˜è®¤è®¾ç½® (æ­¤æ—¶ä¸º OFF). å¯¹äºŽ <a href="_IfWinActive.htm">#IfWin</a> ä¹Ÿæ˜¯è¿™æ ·: é™¤éžè„šæœ¬å¯åŠ¨åŽæ‰§è¡Œè¿‡ "<a href="#IfWin">Hotkey IfWin</a>", å¦åˆ™å°†å¯¹æ–°åˆ›å»ºçš„çƒ­é”®åº”ç”¨æœ€è¿‘çš„å®žä¾‹.</p>
       </dd>
 
   <dt>IfWinActive<br>
     
     IfWinExist</dt>
-  <dd><p>(Ò²Ö§³Ö IfWin<strong>Not</strong>Active ºÍ IfWin<strong>Not</strong>Exist). ÕâÐ©×ÓÃüÁîÈÃ´Ëºó´´½¨µÄËùÓÐÈÈ¼ü¶¼ÊÇÉÏÏÂÎÄÏà¹ØµÄ. Çë²ÎÔÄ <a href="#IfWin">ºóÃæ</a> ÁË½âÏêÇé.</p></dd>
+  <dd><p>(ä¹Ÿæ”¯æŒ IfWin<strong>Not</strong>Active å’Œ IfWin<strong>Not</strong>Exist). è¿™äº›å­å‘½ä»¤è®©æ­¤åŽåˆ›å»ºçš„æ‰€æœ‰çƒ­é”®éƒ½æ˜¯ä¸Šä¸‹æ–‡ç›¸å…³çš„. è¯·å‚é˜… <a href="#IfWin">åŽé¢</a> äº†è§£è¯¦æƒ….</p></dd>
 
   <dt>WinTitle<br>
     
     WinText</dt>
-  <dd><p>ÔÚÕâÁ½¸ö²ÎÊýÖÐ, ÈÎºÎ±äÁ¿ÒýÓÃ (ÀýÈç %var%) »áÔÚÃüÁîÖ´ÐÐ½áÊøÊ±±»¹Ì¶¨ÏÂÀ´. »»¾ä»°Ëµ, ´Ëºó¶ÔÕâÐ©±äÁ¿ÄÚÈÝµÄ¸Ä±ä²»»áÓ°ÏìÏÖÓÐµÄ IfWin ÈÈ¼ü.</p>
-      <p>Óë <a href="_IfWinActive.htm">#IfWinActive/Exist</a> Ò»Ñù£¬<em>WinTitle</em> ºÍ <em>WinText</em> Îª <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> ºÍ <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> Ê¹ÓÃÔÚ<a href="../Scripts.htm#auto">×Ô¶¯Ö´ÐÐ¶Î</a>ÖÐµÄÄ¬ÈÏÉèÖÃ¡£Çë²ÎÔÄ <a href="_IfWinActive.htm">#IfWinActive/Exist</a> ÁË½âÏêÇé.</p></dd>
+  <dd><p>åœ¨è¿™ä¸¤ä¸ªå‚æ•°ä¸­, ä»»ä½•å˜é‡å¼•ç”¨ (ä¾‹å¦‚ %var%) ä¼šåœ¨å‘½ä»¤æ‰§è¡Œç»“æŸæ—¶è¢«å›ºå®šä¸‹æ¥. æ¢å¥è¯è¯´, æ­¤åŽå¯¹è¿™äº›å˜é‡å†…å®¹çš„æ”¹å˜ä¸ä¼šå½±å“çŽ°æœ‰çš„ IfWin çƒ­é”®.</p>
+      <p>ä¸Ž <a href="_IfWinActive.htm">#IfWinActive/Exist</a> ä¸€æ ·ï¼Œ<em>WinTitle</em> å’Œ <em>WinText</em> ä¸º <a href="SetTitleMatchMode.htm">SetTitleMatchMode</a> å’Œ <a href="DetectHiddenWindows.htm">DetectHiddenWindows</a> ä½¿ç”¨åœ¨<a href="../Scripts.htm#auto">è‡ªåŠ¨æ‰§è¡Œæ®µ</a>ä¸­çš„é»˜è®¤è®¾ç½®ã€‚è¯·å‚é˜… <a href="_IfWinActive.htm">#IfWinActive/Exist</a> äº†è§£è¯¦æƒ….</p></dd>
 
   <dt id="If">If, Expression</dt>
   <dd>
-    <p><span class="ver">[AHK_L]:</span> <a href="_If.htm">#If <i>Expression</i></a> µÄ¸±±¾. <i>Expression</i> ±ØÐë×¼È·Æ¥Åä <b>ÏÖÓÐµÄ</b> <code>#If <i>Expression</i></code> µÄÎÄ×Ö, ²»°üÀ¨ "<code>#If</code>" »ò "<code>#If,</code>". µ±ÓÃÓÚ Hotkey ÃüÁîÊ±, "If" ºóÃæµÄ¶ººÅÊÇ±ØÐëµÄ. ¾¡¹Ü´ËÃüÁî²»ÄÜ´´½¨ÐÂµÄ±í´ïÊ½, µ«Ëü¿ÉÒÔÊ¹ÓÃÏÖÓÐµÄ±í´ïÊ½´´½¨ÐÂµÄÈÈ¼ü. Çë²ÎÔÄ <a href="_If.htm#ex4">#If Ê¾Àý 4</a>.</p>
-    <p><strong>ÒÑÖªÏÞÖÆ£º</strong>Èç¹û <em>Expression</em> °üº¬ <code>and</code>/<code>or</code> ÔËËã·û£¬ÔòËü²»»á±»Ê¶±ðÎª±í´ïÊ½¡£ÎªÁË±ÜÃâ´ËÎÊÌâ£¬ÇëÔÚÔ­À´µÄ #If ±í´ïÊ½ºÍ´«µÝ¸ø Hotkey ÃüÁîµÄ±í´ïÊ½ÖÐÊ¹ÓÃµÈ¼ÛµÄ <code>&amp;&amp;</code>/<code>||</code> ÔËËã·û¡£</p>
+    <p><span class="ver">[AHK_L]:</span> <a href="_If.htm">#If <i>Expression</i></a> çš„å‰¯æœ¬. <i>Expression</i> å¿…é¡»å‡†ç¡®åŒ¹é… <b>çŽ°æœ‰çš„</b> <code>#If <i>Expression</i></code> çš„æ–‡å­—, ä¸åŒ…æ‹¬ "<code>#If</code>" æˆ– "<code>#If,</code>". å½“ç”¨äºŽ Hotkey å‘½ä»¤æ—¶, "If" åŽé¢çš„é€—å·æ˜¯å¿…é¡»çš„. å°½ç®¡æ­¤å‘½ä»¤ä¸èƒ½åˆ›å»ºæ–°çš„è¡¨è¾¾å¼, ä½†å®ƒå¯ä»¥ä½¿ç”¨çŽ°æœ‰çš„è¡¨è¾¾å¼åˆ›å»ºæ–°çš„çƒ­é”®. è¯·å‚é˜… <a href="_If.htm#ex4">#If ç¤ºä¾‹ 4</a>.</p>
+    <p><strong>å·²çŸ¥é™åˆ¶ï¼š</strong>å¦‚æžœ <em>Expression</em> åŒ…å« <code>and</code>/<code>or</code> è¿ç®—ç¬¦ï¼Œåˆ™å®ƒä¸ä¼šè¢«è¯†åˆ«ä¸ºè¡¨è¾¾å¼ã€‚ä¸ºäº†é¿å…æ­¤é—®é¢˜ï¼Œè¯·åœ¨åŽŸæ¥çš„ #If è¡¨è¾¾å¼å’Œä¼ é€’ç»™ Hotkey å‘½ä»¤çš„è¡¨è¾¾å¼ä¸­ä½¿ç”¨ç­‰ä»·çš„ <code>&amp;&amp;</code>/<code>||</code> è¿ç®—ç¬¦ã€‚</p>
   </dd>
 
 </dl>
 
 <h3 id="ErrorLevel">ErrorLevel</h3>
-<p><span class="ver">[v1.1.04+]</span> ´ËÃüÁîÊ§°ÜÊ±»áÅ×³öÒì³£. ÏëÁË½â¸ü¶àÐÅÏ¢, Çë²ÎÔÄ <a href="Catch.htm#RuntimeErrors">ÔËÐÐÊ±´íÎó</a>.</p>
-<p>Ö»ÓÐÔÚ³öÏÖÏÂÁÐÇé¿öÊ± <a href="../misc/ErrorLevel.htm">ErrorLevel</a> ²Å»á±»¸Ä±ä: 1) Ê×¸ö²ÎÊýÎª IfWin[Not]Active/Exist, ´ËÊ±Èç¹ûÓöµ½ÎÊÌâËü»á±»ÉèÖÃÎª 1 ·ñÔòÎª 0; »ò 2) ÔÚ <em>Options</em> ²ÎÊýÖÐÊ¹ÓÃÁËµ¥´Ê UseErrorLevel.</p>
+<p><span class="ver">[v1.1.04+]</span> æ­¤å‘½ä»¤å¤±è´¥æ—¶ä¼šæŠ›å‡ºå¼‚å¸¸. æƒ³äº†è§£æ›´å¤šä¿¡æ¯, è¯·å‚é˜… <a href="Catch.htm#RuntimeErrors">è¿è¡Œæ—¶é”™è¯¯</a>.</p>
+<p>åªæœ‰åœ¨å‡ºçŽ°ä¸‹åˆ—æƒ…å†µæ—¶ <a href="../misc/ErrorLevel.htm">ErrorLevel</a> æ‰ä¼šè¢«æ”¹å˜: 1) é¦–ä¸ªå‚æ•°ä¸º IfWin[Not]Active/Exist, æ­¤æ—¶å¦‚æžœé‡åˆ°é—®é¢˜å®ƒä¼šè¢«è®¾ç½®ä¸º 1 å¦åˆ™ä¸º 0; æˆ– 2) åœ¨ <em>Options</em> å‚æ•°ä¸­ä½¿ç”¨äº†å•è¯ UseErrorLevel.</p>
 <table class="info">
   <tr>
-    <th>´íÎó</th>
-    <th>ËµÃ÷</th>
+    <th>é”™è¯¯</th>
+    <th>è¯´æ˜Ž</th>
   </tr>
   <tr>
     <td>1</td>
-    <td><em>Label</em> ²ÎÊýÖ¸¶¨ÁË²»´æÔÚµÄ±êÇ©Ãû.</td>
+    <td><em>Label</em> å‚æ•°æŒ‡å®šäº†ä¸å­˜åœ¨çš„æ ‡ç­¾å.</td>
   </tr>
   <tr>
     <td>2</td>
-    <td><em>KeyName</em> ²ÎÊýÖ¸¶¨ÁËÒ»¸ö»ò¶à¸öµ±Ç°¼üÅÌ²¼¾Ö/ÓïÑÔÎÞ·¨Ê¶±ð»ò²»Ö§³ÖµÄ¼ü.</td>
+    <td><em>KeyName</em> å‚æ•°æŒ‡å®šäº†ä¸€ä¸ªæˆ–å¤šä¸ªå½“å‰é”®ç›˜å¸ƒå±€/è¯­è¨€æ— æ³•è¯†åˆ«æˆ–ä¸æ”¯æŒçš„é”®.</td>
   </tr>
   <tr>
     <td>3</td>
-    <td>²»Ö§³ÖµÄÇ°×º¼ü. ÀýÈç£¬²»Ö§³ÖÊ¹ÓÃÊó±ê¹öÂÖ×÷ÎªÈÈ¼ü£¨Èç <code>WheelDown &amp; Enter</code>£©µÄÇ°×º¡£</td>
+    <td>ä¸æ”¯æŒçš„å‰ç¼€é”®. ä¾‹å¦‚ï¼Œä¸æ”¯æŒä½¿ç”¨é¼ æ ‡æ»šè½®ä½œä¸ºçƒ­é”®ï¼ˆå¦‚ <code>WheelDown &amp; Enter</code>ï¼‰çš„å‰ç¼€ã€‚</td>
   </tr>
   <tr>
     <td>4</td>
-    <td><em>KeyName</em> ²ÎÊý²»ÊÊºÏÓÃÓÚ <a href="../Hotkeys.htm#alttab">AltTab »ò ShiftAltTab</a>¹¦ÄÜ¡£ÕâÖÖÇé¿öÏÂÒªÇóÈÈ¼üÎªÁ½¸ö¼üµÄ×éºÏ. ÀýÈç£º<code>RControl &amp; RShift::AltTab</code>¡£</td>
+    <td><em>KeyName</em> å‚æ•°ä¸é€‚åˆç”¨äºŽ <a href="../Hotkeys.htm#alttab">AltTab æˆ– ShiftAltTab</a>åŠŸèƒ½ã€‚è¿™ç§æƒ…å†µä¸‹è¦æ±‚çƒ­é”®ä¸ºä¸¤ä¸ªé”®çš„ç»„åˆ. ä¾‹å¦‚ï¼š<code>RControl &amp; RShift::AltTab</code>ã€‚</td>
   </tr>
   <tr>
     <td>5</td>
-    <td>ÃüÁîÊÔÍ¼ÐÞ¸Ä²»´æÔÚµÄÈÈ¼ü.</td>
+    <td>å‘½ä»¤è¯•å›¾ä¿®æ”¹ä¸å­˜åœ¨çš„çƒ­é”®.</td>
   </tr>
   <tr>
     <td>6</td>
-    <td>ÃüÁîÊÔÍ¼ÐÞ¸ÄÏÖÓÐÈÈ¼üµÄ²»´æÔÚµÄ <a href="#variant">±äÌå</a>. Òª½â¾ö´ËÎÊÌâ£¬ÇëÊ¹ÓÃ <a href="#IfWin">Hotkey IfWin</a> À´ÉèÖÃÆ¥ÅäÄÇÐ©ÐèÐÞ¸ÄµÄÈÈ¼ü±äÌåµÄ±ê×¼¡£</td>
+    <td>å‘½ä»¤è¯•å›¾ä¿®æ”¹çŽ°æœ‰çƒ­é”®çš„ä¸å­˜åœ¨çš„ <a href="#variant">å˜ä½“</a>. è¦è§£å†³æ­¤é—®é¢˜ï¼Œè¯·ä½¿ç”¨ <a href="#IfWin">Hotkey IfWin</a> æ¥è®¾ç½®åŒ¹é…é‚£äº›éœ€ä¿®æ”¹çš„çƒ­é”®å˜ä½“çš„æ ‡å‡†ã€‚</td>
   </tr>
   <tr>
     <td>98</td>
-    <td>´´½¨´ËÈÈ¼üºó½«³¬¹ýÃ¿½Å±¾ 1000 ¸öÈÈ¼üµÄÏÞÖÆ (²»¹ý, Ã¿¸öÈÈ¼üµÄ <a href="#variant">±äÌå</a> ÊýÄ¿²»ÊÜÏÞÖÆ, ²¢ÇÒ¶ÔÓÚ <a href="../Hotstrings.htm">ÈÈ×Ö´®</a> µÄÊýÄ¿Ò²Ã»ÓÐÏÞÖÆ).</td>
+    <td>åˆ›å»ºæ­¤çƒ­é”®åŽå°†è¶…è¿‡æ¯è„šæœ¬ 1000 ä¸ªçƒ­é”®çš„é™åˆ¶ (ä¸è¿‡, æ¯ä¸ªçƒ­é”®çš„ <a href="#variant">å˜ä½“</a> æ•°ç›®ä¸å—é™åˆ¶, å¹¶ä¸”å¯¹äºŽ <a href="../Hotstrings.htm">çƒ­å­—ä¸²</a> çš„æ•°ç›®ä¹Ÿæ²¡æœ‰é™åˆ¶).</td>
   </tr>
   <tr>
     <td>99</td>
-    <td>ÄÚ´æ²»×ã. ÕâÖÖÇé¿ö¼«ÉÙ, Í¨³£½öÔÚ²Ù×÷ÏµÍ³±äµÃ²»ÎÈ¶¨Ê±²Å»á·¢Éú.</td>
+    <td>å†…å­˜ä¸è¶³. è¿™ç§æƒ…å†µæžå°‘, é€šå¸¸ä»…åœ¨æ“ä½œç³»ç»Ÿå˜å¾—ä¸ç¨³å®šæ—¶æ‰ä¼šå‘ç”Ÿ.</td>
   </tr>
 </table>
 <p><br>
-ÌáÊ¾: Ê¹ÓÃ UseErrorLevel Ñ¡Ïî¿ÉÒÔ¼ì²éÒ»¸öÈÈ¼üµÄ±äÌåÊÇ·ñ´æÔÚ. ÀýÈç£º</p>
+æç¤º: ä½¿ç”¨ UseErrorLevel é€‰é¡¹å¯ä»¥æ£€æŸ¥ä¸€ä¸ªçƒ­é”®çš„å˜ä½“æ˜¯å¦å­˜åœ¨. ä¾‹å¦‚ï¼š</p>
 <pre>Hotkey, ^!p,, UseErrorLevel
 if ErrorLevel in 5,6
     MsgBox The hotkey does not exist or it has no variant for the current IfWin criteria.</pre>
 
-<h3>±¸×¢</h3>
-<p><a href="#IfWin">µ±Ç°µÄ IfWin ÉèÖÃ</a> ¾ö¶¨ÁË Hotkey ÃüÁî½«²Ù×÷ÈÈ¼üµÄÄÄ¸ö <a href="#variant">±äÌå</a>.</p>
-<p>Èç¹ûÐèÒª¸ù¾Ý»î¶¯´°¿ÚµÄÀàÐÍ×Ô¶¯½ûÓÃÑ¡ÔñµÄÈÈ¼ü»òÈÈ×Ö´®£¬Ê¹ÓÃ <code>Hotkey, ^!c, Off</code> Í¨³£²»Èç <a href="_IfWinActive.htm">#IfWinActive/Exist</a>£¨»òËüÃÇ<a href="#IfWin">ÏÂÃæ</a>µÄ¶¯Ì¬¸±±¾¡°Hotkey IfWinActive/Exist¡±£©À´µÄ·½±ã¡£</p>
-<p>Í¨¹ý <a href="../Hotkeys.htm">Ë«Ã°ºÅ</a> ´´½¨ÈÈ¼ü±ÈÊ¹ÓÃ Hotkey ÃüÁîÖ´ÐÐµØ¸üºÃ, ÒòÎªÔÚ½Å±¾Æô¶¯Ê±»áÅúÁ¿ÆôÓÃËüÃÇ (¶ø·ÇÒ»¸öÒ»¸öµØÆôÓÃ). Òò´Ë, ×îºÃÊ¹ÓÃ´ËÃüÁî´´½¨ÄÇÐ©ÔÚ½Å±¾¿ªÊ¼ÔËÐÐºó²ÅÖªµÀ¼üÃûµÄÈÈ¼ü. Ò»ÖÖÕâÑùµÄÇé¿öÊÇÍ¨¹ý <a href="IniRead.htm">INI ÎÄ¼þ</a> ÎªÈÈ¼üÅäÖÃÁË¶à¸ö²»Í¬µÄ¶¯×÷.</p>
-<p>¸ø¶¨µÄ±êÇ©¿ÉÒÔÊÇ¶à¸öÈÈ¼üµÄÄ¿±ê. Èç¹ûÄ³¸öÈÈ¼üµ÷ÓÃÁË±êÇ©, Äú¿ÉÒÔÍ¨¹ý¼ì²éÄÚÖÃ±äÁ¿ <a href="../Variables.htm#ThisHotkey">A_ThisHotkey</a> À´È·¶¨ÊÇÄÄ¸öÈÈ¼ü.</p>
-<p>Èç¹û½Å±¾ÊÇ <a href="Suspend.htm">¹ÒÆðµÄ</a>, ÄÇÃ´ÐÂÔö¼Ó/ÆôÓÃµÄÈÈ¼üÒ²½«ÊÇ¹ÒÆðµÄ, Ö±µ½¹ÒÆð×´Ì¬±»¹Ø±Õ (³ý·ÇËüÃÇÏñ <a href="Suspend.htm">Suspend</a> ÃüÁîÖÐÃèÊöµÄÄÇÑù±»Ãâ³ýÁË).</p>
-<p>ÓÉ´ËÃüÁî×ö³öµÄ¸Ä±äÊ¹µÃ <a href="_InstallKeybdHook.htm">¼üÅÌ</a> ºÍ/»ò <a href="_InstallMouseHook.htm">Êó±ê</a> ¹³×Ó±»°²×°»òÒÆ³ýÊÇÕý³£µÄ.</p>
-<p>¾¡¹Ü Hotkey ÃüÁî²»ÄÜÖ±½ÓÆôÓÃ»ò½ûÓÃ½Å±¾ÖÐ²»ÊÇËü´´½¨µÄÈÈ¼ü, µ«ÔÚ´ó¶àÊýÇé¿öÏÂËü¿ÉÒÔÍ¨¹ý´´½¨»òÆôÓÃÏàÍ¬µÄÈÈ¼üÀ´ <a href="../misc/Override.htm">¸²¸Ç</a> ËüÃÇ. ÕâÑùÊÇ·ñÓÐÐ§È¡¾öÓÚÏÂÁÐÒòËØ£º1) ÔÚÆäËû½Å±¾ÖÐÐèÒª±»¸²¸ÇµÄÈÈ¼üÊÇ·ñÎª<a href="ListHotkeys.htm">¹³×ÓÈÈ¼ü</a>£¨·Ç¹³×ÓÈÈ¼ü×ÜÊÇ¿ÉÒÔ³É¹¦¸²¸Ç£©£»2) ×î½üÆô¶¯µÄÈÈ¼üÍ¨³£ÓÅÏÈÓÚÆäËû½Å±¾ÖÐµÄÏàÍ¬ÈÈ¼ü£¨Òò´Ë£¬Èç¹ûÒª¸²¸ÇÆäËû½Å±¾ÖÐµÄ½Å±¾ÊÇ×î½üÆô¶¯µÄ£¬¸²¸Ç×ÜÊÇ»á³É¹¦£©£»3) ´ËÈÈ¼üµÄÆôÓÃ»ò´´½¨ÊÇ·ñ»áÖØÐÂ¼¤»î<a href="_InstallKeybdHook.htm">¼üÅÌ</a>»ò<a href="_InstallMouseHook.htm">Êó±ê</a>¹³×Ó£¨Èç¹ûÊÇ£¬ÄÇÃ´¸²¸Ç×ÜÊÇ»á³É¹¦£©¡£</p>
-<p>Ã¿µ±½Å±¾º¬ÓÐÖÁÉÙÒ»¸öÈÈ¼üÊ±, Ëü»á±ä³É³ÖÐøÔËÐÐµÄ, ÕâÒâÎ¶×ÅÓ¦¸ÃÊ¹ÓÃ <a href="ExitApp.htm">ExitApp</a> ¶ø²»ÊÇ Exit À´ÖÕÖ¹Ëü. Í¬Ê±ÈÈ¼ü½Å±¾×Ô¶¯Îª <a href="_SingleInstance.htm">#SingleInstance</a> µÄµ¥ÊµÀýÊôÐÔ£¬²»¹ý¿ÉÒÔÖ¸¶¨ <code>#SingleInstance Off</code> À´¹Ø±Õ¡£</p>
-<h3 id="IfWin">¹ØÓÚ <em>Hotkey, IfWinXX [, WinTitle, WinText]</em> µÄ±¸×¢</h3>
-<p>"Hotkey IfWin" ÃüÁîÔÊÐíÔÚ½Å±¾ÔËÐÐÊ±´´½¨»òÐÞ¸ÄÉÏÏÂÎÄÏà¹ØµÄ <a href="../Hotkeys.htm">ÈÈ¼ü</a> (ÓëÖ®Ïà±È, <a href="_IfWinActive.htm">#IfWinActive/Exist</a> Ö¸ÁîÊÇÓÉÎ»ÖÃ¾ö¶¨µÄ²¢ÇÒÔÚ½Å±¾Æô¶¯Ê±ÉúÐ§). ÀýÈç£º</p>
+<h3>å¤‡æ³¨</h3>
+<p><a href="#IfWin">å½“å‰çš„ IfWin è®¾ç½®</a> å†³å®šäº† Hotkey å‘½ä»¤å°†æ“ä½œçƒ­é”®çš„å“ªä¸ª <a href="#variant">å˜ä½“</a>.</p>
+<p>å¦‚æžœéœ€è¦æ ¹æ®æ´»åŠ¨çª—å£çš„ç±»åž‹è‡ªåŠ¨ç¦ç”¨é€‰æ‹©çš„çƒ­é”®æˆ–çƒ­å­—ä¸²ï¼Œä½¿ç”¨ <code>Hotkey, ^!c, Off</code> é€šå¸¸ä¸å¦‚ <a href="_IfWinActive.htm">#IfWinActive/Exist</a>ï¼ˆæˆ–å®ƒä»¬<a href="#IfWin">ä¸‹é¢</a>çš„åŠ¨æ€å‰¯æœ¬â€œHotkey IfWinActive/Existâ€ï¼‰æ¥çš„æ–¹ä¾¿ã€‚</p>
+<p>é€šè¿‡ <a href="../Hotkeys.htm">åŒå†’å·</a> åˆ›å»ºçƒ­é”®æ¯”ä½¿ç”¨ Hotkey å‘½ä»¤æ‰§è¡Œåœ°æ›´å¥½, å› ä¸ºåœ¨è„šæœ¬å¯åŠ¨æ—¶ä¼šæ‰¹é‡å¯ç”¨å®ƒä»¬ (è€Œéžä¸€ä¸ªä¸€ä¸ªåœ°å¯ç”¨). å› æ­¤, æœ€å¥½ä½¿ç”¨æ­¤å‘½ä»¤åˆ›å»ºé‚£äº›åœ¨è„šæœ¬å¼€å§‹è¿è¡ŒåŽæ‰çŸ¥é“é”®åçš„çƒ­é”®. ä¸€ç§è¿™æ ·çš„æƒ…å†µæ˜¯é€šè¿‡ <a href="IniRead.htm">INI æ–‡ä»¶</a> ä¸ºçƒ­é”®é…ç½®äº†å¤šä¸ªä¸åŒçš„åŠ¨ä½œ.</p>
+<p>ç»™å®šçš„æ ‡ç­¾å¯ä»¥æ˜¯å¤šä¸ªçƒ­é”®çš„ç›®æ ‡. å¦‚æžœæŸä¸ªçƒ­é”®è°ƒç”¨äº†æ ‡ç­¾, æ‚¨å¯ä»¥é€šè¿‡æ£€æŸ¥å†…ç½®å˜é‡ <a href="../Variables.htm#ThisHotkey">A_ThisHotkey</a> æ¥ç¡®å®šæ˜¯å“ªä¸ªçƒ­é”®.</p>
+<p>å¦‚æžœè„šæœ¬æ˜¯ <a href="Suspend.htm">æŒ‚èµ·çš„</a>, é‚£ä¹ˆæ–°å¢žåŠ /å¯ç”¨çš„çƒ­é”®ä¹Ÿå°†æ˜¯æŒ‚èµ·çš„, ç›´åˆ°æŒ‚èµ·çŠ¶æ€è¢«å…³é—­ (é™¤éžå®ƒä»¬åƒ <a href="Suspend.htm">Suspend</a> å‘½ä»¤ä¸­æè¿°çš„é‚£æ ·è¢«å…é™¤äº†).</p>
+<p>ç”±æ­¤å‘½ä»¤åšå‡ºçš„æ”¹å˜ä½¿å¾— <a href="_InstallKeybdHook.htm">é”®ç›˜</a> å’Œ/æˆ– <a href="_InstallMouseHook.htm">é¼ æ ‡</a> é’©å­è¢«å®‰è£…æˆ–ç§»é™¤æ˜¯æ­£å¸¸çš„.</p>
+<p>å°½ç®¡ Hotkey å‘½ä»¤ä¸èƒ½ç›´æŽ¥å¯ç”¨æˆ–ç¦ç”¨è„šæœ¬ä¸­ä¸æ˜¯å®ƒåˆ›å»ºçš„çƒ­é”®, ä½†åœ¨å¤§å¤šæ•°æƒ…å†µä¸‹å®ƒå¯ä»¥é€šè¿‡åˆ›å»ºæˆ–å¯ç”¨ç›¸åŒçš„çƒ­é”®æ¥ <a href="../misc/Override.htm">è¦†ç›–</a> å®ƒä»¬. è¿™æ ·æ˜¯å¦æœ‰æ•ˆå–å†³äºŽä¸‹åˆ—å› ç´ ï¼š1) åœ¨å…¶ä»–è„šæœ¬ä¸­éœ€è¦è¢«è¦†ç›–çš„çƒ­é”®æ˜¯å¦ä¸º<a href="ListHotkeys.htm">é’©å­çƒ­é”®</a>ï¼ˆéžé’©å­çƒ­é”®æ€»æ˜¯å¯ä»¥æˆåŠŸè¦†ç›–ï¼‰ï¼›2) æœ€è¿‘å¯åŠ¨çš„çƒ­é”®é€šå¸¸ä¼˜å…ˆäºŽå…¶ä»–è„šæœ¬ä¸­çš„ç›¸åŒçƒ­é”®ï¼ˆå› æ­¤ï¼Œå¦‚æžœè¦è¦†ç›–å…¶ä»–è„šæœ¬ä¸­çš„è„šæœ¬æ˜¯æœ€è¿‘å¯åŠ¨çš„ï¼Œè¦†ç›–æ€»æ˜¯ä¼šæˆåŠŸï¼‰ï¼›3) æ­¤çƒ­é”®çš„å¯ç”¨æˆ–åˆ›å»ºæ˜¯å¦ä¼šé‡æ–°æ¿€æ´»<a href="_InstallKeybdHook.htm">é”®ç›˜</a>æˆ–<a href="_InstallMouseHook.htm">é¼ æ ‡</a>é’©å­ï¼ˆå¦‚æžœæ˜¯ï¼Œé‚£ä¹ˆè¦†ç›–æ€»æ˜¯ä¼šæˆåŠŸï¼‰ã€‚</p>
+<p>æ¯å½“è„šæœ¬å«æœ‰è‡³å°‘ä¸€ä¸ªçƒ­é”®æ—¶, å®ƒä¼šå˜æˆæŒç»­è¿è¡Œçš„, è¿™æ„å‘³ç€åº”è¯¥ä½¿ç”¨ <a href="ExitApp.htm">ExitApp</a> è€Œä¸æ˜¯ Exit æ¥ç»ˆæ­¢å®ƒ. åŒæ—¶çƒ­é”®è„šæœ¬è‡ªåŠ¨ä¸º <a href="_SingleInstance.htm">#SingleInstance</a> çš„å•å®žä¾‹å±žæ€§ï¼Œä¸è¿‡å¯ä»¥æŒ‡å®š <code>#SingleInstance Off</code> æ¥å…³é—­ã€‚</p>
+<h3 id="IfWin">å…³äºŽ <em>Hotkey, IfWinXX [, WinTitle, WinText]</em> çš„å¤‡æ³¨</h3>
+<p>"Hotkey IfWin" å‘½ä»¤å…è®¸åœ¨è„šæœ¬è¿è¡Œæ—¶åˆ›å»ºæˆ–ä¿®æ”¹ä¸Šä¸‹æ–‡ç›¸å…³çš„ <a href="../Hotkeys.htm">çƒ­é”®</a> (ä¸Žä¹‹ç›¸æ¯”, <a href="_IfWinActive.htm">#IfWinActive/Exist</a> æŒ‡ä»¤æ˜¯ç”±ä½ç½®å†³å®šçš„å¹¶ä¸”åœ¨è„šæœ¬å¯åŠ¨æ—¶ç”Ÿæ•ˆ). ä¾‹å¦‚ï¼š</p>
 <pre>Hotkey, IfWinActive, ahk_class Notepad
-Hotkey, ^!e, MyLabel  <em>; ´´½¨½öÔÚ¼ÇÊÂ±¾ÖÐÓÐÐ§µÄÈÈ¼ü.</em></pre>
-<p>Ê¹ÓÃ "Hotkey IfWin" »á°ÑºóÐø´´½¨»òÐÞ¸ÄµÄËùÓÐ <a href="../Hotkeys.htm">ÈÈ¼ü</a> ¶¼±ä³ÉÉÏÏÂÎÄÏà¹ØµÄ. ´ËÍâ, Ã¿¸ö IfWin ×ÓÃüÁîÊÇ»¥³âµÄ; ¼´Ö»ÓÐ×î½üµÄÄÇ¸ö»áÆð×÷ÓÃ.</p>
-<p>Òª¹Ø±ÕÉÏÏÂÎÄÏà¹ØÐÔ (¼´ÈÃºóÐø´´½¨µÄÈÈ¼ü¶ÔËùÓÐ´°¿ÚÓÐÐ§), ÇëÖ¸¶¨ÈÎÒ»Ê¡ÂÔÁË <em>WinTitle/Text</em> ²ÎÊýµÄ IfWin ×ÓÃüÁî. ÀýÈç£º<code>Hotkey, IfWinActive</code>¡£</p>
-<p>Èç¹û½Å±¾ÖÐÃ»ÓÐÊ¹ÓÃ¹ý¡°Hotkey IfWin¡±£¬Ôò×î½üÊ¹ÓÃµÄ<a href="_IfWinActive.htm">#IfWin</a>Ö¸Áî£¨Èç¹ûÓÐ£©½«×÷ÓÃÓÚHotkeyÃüÁî¡£</p>
-<p>Í¨¹ý IfWin ½ûÓÃÊó±ê»ò¼üÅÌÈÈ¼üºó, ÔòÈÈ¼ü»áÖ´ÐÐËüÔ­À´µÄ¹¦ÄÜ; ¼´ÈçÍ¬ÕâÑùµÄÈÈ¼ü²»´æÔÚÄÇÑù±»Ö±½Ó´«µÝµ½»î¶¯´°¿Ú. ÓÐÒ»ÖÖÇé¿öÀýÍâ£º¶ÔÓÚ²Ù×Ý¸ËÈÈ¼ü£¬¾¡¹Ü #IfWin ÓÐÐ§£¬µ«Ëü²»ÄÜ×èÖ¹ÆäËû³ÌÐòÌ½²âµ½°´Å¥µÄ°´ÏÂ¶¯×÷¡£</p>
-<h3 id="variant">±äÌå (¸±±¾) ÈÈ¼ü</h3>
-<p>Ö»ÒªÃ¿´Î¶¨ÒåÊ±º¬ÓÐ²»Í¬µÄ IfWin Ìõ¼þ, Ò»¸öÌØ¶¨µÄÈÈ¼ü¿ÉÒÔ±»´´½¨¶à´Î. Õâ±»³ÆÎª <em>ÈÈ¼ü±äÌå</em>. ÀýÈç£º</p>
+Hotkey, ^!e, MyLabel  <em>; åˆ›å»ºä»…åœ¨è®°äº‹æœ¬ä¸­æœ‰æ•ˆçš„çƒ­é”®.</em></pre>
+<p>ä½¿ç”¨ "Hotkey IfWin" ä¼šæŠŠåŽç»­åˆ›å»ºæˆ–ä¿®æ”¹çš„æ‰€æœ‰ <a href="../Hotkeys.htm">çƒ­é”®</a> éƒ½å˜æˆä¸Šä¸‹æ–‡ç›¸å…³çš„. æ­¤å¤–, æ¯ä¸ª IfWin å­å‘½ä»¤æ˜¯äº’æ–¥çš„; å³åªæœ‰æœ€è¿‘çš„é‚£ä¸ªä¼šèµ·ä½œç”¨.</p>
+<p>è¦å…³é—­ä¸Šä¸‹æ–‡ç›¸å…³æ€§ (å³è®©åŽç»­åˆ›å»ºçš„çƒ­é”®å¯¹æ‰€æœ‰çª—å£æœ‰æ•ˆ), è¯·æŒ‡å®šä»»ä¸€çœç•¥äº† <em>WinTitle/Text</em> å‚æ•°çš„ IfWin å­å‘½ä»¤. ä¾‹å¦‚ï¼š<code>Hotkey, IfWinActive</code>ã€‚</p>
+<p>å¦‚æžœè„šæœ¬ä¸­æ²¡æœ‰ä½¿ç”¨è¿‡â€œHotkey IfWinâ€ï¼Œåˆ™æœ€è¿‘ä½¿ç”¨çš„<a href="_IfWinActive.htm">#IfWin</a>æŒ‡ä»¤ï¼ˆå¦‚æžœæœ‰ï¼‰å°†ä½œç”¨äºŽHotkeyå‘½ä»¤ã€‚</p>
+<p>é€šè¿‡ IfWin ç¦ç”¨é¼ æ ‡æˆ–é”®ç›˜çƒ­é”®åŽ, åˆ™çƒ­é”®ä¼šæ‰§è¡Œå®ƒåŽŸæ¥çš„åŠŸèƒ½; å³å¦‚åŒè¿™æ ·çš„çƒ­é”®ä¸å­˜åœ¨é‚£æ ·è¢«ç›´æŽ¥ä¼ é€’åˆ°æ´»åŠ¨çª—å£. æœ‰ä¸€ç§æƒ…å†µä¾‹å¤–ï¼šå¯¹äºŽæ“çºµæ†çƒ­é”®ï¼Œå°½ç®¡ #IfWin æœ‰æ•ˆï¼Œä½†å®ƒä¸èƒ½é˜»æ­¢å…¶ä»–ç¨‹åºæŽ¢æµ‹åˆ°æŒ‰é’®çš„æŒ‰ä¸‹åŠ¨ä½œã€‚</p>
+<h3 id="variant">å˜ä½“ (å‰¯æœ¬) çƒ­é”®</h3>
+<p>åªè¦æ¯æ¬¡å®šä¹‰æ—¶å«æœ‰ä¸åŒçš„ IfWin æ¡ä»¶, ä¸€ä¸ªç‰¹å®šçš„çƒ­é”®å¯ä»¥è¢«åˆ›å»ºå¤šæ¬¡. è¿™è¢«ç§°ä¸º <em>çƒ­é”®å˜ä½“</em>. ä¾‹å¦‚ï¼š</p>
 <pre>Hotkey, IfWinActive, ahk_class Notepad
 Hotkey, ^!c, MyLabelForNotepad
 Hotkey, IfWinActive, ahk_class WordPadClass
 Hotkey, ^!c, MyLabelForWordPad
 Hotkey, IfWinActive
 Hotkey, ^!c, MyLabelForAllOtherWindows</pre>
-<p>Èç¹ûÓÐ¶à¸ö±äÌå·ûºÏ´¥·¢Ìõ¼þ, ÄÇÃ´½ö´¥·¢×îÔç´´½¨µÄÄÇ¸ö. ÕâÖÖÇé¿öµÄÀýÍâÊÇÈ«¾Ö±äÌå (²»´øÓÐ IfWin Ìõ¼þµÄÄÇ¸ö): ËüµÄÓÅÏÈ¼¶×ÜÊÇ×îµÍ, ½öµ±ÆäËû±äÌå¶¼²»´¥·¢Ê±Ëü²Å»á±»´¥·¢.</p>
-<p>´´½¨ÖØ¸´ÈÈ¼üÊ±, <a href="../Hotkeys.htm#Symbols">ÐÞÊÎ·û</a> µÄË³ÐòÀýÈç ^!+# Ã»ÓÐ¹ØÏµ. ÀýÈç£º<code>^!c</code>µÈÐ§ÓÚ<code>!^c</code>¡£µ«ÊÇ, °´¼ü±ØÐëÆ´Ð´Ò»ÖÂ. ÀýÈç£¬ÓÃÓÚ´ËÄ¿µÄÊ± <em>Esc</em> Óë <em>Escape</em> ÊÇÓÐÇø±ðµÄ£¨¾¡¹Ü²»»áÊÜ´óÐ¡Ð´ÐÎÊ½µÄÓ°Ïì£©¡£×îºó£¬ÈÎºÎ´øÓÐ<a href="../Hotkeys.htm#wildcard">Í¨Åä·ûÇ°×º£¨*£©</a>µÄÈÈ¼üºÍ²»´øÍ¨Åä·ûµÄÍêÈ«²»Í¬£»ÀýÈç, <code>*F1</code> ºÍ <code>F1</code> ½«ÓµÓÐ¸÷×ÔµÄ±äÌåÉèÖÃ¡£</p>
-<p>¹ØÓÚ IfWin ÈÈ¼üµÄ¸ü¶àÐÅÏ¢, Çë²ÎÔÄ <a href="_IfWinActive.htm#gen">#IfWin µÄÒ»°ãËµÃ÷</a>.</p>
-<h3>Ïà¹Ø</h3>
-<p><a href="../Hotkeys.htm#Symbols">ÈÈ¼üÐÞÊÎ·û</a>, <a href="_IfWinActive.htm">#IfWinActive/Exist</a>, <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a>, <a href="_MaxThreadsPerHotkey.htm">#MaxThreadsPerHotkey</a>, <a href="Suspend.htm">Suspend</a>, <a href="../Functions.htm#IsLabel">IsLabel()</a>, <a href="../misc/Threads.htm">Ïß³Ì</a>, <a href="Thread.htm">Thread</a>, <a href="Critical.htm">Critical</a>, <a href="Gosub.htm">Gosub</a>, <a href="Return.htm">Return</a>, <a href="Menu.htm">Menu</a>, <a href="SetTimer.htm">SetTimer</a></p>
-<h3>Ê¾Àý</h3>
+<p>å¦‚æžœæœ‰å¤šä¸ªå˜ä½“ç¬¦åˆè§¦å‘æ¡ä»¶, é‚£ä¹ˆä»…è§¦å‘æœ€æ—©åˆ›å»ºçš„é‚£ä¸ª. è¿™ç§æƒ…å†µçš„ä¾‹å¤–æ˜¯å…¨å±€å˜ä½“ (ä¸å¸¦æœ‰ IfWin æ¡ä»¶çš„é‚£ä¸ª): å®ƒçš„ä¼˜å…ˆçº§æ€»æ˜¯æœ€ä½Ž, ä»…å½“å…¶ä»–å˜ä½“éƒ½ä¸è§¦å‘æ—¶å®ƒæ‰ä¼šè¢«è§¦å‘.</p>
+<p>åˆ›å»ºé‡å¤çƒ­é”®æ—¶, <a href="../Hotkeys.htm#Symbols">ä¿®é¥°ç¬¦</a> çš„é¡ºåºä¾‹å¦‚ ^!+# æ²¡æœ‰å…³ç³». ä¾‹å¦‚ï¼š<code>^!c</code>ç­‰æ•ˆäºŽ<code>!^c</code>ã€‚ä½†æ˜¯, æŒ‰é”®å¿…é¡»æ‹¼å†™ä¸€è‡´. ä¾‹å¦‚ï¼Œç”¨äºŽæ­¤ç›®çš„æ—¶ <em>Esc</em> ä¸Ž <em>Escape</em> æ˜¯æœ‰åŒºåˆ«çš„ï¼ˆå°½ç®¡ä¸ä¼šå—å¤§å°å†™å½¢å¼çš„å½±å“ï¼‰ã€‚æœ€åŽï¼Œä»»ä½•å¸¦æœ‰<a href="../Hotkeys.htm#wildcard">é€šé…ç¬¦å‰ç¼€ï¼ˆ*ï¼‰</a>çš„çƒ­é”®å’Œä¸å¸¦é€šé…ç¬¦çš„å®Œå…¨ä¸åŒï¼›ä¾‹å¦‚, <code>*F1</code> å’Œ <code>F1</code> å°†æ‹¥æœ‰å„è‡ªçš„å˜ä½“è®¾ç½®ã€‚</p>
+<p>å…³äºŽ IfWin çƒ­é”®çš„æ›´å¤šä¿¡æ¯, è¯·å‚é˜… <a href="_IfWinActive.htm#gen">#IfWin çš„ä¸€èˆ¬è¯´æ˜Ž</a>.</p>
+<h3>ç›¸å…³</h3>
+<p><a href="../Hotkeys.htm#Symbols">çƒ­é”®ä¿®é¥°ç¬¦</a>, <a href="_IfWinActive.htm">#IfWinActive/Exist</a>, <a href="_MaxThreadsBuffer.htm">#MaxThreadsBuffer</a>, <a href="_MaxThreadsPerHotkey.htm">#MaxThreadsPerHotkey</a>, <a href="Suspend.htm">Suspend</a>, <a href="../Functions.htm#IsLabel">IsLabel()</a>, <a href="../misc/Threads.htm">çº¿ç¨‹</a>, <a href="Thread.htm">Thread</a>, <a href="Critical.htm">Critical</a>, <a href="Gosub.htm">Gosub</a>, <a href="Return.htm">Return</a>, <a href="Menu.htm">Menu</a>, <a href="SetTimer.htm">SetTimer</a></p>
+<h3>ç¤ºä¾‹</h3>
 <pre class="NoIndent">Hotkey, ^!z, MyLabel
 return
 
@@ -158,14 +158,14 @@ MyLabel:
 MsgBox You pressed %A_ThisHotkey%.
 return
 
-<em>; ÆäËûµÄÀý×Ó:</em>
-Hotkey, RCtrl &amp; RShift, AltTab <em>; ÈÃ RCtrl &amp; RShift Ö´ÐÐ Alt-Tab µÄ¹¦ÄÜ.</em>
-Hotkey, #c, On  <em>; ÖØÐÂÆôÓÃ Win-C ÈÈ¼ü.</em>
-Hotkey, $+#c, Off  <em>; ½ûÓÃ Shift-Win-C ÈÈ¼ü.</em>
-Hotkey, ^!a, , T5  <em>; ¸Ä±äÈÈ¼üÎªÔÊÐí 5 ¸öÏß³Ì.</em>
+<em>; å…¶ä»–çš„ä¾‹å­:</em>
+Hotkey, RCtrl &amp; RShift, AltTab <em>; è®© RCtrl &amp; RShift æ‰§è¡Œ Alt-Tab çš„åŠŸèƒ½.</em>
+Hotkey, #c, On  <em>; é‡æ–°å¯ç”¨ Win-C çƒ­é”®.</em>
+Hotkey, $+#c, Off  <em>; ç¦ç”¨ Shift-Win-C çƒ­é”®.</em>
+Hotkey, ^!a, , T5  <em>; æ”¹å˜çƒ­é”®ä¸ºå…è®¸ 5 ä¸ªçº¿ç¨‹.</em>
 
 Hotkey, IfWinActive, ahk_class Notepad
-Hotkey, ^!c, MyLabelForNotepad  <em>; ´´½¨½öÔÚ¼ÇÊÂ±¾ÖÐÓÐÐ§µÄÈÈ¼ü Ctrl-Alt-C.</em></pre>
+Hotkey, ^!c, MyLabelForNotepad  <em>; åˆ›å»ºä»…åœ¨è®°äº‹æœ¬ä¸­æœ‰æ•ˆçš„çƒ­é”® Ctrl-Alt-C.</em></pre>
 
 </body>
 </html>
